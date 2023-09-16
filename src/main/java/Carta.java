@@ -4,7 +4,6 @@ public class Carta {
     private final int valorCarta;
     private final Palo palo;
     private final Color color;
-
     private boolean bocaAbajo;
     public Carta(int valor, Palo palo){
         this.valorCarta = valor;
@@ -44,6 +43,13 @@ public class Carta {
         return this.toString();
     }
 
+    public int obtenerValor(){
+        return valorCarta;
+    }
+
+    public Palo obtenerPalo() {
+        return palo;
+    }
 }
 
 
