@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Primer commit">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PilaDeCartas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Carta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Carta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Cimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Cimiento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Mazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Mazo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CartaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CartaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MazoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MazoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Palo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Palo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +57,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -103,7 +106,8 @@
       <updated>1694872688843</updated>
       <workItem from="1694872689846" duration="266000" />
       <workItem from="1694872970563" duration="2695000" />
-      <workItem from="1694957142726" duration="9094000" />
+      <workItem from="1694957142726" duration="9694000" />
+      <workItem from="1694985458096" duration="5156000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />

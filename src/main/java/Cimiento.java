@@ -1,21 +1,33 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+/**
+ * La clase Cimiento representa una pila especializada de cartas utilizada en el solitario.
+ * Esta clase hereda de la clase PilaDeCartas y agrega funcionalidad específica para manejar
+ * las reglas del cimiento en el juego.
+ */
 
-public class Cimiento {
-    private Stack<Carta> cimiento = new Stack<>();
+public class Cimiento extends PilaDeCartas {
 
+    //////////////////// Atributos ////////////////////
+
+
+
+    //////////////////// Métodos ////////////////////
+
+    /**
+     * Agregar una carta al cimiento según las reglas del solitario.
+     * @param carta La carta que se va a agregar al cimiento.
+     * @return true si la carta se puede agregar al cimiento, false en caso contrario.
+     */
     public boolean agregarCarta(Carta carta) {
-        if (cimiento.isEmpty()) {
-            if (carta.obtenerValor() == 1) {
-                cimiento.push(carta);
+        if (estaVacio()) {
+            if (carta.getValor() == 1) {
+                pushCarta(carta);
                 return true;
             }
             return false;
         } else {
-            Carta tope = cimiento.peek();
-            if (tope.obtenerValor() + 1 == carta.obtenerValor() && tope.obtenerPalo() == carta.obtenerPalo()){
-                cimiento.push(carta);
+            Carta tope = peekCarta();
+            if (((tope.getValor() + 1) == carta.getValor()) && (tope.getPalo() == carta.getPalo())) {
+                pushCarta(carta);
                 return true;
             }
             return false;

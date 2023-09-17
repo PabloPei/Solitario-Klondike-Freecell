@@ -1,5 +1,3 @@
-import java.sql.SQLOutput;
-
 /**
  * La clase Carta representa una carta de una baraja de cartas estándar (Francesa,
  * Española, Alemana, etc). Cada carta tiene un valor desde el As (valor=1), hasta
@@ -9,11 +7,11 @@ import java.sql.SQLOutput;
 
 public class Carta {
 
-    //////////////////// atributos ////////////////////
+    //////////////////// Atributos ////////////////////
 
     /** El valor de la carta, entre 1 y 13 inclusive. Un valor de 1
-     *  representa un As, 11 representa una Sota (Jack), 12 representa una Reina (Queen), y
-     *  13 representa un Rey (King). Todos los otros números en el rango representan
+     *  representa un As, 11 representa una Sota , 12 representa una Reina, y
+     *  13 representa un Rey. Todos los otros números en el rango representan
      *  las cartas con el número correspondiente.
      */
     private final int valor;
@@ -24,7 +22,7 @@ public class Carta {
     /** Indica si la carta esta escondida para el usuario. */
     private boolean bocaAbajo;
 
-    /** ¿Para que se usaria el color? */
+    /** Indica el Color de la carta */
     private final Color color;
 
 
@@ -47,7 +45,6 @@ public class Carta {
         this.palo = palo;
         this.bocaAbajo = bocaAbajo;
 
-        // ¿Hace falta?
         switch (palo){
             case DIAMANTE -> this.color = Color.ROJO;
             case CORAZON -> this.color = Color.ROJO;
@@ -73,27 +70,12 @@ public class Carta {
     }
 
     /**
-     * Devuelve el valor, el palo y el color de la carta como un string.
-     * @return Valor de la carta + el palo + color.
-     */
-
-    // ¿Hace falta?
-    public String toString(){
-        String color = this.color.toString();
-        String palo = this.palo.toString();
-        String valorString = this.valorToString();
-
-        return (valorString + " de " + palo + " (" + color + ")");
-
-    }
-
-    /**
-     * Compara el valor, palo y color de dos cartas.
-     * @return true si color, palo y valor son iguales, false en otro caso.
+     * Compara el valor y palo de dos cartas.
+     * @return true palo y valor son iguales, false en otro caso.
      */
 
     public boolean equals (Carta carta){
-        return this.valor == carta.valor && this.palo == carta.palo  && this.color == carta.color;
+        return this.valor == carta.valor && this.palo == carta.palo;
     }
 
     /**
@@ -105,27 +87,22 @@ public class Carta {
         bocaAbajo = !bocaAbajo;
     }
 
-    public String mostrarCarta(){
-        bocaAbajo = false;
-        return this.toString();
-    }
-
 
     //// Getters & Setters ////
 
-    public boolean obtenerBocaAbajo(){
-        return bocaAbajo;
-    }
-
-    public void configurarBocaAbajo(boolean bocaAbajo){
+    public void setBocaAbajo(boolean bocaAbajo){
         this.bocaAbajo = bocaAbajo;
     }
 
-    public int obtenerValor(){
+    public boolean getBocaAbajo(){
+        return bocaAbajo;
+    }
+
+    public int getValor(){
         return valor;
     }
 
-    public Palo obtenerPalo(){
+    public Palo getPalo(){
         return palo;
     }
 
