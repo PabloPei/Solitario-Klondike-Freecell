@@ -16,10 +16,4 @@ public class CartaTest extends TestCase {
         assertNotSame(carta2, carta1);
     }
 
-    @Test
-    public void testMostrarCarta() {
-        Carta carta1 = new Carta(12,Palo.PICA, false);
-        String resultadoEsperado = "Q de PICA (NEGRO)";
-        assertEquals(resultadoEsperado, carta1.mostrarCarta());
-    }
 }

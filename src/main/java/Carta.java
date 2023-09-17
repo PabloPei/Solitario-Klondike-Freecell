@@ -45,11 +45,9 @@ public class Carta {
         this.palo = palo;
         this.bocaAbajo = bocaAbajo;
 
-        switch (palo){
-            case DIAMANTE -> this.color = Color.ROJO;
-            case CORAZON -> this.color = Color.ROJO;
-            default -> this.color = Color.NEGRO;
-        }
+        if (this.palo.ordinal() == Palo.DIAMANTE.ordinal() || this.palo.ordinal() == Palo.CORAZON.ordinal()){
+            this.color = Color.ROJO;
+        } else this.color = Color.NEGRO;
 
     }
 
