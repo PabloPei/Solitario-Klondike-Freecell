@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class Mazo {
     private List<Carta> cartas = new ArrayList<>();
@@ -47,6 +48,20 @@ public class Mazo {
             mazoCompleto = mazoCompleto + cartas.get(i).mostrarCarta() + "\n";
         }
         return mazoCompleto;
+    }
+    public void repartirMazo(){
+        List<Stack> pilas = new ArrayList<>();
+        for (int i = 0; i < 7; i++){
+            Stack <Carta> pila = new Stack<>();
+            for (int j = 0; j< i + 1; j++) {
+                Carta carta = this.sacarCarta();
+                if (j == i) {
+                    carta.mostrarCarta();
+                }
+                pila.push(carta);
+            }
+            pilas.add(pila);
+        }
     }
 
 }
