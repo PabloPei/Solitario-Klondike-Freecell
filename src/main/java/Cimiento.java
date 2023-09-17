@@ -5,7 +5,6 @@ import java.util.Stack;
 public class Cimiento {
     private Stack<Carta> cimiento = new Stack<>();
 
-
     public boolean agregarCarta(Carta carta) {
         if (cimiento.isEmpty()) {
             if (carta.obtenerValor() == 1) {
