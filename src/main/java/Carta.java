@@ -22,9 +22,6 @@ public class Carta {
     /** Indica si la carta esta escondida para el usuario. */
     private boolean bocaAbajo;
 
-    /** Indica el Color de la carta */
-    private final Color color;
-
 
     //////////////////// metodos ////////////////////
 
@@ -44,10 +41,6 @@ public class Carta {
         this.valor = valor;
         this.palo = palo;
         this.bocaAbajo = bocaAbajo;
-
-        if (this.palo.ordinal() == Palo.DIAMANTE.ordinal() || this.palo.ordinal() == Palo.CORAZON.ordinal()){
-            this.color = Color.ROJO;
-        } else this.color = Color.NEGRO;
 
     }
 
@@ -85,6 +78,14 @@ public class Carta {
         bocaAbajo = !bocaAbajo;
     }
 
+    /**
+     * Devuelve el color de la carta
+     * @return devuelve un color correspondiente al color de la carta (ROJO O NEGRO) 
+     */
+
+    public Color getColor() {
+        return (this.palo.ordinal() == Palo.DIAMANTE.ordinal() || this.palo.ordinal() == Palo.CORAZON.ordinal() ? Color.ROJO : Color.NEGRO);
+    }
 
     //// Getters & Setters ////
 

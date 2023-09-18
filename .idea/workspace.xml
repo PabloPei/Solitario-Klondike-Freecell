@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Primer commit">
       <change beforePath="$PROJECT_DIR$/src/main/java/Carta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Carta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MazoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MazoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,12 +24,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "axel-zielonka"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;axel-zielonka&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
