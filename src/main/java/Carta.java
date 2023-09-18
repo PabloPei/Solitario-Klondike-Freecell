@@ -79,8 +79,8 @@ public class Carta {
     }
 
     /**
-     * Devuelve el color de la carta
-     * @return devuelve un color correspondiente al color de la carta (ROJO O NEGRO) 
+     * Metodo para obtener el color de la carta 
+     * @return devuelve un color correspondiente al color de la carta (ROJO O NEGRO)
      */
 
     public Color getColor() {
