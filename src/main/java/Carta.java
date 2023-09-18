@@ -66,7 +66,7 @@ public class Carta {
      */
 
     public boolean equals (Carta carta){
-        return this.valor == carta.valor && this.palo == carta.palo;
+        return (this.valor == carta.valor && this.palo.equals(carta.palo));
     }
 
     /**

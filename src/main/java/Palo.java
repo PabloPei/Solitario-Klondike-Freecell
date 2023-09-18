@@ -23,4 +23,8 @@ public enum Palo {
         }
         return palo;
     }
+
+    public boolean equals(Palo palo){
+        return this.ordinal() == palo.ordinal();
+    }
 }

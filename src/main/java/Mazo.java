@@ -41,6 +41,15 @@ public class Mazo extends PilaDeCartas {
         Collections.shuffle(pilaDeCartas);
     }
 
+    public boolean equals(Mazo mazo){
+        boolean iguales = true;
+        int contador = 0;
+        while (iguales && (contador < this.tamanio())){
+            if (!this.pilaDeCartas.get(contador).equals(mazo.pilaDeCartas.get(contador))) iguales = false;
+            else contador++;
+        }
+        return iguales;
+    }
 
 }
 

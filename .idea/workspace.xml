@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Primer commit">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Carta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Carta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Mazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Mazo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Palo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Palo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MazoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MazoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,20 +84,18 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MazoTest.testMezclar">
-    <configuration name="All in Solitario-Algo3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.All in Solitario-Algo3">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Solitario-Algo3" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in Solitario-Algo3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CartaTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -131,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in Solitario-Algo3" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MazoTest.testMezclar" />
         <item itemvalue="JUnit.MazoTest" />
         <item itemvalue="JUnit.MazoTest.testCantidadCartas" />
-        <item itemvalue="JUnit.All in Solitario-Algo3" />
-        <item itemvalue="JUnit.CartaTest" />
       </list>
     </recent_temporary>
   </component>
