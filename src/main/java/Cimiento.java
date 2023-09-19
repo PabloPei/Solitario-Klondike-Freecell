@@ -19,14 +19,14 @@ public class Cimiento extends PilaDeCartas {
      */
     public boolean agregarCarta(Carta carta) {
         if (estaVacio()) {
-            if (carta.getValor() == 1) {
+            if (carta.getValor().ordinal() == 1) {
                 pushCarta(carta);
                 return true;
             }
             return false;
         } else {
             Carta tope = peekCarta();
-            if (((tope.getValor() + 1) == carta.getValor()) && (tope.getPalo() == carta.getPalo())) {
+            if (((tope.getValor().ordinal() + 1) == carta.getValor().ordinal()) && (tope.getPalo() == carta.getPalo())) {
                 pushCarta(carta);
                 return true;
             }

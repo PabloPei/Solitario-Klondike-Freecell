@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Primer commit">
+    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Arregle la prueba mezclar en MazoTest">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Solitario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Tablero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ValorCarta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Carta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Carta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Mazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Mazo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Palo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Palo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Cimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Cimiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CartaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CartaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MazoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MazoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="JUnit4 Test Class" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -151,6 +154,7 @@
       <workItem from="1694872970563" duration="2695000" />
       <workItem from="1694957142726" duration="9694000" />
       <workItem from="1694985458096" duration="5156000" />
+      <workItem from="1695141140014" duration="2049000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />
@@ -168,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694872845123</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Arregle la prueba mezclar en MazoTest">
+      <option name="closed" value="true" />
+      <created>1695081517640</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695081517640</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +199,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primer commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Primer commit" />
+    <MESSAGE value="Arregle la prueba mezclar en MazoTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arregle la prueba mezclar en MazoTest" />
   </component>
 </project>

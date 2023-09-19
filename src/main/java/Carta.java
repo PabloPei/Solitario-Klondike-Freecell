@@ -14,7 +14,7 @@ public class Carta {
      *  13 representa un Rey. Todos los otros números en el rango representan
      *  las cartas con el número correspondiente.
      */
-    private final int valor;
+    private final ValorCarta valor;
 
     /** Indica el palo (Corazon, Diamante, Trebol, Pica) de la carta */
     private final Palo palo;
@@ -37,27 +37,10 @@ public class Carta {
         if(valor < 1 || valor > 13){
             throw new IllegalArgumentException("Valor fuera de rango.");
         }
-
-        this.valor = valor;
+        this.valor = ValorCarta.getValorCorrespondiente(valor);
         this.palo = palo;
         this.bocaAbajo = bocaAbajo;
 
-    }
-
-    /**
-     * Devuelve el valor de la carta como un String.
-     * @return El valor entero de la carta como un string si 1 < valor < 11. En otro caso,
-     * "A" si valor == 1, "J" si valor == 11, "Q" si valor == 12, "K" si valor == 13.
-     */
-
-    private String valorToString(){
-        switch(valor){
-            case 1: return "A";
-            case 11: return "J";
-            case 12: return "Q";
-            case 13: return "K";
-            default: return Integer.toString(valor);
-        }
     }
 
     /**
@@ -66,7 +49,7 @@ public class Carta {
      */
 
     public boolean equals (Carta carta){
-        return (this.valor == carta.valor && this.palo.equals(carta.palo));
+        return (this.valor == carta.valor && this.palo == carta.palo);
     }
 
     /**
@@ -97,7 +80,7 @@ public class Carta {
         return bocaAbajo;
     }
 
-    public int getValor(){
+    public ValorCarta getValor(){
         return valor;
     }
 

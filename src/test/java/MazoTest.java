@@ -14,7 +14,7 @@ public class MazoTest extends TestCase {
         Mazo mazoSinMezclar = new Mazo();
         Mazo mazoMezclado = new Mazo();
         mazoMezclado.mezclar();
-        assertNotSame(mazoMezclado, mazoSinMezclar);
+        assertNotSame(mazoSinMezclar, mazoMezclado);
     }
 
 }
