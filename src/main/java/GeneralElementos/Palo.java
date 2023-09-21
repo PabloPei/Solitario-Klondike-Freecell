@@ -1,5 +1,7 @@
+package GeneralElementos;
+
 /**
- * La enumeración Palo representa los diferentes palos de una baraja de cartas estándar,
+ * La enumeración General.Palo representa los diferentes palos de una baraja de cartas estándar,
  * que incluyen DIAMANTE, CORAZON, TREBOL y PICA.
  */
 public enum Palo {
@@ -14,14 +16,7 @@ public enum Palo {
      * "TREBOL" o "PICA" según el valor de la enumeración.
      */
     public String toString(){
-        String palo;
-        switch (this.ordinal()){
-            case 0 -> palo = "DIAMANTE";
-            case 1 -> palo = "CORAZON";
-            case 2 -> palo = "TREBOL";
-            default -> palo = "PICA";
-        }
-        return palo;
+        return this.name();
     }
 
     public boolean equals(Palo palo){

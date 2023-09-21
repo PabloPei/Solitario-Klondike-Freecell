@@ -1,3 +1,4 @@
+import GeneralElementos.Mazo;
 import junit.framework.TestCase;
 import org.junit.Test;
 

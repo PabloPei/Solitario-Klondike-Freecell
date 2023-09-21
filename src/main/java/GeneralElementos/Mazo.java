@@ -1,7 +1,11 @@
+package GeneralElementos;
+
+import GeneralSolitario.PilaDeCartas;
+
 import java.util.Collections;
 
 /**
- * La clase Mazo representa un mazo de cartas que hereda de PilaDeCartas.
+ * La clase General.Mazo representa un mazo de cartas que hereda de GeneralSolitario.PilaDeCartas.
  * Este mazo se inicializa con 52 cartas, cada una con un valor numérico en el rango de 1 a 13
  * y uno de los cuatro palos posibles: DIAMANTE, CORAZON, TREBOL o PICA.
  * Todas las cartas se inicializan como ocultas (boca abajo). El mazo se almacena en una estructura

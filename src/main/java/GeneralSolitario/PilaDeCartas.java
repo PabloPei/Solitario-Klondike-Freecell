@@ -1,3 +1,8 @@
+package GeneralSolitario;
+
+import GeneralElementos.Carta;
+import GeneralElementos.ValorCarta;
+
 import java.util.Stack;
 
 /**
@@ -66,5 +71,20 @@ public class PilaDeCartas extends Stack<Carta> {
      */
     public boolean estaVacio(){
         return this.pilaDeCartas.empty();
+    }
+
+    public boolean agregarCarta(Carta carta){
+        if (estaVacio()){
+            if (carta.getValor() == ValorCarta.REY){
+                pushCarta(carta);
+                return true;
+            } else return false;
+        } else {
+            Carta tope = peekCarta();
+            if (carta.valorValidoParaEntrarAPila(tope) && (carta.getColor() != tope.getColor())){
+                pushCarta(carta);
+                return true;
+            } else return false;
+        }
     }
 }

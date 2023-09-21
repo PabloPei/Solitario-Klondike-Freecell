@@ -1,5 +1,7 @@
+package GeneralElementos;
+
 /**
- * La clase Carta representa una carta de una baraja de cartas estándar (Francesa,
+ * La clase General.Carta representa una carta de una baraja de cartas estándar (Francesa,
  * Española, Alemana, etc). Cada carta tiene un valor desde el As (valor=1), hasta
  * el rey (valor=13) y un palo que toma los valores de Corazones, Diamantes,
  * Tréboles o Picas.
@@ -86,6 +88,10 @@ public class Carta {
 
     public Palo getPalo(){
         return palo;
+    }
+
+    public boolean valorValidoParaEntrarAPila(Carta carta){
+        return (this.valor.ordinal() + 1 == carta.valor.ordinal());
     }
 
 }

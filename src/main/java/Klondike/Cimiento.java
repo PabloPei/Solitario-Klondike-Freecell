@@ -1,6 +1,12 @@
+package Klondike;
+
+import GeneralElementos.Carta;
+import GeneralElementos.ValorCarta;
+import GeneralSolitario.PilaDeCartas;
+
 /**
- * La clase Cimiento representa una pila especializada de cartas utilizada en el solitario.
- * Esta clase hereda de la clase PilaDeCartas y agrega funcionalidad específica para manejar
+ * La clase Klondike.Cimiento representa una pila especializada de cartas utilizada en el solitario.
+ * Esta clase hereda de la clase GeneralSolitario.PilaDeCartas y agrega funcionalidad específica para manejar
  * las reglas del cimiento en el juego.
  */
 
@@ -19,18 +25,22 @@ public class Cimiento extends PilaDeCartas {
      */
     public boolean agregarCarta(Carta carta) {
         if (estaVacio()) {
-            if (carta.getValor().ordinal() == 1) {
+            if (carta.getValor() == ValorCarta.AS) {
                 pushCarta(carta);
                 return true;
             }
             return false;
         } else {
             Carta tope = peekCarta();
-            if (((tope.getValor().ordinal() + 1) == carta.getValor().ordinal()) && (tope.getPalo() == carta.getPalo())) {
+            if (tope.valorValidoParaEntrarAPila(carta) && (tope.getPalo() == carta.getPalo())) {
                 pushCarta(carta);
                 return true;
             }
             return false;
         }
+    }
+
+    public boolean cimientoCompleto(){
+        return this.size() == 13;
     }
 }

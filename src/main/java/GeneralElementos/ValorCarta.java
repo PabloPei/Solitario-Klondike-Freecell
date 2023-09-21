@@ -1,3 +1,5 @@
+package GeneralElementos;
+
 public enum ValorCarta {
     JOKER, AS, DOS, TRES, CUATRO, CINCO, SEIS, SIETE, OCHO,
     NUEVE, DIEZ, SOTA, REINA, REY;
