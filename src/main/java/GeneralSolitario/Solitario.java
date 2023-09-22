@@ -15,7 +15,7 @@ public abstract class Solitario {
     }
 
     public abstract void jugar();
-    public abstract boolean ganoJuego();
-    public abstract boolean perdioJuego();
+//    public abstract boolean ganoJuego();
+//    public abstract boolean perdioJuego();
 
 }

@@ -2,11 +2,13 @@ package Klondike;
 
 import GeneralElementos.Carta;
 import GeneralElementos.Mazo;
+import GeneralElementos.Palo;
 import GeneralSolitario.EstadoJuego;
 import GeneralSolitario.PilaDeCartas;
 import GeneralSolitario.Tablero;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class TableroKlondike extends Tablero {
     private ArrayList<Cimiento> cimientos = new ArrayList<>();
@@ -24,8 +26,8 @@ public class TableroKlondike extends Tablero {
         for(int i = 0; i < 7; i++){
             pilas.add(new PilaDeCartas());
         }
-        for (int i = 0; i < 4; i++){
-            cimientos.add(new Cimiento());
+        for (Palo p : Palo.values()){
+            cimientos.add(new Cimiento(p));
         }
         int cartasPorPila = 1;
         for(PilaDeCartas pila : pilas){
@@ -41,6 +43,41 @@ public class TableroKlondike extends Tablero {
         }
     }
 
+    public TableroKlondike(EstadoJuego estado){
+        super(7);
+        if (estado == EstadoJuego.GANADO){
+            for(Palo p : Palo.values()){
+                cimientos.add(new Cimiento(p, 13));
+            }
+        }
+    }
+
+    public PilaDeCartas getDescarte(){
+        return descarte;
+    }
+    public boolean usarCartaDescarte(PilaDeCartas pilaDestino){
+        if (descarte.isEmpty()) return false;
+        else {
+            return moverCarta(descarte, pilaDestino);
+        }
+    }
+
+    public PilaDeCartas getPilonSinUsar(){
+        return cartasSinJugar;
+    }
+    public boolean elegirCartaSinJugar(){
+        if (cartasSinJugar.isEmpty()){
+            int cartasEnDescarte = descarte.size();
+            for (int i = 0; i < cartasEnDescarte; i++){
+                cartasSinJugar.push(descarte.pop());
+            }
+            return false;
+        } else{
+            descarte.push(cartasSinJugar.pop());
+            descarte.peek().voltear();
+            return true;
+        }
+    }
     public boolean moverCarta(PilaDeCartas pilaActual, PilaDeCartas nuevaPila){
         return (nuevaPila.agregarCarta(pilaActual.pop()));
     }
@@ -77,6 +114,7 @@ public class TableroKlondike extends Tablero {
         int cimientoActual = 0;
         while(cimientosCompletos && cimientoActual < 4){
             cimientosCompletos = cimientos.get(cimientoActual).cimientoCompleto();
+            cimientoActual++;
         }
         return cimientosCompletos;
     }
@@ -86,4 +124,17 @@ public class TableroKlondike extends Tablero {
         return condicionDerrota;
     }
 
+    /*
+        Devuelve true si se pudo realizar la jugada, en otro caso devuelve false
+     */
+    public boolean realizarJugada(int opcionDeseada){
+        boolean jugadaValida = false;
+        switch(opcionDeseada){
+            case 0 -> jugadaValida = true;
+            case 1 -> jugadaValida = true;
+            case 2 -> jugadaValida = true;
+            case 3 -> jugadaValida = elegirCartaSinJugar();
+        }
+        return jugadaValida;
+    }
 }

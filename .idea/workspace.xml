@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Cree enum ValorCarta y las clases Solitario y Tablero">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Klondike/CimientoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Klondike/TableroKlondikeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralElementos/Mazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralElementos/Mazo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralSolitario/PilaDeCartas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralSolitario/PilaDeCartas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GeneralSolitario/Solitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralSolitario/Solitario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GeneralSolitario/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralSolitario/Tablero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Klondike/Cimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Klondike/Cimiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Klondike/SolitarioKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Klondike/SolitarioKlondike.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Klondike/TableroKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Klondike/TableroKlondike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MazoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MazoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CartaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CartaTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
         <option value="Enum" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -85,10 +86,11 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="Klondike" />
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Prueba">
+  <component name="RunManager" selected="JUnit.All in Solitario-Algo3">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Solitario-Algo3" />
@@ -132,8 +134,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Prueba" />
         <item itemvalue="JUnit.All in Solitario-Algo3" />
+        <item itemvalue="Application.Prueba" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MazoTest.testMezclar" />
         <item itemvalue="JUnit.MazoTest" />

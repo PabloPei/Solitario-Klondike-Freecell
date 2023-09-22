@@ -4,6 +4,7 @@ public class Main {
     public static final java.io.PrintStream pantalla = new java.io.PrintStream(System.out);
 
     public static void main(String[] args) {
+
     }
 
 }

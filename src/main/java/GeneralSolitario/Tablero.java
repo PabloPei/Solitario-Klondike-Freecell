@@ -11,5 +11,6 @@ public abstract class Tablero {
         this.pilas = new ArrayList<>();
     }
 
+    public abstract boolean realizarJugada(int jugadaDeseada);
     public abstract EstadoJuego chequearEstadoJuego();
 }
