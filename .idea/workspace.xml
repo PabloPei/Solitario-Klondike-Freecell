@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Cree enum ValorCarta y las clases Solitario y Tablero">
-      <change afterPath="$PROJECT_DIR$/src/main/java/EstadoJuego.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SolitarioKlondike.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/TableroKlondike.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Carta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Carta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Cimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Cimiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Palo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Palo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PilaDeCartas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PilaDeCartas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Solitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Solitario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralElementos/Mazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralElementos/Mazo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralSolitario/PilaDeCartas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralSolitario/PilaDeCartas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralSolitario/Solitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralSolitario/Solitario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralSolitario/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralSolitario/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Klondike/Cimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Klondike/Cimiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Klondike/TableroKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Klondike/TableroKlondike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MazoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MazoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -24,16 +24,16 @@ public class Cimiento extends PilaDeCartas {
      * @return true si la carta se puede agregar al cimiento, false en caso contrario.
      */
     public boolean agregarCarta(Carta carta) {
-        if (estaVacio()) {
+        if (isEmpty()) {
             if (carta.getValor() == ValorCarta.AS) {
-                pushCarta(carta);
+                push(carta);
                 return true;
             }
             return false;
         } else {
-            Carta tope = peekCarta();
+            Carta tope = peek();
             if (tope.valorValidoParaEntrarAPila(carta) && (tope.getPalo() == carta.getPalo())) {
-                pushCarta(carta);
+                push(carta);
                 return true;
             }
             return false;

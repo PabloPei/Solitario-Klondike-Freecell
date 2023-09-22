@@ -6,7 +6,7 @@ public class MazoTest extends TestCase {
     @Test
     public void testCantidadCartas(){
         int cantidadEsperada = 52;
-        int cantidadActual = new Mazo().tamanio();
+        int cantidadActual = new Mazo().size();
         assertEquals(cantidadActual, cantidadEsperada);
     }
 

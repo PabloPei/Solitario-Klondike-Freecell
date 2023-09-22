@@ -30,19 +30,19 @@ public class TableroKlondike extends Tablero {
         int cartasPorPila = 1;
         for(PilaDeCartas pila : pilas){
             while (pila.size() < cartasPorPila){
-                pila.pushCarta(mazo.popCarta());
+                pila.push(mazo.pop());
             }
-            pila.peekCarta().voltear();
+            pila.peek().voltear();
             cartasPorPila++;
         }
-        int tamanioMazo = mazo.tamanio();
+        int tamanioMazo = mazo.size();
         for (int i = 0; i < tamanioMazo; i++){
-            cartasSinJugar.pushCarta(mazo.popCarta());
+            cartasSinJugar.push(mazo.pop());
         }
     }
 
     public boolean moverCarta(PilaDeCartas pilaActual, PilaDeCartas nuevaPila){
-        return (nuevaPila.agregarCarta(pilaActual.popCarta()));
+        return (nuevaPila.agregarCarta(pilaActual.pop()));
     }
 
     public boolean moverConjuntoCartas(PilaDeCartas pilaActual, PilaDeCartas nuevaPila, Carta primeraCartaAMover){
@@ -57,10 +57,10 @@ public class TableroKlondike extends Tablero {
             }
             if (nuevaPila.agregarCarta(primeraCartaAMover)){
                 for(int i = iterator+1; i < pilaActual.size(); i++){
-                    nuevaPila.pushCarta(pilaActual.get(iterator));
+                    nuevaPila.push(pilaActual.get(iterator));
                 }
                 for (int j = pilaActual.size(); j >= iterator; j--){
-                    pilaActual.popCarta();
+                    pilaActual.pop();
                 }
                 return true;
             } else return false;

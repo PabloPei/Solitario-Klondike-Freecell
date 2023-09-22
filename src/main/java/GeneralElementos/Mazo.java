@@ -32,7 +32,7 @@ public class Mazo extends PilaDeCartas {
         for( Palo palo : Palo.values() ){
             for ( int i = 1 ; i < 14 ; i++ ){
                 Carta carta = new Carta(i, palo, true);
-                pushCarta(carta);
+                push(carta);
             }
         }
 
@@ -48,7 +48,7 @@ public class Mazo extends PilaDeCartas {
     public boolean equals(Mazo mazo){
         boolean iguales = true;
         int contador = 0;
-        while (iguales && (contador < this.tamanio())){
+        while (iguales && (contador < this.size())){
             if (!this.pilaDeCartas.get(contador).equals(mazo.pilaDeCartas.get(contador))) iguales = false;
             else contador++;
         }

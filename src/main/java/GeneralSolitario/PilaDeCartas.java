@@ -25,30 +25,6 @@ public class PilaDeCartas extends Stack<Carta> {
     }
 
     /**
-     * Extrae y devuelve la carta en la parte superior de la pila.
-     * @return La carta en la parte superior de la pila.
-     */
-    public Carta popCarta(){
-        return this.pilaDeCartas.pop();
-    }
-
-    /**
-     * Agrega una carta a la parte superior de la pila.
-     * @param carta La carta que se va a agregar a la pila.
-     */
-    public void pushCarta(Carta carta){
-        this.pilaDeCartas.push(carta);
-    }
-
-    /**
-     * Obtiene la carta en la parte superior de la pila sin eliminarla.
-     * @return La carta en la parte superior de la pila.
-     */
-    public Carta peekCarta(){
-        return this.pilaDeCartas.peek();
-    }
-
-    /**
      * Voltea todas las cartas en la pila para que queden boca arriba.
      */
     public void voltearTodas (){
@@ -58,31 +34,20 @@ public class PilaDeCartas extends Stack<Carta> {
     }
 
     /**
-     * Obtiene el tamaño actual de la pila de cartas.
-     * @return El tamaño de la pila.
+     * Agregar una carta a la pila según las reglas del solitario.
+     * @param carta La carta que se va a agregar a la pila.
+     * @return true si la carta se puede agregar a la pila, false en caso contrario.
      */
-    public int tamanio(){
-        return this.pilaDeCartas.size();
-    }
-
-    /**
-     * Verifica si la pila de cartas está vacía.
-     * @return true si la pila está vacía, false de lo contrario.
-     */
-    public boolean estaVacio(){
-        return this.pilaDeCartas.empty();
-    }
-
     public boolean agregarCarta(Carta carta){
-        if (estaVacio()){
+        if (isEmpty()){
             if (carta.getValor() == ValorCarta.REY){
-                pushCarta(carta);
+                push(carta);
                 return true;
             } else return false;
         } else {
-            Carta tope = peekCarta();
+            Carta tope = peek();
             if (carta.valorValidoParaEntrarAPila(tope) && (carta.getColor() != tope.getColor())){
-                pushCarta(carta);
+                push(carta);
                 return true;
             } else return false;
         }
