@@ -19,9 +19,7 @@ public class Cimiento extends PilaDeCartas {
     //////////////////// Métodos ////////////////////
 
     /**
-     * Agregar una carta al cimiento según las reglas del solitario.
-     * @param carta La carta que se va a agregar al cimiento.
-     * @return true si la carta se puede agregar al cimiento, false en caso contrario.
+     * ??
      */
 
     public Cimiento(Palo palo){
@@ -29,12 +27,15 @@ public class Cimiento extends PilaDeCartas {
         this.paloValido = palo;
     }
 
-    public Cimiento(Palo palo, int valor){
+    public Cimiento(Palo palo, ValorCarta valor){
         super();
         this.paloValido = palo;
-        for(int i = 1; i <= valor; i++){
+        ValorCarta i;
+        for (i = ValorCarta.AS;  i.getValor() < valor.getValor() ; i = i.siguiente()) {
             push(new Carta(i, palo, true));
         }
+
+
     }
     public boolean agregarCarta(Carta carta) {
         if (carta.getPalo() != this.paloValido  || cimientoCompleto()) return false;

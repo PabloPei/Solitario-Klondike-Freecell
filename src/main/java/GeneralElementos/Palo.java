@@ -10,16 +10,15 @@ public enum Palo {
     TREBOL,
     PICA;
 
+
     /**
      * Devuelve una representación legible en forma de cadena (String) del palo.
      * @return Un String que representa el palo, que puede ser "DIAMANTE", "CORAZON",
      * "TREBOL" o "PICA" según el valor de la enumeración.
      */
+    @Override
     public String toString(){
         return this.name();
     }
 
-    public boolean equals(Palo palo){
-        return this.ordinal() == palo.ordinal();
-    }
 }

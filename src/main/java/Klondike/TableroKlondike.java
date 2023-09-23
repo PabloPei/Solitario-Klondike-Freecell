@@ -3,6 +3,7 @@ package Klondike;
 import GeneralElementos.Carta;
 import GeneralElementos.Mazo;
 import GeneralElementos.Palo;
+import GeneralElementos.ValorCarta;
 import GeneralSolitario.EstadoJuego;
 import GeneralSolitario.PilaDeCartas;
 import GeneralSolitario.Tablero;
@@ -19,7 +20,7 @@ public class TableroKlondike extends Tablero {
      * Crea un GeneralSolitario.Tablero para un juego de Klondike.
      * Crea los 4 cimientos correspondientes
      * Crea las 7 pilas necesarias para el juego, con la cantidad de cartas en orden cresciente de
-        izquierda (el indice 0 de pilas) a derecha (el indice 6) y voltea la carta superior de cada pila
+     izquierda (el indice 0 de pilas) a derecha (el indice 6) y voltea la carta superior de cada pila
      */
     public TableroKlondike(Mazo mazo){
         super(7);
@@ -47,7 +48,7 @@ public class TableroKlondike extends Tablero {
         super(7);
         if (estado == EstadoJuego.GANADO){
             for(Palo p : Palo.values()){
-                cimientos.add(new Cimiento(p, 13));
+                cimientos.add(new Cimiento(p, ValorCarta.REY));
             }
         }
     }

@@ -5,16 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Cree enum ValorCarta y las clases Solitario y Tablero">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Klondike/CimientoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Klondike/TableroKlondikeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ColorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PaloTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ValorCartaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralElementos/Carta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralElementos/Carta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralElementos/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralElementos/Color.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralElementos/Mazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralElementos/Mazo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralElementos/Palo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralElementos/Palo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralElementos/ValorCarta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralElementos/ValorCarta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralSolitario/EstadoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralSolitario/EstadoJuego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralSolitario/PilaDeCartas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralSolitario/PilaDeCartas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GeneralSolitario/Solitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralSolitario/Solitario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GeneralSolitario/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralSolitario/Tablero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Klondike/Cimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Klondike/Cimiento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Klondike/SolitarioKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Klondike/SolitarioKlondike.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Klondike/TableroKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Klondike/TableroKlondike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CartaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CartaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Klondike/CimientoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Klondike/CimientoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MazoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MazoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +34,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -61,26 +71,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Facultad/Algoritmos3/tp1/TrabajoPractico-Algo3&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/Facultad/Algoritmos3/tp1/TrabajoPractico-Algo3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -91,13 +101,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.All in Solitario-Algo3">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Solitario-Algo3" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Prueba" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Prueba" />
       <module name="Solitario-Algo3" />
@@ -113,21 +116,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MazoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CartaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MazoTest" />
+      <option name="MAIN_CLASS_NAME" value="CartaTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MazoTest.testMezclar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ColorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MazoTest" />
-      <option name="METHOD_NAME" value="testMezclar" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="ColorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValorCartaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Solitario-Algo3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ValorCartaTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -135,10 +146,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in Solitario-Algo3" />
+        <item itemvalue="JUnit.ColorTest" />
+        <item itemvalue="JUnit.CartaTest" />
+        <item itemvalue="JUnit.ValorCartaTest" />
         <item itemvalue="Application.Prueba" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.MazoTest.testMezclar" />
-        <item itemvalue="JUnit.MazoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -157,6 +168,7 @@
       <workItem from="1695141140014" duration="2173000" />
       <workItem from="1695146754471" duration="174000" />
       <workItem from="1695306996411" duration="3108000" />
+      <workItem from="1695478492835" duration="6678000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />

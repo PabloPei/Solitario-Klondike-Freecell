@@ -31,15 +31,12 @@ public class Carta {
      * Inicializa la carta con un palo y valor dados y si la carta está oculta para el usuario.
      *
      * @param palo El palo de la carta (Corazon, Diamante, Trebol, Pica).
-     * @param valor El valor de la carta, entre 1 y 13 inclusive.
+     * @param valor El valor de la carta
      * @param bocaAbajo Si la carta estará orientada al usuario o no.
      */
-    public Carta(int valor, Palo palo, boolean bocaAbajo){
+    public Carta(ValorCarta valor, Palo palo, boolean bocaAbajo){
 
-        if(valor < 1 || valor > 13){
-            throw new IllegalArgumentException("Valor fuera de rango.");
-        }
-        this.valor = ValorCarta.getValorCorrespondiente(valor);
+        this.valor = valor;
         this.palo = palo;
         this.bocaAbajo = bocaAbajo;
 
@@ -47,12 +44,31 @@ public class Carta {
 
     /**
      * Compara el valor y palo de dos cartas.
-     * @return true palo y valor son iguales, false en otro caso.
+     * @param obj El objeto a comparar.
+     * @return true si el objeto es una instancia de Carta y tiene el mismo valor y palo, false en otro caso.
      */
-
-    public boolean equals (Carta carta){
-        return (this.valor == carta.valor && this.palo == carta.palo);
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Carta carta = (Carta) obj;
+        return valor == carta.valor && palo == carta.palo;
     }
+
+    /**
+     * Convierte una instancia de la clase Carta en una representación en forma de cadena
+     * que combina su valor y su palo en un formato legible.
+     * @return Una cadena que representa la carta en el formato "Valor - Palo".
+     */
+    @Override
+    public String toString() {
+        return valor.toString() + " - " + palo.toString();
+    }
+
 
     /**
      * Voltea la orientación de la carta. Si la carta estaba boca abajo antes de llamar a este método,
@@ -70,6 +86,11 @@ public class Carta {
 
     public Color getColor() {
         return (this.palo.ordinal() == Palo.DIAMANTE.ordinal() || this.palo.ordinal() == Palo.CORAZON.ordinal() ? Color.ROJO : Color.NEGRO);
+    }
+
+    // supongo que esto hay que sacarlo de aca
+    public boolean valorValidoParaEntrarAPila(Carta carta){
+        return (this.valor.getValor() + 1 == carta.valor.getValor());
     }
 
     //// Getters & Setters ////
@@ -90,9 +111,6 @@ public class Carta {
         return palo;
     }
 
-    public boolean valorValidoParaEntrarAPila(Carta carta){
-        return (this.valor.ordinal() + 1 == carta.valor.ordinal());
-    }
 
 }
 

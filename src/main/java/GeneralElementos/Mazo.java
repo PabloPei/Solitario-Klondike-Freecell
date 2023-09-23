@@ -30,8 +30,8 @@ public class Mazo extends PilaDeCartas {
         super();
 
         for( Palo palo : Palo.values() ){
-            for ( int i = 1 ; i < 14 ; i++ ){
-                Carta carta = new Carta(i, palo, true);
+            for ( ValorCarta valor: ValorCarta.values() ){
+                Carta carta = new Carta(valor, palo, true);
                 push(carta);
             }
         }
@@ -56,4 +56,3 @@ public class Mazo extends PilaDeCartas {
     }
 
 }
-
