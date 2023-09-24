@@ -85,7 +85,7 @@ public class Carta {
      * @param carta2 La segunda carta a comparar.
      * @return true si la segunda carta pasada es la siguiente de la primera en orden secuencial, false en caso contrario.
      */
-    public static boolean esSiguienteValor(Carta carta1, Carta carta2) {
+    public static boolean esValorSiguiente(Carta carta1, Carta carta2) {
         return (carta1.getValor().siguienteValor() == carta2.getValor());
     }
 
@@ -97,6 +97,16 @@ public class Carta {
      */
     public static boolean esMismoPalo(Carta carta1, Carta carta2) {
         return (carta1.getPalo() == carta2.getPalo());
+    }
+
+    /**
+     * Comprueba si dos cartas son de color alternado
+     * @param carta1 La primera carta a comparar.
+     * @param carta2 La segunda carta a comparar.
+     * @return true si la primera carta tiene el color alternado respecto a la segunda, false en otro caso.
+     */
+    public static boolean esColorAlternado(Carta carta1, Carta carta2) {
+        return (carta1.getPalo().getColor() != carta2.getPalo().getColor());
     }
 
     //// Getters & Setters ////

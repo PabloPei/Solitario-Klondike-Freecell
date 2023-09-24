@@ -11,9 +11,7 @@ import generalelementos.Dificultad;
 public interface Solitario {
 
     /** #seguir agregando metodos
-     * Inicia un nuevo juego de Solitario.
      */
-    void iniciarJuego(Dificultad dificultad);
 
     /**
      * Funcion principal para jugar al solitario
@@ -41,5 +39,11 @@ public interface Solitario {
      * @return La puntuación del juego.
      */
     int obtenerPuntuación();
+
+    /**
+     * Setea la dificultad del solitario
+     * @param dificultad la dificultad del solitario (facil,medio,dificil)
+     */
+    void setDificultad(Dificultad dificultad);
 
 }

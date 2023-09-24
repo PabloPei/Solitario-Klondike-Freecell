@@ -3,7 +3,6 @@ package klondike;
 import generalelementos.Dificultad;
 import generalelementos.EstadoJuego;
 import generalsolitario.Solitario;
-import generalsolitario.Tablero;
 
 public class SolitarioKlondike implements Solitario {
 
@@ -11,27 +10,19 @@ public class SolitarioKlondike implements Solitario {
     // protected Reglas reglas;
     private Dificultad dificultad;
     private EstadoJuego estadoJuego;
-    private Tablero tablero;
+    private TableroKlondike tablero;
 
     /**
      * doc
      */
     public SolitarioKlondike(){
 
-         this.tablero = new TableroKlondike(dificultad);
+         this.tablero = new TableroKlondike();
+         this.setDificultad(dificultad);
          this.estadoJuego = EstadoJuego.INICIADO;
 
     }
 
-    /**
-     * doc
-     */
-    @Override
-    public void iniciarJuego(Dificultad dificultad){
-
-            this.setDificultad(dificultad);
-            tablero.iniciarPilas();
-    }
 
     /**
      * doc
@@ -68,9 +59,15 @@ public class SolitarioKlondike implements Solitario {
     }
 
 
-    /////////// setters //////////
+    /**
+     * Setea la dificultad del solitario
+     * @param dificultad dificultad del solitario
+     */
     public void setDificultad(Dificultad dificultad) {
+
         this.dificultad=dificultad;
+        this.tablero.getDescarte().setDificultad(dificultad);
+
     }
 
 }

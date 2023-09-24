@@ -3,7 +3,6 @@ package klondike;
 import generalelementos.Carta;
 import generalelementos.Palo;
 import generalelementos.ValorCarta;
-import generalsolitario.Cimiento;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

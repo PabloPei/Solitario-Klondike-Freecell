@@ -1,10 +1,23 @@
 package generalsolitario;
 
+import generalelementos.Carta;
 import generalelementos.PilaDeCartas;
 
-/**
- * implementa la clase pila de un solitario que hereda de la clase pila de cartas agregando funcionalidades particulares
- * en base a las reglas del solitario.
- */
-public class Pila extends PilaDeCartas {
+
+public interface Pila {
+
+    /**
+     * Agrega una carta a la pila si el movimiento es válido.
+     * @param carta La carta que se intenta agregar.
+     * @return true si se pudo agregar la carta, false si no es un movimiento válido.
+     */
+    boolean agregarCarta(Carta carta);
+
+    /**
+     * Retira cartas de una pila
+     *
+     * @return La carta retirada o null si la pila está vacía.
+     */
+    PilaDeCartas retirarCartas(int cantidadCartas);
+
 }
