@@ -1,8 +1,3 @@
-import GeneralSolitario.EstadoJuego;
-import junit.framework.TestCase;
-import org.junit.Test;
-
-import GeneralElementos.Mazo;
 import junit.framework.TestCase;
 import org.junit.Test;
 

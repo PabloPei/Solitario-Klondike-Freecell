@@ -1,4 +1,4 @@
-package GeneralElementos;
+package generalelementos;
 
 /**
  * Esta enumeración representa los valores de las cartas en un juego de cartas de baraja estandar (española, francesa, etc).
@@ -33,6 +33,7 @@ public enum ValorCarta {
      * Devuelve una representación en forma de cadena del nombre de la carta.
      * @return El nombre de la carta.
      */
+    @Override
     public String toString(){
         return this.name();
     }
@@ -41,7 +42,7 @@ public enum ValorCarta {
      * Devuelve el siguiente valor de una carta. Si el valor actual es `REY`, devuelve `null`.
      * @return Siguiente valor de una carta o `null` si es `REY`.
      */
-    public ValorCarta siguiente(){
+    public ValorCarta siguienteValor(){
         if (this == REY) {
             return null;
         }

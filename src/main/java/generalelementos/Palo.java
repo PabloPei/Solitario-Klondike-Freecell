@@ -1,7 +1,7 @@
-package GeneralElementos;
+package generalelementos;
 
 /**
- * La enumeración General.Palo representa los diferentes palos de una baraja de cartas estándar,
+ * La enumeración Palo representa los diferentes palos de una baraja de cartas estándar,
  * que incluyen DIAMANTE, CORAZON, TREBOL y PICA.
  */
 public enum Palo {
@@ -20,5 +20,11 @@ public enum Palo {
     public String toString(){
         return this.name();
     }
+
+    /**
+     * Devuelve el valor del color del palo.
+     * @return Color del palo, puede ser ROJO o NEGRO.
+     */
+    public Color getColor() { return (this.equals(Palo.DIAMANTE) || this.equals(Palo.CORAZON) ? Color.ROJO : Color.NEGRO);}
 
 }

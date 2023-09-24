@@ -1,7 +1,7 @@
-import GeneralElementos.Carta;
-import GeneralElementos.Palo;
-import GeneralElementos.ValorCarta;
-import GeneralElementos.Color;
+import generalelementos.Carta;
+import generalelementos.Palo;
+import generalelementos.ValorCarta;
+import generalelementos.Color;
 import junit.framework.TestCase;
 import org.junit.Test;
 

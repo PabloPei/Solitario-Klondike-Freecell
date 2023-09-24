@@ -1,8 +1,6 @@
-package Klondike;
+package klondike;
 
-import GeneralElementos.Mazo;
-import GeneralSolitario.EstadoJuego;
-import GeneralSolitario.Tablero;
+import generalelementos.EstadoJuego;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

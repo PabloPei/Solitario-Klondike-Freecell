@@ -1,4 +1,4 @@
-import GeneralElementos.Palo;
+import generalelementos.Palo;
 import static org.junit.Assert.*;
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package GeneralElementos;
+package generalelementos;
 
 public enum Color {
     ROJO,
