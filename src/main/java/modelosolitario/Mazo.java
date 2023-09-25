@@ -1,12 +1,12 @@
-package generalsolitario;
+package modelosolitario;
 
-import generalelementos.PilaDeCartas;
-import generalelementos.Palo;
-import generalelementos.ValorCarta;
-import generalelementos.Carta;
+import modeloelementos.PilaDeCartas;
+import modeloelementos.Palo;
+import modeloelementos.ValorCarta;
+import modeloelementos.Carta;
 
 /**
- * La clase Mazo representa un mazo de cartas de tipo Francesa Inglesa, Alemana, etc que hereda de PilaDeCartas.
+ * La clase Mazo representa un mazo de cartas de tipo Francesa, Inglesa, Alemana, etc que hereda de PilaDeCartas.
  * Este mazo se inicializa con 52 cartas, cada una con un valor numérico en el rango de 1 a 13
  * y uno de los cuatro palos posibles: DIAMANTE, CORAZON, TREBOL o PICA.
  * Todas las cartas se inicializan como ocultas (boca abajo). El mazo se almacena en una estructura

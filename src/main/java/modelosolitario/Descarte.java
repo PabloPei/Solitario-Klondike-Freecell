@@ -1,18 +1,16 @@
-package klondike;
+package modelosolitario;
 
-import generalelementos.Carta;
-import generalelementos.PilaDeCartas;
-import generalelementos.Dificultad;
-import generalsolitario.Mazo;
-import generalsolitario.Descarte;
+import modeloelementos.Carta;
+import modeloelementos.PilaDeCartas;
+import modeloelementos.Dificultad;
 
 /**
- * La clase Descarte representa la pila de cartas utilizada en el juego de Solitario Klondike
+ * La clase Descarte representa la pila de cartas utilizada en el juego de Solitario
  * para almacenar temporalmente cartas que no se pueden jugar de inmediato.
  * Esta clase hereda de la clase PilaDeCartas y agrega funcionalidad específica para manejar
  * las reglas de cantidad de cartas en el descarte según la dificultad del juego.
  */
-public class DescarteKlondike extends PilaDeCartas implements Descarte{
+public class Descarte extends PilaDeCartas{
 
     private int cantidadCartas;
 
@@ -35,7 +33,6 @@ public class DescarteKlondike extends PilaDeCartas implements Descarte{
      * Saca cartas del mazo y las coloca en el descarte.
      * @param mazo El mazo del que se sacarán las cartas para colocar en el descarte.
      */
-    @Override
     public void sacarCartas(Mazo mazo) {
 
         this.empty();
@@ -53,7 +50,6 @@ public class DescarteKlondike extends PilaDeCartas implements Descarte{
      * Si la pila está vacía, devuelve una excepcion.
      * @return La carta obtenida de la pila.
      */
-    @Override
     public Carta retirarCarta(){
 
         if(isEmpty()){

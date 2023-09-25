@@ -1,8 +1,8 @@
 package klondike;
 
-import generalelementos.Carta;
-import generalelementos.Palo;
-import generalelementos.ValorCarta;
+import modeloelementos.Carta;
+import modeloelementos.Palo;
+import modeloelementos.ValorCarta;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

@@ -1,6 +1,6 @@
 import org.junit.Test;
 import static org.junit.Assert.*;
-import generalelementos.Color;
+import modeloelementos.Color;
 
 
 public class ColorTest {

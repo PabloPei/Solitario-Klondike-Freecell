@@ -1,4 +1,4 @@
-package generalelementos;
+package modeloelementos;
 
 /**
  * Esta enumeración representa los valores de las cartas en un juego de cartas de baraja estandar (española, francesa, etc).

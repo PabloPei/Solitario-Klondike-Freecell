@@ -1,4 +1,4 @@
-package generalelementos;
+package modeloelementos;
 
 public enum EstadoJuego {
     GANADO, INICIADO, PERDIDO, JUGANDO;

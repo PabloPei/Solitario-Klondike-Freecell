@@ -1,4 +1,4 @@
-package generalelementos;
+package modeloelementos;
 
 /**
  * La clase Carta representa una carta de una baraja de cartas estándar (Francesa,

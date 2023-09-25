@@ -1,4 +1,4 @@
-package generalelementos;
+package modeloelementos;
 import java.util.Collections;
 import java.util.Stack;
 

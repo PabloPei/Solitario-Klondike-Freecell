@@ -1,4 +1,4 @@
-package generalelementos;
+package modeloelementos;
 
 /**
  * Representa los niveles de dificultad de un solitario

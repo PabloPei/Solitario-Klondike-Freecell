@@ -1,4 +1,4 @@
-import generalelementos.ValorCarta;
+import modeloelementos.ValorCarta;
 import junit.framework.TestCase;
 import org.junit.Test;
 

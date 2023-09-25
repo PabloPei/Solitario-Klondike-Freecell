@@ -1,87 +1,50 @@
 package klondike;
 
-import generalelementos.Dificultad;
-import generalelementos.Palo;
-import generalsolitario.*;
-import generalsolitario.Mazo;
-import java.util.ArrayList;
+import modelosolitario.*;
 
 
-/**
- * doc
- */
-public class TableroKlondike implements Tablero {
+public class TableroKlondike extends Tablero {
 
-    protected ArrayList<PilaKlondike> pilas;
-    private Mazo mazo;
-    private DescarteKlondike descarte;
-    private ArrayList<Cimiento> cimientos;
+
+    ///////// Atributos ///////////
+    private Descarte descarte;
+
+    ///////// Metodos ///////////
 
     /**
-     * Crea una instancia del tablero de juego Klondike con un mazo, las pilas, los cimientos y la pila de descarte.
-
+     * Inicializa las pilas segun las reglas del solitario klondike
      */
-    public TableroKlondike() {
-
-        this.descarte = new DescarteKlondike();
-        iniciarMazo();
-        iniciarPilas();
-        repartirPilas();
-        iniciarCimientos();
-
+    public TableroKlondike(){
+        super();
+        Descarte descarte=new Descarte();
     }
 
     /**
-     * Inicializa el unico mazo del solitario klondike
-     */
-    @Override
-    public void iniciarMazo() {
-        this.mazo = new Mazo();
-    }
-
-    /**
-     * Inicializa las pilas en el tablero.
+     * Inicializa las pilas segun las reglas del solitario klondike
      */
     @Override
     public void iniciarPilas() {
-        this.pilas = new ArrayList<>();
         for (int i = 0; i < 7; i++) {
-            pilas.add(new PilaKlondike());
+            this.getPilas().add(new Pila());
         }
     }
 
     /**
-     * Inicializa los cimientos en el tablero.
-     */
-    public void iniciarCimientos() {
-        this.cimientos = new ArrayList<>();
-        for (Palo p : Palo.values()) {
-            cimientos.add(new CimientoKlondike());
-        }
-    }
-
-    /**
-     * Reparte las cartas iniciales en las pilas de juego.
+     * Reparte las cartas iniciales en las pilas segun las reglas del solitario klondike.
      */
     @Override
     public void repartirPilas() {
 
         int cartasPorPila = 1;
 
-        for (PilaKlondike pila : pilas) {
+        for (Pila pila : this.getPilas()) {
             while (pila.size() < cartasPorPila) {
-                pila.push(this.mazo.pop());
+                pila.push(this.getMazo().pop());
             }
-
             pila.peek().voltear();
             cartasPorPila++;
         }
 
     }
 
-    //////////// getters /////////////
-
-    public DescarteKlondike getDescarte() {
-        return descarte;
-    }
 }

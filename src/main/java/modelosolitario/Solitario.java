@@ -1,7 +1,7 @@
-package generalsolitario;
+package modelosolitario;
 
 
-import generalelementos.Dificultad;
+import modeloelementos.Dificultad;
 
 /**
  * La interfaz Solitario define un conjunto de métodos que deben ser implementados

@@ -1,4 +1,4 @@
-package generalelementos;
+package modeloelementos;
 
 /**
  * La enumeración Palo representa los diferentes palos de una baraja de cartas estándar,
