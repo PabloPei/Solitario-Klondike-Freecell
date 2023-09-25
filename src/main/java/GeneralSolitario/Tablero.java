@@ -13,4 +13,6 @@ public abstract class Tablero {
 
     public abstract boolean realizarJugada(int jugadaDeseada);
     public abstract EstadoJuego chequearEstadoJuego();
+    public abstract boolean chequearVictoria();
+    public abstract boolean chequearDerrota();
 }

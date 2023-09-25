@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Cree enum ValorCarta y las clases Solitario y Tablero">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ColorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/PaloTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ValorCartaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralElementos/Carta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralElementos/Carta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralElementos/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralElementos/Color.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralElementos/Mazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralElementos/Mazo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralElementos/Palo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralElementos/Palo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralElementos/ValorCarta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralElementos/ValorCarta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralSolitario/EstadoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralSolitario/EstadoJuego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralSolitario/PilaDeCartas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralSolitario/PilaDeCartas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralSolitario/Solitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralSolitario/Solitario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GeneralSolitario/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GeneralSolitario/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Klondike/Cimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Klondike/Cimiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Klondike/SolitarioKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Klondike/SolitarioKlondike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Klondike/TableroKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Klondike/TableroKlondike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CartaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CartaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Klondike/CimientoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Klondike/CimientoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MazoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MazoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,26 +52,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/Facultad/Algoritmos3/tp1/TrabajoPractico-Algo3",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Facultad/Algoritmos3/tp1/TrabajoPractico-Algo3&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />

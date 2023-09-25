@@ -50,6 +50,8 @@ public class TableroKlondike extends Tablero {
             for(Palo p : Palo.values()){
                 cimientos.add(new Cimiento(p, ValorCarta.REY));
             }
+        } else {
+
         }
     }
 
@@ -110,7 +112,7 @@ public class TableroKlondike extends Tablero {
         else return EstadoJuego.JUGANDO;
     }
 
-    private boolean chequearVictoria(){
+    public boolean chequearVictoria(){
         boolean cimientosCompletos = true;
         int cimientoActual = 0;
         while(cimientosCompletos && cimientoActual < 4){
@@ -120,9 +122,57 @@ public class TableroKlondike extends Tablero {
         return cimientosCompletos;
     }
 
-    private boolean chequearDerrota(){
-        boolean condicionDerrota = false;
-        return condicionDerrota;
+    public boolean chequearDerrota(){
+        return (yaNoSePuedenAgregarCartasACimientos() && yaNoSePuedenAgregarCartasAPilas());
+    }
+
+    public boolean yaNoSePuedenAgregarCartasACimientos(){
+        boolean puedeAgregarCarta = true;
+        int cimientoActual = 0;
+        while (puedeAgregarCarta && cimientoActual < 4){
+            int pilaActual = 0;
+            while (puedeAgregarCarta && pilaActual < 7){
+                if (cimientos.get(cimientoActual).agregarCarta(pilas.get(pilaActual).peek())){
+                    pilas.get(pilaActual).push(cimientos.get(cimientoActual).pop());
+                    pilaActual++;
+                } else puedeAgregarCarta = false;
+            }
+            if (puedeAgregarCarta){
+                if(cimientos.get(cimientoActual).agregarCarta(descarte.peek())){
+                    descarte.push(cimientos.get(cimientoActual).pop());
+                    cimientoActual++;
+                }
+            }
+        }
+        return puedeAgregarCarta;
+    }
+
+    public boolean yaNoSePuedenAgregarCartasAPilas(){
+        boolean puedeAgregarCarta = true;
+        int pilaActual = 0;
+        while (puedeAgregarCarta && pilaActual < 7){
+            int pilaBusqueda = 0;
+            while (puedeAgregarCarta && pilaBusqueda < 7){
+                if (pilaBusqueda == pilaActual) pilaBusqueda++;
+                else {
+                    for(Carta c : pilas.get(pilaBusqueda)){
+                        if (pilas.get(pilaActual).agregarCarta(c)){
+                            pilas.get(pilaBusqueda).push(pilas.get(pilaActual).pop());
+                            pilaBusqueda++;
+                        } else {
+                            puedeAgregarCarta = false;
+                            break;
+                        }
+                    }
+                }
+            }
+            if (puedeAgregarCarta){
+                if (pilas.get(pilaActual).agregarCarta(descarte.peek())){
+                    pilas.get(pilaActual).pop();
+                } else puedeAgregarCarta = false;
+            }
+        }
+        return puedeAgregarCarta;
     }
 
     /*
