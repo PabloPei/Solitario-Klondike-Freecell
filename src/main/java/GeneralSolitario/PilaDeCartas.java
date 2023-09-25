@@ -33,6 +33,12 @@ public class PilaDeCartas extends Stack<Carta> {
         }
     }
 
+    private boolean validarCartaParaPila(Carta carta) {
+        Carta tope = this.pilaDeCartas.peek();
+        return  ((carta.getValor().ordinal() + 1 == tope.getValor().ordinal())
+                && (carta.getColor() != tope.getColor()));
+    }
+
     /**
      * Agregar una carta a la pila según las reglas del solitario.
      * @param carta La carta que se va a agregar a la pila.
@@ -45,8 +51,7 @@ public class PilaDeCartas extends Stack<Carta> {
                 return true;
             } else return false;
         } else {
-            Carta tope = peek();
-            if (carta.valorValidoParaEntrarAPila(tope) && (carta.getColor() != tope.getColor())){
+            if (validarCartaParaPila(carta)){
                 push(carta);
                 return true;
             } else return false;

@@ -88,11 +88,6 @@ public class Carta {
         return (this.palo.ordinal() == Palo.DIAMANTE.ordinal() || this.palo.ordinal() == Palo.CORAZON.ordinal() ? Color.ROJO : Color.NEGRO);
     }
 
-    // supongo que esto hay que sacarlo de aca
-    public boolean valorValidoParaEntrarAPila(Carta carta){
-        return (this.valor.getValor() + 1 == carta.valor.getValor());
-    }
-
     //// Getters & Setters ////
 
     public void setBocaAbajo(boolean bocaAbajo){

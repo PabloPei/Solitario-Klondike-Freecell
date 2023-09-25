@@ -5,6 +5,8 @@ import GeneralElementos.Palo;
 import GeneralElementos.ValorCarta;
 import GeneralSolitario.PilaDeCartas;
 
+import java.util.Stack;
+
 /**
  * La clase Klondike.Cimiento representa una pila especializada de cartas utilizada en el solitario.
  * Esta clase hereda de la clase GeneralSolitario.PilaDeCartas y agrega funcionalidad específica para manejar
@@ -37,6 +39,12 @@ public class Cimiento extends PilaDeCartas {
 
 
     }
+
+    private boolean validarCartaParaCimiento(Carta carta) {
+        Carta tope = this.peek();
+        return  ((tope.getValor().ordinal() + 1 == carta.getValor().ordinal())
+                && (carta.getColor() == tope.getColor()));
+    }
     public boolean agregarCarta(Carta carta) {
         if (carta.getPalo() != this.paloValido  || cimientoCompleto()) return false;
         else {
@@ -47,8 +55,7 @@ public class Cimiento extends PilaDeCartas {
                 }
                 return false;
             } else {
-                Carta tope = peek();
-                if (tope.valorValidoParaEntrarAPila(carta) && (tope.getPalo() == carta.getPalo())) {
+                if (validarCartaParaCimiento(carta)) {
                     push(carta);
                     return true;
                 }
