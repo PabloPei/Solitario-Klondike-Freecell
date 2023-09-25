@@ -47,4 +47,10 @@ public class TableroKlondike extends Tablero {
 
     }
 
+
+    //////////// getters /////////////
+
+    public Descarte getDescarte(){ return this.descarte; }
+
+
 }

@@ -58,7 +58,6 @@ public abstract class Tablero {
         return this.mazo;
     }
 
-
     public ArrayList<Cimiento> getCimientos(){
         return this.cimientos;
     }

@@ -5,33 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Cree enum ValorCarta y las clases Solitario y Tablero">
-      <change afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generalelementos/Carta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modeloelementos/Carta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generalelementos/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modeloelementos/Color.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generalelementos/Dificultad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modeloelementos/Dificultad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generalelementos/EstadoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modeloelementos/EstadoJuego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generalelementos/Palo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modeloelementos/Palo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generalelementos/PilaDeCartas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modeloelementos/PilaDeCartas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generalelementos/ValorCarta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modeloelementos/ValorCarta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generalsolitario/Cimiento.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generalsolitario/Descarte.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generalsolitario/Mazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Mazo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generalsolitario/Pila.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generalsolitario/Solitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generalsolitario/Tablero.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/klondike/CimientoKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Cimiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/klondike/DescarteKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Descarte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/klondike/PilaKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Pila.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/klondike/TableroKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/klondike/TableroKlondike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CartaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CartaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ColorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ColorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PaloTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PaloTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ValorCartaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ValorCartaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/klondike/CimientoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/klondike/CimientoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/klondike/TableroKlondikeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/klondike/TableroKlondikeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Tablero.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +160,7 @@
       <workItem from="1695306996411" duration="3108000" />
       <workItem from="1695478492835" duration="7026000" />
       <workItem from="1695561598122" duration="26606000" />
-      <workItem from="1695665739064" duration="7270000" />
+      <workItem from="1695665739064" duration="7779000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />
@@ -238,16 +216,5 @@
     <MESSAGE value="Arregle la prueba mezclar en MazoTest" />
     <MESSAGE value="Cree enum ValorCarta y las clases Solitario y Tablero" />
     <option name="LAST_COMMIT_MESSAGE" value="Cree enum ValorCarta y las clases Solitario y Tablero" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

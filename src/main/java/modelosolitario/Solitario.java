@@ -2,6 +2,7 @@ package modelosolitario;
 
 
 import modeloelementos.Dificultad;
+import modeloelementos.EstadoJuego;
 
 /**
  * La interfaz Solitario define un conjunto de métodos que deben ser implementados
@@ -17,10 +18,12 @@ public interface Solitario {
      * Funcion principal para jugar al solitario
      */
     void jugar();
+
     /**
-     * Realiza una jugada en el juego de Solitario.
+     * Verifica si el juego ha sido ganado según las reglas específicas del Solitario.
+     * @return true si el juego ha sido ganado, false en caso contrario.
      */
-    void realizarJugada();
+    EstadoJuego verificarEstado();
 
     /**
      * Verifica si el juego ha sido ganado según las reglas específicas del Solitario.

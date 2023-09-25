@@ -31,23 +31,24 @@ public class SolitarioKlondike implements Solitario {
         this.estadoJuego=EstadoJuego.JUGANDO;
 
         while (this.estadoJuego == EstadoJuego.JUGANDO){
-            estado = realizarjugada()
+
+            //Movimento.MetodoMovimiento()
+            this.estadoJuego = verificarEstado();
         }
     }
-
+    
+    /**
+     * doc
+     */
     @Override
-    public estado realizarJugada(Movimiento movimiento) {
-            Moviemiento.moverEntrePilas(pila1 , pila2);
-            estado = verificarEstado();
+    public EstadoJuego verificarEstado() {
+
+        if (verificarVictoria()) return EstadoJuego.GANADO;
+        else if (verificarDerrota()) return EstadoJuego.PERDIDO;
+        else return EstadoJuego.JUGANDO;
     }
 
-    public Estado verificarEstado(){
-        if verificarVictoria()
-        return estado.gano
-                else verificarDerrota()
-        return estado.perdio
-                else jugando
-    }
+
     @Override
     public boolean verificarVictoria() {
         return false;
