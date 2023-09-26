@@ -127,6 +127,7 @@ public class Carta {
         return palo;
     }
 
+    public Color getColor() { return getPalo().getColor(); }
 
 }
 

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 
 /**
- * Esta clase abstracta representa un tablero en el juego de Solitario.
+ * Esta clase abstracta representa un tablero en el juego de Solitario (todos tienen mazo y pilas).
  * Los tableros son utilizados para organizar y gestionar las cartas en el juego.
  * Las clases concretas que implementan esta clase abstracta proporcionan la
  * lógica específica para diferentes variantes del juego de Solitario.
@@ -16,38 +16,34 @@ public abstract class Tablero {
     ///////// Atributos ///////////
     private ArrayList<Pila> pilas;
     private Mazo mazo;
-    private ArrayList<Cimiento> cimientos;
 
    ///////// Metodos ///////////
     /**
      * Crea una instancia del tablero con un mazo, las pilas y los cimientos.
      */
-    public Tablero() {
+    public Tablero(int cantidadPilas) {
 
         this.mazo = new Mazo();
-        this.cimientos = new ArrayList<Cimiento>();
+        this.mazo.mezclar();
+
         this.pilas = new ArrayList<Pila>();
-
+        iniciarPilas(cantidadPilas);
     }
 
     /**
-     * Inicializa los cimientos en el tablero.
+     * Inicializa las pilas, dependiendo la cantidad que corresponda al solitario
      */
-    public void iniciarCimientos() {
-        this.cimientos = new ArrayList<>();
-        for (Palo p : Palo.values()) {
-            cimientos.add(new Cimiento());
+    public void iniciarPilas(int cantidadPilas){
+
+        for (int i = 0; i < cantidadPilas; i++) {
+            this.getPilas().add(new Pila());
         }
+
     }
 
-    /**
-     * Inicializa las pilas en el tablero.
-     */
-    public abstract void iniciarPilas();
-
 
     /**
-     * Reparte las cartas iniciales en las pilas de juego.
+     * Reparte las cartas iniciales en las pilas de juego (cada solitario lo implementa de distinta forma).
      */
     public abstract void repartirPilas();
 
@@ -56,10 +52,6 @@ public abstract class Tablero {
 
     public Mazo getMazo(){
         return this.mazo;
-    }
-
-    public ArrayList<Cimiento> getCimientos(){
-        return this.cimientos;
     }
 
     public ArrayList<Pila> getPilas(){

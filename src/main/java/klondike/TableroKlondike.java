@@ -2,11 +2,15 @@ package klondike;
 
 import modelosolitario.*;
 
+import java.util.ArrayList;
+
 
 public class TableroKlondike extends Tablero {
 
+    public static final int CANTIDAD_PILAS = 7;
 
     ///////// Atributos ///////////
+    private ArrayList<Cimiento> cimientos;
     private Descarte descarte;
 
     ///////// Metodos ///////////
@@ -15,18 +19,11 @@ public class TableroKlondike extends Tablero {
      * Inicializa las pilas segun las reglas del solitario klondike
      */
     public TableroKlondike(){
-        super();
-        Descarte descarte=new Descarte();
-    }
 
-    /**
-     * Inicializa las pilas segun las reglas del solitario klondike
-     */
-    @Override
-    public void iniciarPilas() {
-        for (int i = 0; i < 7; i++) {
-            this.getPilas().add(new Pila());
-        }
+        super(CANTIDAD_PILAS);
+
+        this.cimientos = new ArrayList<Cimiento>();
+        Descarte descarte=new Descarte();
     }
 
     /**
@@ -52,5 +49,6 @@ public class TableroKlondike extends Tablero {
 
     public Descarte getDescarte(){ return this.descarte; }
 
+    public ArrayList<Cimiento> getCimientos(){ return this.cimientos; }
 
 }
