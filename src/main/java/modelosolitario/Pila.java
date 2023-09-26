@@ -10,24 +10,9 @@ import modeloelementos.ValorCarta;
  */
 public class Pila extends PilaDeCartas {
 
-
     /**
-     * Intenta agregar una carta a la pila si es una jugada válida según las reglas del juego.
+     * Verifica si es valido agregar una carta a la pila segun las reglas del solitario.
      * @param carta La carta que se va a intentar agregar a la pila.
-     * @return true si la carta se ha agregado correctamente, false si no se pudo agregar debido a reglas del juego.
-     */
-    public boolean agregarCarta(Carta carta) {
-
-        if(puedeAgregarCarta(carta)) {
-            push(carta);
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * Verifica si es valido agregar una carta al cimiento
-     * @param carta La carta que se va a intentar agregar al cimiento.
      * @return true si la carta se ha agregado correctamente, false si no se pudo agregar debido a reglas del juego o si el cimiento está completo.
      */
     public boolean puedeAgregarCarta(Carta carta) {

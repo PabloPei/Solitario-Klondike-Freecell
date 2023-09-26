@@ -13,22 +13,7 @@ public class Cimiento extends PilaDeCartas {
     //////////////////// Métodos ////////////////////
 
     /**
-     * Intenta agregar una carta al cimiento si es una jugada válida según las reglas del juego.
-     * @param carta La carta que se va a intentar agregar al cimiento.
-     * @return true si la carta se ha agregado correctamente, false si no se pudo agregar debido a reglas del juego o si el cimiento está completo.
-     */
-    public boolean agregarCarta(Carta carta) {
-
-        if(puedeAgregarCarta(carta)) {
-            carta.setBocaAbajo(false); // La carta en un cimiento siempre esta boca arriba
-            push(carta);
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * Verifica si es valido agregar una carta al cimiento
+     * Verifica si es valido agregar una carta al cimiento segun las reglas del solitario.
      * @param carta La carta que se va a intentar agregar al cimiento.
      * @return true si la carta se ha agregado correctamente, false si no se pudo agregar debido a reglas del juego o si el cimiento está completo.
      */
