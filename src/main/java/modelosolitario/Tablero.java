@@ -47,6 +47,19 @@ public abstract class Tablero {
         repartirPilas();
     }
 
+    /**
+     * Crea una instancia del tablero con un mazo y las pilas con el mazo y las pilas configuradas
+     * como el usuario quiera, sirve para test y para recuperar el estado del solitario.
+     * @param cantidadPilas Dependiendo la implementación de solitario, la cantidad de pilas
+     *                      en el juego sera distinta.
+     * @param mazo el mazo en el estado que se busque
+     * @param
+     */
+    public Tablero(int cantidadPilas) {
+
+
+    }
+
 
     /**
      * Constructor por estado, ver como hacerlo segun lo que conteste maca

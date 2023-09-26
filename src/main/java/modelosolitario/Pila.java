@@ -32,6 +32,9 @@ public class Pila extends PilaDeCartas {
      */
     public boolean puedeAgregarCarta(Carta carta) {
 
+        // Verifica las condiciones genericas de una pila
+        if ( !super.puedeAgregarCarta(carta)) return false;
+
         // Verifica si la pila está vacía y si la carta es un Rey (valor 13) para iniciar la pila.
         if (isEmpty()){
             return (carta.getValor() == ValorCarta.REY);

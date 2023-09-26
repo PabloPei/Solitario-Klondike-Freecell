@@ -14,7 +14,28 @@ public class PilaDeCartas extends Stack<Carta> {
 
     //////////////////// Métodos ////////////////////
 
+    /**
+     * Intenta agregar una carta a la pila de cartas.
+     * @param carta La carta que se va a intentar agregar a la pila.
+     * @return true si la carta se ha agregado correctamente, false si no se pudo agregar debido a reglas del juego.
+     */
+    public boolean agregarCarta(Carta carta) {
 
+        if(puedeAgregarCarta(carta)) {
+            push(carta);
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Verifica si es valido agregar una carta a una pila de cartas generica.
+     * @param carta La carta que se va a intentar agregar al cimiento.
+     * @return true si la carta se ha agregado correctamente, false si no se pudo agregar debido a reglas del juego o si el cimiento está completo.
+     */
+    public boolean puedeAgregarCarta(Carta carta) {
+        return (carta != null && !this.contains(carta));
+    }
 
     /**
      * Voltea todas las cartas en la pila para que queden boca arriba.

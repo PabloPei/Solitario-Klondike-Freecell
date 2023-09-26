@@ -34,9 +34,12 @@ public class Cimiento extends PilaDeCartas {
      */
     public boolean puedeAgregarCarta(Carta carta) {
 
-        if (cimientoCompleto()) {
-            return false;
-        }
+        // Verifica las condiciones genericas de una pila
+        if ( !super.puedeAgregarCarta(carta)) return false;
+
+        // Verifica si el cimiento esta completo
+        if (cimientoCompleto())  return false;
+
         if (isEmpty()) {
             return (carta.getValor() == ValorCarta.AS); // Solo se puede comenzar con un As.
         } else {

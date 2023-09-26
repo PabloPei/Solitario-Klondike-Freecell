@@ -7,6 +7,7 @@ import modeloelementos.Carta;
 
 import java.util.Collections;
 import java.util.Random;
+import java.util.Stack;
 
 /**
  * La clase Mazo representa un mazo de cartas de tipo Francesa, Inglesa, Alemana, etc que hereda de PilaDeCartas.
