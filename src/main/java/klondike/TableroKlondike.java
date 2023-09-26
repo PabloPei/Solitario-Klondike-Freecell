@@ -87,12 +87,46 @@ public class TableroKlondike extends Tablero {
     }
 
     /**
+     * Verifica si existen movimientos posibles para agregar cartas a las pilas
+     * @return true si existen movimientos para agregar cartas a pilas, false en otro caso.
+     */
+    public boolean hayMovimientoAPilas() {
+
+        // Itero sobre cada pila
+        for (Pila pilaActual : pilas) {
+
+
+            // Itero sobre cada pila de busqueda
+            for (Pila pilaBusqueda : pilas) {
+                if (pilaBusqueda != pilaActual) {
+                    //Veo si puedo agregar la carta a la pila
+                    Carta cartaEnPilaBusqueda = pilaBusqueda.peek();
+                    if (pilaActual.puedeAgregarCarta(cartaEnPilaBusqueda)) {
+                        return true;
+                    }
+                }
+            }
+
+            // También verifica si se puede agregar la carta del descarte al tableau actual
+            if (descarte.size() > 0) {
+                if (pilaActual.puedeAgregarCarta(descarte.peek())) {
+                    return true;
+                }
+            }
+        }
+
+        // No se encontraron movimientos válidos
+        return false;
+    }
+
+
+    /**
      * Verifica si hay algun movimiento disponible en el trablero
      * @return true si hay movimientos disponibles, false en otro caso
      */
     @Override
     public boolean hayMovimientosDisponibles() {
-        return false;
+        return (hayMovimientoACimientos() && hayMovimientoAPilas());
     }
 
 

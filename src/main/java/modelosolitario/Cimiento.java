@@ -22,7 +22,9 @@ public class Cimiento extends PilaDeCartas {
         if(puedeAgregarCarta(carta)) {
             carta.setBocaAbajo(false); // La carta en un cimiento siempre esta boca arriba
             push(carta);
+            return true;
         }
+        return false;
     }
 
     /**
@@ -35,7 +37,6 @@ public class Cimiento extends PilaDeCartas {
         if (cimientoCompleto()) {
             return false;
         }
-
         if (isEmpty()) {
             return (carta.getValor() == ValorCarta.AS); // Solo se puede comenzar con un As.
         } else {
@@ -44,17 +45,6 @@ public class Cimiento extends PilaDeCartas {
         }
     }
 
-    /**
-     * Retira una carta del cimiento.
-     * @return devuelve la última carta del cimiento o excepción en caso de que no haya ninguna.
-     */
-    public Carta retirarCarta() {
-
-        if (isEmpty())
-            throw new IllegalStateException("No hay cartas disponibles en el cimiento.");
-
-        return this.pop();
-    }
 
     /**
      * Verifica si el cimiento está completo, es decir, si tiene 13 cartas en orden ascendente.

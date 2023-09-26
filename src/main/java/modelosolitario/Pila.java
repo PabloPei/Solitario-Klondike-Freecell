@@ -5,7 +5,7 @@ import modeloelementos.PilaDeCartas;
 import modeloelementos.ValorCarta;
 
 /**
- * Representa una pila en el juego de solitario.
+ * Representa una pila o 'tableu' en el juego de solitario. No confundir con la estructura de datos stack.
  * Las pilas son utilizadas para mover y organizar las cartas según las reglas del juego.
  */
 public class Pila extends PilaDeCartas {
@@ -18,20 +18,28 @@ public class Pila extends PilaDeCartas {
      */
     public boolean agregarCarta(Carta carta) {
 
-        // Verifica si la pila está vacía y si la carta es un Rey (valor 13) para iniciar la pila.
-        if (isEmpty() && carta.getValor() == ValorCarta.REY) {
-            this.add(carta);
+        if(puedeAgregarCarta(carta)) {
+            push(carta);
             return true;
         }
-
-        // Verifica si la carta es válida para agregar en la pila según las reglas del solitario.
-        Carta tope = this.peek();
-        if (Carta.esColorAlternado(tope, carta) && Carta.esValorSiguiente(tope, carta)) {
-            this.add(carta);
-            return true;
-        }
-
         return false;
+    }
+
+    /**
+     * Verifica si es valido agregar una carta al cimiento
+     * @param carta La carta que se va a intentar agregar al cimiento.
+     * @return true si la carta se ha agregado correctamente, false si no se pudo agregar debido a reglas del juego o si el cimiento está completo.
+     */
+    public boolean puedeAgregarCarta(Carta carta) {
+
+        // Verifica si la pila está vacía y si la carta es un Rey (valor 13) para iniciar la pila.
+        if (isEmpty()){
+            return (carta.getValor() == ValorCarta.REY);
+        }else {
+            Carta tope = this.peek();
+            // Verifica si la carta es válida para agregar en la pila según las reglas del solitario.
+            return (Carta.esColorAlternado(tope, carta) && Carta.esValorSiguiente(tope, carta));
+        }
     }
 
     /**
