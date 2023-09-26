@@ -24,7 +24,7 @@ public class Pila extends PilaDeCartas {
             return true;
         }
 
-        // Verifica si la carta es válida para agregar en la pila según las reglas de Klondike.
+        // Verifica si la carta es válida para agregar en la pila según las reglas del solitario.
         Carta tope = this.peek();
         if (Carta.esColorAlternado(tope, carta) && Carta.esValorSiguiente(tope, carta)) {
             this.add(carta);

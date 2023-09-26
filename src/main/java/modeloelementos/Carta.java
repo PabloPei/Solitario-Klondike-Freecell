@@ -12,7 +12,7 @@ public class Carta {
     //////////////////// Atributos ////////////////////
 
     /**
-     *  tiene un valor numerico asociado entre el 1 y el 13 respectivamente. Donde el 1
+     *  Valor numerico asociado entre el 1 y el 13. Donde el 1
      *  representa un As, 11 representa una Sota , 12 representa una Reina, y
      *  13 representa un Rey. Todos los otros números en el rango representan
      *  las cartas con el número correspondiente.

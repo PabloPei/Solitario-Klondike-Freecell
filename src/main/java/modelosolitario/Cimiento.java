@@ -20,24 +20,23 @@ public class Cimiento extends PilaDeCartas {
     public boolean agregarCarta(Carta carta) {
 
         if (cimientoCompleto()) {
-            return false; // El cimiento está completo, no se pueden agregar más cartas.
+            return false;
         }
 
         if (isEmpty()) {
             if (carta.getValor() == ValorCarta.AS) {
-                carta.setBocaAbajo(false); // Voltea la carta boca arriba.
+                carta.setBocaAbajo(false); // La carta en un cimiento siempre esta boca arriba
                 push(carta);
-                return true; // La carta se ha agregado con éxito.
+                return true;
             }
             return false; // Solo se puede comenzar con un As.
         } else {
             Carta tope = peek();
             if (Carta.esValorSiguiente(tope, carta) && Carta.esMismoPalo(tope, carta)) {
-                carta.setBocaAbajo(false); // Voltea la carta boca arriba.
+                carta.setBocaAbajo(false);
                 push(carta);
-                return true; // La carta se ha agregado con éxito.
-            }
-            return false; // La carta no cumple con las reglas de colocación en el cimiento.
+                return true;             }
+            return false;
         }
     }
 
@@ -46,10 +45,11 @@ public class Cimiento extends PilaDeCartas {
      * @return devuelve la última carta del cimiento o excepción en caso de que no haya ninguna.
      */
     public Carta retirarCarta() {
+
         if (isEmpty())
             throw new IllegalStateException("No hay cartas disponibles en el cimiento.");
 
-        return this.pop(); // Retira la carta del cimiento y la devuelve.
+        return this.pop();
     }
 
     /**

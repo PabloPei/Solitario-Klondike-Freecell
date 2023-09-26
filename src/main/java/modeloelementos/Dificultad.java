@@ -2,16 +2,8 @@ package modeloelementos;
 
 /**
  * Representa los niveles de dificultad de un solitario
- * Las dificultades disponibles son facil y dificil.
+ * Las dificultades disponibles son facil, medio y dificil.
  */
 public enum Dificultad {
     FACIL, MEDIO, DIFICIL;
-
-
-    @Override
-    public String toString(){
-        return this.name();
-    }
-
-
 }

@@ -30,15 +30,6 @@ public enum ValorCarta {
     }
 
     /**
-     * Devuelve una representación en forma de cadena del nombre de la carta.
-     * @return El nombre de la carta.
-     */
-    @Override
-    public String toString(){
-        return this.name();
-    }
-
-    /**
      * Devuelve el siguiente valor de una carta. Si el valor actual es `REY`, devuelve `null`.
      * @return Siguiente valor de una carta o `null` si es `REY`.
      */

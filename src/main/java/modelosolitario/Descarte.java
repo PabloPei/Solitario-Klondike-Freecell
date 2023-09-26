@@ -5,7 +5,7 @@ import modeloelementos.PilaDeCartas;
 import modeloelementos.Dificultad;
 
 /**
- * La clase Descarte representa la pila de cartas utilizada en el juego de Solitario
+ * La clase Descarte representa la de descarte utilizada en el juego de Solitario
  * para almacenar temporalmente cartas que no se pueden jugar de inmediato.
  * Esta clase hereda de la clase PilaDeCartas y agrega funcionalidad específica para manejar
  * las reglas de cantidad de cartas en el descarte según la dificultad del juego.
@@ -36,7 +36,6 @@ public class Descarte extends PilaDeCartas{
     public void sacarCartas(Mazo mazo) {
 
         this.empty();
-
         int i = 0;
         while(i < this.cantidadCartas && !mazo.isEmpty()){
             Carta carta = mazo.pop();
@@ -58,7 +57,6 @@ public class Descarte extends PilaDeCartas{
         return this.pop();
 
     }
-
-
+    
 
 }

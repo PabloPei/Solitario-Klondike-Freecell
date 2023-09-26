@@ -36,7 +36,7 @@ public class SolitarioKlondike implements Solitario {
             this.estadoJuego = verificarEstado();
         }
     }
-    
+
     /**
      * doc
      */
