@@ -1,6 +1,5 @@
 package modelosolitario;
 
-import modeloelementos.*;
 import java.util.ArrayList;
 
 
@@ -14,12 +13,14 @@ import java.util.ArrayList;
 public abstract class Tablero {
 
     ///////// Atributos ///////////
-    private ArrayList<Pila> pilas;
-    private Mazo mazo;
+    protected final ArrayList<Pila> pilas;
+    protected final Mazo mazo;
 
    ///////// Metodos ///////////
     /**
-     * Crea una instancia del tablero con un mazo, las pilas y los cimientos.
+     * Crea una instancia del tablero con un mazo y las pilas.
+     * @param cantidadPilas Dependiendo la implementación de solitario, la cantidad de pilas
+     *                      en el juego sera distinta.
      */
     public Tablero(int cantidadPilas) {
 
@@ -30,6 +31,40 @@ public abstract class Tablero {
         iniciarPilas(cantidadPilas);
     }
 
+    /**
+     * Crea una instancia del tablero con un mazo y las pilas a partir de una semilla.
+     * @param cantidadPilas Dependiendo la implementación de solitario, la cantidad de pilas
+     *                      en el juego sera distinta.
+     * @param semilla Semilla inicial a partir de la cual se construira el juego.
+     */
+    public Tablero(int cantidadPilas, long semilla) {
+
+        this.mazo = new Mazo();
+        this.mazo.mezclar(semilla);
+
+        this.pilas = new ArrayList<Pila>();
+        iniciarPilas(cantidadPilas);
+        repartirPilas();
+    }
+
+
+    /**
+     * Constructor por estado, ver como hacerlo segun lo que conteste maca
+     * Crea una instancia del tablero a partir de un cierto estado.
+     * @param cantidadPilas Dependiendo la implementación de solitario, la cantidad de pilas
+     *                      en el juego sera distinta.
+     * @param semilla Semilla inicial a partir de la cual se construira el juego.
+
+    public Tablero(int cantidadPilas, Mazo mazo) {
+
+        this.mazo = new Mazo();
+        this.mazo.mezclar(semilla);
+
+        this.pilas = new ArrayList<Pila>();
+        iniciarPilas(cantidadPilas);
+        repartirPilas();
+    }
+    */
     /**
      * Inicializa las pilas, dependiendo la cantidad que corresponda al solitario
      */
@@ -46,6 +81,11 @@ public abstract class Tablero {
      * Reparte las cartas iniciales en las pilas de juego (cada solitario lo implementa de distinta forma).
      */
     public abstract void repartirPilas();
+
+    /**
+     * Este metodo indica si aun hay movimientos disponibles, cada solitario debe implementarlo segun sus reglas
+     */
+    public abstract boolean hayMovimientosDisponibles();
 
 
     //////////// getters /////////////

@@ -19,24 +19,28 @@ public class Cimiento extends PilaDeCartas {
      */
     public boolean agregarCarta(Carta carta) {
 
+        if(puedeAgregarCarta(carta)) {
+            carta.setBocaAbajo(false); // La carta en un cimiento siempre esta boca arriba
+            push(carta);
+        }
+    }
+
+    /**
+     * Verifica si es valido agregar una carta al cimiento
+     * @param carta La carta que se va a intentar agregar al cimiento.
+     * @return true si la carta se ha agregado correctamente, false si no se pudo agregar debido a reglas del juego o si el cimiento está completo.
+     */
+    public boolean puedeAgregarCarta(Carta carta) {
+
         if (cimientoCompleto()) {
             return false;
         }
 
         if (isEmpty()) {
-            if (carta.getValor() == ValorCarta.AS) {
-                carta.setBocaAbajo(false); // La carta en un cimiento siempre esta boca arriba
-                push(carta);
-                return true;
-            }
-            return false; // Solo se puede comenzar con un As.
+            return (carta.getValor() == ValorCarta.AS); // Solo se puede comenzar con un As.
         } else {
             Carta tope = peek();
-            if (Carta.esValorSiguiente(tope, carta) && Carta.esMismoPalo(tope, carta)) {
-                carta.setBocaAbajo(false);
-                push(carta);
-                return true;             }
-            return false;
+            return (Carta.esValorSiguiente(tope, carta) && Carta.esMismoPalo(tope, carta));
         }
     }
 

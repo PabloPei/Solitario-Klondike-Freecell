@@ -44,19 +44,5 @@ public class Descarte extends PilaDeCartas{
         }
     }
 
-    /**
-     * Obtiene una carta utilizable de la pila de cartas.
-     * Si la pila está vacía, devuelve una excepcion.
-     * @return La carta obtenida de la pila.
-     */
-    public Carta retirarCarta(){
-
-        if(isEmpty()){
-            throw new IllegalStateException("No hay cartas disponibles en la pila de descartes.");
-        }
-        return this.pop();
-
-    }
-    
 
 }

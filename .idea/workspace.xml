@@ -7,11 +7,9 @@
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Cree enum ValorCarta y las clases Solitario y Tablero">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/klondike/TableroKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/klondike/TableroKlondike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modeloelementos/Carta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modeloelementos/Carta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Cimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Cimiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Descarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Descarte.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MazoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MazoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/klondike/CimientoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/klondike/CimientoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/klondike/TableroKlondikeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/klondike/TableroKlondikeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +167,7 @@
       <workItem from="1695306996411" duration="3108000" />
       <workItem from="1695478492835" duration="7026000" />
       <workItem from="1695561598122" duration="26606000" />
-      <workItem from="1695665739064" duration="11423000" />
+      <workItem from="1695665739064" duration="14044000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />
