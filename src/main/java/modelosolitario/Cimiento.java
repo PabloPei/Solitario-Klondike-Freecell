@@ -1,5 +1,6 @@
 package modelosolitario;
 
+import modeloelementos.Palo;
 import modeloelementos.PilaDeCartas;
 import modeloelementos.Carta;
 import modeloelementos.ValorCarta;
@@ -13,6 +14,14 @@ public class Cimiento extends PilaDeCartas {
 
     //////////////////// Métodos ////////////////////
 
+    public Cimiento() {super(); }
+    public Cimiento(int cantidadCartas, Palo palo){
+        for(ValorCarta v : ValorCarta.values()){
+            if (v.ordinal() < cantidadCartas){
+                push(new Carta(v, palo, false));
+            }
+        }
+    }
     /**
      * Verifica si es valido agregar una carta al cimiento segun las reglas del solitario.
      * @param carta La carta que se va a intentar agregar al cimiento.

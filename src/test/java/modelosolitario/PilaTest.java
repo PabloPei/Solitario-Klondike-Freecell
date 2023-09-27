@@ -60,7 +60,8 @@ public class PilaTest {
         cartasIniciales.push(new Carta(ValorCarta.SIETE, Palo.PICA, false));
         var pilaOriginal = new Pila(cartasIniciales);
         int cantidadDeCartasASacar = 1;
-        var nuevaPila = pilaOriginal.sacarCarta(false);
+        var nuevaPila = new Pila();
+        nuevaPila.push(pilaOriginal.sacarCarta(false));
         var resultadoEsperado = new Pila();
         resultadoEsperado.push(cartasIniciales.peek());
         assertEquals(resultadoEsperado, nuevaPila);

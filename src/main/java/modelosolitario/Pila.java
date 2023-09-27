@@ -35,7 +35,7 @@ public class Pila extends PilaDeCartas {
         }else {
             Carta tope = this.peek();
             // Verifica si la carta es válida para agregar en la pila según las reglas del solitario.
-            return (Carta.esColorAlternado(tope, carta) && Carta.esValorSiguiente(tope, carta));
+            return (Carta.esColorAlternado(tope, carta) && Carta.esValorSiguiente(carta, tope));
         }
     }
 
