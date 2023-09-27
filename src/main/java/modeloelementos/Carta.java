@@ -1,8 +1,8 @@
-package GeneralElementos;
+package modeloelementos;
 
 /**
- * La clase General.Carta representa una carta de una baraja de cartas estándar (Francesa,
- * Española, Alemana, etc). Cada carta tiene un valor desde el As (valor=1), hasta
+ * La clase Carta representa una carta de una baraja de cartas estándar (Francesa,
+ * Inglesa, Alemana, etc). Cada carta tiene un valor desde el As (valor=1), hasta
  * el rey (valor=13) y un palo que toma los valores de Corazones, Diamantes,
  * Tréboles o Picas.
  */
@@ -11,7 +11,8 @@ public class Carta {
 
     //////////////////// Atributos ////////////////////
 
-    /** El valor de la carta, entre 1 y 13 inclusive. Un valor de 1
+    /**
+     *  Valor numerico asociado entre el 1 y el 13. Donde el 1
      *  representa un As, 11 representa una Sota , 12 representa una Reina, y
      *  13 representa un Rey. Todos los otros números en el rango representan
      *  las cartas con el número correspondiente.
@@ -21,7 +22,7 @@ public class Carta {
     /** Indica el palo (Corazon, Diamante, Trebol, Pica) de la carta */
     private final Palo palo;
 
-    /** Indica si la carta esta escondida para el usuario. */
+    /** Indica si la carta esta visible o no para el usuario. */
     private boolean bocaAbajo;
 
 
@@ -49,9 +50,6 @@ public class Carta {
      */
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
         if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
@@ -61,11 +59,12 @@ public class Carta {
 
     /**
      * Convierte una instancia de la clase Carta en una representación en forma de cadena
-     * que combina su valor y su palo en un formato legible.
+     * que combina su valor y su palo en un formato legible. Ademas, la torna boca arriba.
      * @return Una cadena que representa la carta en el formato "Valor - Palo".
      */
     @Override
     public String toString() {
+        this.setBocaAbajo(false);
         return valor.toString() + " - " + palo.toString();
     }
 
@@ -79,13 +78,35 @@ public class Carta {
         bocaAbajo = !bocaAbajo;
     }
 
-    /**
-     * Metodo para obtener el color de la carta 
-     * @return devuelve un color correspondiente al color de la carta (ROJO O NEGRO)
-     */
 
-    public Color getColor() {
-        return (this.palo.ordinal() == Palo.DIAMANTE.ordinal() || this.palo.ordinal() == Palo.CORAZON.ordinal() ? Color.ROJO : Color.NEGRO);
+    /**
+     * Comprueba si la segunda carta pasada como argumento es la siguiente carta en orden secuencial con respecto a la primera.
+     * @param carta1 La primera carta a comparar.
+     * @param carta2 La segunda carta a comparar.
+     * @return true si la segunda carta pasada es la siguiente de la primera en orden secuencial, false en caso contrario.
+     */
+    public static boolean esValorSiguiente(Carta carta1, Carta carta2) {
+        return (carta1.getValor().siguienteValor() == carta2.getValor());
+    }
+
+    /**
+     * Comprueba si dos cartas son del mismo palo.
+     * @param carta1 La primera carta a comparar.
+     * @param carta2 La segunda carta a comparar.
+     * @return true si las dos cartas son del mismo palo, false en caso contrario.
+     */
+    public static boolean esMismoPalo(Carta carta1, Carta carta2) {
+        return (carta1.getPalo() == carta2.getPalo());
+    }
+
+    /**
+     * Comprueba si dos cartas son de color alternado
+     * @param carta1 La primera carta a comparar.
+     * @param carta2 La segunda carta a comparar.
+     * @return true si la primera carta tiene el color alternado respecto a la segunda, false en otro caso.
+     */
+    public static boolean esColorAlternado(Carta carta1, Carta carta2) {
+        return (carta1.getPalo().getColor() != carta2.getPalo().getColor());
     }
 
     //// Getters & Setters ////
@@ -106,6 +127,7 @@ public class Carta {
         return palo;
     }
 
+    public Color getColor() { return getPalo().getColor(); }
 
 }
 

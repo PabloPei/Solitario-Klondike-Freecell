@@ -1,4 +1,4 @@
-package GeneralElementos;
+package modeloelementos;
 
 public enum Color {
     ROJO,
