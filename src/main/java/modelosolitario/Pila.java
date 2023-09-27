@@ -32,10 +32,27 @@ public class Pila extends PilaDeCartas {
     }
 
     /**
+     * Accion de retirar una carta de la pila. Chequea si hay una carta anterior boca abajo y la pone bocca arriba
+     * @param bocaAbajo indica si la carta estara boca abajo o no
+     * @return Carta la carta que saco de la pila de cartas
+     */
+    public Carta sacarCarta(boolean bocaAbajo) {
+
+        Carta carta = super.sacarCarta(bocaAbajo);
+
+        if ( ! this.isEmpty() ){
+            Carta tope = this.peek();
+            tope.setBocaAbajo(false);
+        }
+
+        return carta; 
+
+    }
+
+    /**
      * Retira un número especificado de cartas de la pila.
      * @param cantidadCartas La cantidad de cartas que se desea retirar.
      * @return Una pila de cartas con las cartas retiradas.
-     * @throws IllegalStateException si no hay suficientes cartas disponibles en la pila.
      */
     public PilaDeCartas sacarCartas(int cantidadCartas, boolean bocaAbajo) {
 

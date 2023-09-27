@@ -8,7 +8,7 @@ public class SolitarioKlondike implements Solitario {
 
     // private Jugador jugador
     // protected Reglas reglas;
-    private int puntuacion;
+    private int movimientos;
     private Dificultad dificultad;
     private EstadoJuego estadoJuego;
     private TableroKlondike tablero;
@@ -17,7 +17,7 @@ public class SolitarioKlondike implements Solitario {
      * doc
      */
     public SolitarioKlondike(Dificultad dificultad){
-         this.puntuacion=0;
+         this.movimientos=0;
          this.tablero = new TableroKlondike();
          this.setDificultad(dificultad);
          this.estadoJuego = EstadoJuego.INICIADO;
@@ -62,13 +62,13 @@ public class SolitarioKlondike implements Solitario {
     }
 
     @Override
-    public void sumarPuntuacion(int cantidad){
-        puntuacion += cantidad;
+    public void sumarMovimiento(){
+        movimientos++;
     }
 
     @Override
-    public int obtenerPuntuación() {
-        return 0;
+    public int obtenerMovimientos() {
+        return this.movimientos;
     }
 
     /**

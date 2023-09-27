@@ -4,8 +4,8 @@ import modeloelementos.Carta;
 import modeloelementos.PilaDeCartas;
 
     public class Movimientos {
-        public static boolean moverCarta(PilaDeCartas origen, PilaDeCartas destino) {
-            Carta cartaSacada = origen.pop();
+        public static boolean moverCarta(PilaDeCartas origen, PilaDeCartas destino, boolean bocaAbajo) {
+            Carta cartaSacada = origen.sacarCarta(bocaAbajo);
             if (!destino.agregarCarta(cartaSacada)){
                 origen.agregarCarta(cartaSacada);
                 return false;
