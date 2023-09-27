@@ -45,7 +45,7 @@ public class Pila extends PilaDeCartas {
             tope.setBocaAbajo(false);
         }
 
-        return carta; 
+        return carta;
 
     }
 

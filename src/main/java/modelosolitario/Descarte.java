@@ -30,6 +30,13 @@ public class Descarte extends PilaDeCartas{
     }
 
     /**
+     * @return devuelve la cantidad de cartas de la pila de descarte
+     */
+    public int getCantidadCartas(){
+        return this.cantidadCartas;
+    }
+
+    /**
      * Saca la cantidad de cartas del mazo dado y las coloca en la pila de descarte.
      * Luego, vuelve a colocar las cartas de la pila de descarte en el mazo original.
      * @param mazo El mazo del que se sacarán las cartas para colocar en el descarte.
