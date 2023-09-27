@@ -14,11 +14,22 @@ public class Cimiento extends PilaDeCartas {
 
     //////////////////// Métodos ////////////////////
 
-    public Cimiento() {super(); }
+    /**
+     * Constructor estandard
+     */
+    public Cimiento(){
+        super();
+    }
+
+    /**
+     * Permite iniciar un cimiento en un estado particular
+     * @param cantidadCartas la cantidad de cartas que va tener el cimiento
+     * @param palo el palo de las cartas del cimiento
+     */
     public Cimiento(int cantidadCartas, Palo palo){
         for(ValorCarta v : ValorCarta.values()){
             if (v.ordinal() < cantidadCartas){
-                push(new Carta(v, palo, false));
+                this.agregarCarta(new Carta(v, palo, false));
             }
         }
     }

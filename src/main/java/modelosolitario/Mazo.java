@@ -53,6 +53,22 @@ public class Mazo extends ArrayList<Carta> {
 
     }
 
+
+    /**
+     * Saca la primera carta del mazo
+     * @param carta Carta que se quiere agregar al mazo
+     * @return true si se puede agregar, false sino
+     */
+    public boolean agregarCarta(Carta carta){
+
+        if ( this.contains(carta))
+            return false;
+        else
+            this.add(carta);
+        return true;
+    }
+
+
     /**
      * Saca la primera carta del mazo
      * @param bocaAbajo para indicar si se roba boca abajo o arriba

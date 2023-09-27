@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Cree Tests para pila">
-      <change afterPath="$PROJECT_DIR$/src/test/java/modeloelementos/PilaDeCartasTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/modelosolitario/MovimientosTest.java" afterDir="false" />
+    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Cree enum ValorCarta y las clases Solitario y Tablero">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/klondike/TableroKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/klondike/TableroKlondike.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Cimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Cimiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Pila.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Pila.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MazoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MazoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/klondike/CimientoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/klondike/CimientoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modelosolitario/PilaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modelosolitario/PilaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Descarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Descarte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Mazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Mazo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Movimientos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Movimientos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CartaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modeloelementos/CartaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ColorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modeloelementos/ColorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MazoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modelosolitario/MazoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PaloTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modeloelementos/PaloTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ValorCartaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modeloelementos/ValorCartaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/klondike/CimientoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modelosolitario/CimientoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modeloelementos/PilaDeCartasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modeloelementos/PilaDeCartasTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +31,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -86,6 +93,8 @@
       <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="modelosolitario" />
+      <recent name="modeloelementos" />
       <recent name="klondike" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
@@ -95,19 +104,32 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Solitario-Algo3">
-    <configuration name="All in Solitario-Algo3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CimientoTest">
+    <configuration name="CartaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modeloelementos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modeloelementos" />
+      <option name="MAIN_CLASS_NAME" value="modeloelementos.CartaTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CimientoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CartaTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modelosolitario.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modelosolitario" />
+      <option name="MAIN_CLASS_NAME" value="modelosolitario.CimientoTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -115,31 +137,43 @@
     </configuration>
     <configuration name="ColorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ColorTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MazoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Solitario-Algo3" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MazoTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="klondike in Solitario-Algo3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Solitario-Algo3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="klondike.*" />
+          <option name="PATTERN" value="modeloelementos.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="klondike" />
+      <option name="PACKAGE_NAME" value="modeloelementos" />
+      <option name="MAIN_CLASS_NAME" value="modeloelementos.ColorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaloTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Solitario-Algo3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modeloelementos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modeloelementos" />
+      <option name="MAIN_CLASS_NAME" value="modeloelementos.PaloTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="modeloelementos in Solitario-Algo3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Solitario-Algo3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modeloelementos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modeloelementos" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -147,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in Solitario-Algo3" />
-        <item itemvalue="JUnit.MazoTest" />
-        <item itemvalue="JUnit.klondike in Solitario-Algo3" />
-        <item itemvalue="JUnit.CartaTest" />
+        <item itemvalue="JUnit.CimientoTest" />
+        <item itemvalue="JUnit.modeloelementos in Solitario-Algo3" />
+        <item itemvalue="JUnit.PaloTest" />
         <item itemvalue="JUnit.ColorTest" />
+        <item itemvalue="JUnit.CartaTest" />
       </list>
     </recent_temporary>
   </component>
@@ -175,6 +209,7 @@
       <workItem from="1695665739064" duration="28174000" />
       <workItem from="1695839131334" duration="74000" />
       <workItem from="1695841540821" duration="1772000" />
+      <workItem from="1695846937981" duration="9244000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />

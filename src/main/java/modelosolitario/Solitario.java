@@ -1,6 +1,6 @@
 package modelosolitario;
 
-
+import modeloelementos.Carta;
 import modeloelementos.Dificultad;
 import modeloelementos.EstadoJuego;
 
@@ -10,9 +10,6 @@ import modeloelementos.EstadoJuego;
  */
 
 public interface Solitario {
-
-    /** #seguir agregando metodos
-     */
 
     /**
      * Funcion principal para jugar al solitario
@@ -53,5 +50,12 @@ public interface Solitario {
      * @param dificultad la dificultad del solitario (facil,medio,dificil)
      */
     void setDificultad(Dificultad dificultad);
+
+
+    /**
+     * devuelve la dificultad
+     * @return dificultad la dificultad del solitario (facil,medio,dificil)
+     */
+    Dificultad getDificultad();
 
 }

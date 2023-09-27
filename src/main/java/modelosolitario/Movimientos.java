@@ -8,6 +8,8 @@ import modeloelementos.PilaDeCartas;
  */
 public class Movimientos {
 
+    private int cantidadMovimientos;
+
     /**
      * Mueve una carta desde una pila de origen a una pila de destino.
      * @param origen   La pila de origen desde la que se va a sacar la carta.
@@ -15,12 +17,14 @@ public class Movimientos {
      * @return         Devuelve true si el movimiento se realizó con éxito, false si no se pudo realizar.
      */
     public static boolean moverCarta(PilaDeCartas origen, PilaDeCartas destino) {
+
         Carta cartaSacada = origen.sacarCarta(false);
         if (!destino.agregarCarta(cartaSacada)){
             origen.agregarCarta(cartaSacada); //no pudo agregar la carta la vuelvo al lugar original
             return false;
         }
         return true;
+
     }
 
     /**
@@ -30,7 +34,7 @@ public class Movimientos {
      * @param descarte pila de descarte en la cual va a agregar la carta
      * @return         Devuelve true si el movimiento se realizó con éxito, false si no se pudo realizar.
      */
-    public static boolean robarCartas(Mazo mazo, Descarte descarte) {
+    public static boolean robarCartasDelMazo(Mazo mazo, Descarte descarte) {
 
         // Si el mazo y el descarte estan vacios no puedo robar cartas
         if (descarte.isEmpty() && mazo.isEmpty())
@@ -39,7 +43,7 @@ public class Movimientos {
         // Coloco las cartas de la pila de descarte boca abajo y lo agrego al final del mazo
         while (!descarte.isEmpty()) {
             Carta carta = descarte.sacarCarta(true);
-            mazo.add(carta);
+            mazo.agregarCarta(carta);
         }
 
         // Saco las cartas del mazo y las coloca en la pila de descarte.
@@ -61,7 +65,8 @@ public class Movimientos {
      * @param primeraCarta  La primera carta del conjunto a mover.
      * @return              Devuelve true si el movimiento se realizó con éxito, false si no se pudo realizar.
      */
-    public boolean moverConjuntoDeCartas(PilaDeCartas origen, PilaDeCartas destino, Carta primeraCarta){
+    public static boolean moverCartas(PilaDeCartas origen, PilaDeCartas destino, Carta primeraCarta){
+
         PilaDeCartas pilaAux = new PilaDeCartas();
         do {
             pilaAux.agregarCarta(origen.pop());

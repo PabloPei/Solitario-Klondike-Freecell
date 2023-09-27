@@ -15,10 +15,19 @@ public class Descarte extends PilaDeCartas{
     private int cantidadCartas;
 
     /**
-     * Setea la dificultad del solitario klondike, la misma varia la cantidad de cartas de la pila de descarte.
+     * Constructor estandard que ademas setea la cantidad de cartas dependiendo la dificultad del soliatio.
      * @param dificultad La dificultad del juego que determina la cantidad de cartas en el descarte.
      */
-    public void setDificultad(Dificultad dificultad){
+    public Descarte(Dificultad dificultad){
+        super();
+        setCantidadCartas(dificultad);
+    }
+
+    /**
+     * Setea la cantidad de cartas de la pila de descarte en base a la dificultad.
+     * @param dificultad La dificultad del juego que determina la cantidad de cartas en el descarte.
+     */
+    public void setCantidadCartas(Dificultad dificultad){
 
         switch (dificultad) {
             case DIFICIL -> this.cantidadCartas = 3;

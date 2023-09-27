@@ -1,5 +1,6 @@
-package Klondike;
+package klondike;
 
+import modeloelementos.Dificultad;
 import modelosolitario.*;
 import modeloelementos.Palo;
 import modeloelementos.Carta;
@@ -17,15 +18,27 @@ public class TableroKlondike extends Tablero {
     ///////// Metodos ///////////
 
     /**
-     * Inicializa las pilas segun las reglas del solitario klondike
+     * Inicializa un tablero segun las reglas del solitario klondike
      */
-    public TableroKlondike(){
+    public TableroKlondike(Dificultad dificultad){
 
         super(CANTIDAD_PILAS);
 
         inciarCimientos();
-        Descarte descarte=new Descarte();
+        Descarte descarte=new Descarte(dificultad);
     }
+
+    /**
+     * Inicializa un tablero segun las reglas del solitario klondike a partir de una semilla
+     */
+    public TableroKlondike(Dificultad dificultad, long semilla){
+
+        super(CANTIDAD_PILAS, semilla);
+
+        inciarCimientos();
+        Descarte descarte=new Descarte(dificultad);
+    }
+
 
     /**
      * Reparte las cartas iniciales en las pilas segun las reglas del solitario klondike.
@@ -120,6 +133,17 @@ public class TableroKlondike extends Tablero {
         return false;
     }
 
+    /**
+     * Verifica si los cimientos estan llenos
+     * @return true si estan llenos, false en otro caso
+     */
+    public boolean cimientosLlenos(){
+        for (Cimiento cimiento : cimientos){
+            if (!(cimiento.cimientoCompleto()))
+                return false;
+        }
+        return true;
+    }
 
     /**
      * Verifica si hay algun movimiento disponible en el trablero

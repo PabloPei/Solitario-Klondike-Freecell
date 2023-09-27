@@ -1,14 +1,12 @@
-import modeloelementos.Carta;
-import modeloelementos.Palo;
-import modeloelementos.ValorCarta;
-import modeloelementos.Color;
+package modeloelementos;
+
 import junit.framework.TestCase;
 import org.junit.Test;
 
 public class CartaTest extends TestCase {
 
     @Test
-    public void test_create_card_with_valid_value_suit_and_orientation() {
+    public void test_creacion_de_carta_con_parametros_validos() {
         ValorCarta valor = ValorCarta.AS;
         Palo palo = Palo.CORAZON;
         boolean bocaAbajo = false;
@@ -21,7 +19,7 @@ public class CartaTest extends TestCase {
     }
 
     @Test
-    public void test_get_card_value() {
+    public void test_obtener_valor_de_carta() {
         ValorCarta valor = ValorCarta.DIEZ;
         Palo palo = Palo.TREBOL;
         boolean bocaAbajo = false;
@@ -32,7 +30,7 @@ public class CartaTest extends TestCase {
     }
 
     @Test
-    public void test_get_card_suit() {
+    public void test_obtener_palo_de_carta() {
         ValorCarta valor = ValorCarta.REINA;
         Palo palo = Palo.PICA;
         boolean bocaAbajo = false;
@@ -43,7 +41,7 @@ public class CartaTest extends TestCase {
     }
 
     @Test
-    public void test_create_card_with_null_value_or_suit() {
+    public void test_creacion_de_carta_con_valor_o_palo_nulo() {
         ValorCarta valor = null;
         Palo palo = Palo.CORAZON;
         boolean bocaAbajo = false;
@@ -54,7 +52,7 @@ public class CartaTest extends TestCase {
     }
 
     @Test
-    public void test_compare_card_to_null() {
+    public void test_comparar_carta_con_nulo() {
         ValorCarta valor = ValorCarta.SOTA;
         Palo palo = Palo.TREBOL;
         boolean bocaAbajo = false;
@@ -65,7 +63,7 @@ public class CartaTest extends TestCase {
     }
 
     @Test
-    public void test_flip_card_over() {
+    public void test_voltear_carta() {
         ValorCarta valor = ValorCarta.AS;
         Palo palo = Palo.CORAZON;
         boolean bocaAbajo = false;
@@ -77,7 +75,7 @@ public class CartaTest extends TestCase {
     }
 
     @Test
-    public void test_get_card_orientation() {
+    public void test_obtener_orientacion_de_carta() {
         ValorCarta valor = ValorCarta.AS;
         Palo palo = Palo.CORAZON;
         boolean bocaAbajo = false;
@@ -88,7 +86,7 @@ public class CartaTest extends TestCase {
     }
 
     @Test
-    public void test_get_card_color() {
+    public void test_obtener_color_de_carta() {
         ValorCarta valor = ValorCarta.AS;
         Palo palo = Palo.CORAZON;
         boolean bocaAbajo = false;
@@ -99,7 +97,21 @@ public class CartaTest extends TestCase {
     }
 
     @Test
-    public void test_compare_cards_for_equality() {
+    public void test_mismos_colores() {
+        Carta carta1 = new Carta(ValorCarta.AS, Palo.CORAZON, false);
+        Carta carta2 = new Carta(ValorCarta.AS, Palo.DIAMANTE, false);
+        assertFalse(Carta.esColorAlternado(carta1, carta2));
+    }
+
+    @Test
+    public void test_diferentes_colores() {
+        Carta carta1 = new Carta(ValorCarta.AS, Palo.CORAZON, false);
+        Carta carta2 = new Carta(ValorCarta.AS, Palo.TREBOL, false);
+        assertTrue(Carta.esColorAlternado(carta1, carta2));
+    }
+
+    @Test
+    public void test_comparar_cartas_para_igualdad() {
         ValorCarta valor1 = ValorCarta.AS;
         Palo palo1 = Palo.CORAZON;
         boolean bocaAbajo1 = false;
@@ -115,7 +127,7 @@ public class CartaTest extends TestCase {
     }
 
     @Test
-    public void test_compare_cards_with_different_values_or_suits() {
+    public void test_comparar_cartas_con_valores_o_palos_diferentes() {
         ValorCarta valor1 = ValorCarta.AS;
         Palo palo1 = Palo.CORAZON;
         boolean bocaAbajo1 = false;
@@ -131,17 +143,24 @@ public class CartaTest extends TestCase {
     }
 
     @Test
-    public void test_get_string_representation_of_card() {
+    public void test_obtener_representacion_en_cadena_de_carta() {
         ValorCarta valor = ValorCarta.AS;
         Palo palo = Palo.CORAZON;
         boolean bocaAbajo = false;
 
         Carta carta = new Carta(valor, palo, bocaAbajo);
 
-        String expected = "AS - CORAZON";
+        String esperado = "AS - CORAZON";
         String actual = carta.toString();
 
-        assertEquals(expected, actual);
+        assertEquals(esperado, actual);
+    }
+
+    @Test
+    public void test_orden_secuencial() {
+        Carta carta1 = new Carta(ValorCarta.AS, Palo.CORAZON, false);
+        Carta carta2 = new Carta(ValorCarta.DOS, Palo.CORAZON, false);
+        assertTrue(Carta.esValorSiguiente(carta1, carta2));
     }
 
 }
