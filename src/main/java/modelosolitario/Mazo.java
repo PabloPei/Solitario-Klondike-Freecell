@@ -1,26 +1,24 @@
 package modelosolitario;
 
-import modeloelementos.PilaDeCartas;
 import modeloelementos.Palo;
 import modeloelementos.ValorCarta;
 import modeloelementos.Carta;
-
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
-import java.util.Stack;
 
 /**
- * La clase Mazo representa un mazo de cartas de tipo Francesa, Inglesa, Alemana, etc que hereda de PilaDeCartas.
+ * La clase Mazo representa un mazo de cartas de tipo Francesa, Inglesa, Alemana, etc que hereda de un ArrayList.
  * Este mazo se inicializa con 52 cartas, cada una con un valor numérico en el rango de 1 a 13
  * y uno de los cuatro palos posibles: DIAMANTE, CORAZON, TREBOL o PICA.
  * Todas las cartas se inicializan como ocultas (boca abajo). El mazo se almacena en una estructura
- * de datos tipo pila.
+ * de datos tipo ArrayList. Se decidio de esta manera ya que brinda mas flexibilidad a la hora de insertar
+ * y sacar cartas del mazo en distintas posiciones.
  */
 
-public class Mazo extends PilaDeCartas {
+public class Mazo extends ArrayList<Carta> {
 
     //////////////////// metodos ////////////////////
-
     /**
      * Constructor de la clase mazo. Inicializa una baraja estandar (inglesa, alemana, etc) de 52 cartas.
      * Cada carta se crea con un valor numerico en el rango de 1 a 13 y uno de los cuatro palos posibles:
@@ -31,11 +29,10 @@ public class Mazo extends PilaDeCartas {
         for( Palo palo : Palo.values() ){
             for ( ValorCarta valor: ValorCarta.values() ){
                 Carta carta = new Carta(valor, palo, true);
-                push(carta);
+                add(carta);
             }
         }
     }
-
 
     /**
      * Mezcla el mazo de forma pseudo aleatoria
@@ -56,25 +53,41 @@ public class Mazo extends PilaDeCartas {
 
     }
 
+    /**
+     * Saca la primera carta del mazo
+     * @param bocaAbajo para indicar si se roba boca abajo o arriba
+     * @return Carta devuelve la primera carta del mazo
+     */
+    public Carta sacarCarta(boolean bocaAbajo){
+        if (isEmpty()) {
+            return null;
+        }
+
+        Carta carta = this.remove(0);
+        carta.setBocaAbajo(bocaAbajo);
+        return carta;
+    }
+
 
     /**
      * Compara este mazo con otro mazo para determinar si son iguales.
      * @param mazo El mazo con el que se va a comparar.
      * @return true si ambos mazos son iguales en términos de tamaño y contenido, false en caso contrario.
      */
-    public boolean equals(Mazo mazo){
-
-        if (mazo==null || this.size() != mazo.size()) {
+    public boolean equals(Mazo mazo) {
+        // Verifica si el mazo dado es nulo o tiene un tamaño diferente.
+        if (mazo == null || this.size() != mazo.size()) {
             return false;
         }
 
-        boolean iguales = true;
-        int contador = 0;
-        while (iguales && (contador < this.size())){
-            if (!this.get(contador).equals(mazo.get(contador))) iguales = false;
-            else contador++;
+        // Compara cada carta en ambos mazos.
+        for (int i = 0; i < this.size(); i++) {
+            if (!this.get(i).equals(mazo.get(i))) {
+                return false;
+            }
         }
-        return iguales;
+
+        return true;
     }
 
 }

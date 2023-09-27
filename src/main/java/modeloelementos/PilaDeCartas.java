@@ -12,8 +12,6 @@ import java.util.Stack;
  */
 public class PilaDeCartas extends Stack<Carta> {
 
-    //////////////////// Atributos ////////////////////
-
     //////////////////// Métodos ////////////////////
 
     /**
@@ -28,6 +26,29 @@ public class PilaDeCartas extends Stack<Carta> {
             return true;
         }
         return false;
+    }
+
+    /**
+     * Intenta sacar la carta de arriba de la pila de cartas
+     */
+    public Carta sacarCarta(boolean bocaAbajo) {
+        if(isEmpty()) {
+            return null;
+        }
+        Carta carta = pop();
+        carta.setBocaAbajo(bocaAbajo);
+        return carta;
+    }
+
+    /**
+     * Intenta ver la carta de arriba de la pila de cartas
+     * @return Carta la carta que saco de la pila de cartas
+     */
+    public Carta verCarta() {
+        if(isEmpty()) {
+            return null;
+        }
+        return peek();
     }
 
     /**

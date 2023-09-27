@@ -38,10 +38,15 @@ public interface Solitario {
     boolean verificarDerrota();
 
     /**
-     * Calcula la puntuación del juego según las reglas de puntuación del Solitario.
-     * @return La puntuación del juego.
+     * Suma un movimiento al contador
      */
-    int obtenerPuntuación();
+    void sumarMovimiento();
+
+    /**
+     * Devuelve la cantidad de movimientos
+     * @return cantidad de movimientos.
+     */
+    int obtenerMovimientos();
 
     /**
      * Setea la dificultad del solitario

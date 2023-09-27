@@ -30,38 +30,10 @@ public class Descarte extends PilaDeCartas{
     }
 
     /**
-     * #este metodo y el de abajo revisarlos 1) como poner carta alfinal , 2) conviene pasar mazo o carta?
-     * Cuando se saca una carta de la pila de descarte se debe agregar otra.
-     * @param mazo El mazo del que se sacarán las cartas para colocar en el descarte.
+     * @return devuelve la cantidad de cartas de la pila de descarte
      */
-    public Carta usarCarta(Mazo mazo) {
-
-        // Chequeo que no haya 3 cartas ya en la pila de descarte
-        if (this.cantidadCartas - this.size() == 0){
-            throw new IllegalStateException("La pila de descartes ya esta llena");
-        }
-
-        // Saco la carta de la pila de descarte
-        Carta carta = this.pop();
-
-        // Saco la carta del mazo y la agrego a la pila
-        Carta cartaMazo = mazo.pop();
-        carta.setBocaAbajo(false);
-        this.push(cartaMazo);
-
-        return carta;
+    public int getCantidadCartas(){
+        return this.cantidadCartas;
     }
-
-    /**
-     * Saco la cantidad de cartas del mazo a la pila de descarte y vuelvo a poner las que estaban
-     * en la pila de descarte en el mazo.
-     * @param mazo El mazo del que se sacarán las cartas para colocar en el descarte.
-     */
-    public boolean sacarCartas(Mazo mazo) {
-
-        return true;
-    }
-
-
 
 }

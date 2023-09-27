@@ -54,13 +54,13 @@ public abstract class Tablero {
      *                      en el juego sera distinta.
      * @param mazo el mazo en el estado que se busque
      * @param
+
+    public Tablero(int cantidadPilas) {
+
+
+    }
+
      */
-//    public Tablero(int cantidadPilas) {
-//
-//
-//    }
-
-
     /**
      * Constructor por estado, ver como hacerlo segun lo que conteste maca
      * Crea una instancia del tablero a partir de un cierto estado.
