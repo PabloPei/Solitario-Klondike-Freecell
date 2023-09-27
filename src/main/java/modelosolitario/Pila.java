@@ -48,19 +48,5 @@ public class Pila extends PilaDeCartas {
         return carta;
 
     }
-
-    /**
-     * Retira un número especificado de cartas de la pila.
-     * @param cantidadCartas La cantidad de cartas que se desea retirar.
-     * @return Una pila de cartas con las cartas retiradas.
-     */
-    public PilaDeCartas sacarCartas(int cantidadCartas, boolean bocaAbajo) {
-
-        PilaDeCartas cartasAux = new PilaDeCartas();
-
-        for (int i = 0; i < cantidadCartas; i++) {
-            cartasAux.agregarCarta(sacarCarta(bocaAbajo));
-        }
-        return cartasAux;
-    }
+    
 }

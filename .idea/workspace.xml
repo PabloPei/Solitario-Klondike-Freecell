@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Cree enum ValorCarta y las clases Solitario y Tablero">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modeloelementos/PilaDeCartas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modeloelementos/PilaDeCartas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Descarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Descarte.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Movimientos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Movimientos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Pila.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Pila.java" afterDir="false" />
@@ -166,7 +167,7 @@
       <workItem from="1695306996411" duration="3108000" />
       <workItem from="1695478492835" duration="7026000" />
       <workItem from="1695561598122" duration="26606000" />
-      <workItem from="1695665739064" duration="26807000" />
+      <workItem from="1695665739064" duration="27792000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />

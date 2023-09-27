@@ -28,7 +28,6 @@ public class PilaDeCartas extends Stack<Carta> {
 
     /**
      * Intenta sacar la carta de arriba de la pila de cartas
-
      */
     public Carta sacarCarta(boolean bocaAbajo) {
         if(isEmpty()) {

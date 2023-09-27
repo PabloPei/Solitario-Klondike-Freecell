@@ -32,6 +32,9 @@ public class Movimientos {
      */
     public static boolean robarCarta(Mazo mazo, Descarte descarte) {
 
+        // Si el mazo y el descarte estan vacios no puedo robar cartas
+        if (descarte.isEmpty() && mazo.isEmpty())
+            return false;
 
         // Coloco las cartas de la pila de descarte boca abajo y lo agrego al final del mazo
         while (!descarte.isEmpty()) {

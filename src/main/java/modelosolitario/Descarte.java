@@ -36,32 +36,4 @@ public class Descarte extends PilaDeCartas{
         return this.cantidadCartas;
     }
 
-    /**
-     * Saca la cantidad de cartas del mazo dado y las coloca en la pila de descarte.
-     * Luego, vuelve a colocar las cartas de la pila de descarte en el mazo original.
-     * @param mazo El mazo del que se sacarán las cartas para colocar en el descarte.
-     * @return true si la operación se realiza con éxito, false si la cantidad especificada supera el tamaño del mazo.
-     */
-    public boolean sacarYDevolverCartas(Mazo mazo, int cantidad) {
-
-        if (cantidad <= 0 || mazo.isEmpty()) {
-            return false;
-        }
-
-        // Coloco las cartas de la pila de descarte boca abajo y al fondo del mazo
-        while (!this.isEmpty()) {
-            Carta carta = sacarCarta(true);
-            mazo.add(carta);
-        }
-
-        // Sacar las cartas del mazo y las coloca en la pila de descarte.
-        for (int i = 0; i < this.cantidadCartas; i++) {
-            Carta carta = mazo.sacarCarta(false);
-            if (carta==null) break; //si no hay mas cartas en el mazo dejo de agregar al descarte
-            this.agregarCarta(carta);
-        }
-
-        return true;
-    }
-
 }
