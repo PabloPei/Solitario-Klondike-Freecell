@@ -30,7 +30,7 @@ public class Movimientos {
      * @param descarte pila de descarte en la cual va a agregar la carta
      * @return         Devuelve true si el movimiento se realizó con éxito, false si no se pudo realizar.
      */
-    public static boolean robarCarta(Mazo mazo, Descarte descarte) {
+    public static boolean robarCartas(Mazo mazo, Descarte descarte) {
 
         // Si el mazo y el descarte estan vacios no puedo robar cartas
         if (descarte.isEmpty() && mazo.isEmpty())
