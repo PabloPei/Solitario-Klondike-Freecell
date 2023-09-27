@@ -37,7 +37,8 @@ public class TableroKlondike extends Tablero {
 
         for (Pila pila : this.getPilas()) {
             while (pila.size() < cartasPorPila) {
-                pila.push(this.getMazo().pop());
+                Carta cartaAux = this.getMazo().sacarCarta(true);
+                pila.push(cartaAux);
             }
             pila.peek().voltear();
             cartasPorPila++;
@@ -69,14 +70,14 @@ public class TableroKlondike extends Tablero {
             for (Pila pila : getPilas()) {
 
                 // Verifica si se puede agregar la carta de pila al cimiento
-                Carta cartaSuperiorEnPila = pila.peek();
+                Carta cartaSuperiorEnPila = pila.verCarta();
                 if (cartaSuperiorEnPila != null && cimiento.puedeAgregarCarta(cartaSuperiorEnPila)) {
                         return true;
                     }
                 }
 
                 // Verifica si se puede agregar la carta superior del descarte al cimiento
-                Carta cartaSuperiorEnDescarte = descarte.peek();
+                Carta cartaSuperiorEnDescarte = descarte.verCarta();
                 if (cartaSuperiorEnDescarte != null && cimiento.puedeAgregarCarta(cartaSuperiorEnDescarte)) {
                     return true;
                 }
@@ -100,7 +101,7 @@ public class TableroKlondike extends Tablero {
             for (Pila pilaBusqueda : pilas) {
                 if (pilaBusqueda != pilaActual) {
                     //Veo si puedo agregar la carta a la pila
-                    Carta cartaEnPilaBusqueda = pilaBusqueda.peek();
+                    Carta cartaEnPilaBusqueda = pilaBusqueda.verCarta();
                     if (pilaActual.puedeAgregarCarta(cartaEnPilaBusqueda)) {
                         return true;
                     }
@@ -108,8 +109,8 @@ public class TableroKlondike extends Tablero {
             }
 
             // También verifica si se puede agregar la carta del descarte al tableau actual
-            if (descarte.size() > 0) {
-                if (pilaActual.puedeAgregarCarta(descarte.peek())) {
+            if ( ! (descarte.isEmpty()) ) {
+                if (pilaActual.puedeAgregarCarta(descarte.verCarta())) {
                     return true;
                 }
             }

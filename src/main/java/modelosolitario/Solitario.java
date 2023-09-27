@@ -38,6 +38,12 @@ public interface Solitario {
     boolean verificarDerrota();
 
     /**
+     * Suma el valor pasado a la puntuacion
+     * @param cantidad Cantidad que se debe sumar a la puntuación
+     */
+    void sumarPuntuacion(int cantidad);
+
+    /**
      * Calcula la puntuación del juego según las reglas de puntuación del Solitario.
      * @return La puntuación del juego.
      */

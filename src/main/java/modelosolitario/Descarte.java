@@ -30,38 +30,31 @@ public class Descarte extends PilaDeCartas{
     }
 
     /**
-     * #este metodo y el de abajo revisarlos 1) como poner carta alfinal , 2) conviene pasar mazo o carta?
-     * Cuando se saca una carta de la pila de descarte se debe agregar otra.
+     * Saca la cantidad de cartas del mazo dado y las coloca en la pila de descarte.
+     * Luego, vuelve a colocar las cartas de la pila de descarte en el mazo original.
      * @param mazo El mazo del que se sacarán las cartas para colocar en el descarte.
+     * @return true si la operación se realiza con éxito, false si la cantidad especificada supera el tamaño del mazo.
      */
-    public Carta usarCarta(Mazo mazo) {
+    public boolean sacarYDevolverCartas(Mazo mazo, int cantidad) {
 
-        // Chequeo que no haya 3 cartas ya en la pila de descarte
-        if (this.cantidadCartas - this.size() == 0){
-            throw new IllegalStateException("La pila de descartes ya esta llena");
+        if (cantidad <= 0 || mazo.isEmpty()) {
+            return false;
         }
 
-        // Saco la carta de la pila de descarte
-        Carta carta = this.pop();
+        // Coloco las cartas de la pila de descarte boca abajo y al fondo del mazo
+        while (!this.isEmpty()) {
+            Carta carta = sacarCarta(true);
+            mazo.add(carta);
+        }
 
-        // Saco la carta del mazo y la agrego a la pila
-        Carta cartaMazo = mazo.pop();
-        carta.setBocaAbajo(false);
-        this.push(cartaMazo);
-
-        return carta;
-    }
-
-    /**
-     * Saco la cantidad de cartas del mazo a la pila de descarte y vuelvo a poner las que estaban
-     * en la pila de descarte en el mazo.
-     * @param mazo El mazo del que se sacarán las cartas para colocar en el descarte.
-     */
-    public boolean sacarCartas(Mazo mazo) {
+        // Sacar las cartas del mazo y las coloca en la pila de descarte.
+        for (int i = 0; i < this.cantidadCartas; i++) {
+            Carta carta = mazo.sacarCarta(false);
+            if (carta==null) break; //si no hay mas cartas en el mazo dejo de agregar al descarte
+            this.agregarCarta(carta);
+        }
 
         return true;
     }
-
-
 
 }

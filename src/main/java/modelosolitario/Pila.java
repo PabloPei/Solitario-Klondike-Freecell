@@ -6,7 +6,8 @@ import modeloelementos.ValorCarta;
 
 /**
  * Representa una pila o 'tableu' en el juego de solitario. No confundir con la estructura de datos stack.
- * Las pilas son utilizadas para mover y organizar las cartas según las reglas del juego.
+ * Las pilas son utilizadas para mover y organizar las cartas según las reglas del juego. Hereda de la clase
+ * generica pila de cartas y extiende sus funcionalidades segun las reglas del juego solitario.
  */
 public class Pila extends PilaDeCartas {
 
@@ -36,18 +37,13 @@ public class Pila extends PilaDeCartas {
      * @return Una pila de cartas con las cartas retiradas.
      * @throws IllegalStateException si no hay suficientes cartas disponibles en la pila.
      */
-    public PilaDeCartas retirarCartas(int cantidadCartas) {
+    public PilaDeCartas sacarCartas(int cantidadCartas, boolean bocaAbajo) {
 
-        if (cantidadCartas > this.size()) {
-            throw new IllegalStateException("No hay cartas disponibles en la pila.");
-        }
-
-        PilaDeCartas cartas = new PilaDeCartas();
+        PilaDeCartas cartasAux = new PilaDeCartas();
 
         for (int i = 0; i < cantidadCartas; i++) {
-            cartas.push(this.pop());
+            cartasAux.agregarCarta(sacarCarta(bocaAbajo));
         }
-
-        return cartas;
+        return cartasAux;
     }
 }

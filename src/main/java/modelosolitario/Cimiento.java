@@ -5,7 +5,8 @@ import modeloelementos.Carta;
 import modeloelementos.ValorCarta;
 
 /**
- * Representa el cimiento en el juego de solitario.
+ * Representa el cimiento en el juego de solitario. Hereda de la clase pila de cartas genericas y suma funcionalidades
+ * propias de un cimiento.
  * El cimiento es donde se colocan las cartas en orden ascendente por palo, comenzando por el As.
  */
 public class Cimiento extends PilaDeCartas {
