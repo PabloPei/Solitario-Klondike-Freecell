@@ -43,7 +43,7 @@ public class MazoTest {
     public void test_popAllCards() {
         Mazo mazo = new Mazo();
         for (int i = 0; i < 52; i++) {
-            mazo.pop();
+            mazo.remove(mazo.size()-1);
         }
         assertTrue(mazo.isEmpty());
     }
@@ -53,7 +53,7 @@ public class MazoTest {
     public void test_pop51Cards() {
         Mazo mazo = new Mazo();
         for (int i = 0; i < 51; i++) {
-            mazo.pop();
+            mazo.remove(mazo.size()-1);
         }
         assertEquals(1, mazo.size());
     }
@@ -62,8 +62,8 @@ public class MazoTest {
     @Test(expected = EmptyStackException.class)
     public void test_pop53Cards() {
         Mazo mazo = new Mazo();
-        for (int i = 0; i < 53; i++) {
-            mazo.pop();
+        for (int i = 0; i <53; i++) {
+            mazo.remove(mazo.size()-1);
         }
     }
 

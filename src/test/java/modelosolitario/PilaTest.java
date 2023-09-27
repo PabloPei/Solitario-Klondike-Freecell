@@ -28,7 +28,8 @@ public class PilaTest {
         var cartasIniciales = new PilaDeCartas();
         cartasIniciales.push(new Carta(ValorCarta.REY, Palo.TREBOL, false));
         var pila = new Pila(cartasIniciales);
-        assertTrue(pila.puedeAgregarCarta(new Carta(ValorCarta.REINA, Palo.CORAZON, false)));
+        Carta carta = new Carta(ValorCarta.REINA, Palo.CORAZON, false);
+        assertTrue(pila.puedeAgregarCarta(carta));
     }
 
     @Test
@@ -59,7 +60,7 @@ public class PilaTest {
         cartasIniciales.push(new Carta(ValorCarta.SIETE, Palo.PICA, false));
         var pilaOriginal = new Pila(cartasIniciales);
         int cantidadDeCartasASacar = 1;
-        var nuevaPila = pilaOriginal.retirarCartas(cantidadDeCartasASacar);
+        var nuevaPila = pilaOriginal.sacarCarta(false);
         var resultadoEsperado = new Pila();
         resultadoEsperado.push(cartasIniciales.peek());
         assertEquals(resultadoEsperado, nuevaPila);
@@ -77,7 +78,10 @@ public class PilaTest {
         cartasIniciales.push(new Carta(ValorCarta.SIETE, Palo.PICA, false));
         var pilaOriginal = new Pila(cartasIniciales);
         int cantidadDeCartasASacar = 4;
-        var nuevaPila = pilaOriginal.retirarCartas(cantidadDeCartasASacar);
+        var nuevaPila = new Pila();
+        for(int i = 0; i < cantidadDeCartasASacar; i++){
+            nuevaPila.push(pilaOriginal.sacarCarta(false));
+        }
         var resultadoEsperado = new Pila();
         for(int i = 0; i < cantidadDeCartasASacar; i++) {
             resultadoEsperado.push(cartasIniciales.pop());
@@ -96,8 +100,10 @@ public class PilaTest {
         cartasIniciales.push(new Carta(ValorCarta.OCHO, Palo.DIAMANTE, false));
         cartasIniciales.push(new Carta(ValorCarta.SIETE, Palo.PICA, false));
         var pilaOriginal = new Pila(cartasIniciales);
-        int cantidadDeCartasASacar = pilaOriginal.size();
-        var nuevaPila = pilaOriginal.retirarCartas(cantidadDeCartasASacar);
+        int cantidadDeCartasASacar = pilaOriginal.size();var nuevaPila = new Pila();
+        for(int i = 0; i < cantidadDeCartasASacar; i++){
+            nuevaPila.push(pilaOriginal.sacarCarta(false));
+        }
         var resultadoEsperado = new Pila();
         for(int i = 0; i < cantidadDeCartasASacar; i++){
             resultadoEsperado.push(cartasIniciales.pop());

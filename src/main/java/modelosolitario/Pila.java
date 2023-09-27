@@ -11,6 +11,14 @@ import modeloelementos.ValorCarta;
  */
 public class Pila extends PilaDeCartas {
 
+    public Pila() { super(); }
+
+    public Pila(PilaDeCartas pila){
+        for (int i = 0; i < pila.size(); i++){
+            push(pila.get(i));
+        }
+    }
+
     /**
      * Verifica si es valido agregar una carta a la pila segun las reglas del solitario.
      * @param carta La carta que se va a intentar agregar a la pila.
