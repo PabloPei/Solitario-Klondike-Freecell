@@ -55,10 +55,10 @@ public abstract class Tablero {
      * @param mazo el mazo en el estado que se busque
      * @param
      */
-    public Tablero(int cantidadPilas) {
-
-
-    }
+//    public Tablero(int cantidadPilas) {
+//
+//
+//    }
 
 
     /**

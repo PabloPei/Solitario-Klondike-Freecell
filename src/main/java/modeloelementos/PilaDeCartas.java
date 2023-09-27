@@ -1,4 +1,6 @@
 package modeloelementos;
+import modelosolitario.Pila;
+
 import java.util.Collections;
 import java.util.Stack;
 
@@ -46,5 +48,15 @@ public class PilaDeCartas extends Stack<Carta> {
         }
     }
 
+    public boolean equals(PilaDeCartas pila){
+        if(this.size() != pila.size()) return false;
+        boolean sonIguales = true;
+        int indice = 0;
+        while (sonIguales && indice < this.size()){
+            if (this.get(indice) != pila.get(indice)) sonIguales = false;
+            else indice++;
+        }
+        return sonIguales;
+    }
 
 }

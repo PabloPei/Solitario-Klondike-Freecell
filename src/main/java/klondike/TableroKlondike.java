@@ -1,4 +1,4 @@
-package klondike;
+package Klondike;
 
 import modelosolitario.*;
 import modeloelementos.Palo;
