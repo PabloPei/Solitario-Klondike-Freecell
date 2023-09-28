@@ -68,23 +68,30 @@ public class Movimientos {
      * @return              Devuelve true si el movimiento se realizó con éxito, false si no se pudo realizar.
      */
     public static boolean moverCartas(PilaDeCartas origen, PilaDeCartas destino, Carta primeraCarta) {
-        if(!destino.agregarCarta(primeraCarta)) return false;
-        else destino.pop();
+
+        // En primer lugar reviso el caso particular de si se puede agregar la carta a la nueva pila
+        if(!destino.puedeAgregarCarta(primeraCarta)) return false;
+
         // Me guardo la ultima carta por si falla volver atras
         Carta ultimaCarta = origen.verCarta();
 
         // Me armo una pila auxiliar con las cartas
         PilaDeCartas pilaAux = new PilaDeCartas();
-        do {
-            pilaAux.agregarCarta(origen.sacarCarta(false));
-        } while (origen.verCarta() != null && primeraCarta != origen.verCarta());
-        pilaAux.agregarCarta(origen.sacarCarta(false));
+        do{
+            if ( ! (pilaAux.agregarCarta(origen.sacarCarta(false)))) {
+                // Si falla en agregar vuelvo todas las cartas de la pila auxiliar al original
+                while (!(pilaAux.isEmpty())) {
+                    origen.agregarCarta(pilaAux.sacarCarta(false));
+                }
+                return false;
+            }
+        }while (primeraCarta != pilaAux.verCarta());
+
 
         // Comienzo a agregarlas a la nueva pila
         while (!pilaAux.isEmpty()) {
             if (!(destino.agregarCarta(pilaAux.pop()))) {
                 //si fallo al agregar una carta vuelvo las cartas a la posición original
-
                 // Las cartas que ya estaban en la pila destino las vuelvo al origen
                 while (destino.peek() != ultimaCarta) {
                     origen.agregarCarta(destino.sacarCarta(false));
