@@ -29,6 +29,7 @@ public abstract class Tablero {
 
         this.pilas = new ArrayList<Pila>();
         iniciarPilas(cantidadPilas);
+        repartirPilas();
     }
 
     /**
