@@ -1,4 +1,4 @@
-package Klondike;
+package klondike;
 
 import modeloelementos.Dificultad;
 import modelosolitario.*;
@@ -71,10 +71,11 @@ public class TableroKlondike extends Tablero {
     }
 
     /**
+     * Metodo auxiliar de hay movimientos disponibles.
      * Verifica si existen movimientos posibles para agregar cartas a cimientos
      * @return true si existen movimientos para agregar cartas a cimientos, false en otro caso.
      */
-    public boolean hayMovimientoACimientos() {
+    private boolean hayMovimientoACimientos() {
 
         // Itero sobre cada cimiento
         for (Cimiento cimiento : getCimientos()) {
@@ -101,10 +102,11 @@ public class TableroKlondike extends Tablero {
     }
 
     /**
+     * Metodo auxiliar de hay movimientos disponibles.
      * Verifica si existen movimientos posibles para agregar cartas a las pilas
      * @return true si existen movimientos para agregar cartas a pilas, false en otro caso.
      */
-    public boolean hayMovimientoAPilas() {
+    private boolean hayMovimientoAPilas() {
 
         // Itero sobre cada pila
         for (Pila pilaActual : pilas) {

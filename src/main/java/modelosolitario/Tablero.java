@@ -90,7 +90,6 @@ public abstract class Tablero {
 
     }
 
-
     /**
      * Reparte las cartas iniciales en las pilas de juego (cada solitario lo implementa de distinta forma).
      */

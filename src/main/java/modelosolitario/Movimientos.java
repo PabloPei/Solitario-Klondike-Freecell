@@ -8,8 +8,6 @@ import modeloelementos.PilaDeCartas;
  */
 public class Movimientos {
 
-    private int cantidadMovimientos;
-
     /**
      * Mueve una carta desde una pila de origen a una pila de destino.
      * @param origen   La pila de origen desde la que se va a sacar la carta.
@@ -28,37 +26,6 @@ public class Movimientos {
         return true;
 
     }
-
-    /**
-     * Roba cartas del mazo y las pone en la pila de descarte. Ademas, si habia cartas en la pila de descarte las mueve
-     * de vuelta al mazo.
-     * @param mazo     Mazo del cual va a robar las cartas y volver a ingresar
-     * @param descarte pila de descarte en la cual va a agregar la carta
-     * @return         Devuelve true si el movimiento se realizó con éxito, false si no se pudo realizar.
-     */
-    public static boolean robarCartasDelMazo(Mazo mazo, Descarte descarte) {
-
-        // Si el mazo y el descarte estan vacios no puedo robar cartas
-        if (descarte.isEmpty() && mazo.isEmpty())
-            return false;
-
-        // Coloco las cartas de la pila de descarte boca abajo y lo agrego al final del mazo
-        while (!descarte.isEmpty()) {
-            Carta carta = descarte.sacarCarta(true);
-            mazo.agregarCarta(carta);
-        }
-
-        // Saco las cartas del mazo y las coloca en la pila de descarte.
-        for (int i = 0; i < descarte.getCantidadCartas(); i++) {
-            Carta carta = mazo.sacarCarta(false);
-            if (carta==null) break; //si no hay mas cartas en el mazo dejo de agregar al descarte
-            descarte.agregarCarta(carta);
-        }
-
-        return true;
-    }
-
-
 
     /**
      * Mueve un conjunto de cartas desde una pila de origen a una pila de destino.
@@ -105,4 +72,37 @@ public class Movimientos {
         }
         return true;
     }
+
+    /**
+     * Roba cartas del mazo y las pone en la pila de descarte. Ademas, si habia cartas en la pila de descarte las mueve
+     * de vuelta al mazo.
+     * @param mazo     Mazo del cual va a robar las cartas y volver a ingresar
+     * @param descarte pila de descarte en la cual va a agregar la carta
+     * @return         Devuelve true si el movimiento se realizó con éxito, false si no se pudo realizar.
+     */
+    public static boolean robarCartasDelMazo(Mazo mazo, Descarte descarte) {
+
+        // Si el mazo y el descarte estan vacios no puedo robar cartas
+        if (descarte.isEmpty() && mazo.isEmpty())
+            return false;
+
+        // Coloco las cartas de la pila de descarte boca abajo y lo agrego al final del mazo
+        while (!descarte.isEmpty()) {
+            Carta carta = descarte.sacarCarta(true);
+            mazo.agregarCarta(carta);
+        }
+
+        // Saco las cartas del mazo y las coloca en la pila de descarte.
+        for (int i = 0; i < descarte.getCantidadCartas(); i++) {
+            Carta carta = mazo.sacarCarta(false);
+            if (carta==null) break; //si no hay mas cartas en el mazo dejo de agregar al descarte
+            descarte.agregarCarta(carta);
+        }
+
+        return true;
+    }
+
+
+
+
 }
