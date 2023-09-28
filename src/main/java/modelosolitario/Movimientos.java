@@ -68,8 +68,7 @@ public class Movimientos {
      * @return              Devuelve true si el movimiento se realizó con éxito, false si no se pudo realizar.
      */
     public static boolean moverCartas(PilaDeCartas origen, PilaDeCartas destino, Carta primeraCarta) {
-        Carta auxiliar = primeraCarta;
-        if(!destino.agregarCarta(auxiliar)) return false;
+        if(!destino.agregarCarta(primeraCarta)) return false;
         else destino.pop();
         // Me guardo la ultima carta por si falla volver atras
         Carta ultimaCarta = origen.verCarta();
