@@ -18,7 +18,9 @@ public class Movimientos {
      */
     public static boolean moverCarta(PilaDeCartas origen, PilaDeCartas destino) {
 
+
         Carta cartaSacada = origen.sacarCarta(false);
+
         if (!destino.agregarCarta(cartaSacada)){
             origen.agregarCarta(cartaSacada); //no pudo agregar la carta la vuelvo al lugar original
             return false;
@@ -65,20 +67,34 @@ public class Movimientos {
      * @param primeraCarta  La primera carta del conjunto a mover.
      * @return              Devuelve true si el movimiento se realizó con éxito, false si no se pudo realizar.
      */
-    public static boolean moverCartas(PilaDeCartas origen, PilaDeCartas destino, Carta primeraCarta){
+    public static boolean moverCartas(PilaDeCartas origen, PilaDeCartas destino, Carta primeraCarta) {
 
+        // Me guardo la ultima carta por si falla volver atras
+        Carta ultimaCarta = origen.verCarta();
+
+        // Me armo una pila auxiliar con las cartas
         PilaDeCartas pilaAux = new PilaDeCartas();
         do {
-            pilaAux.agregarCarta(origen.pop());
-        } while(primeraCarta != origen.peek());
-        if(!destino.agregarCarta(pilaAux.pop())){
-            while (!pilaAux.isEmpty()) {
-                origen.agregarCarta(pilaAux.pop());
-            }
-            return false;
-        }
+            pilaAux.agregarCarta(origen.sacarCarta(false));
+        } while (origen.verCarta() != null && primeraCarta != origen.verCarta());
+
+        // Comienzo a agregarlas a la nueva pila
         while (!pilaAux.isEmpty()) {
-            destino.agregarCarta(pilaAux.pop());
+
+            if (!(destino.agregarCarta(pilaAux.pop()))) {
+                //si fallo al agregar una carta vuelvo las cartas a la posición original
+
+                // Las cartas que ya estaban en la pila destino las vuelvo al origen
+                while (destino.verCarta() != ultimaCarta) {
+                    origen.agregarCarta(destino.sacarCarta(false));
+                }
+                // Las cartas que todavia no habia podido agregar y estaban en la auxiliar las vuelvo a la origen
+                while (!(pilaAux.isEmpty())) {
+                    destino.agregarCarta(pilaAux.sacarCarta(false));
+                }
+                return false;
+            }
+
         }
         return true;
     }

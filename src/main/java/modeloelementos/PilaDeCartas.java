@@ -40,6 +40,7 @@ public class PilaDeCartas extends Stack<Carta> {
         return carta;
     }
 
+
     /**
      * Intenta ver la carta de arriba de la pila de cartas
      * @return Carta la carta que saco de la pila de cartas
@@ -54,7 +55,7 @@ public class PilaDeCartas extends Stack<Carta> {
     /**
      * Verifica si es valido agregar una carta a una pila de cartas generica.
      * @param carta La carta que se va a intentar agregar al cimiento.
-     * @return true si la carta se ha agregado correctamente, false si no se pudo agregar debido a reglas del juego o si el cimiento está completo.
+     * @return true si la carta se puede agregar, false en otro caso.
      */
     public boolean puedeAgregarCarta(Carta carta) {
         return (carta != null && !this.contains(carta));

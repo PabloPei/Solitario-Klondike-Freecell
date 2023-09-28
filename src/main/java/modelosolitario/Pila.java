@@ -22,7 +22,7 @@ public class Pila extends PilaDeCartas {
     /**
      * Verifica si es valido agregar una carta a la pila segun las reglas del solitario.
      * @param carta La carta que se va a intentar agregar a la pila.
-     * @return true si la carta se ha agregado correctamente, false si no se pudo agregar debido a reglas del juego o si el cimiento está completo.
+     * @return true si la carta se puede agregar, false en otro caso.
      */
     public boolean puedeAgregarCarta(Carta carta) {
 
@@ -38,6 +38,7 @@ public class Pila extends PilaDeCartas {
             return (Carta.esColorAlternado(tope, carta) && Carta.esValorSiguiente(carta, tope));
         }
     }
+    
 
     /**
      * Accion de retirar una carta de la pila. Chequea si hay una carta anterior boca abajo y la pone bocca arriba
