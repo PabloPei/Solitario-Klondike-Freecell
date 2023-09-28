@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Cree enum ValorCarta y las clases Solitario y Tablero">
+    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Habia un error en los nomrbes de los paquetes que generaba un error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Movimientos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Movimientos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modelosolitario/MovimientosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modelosolitario/MovimientosTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,9 +86,9 @@
       <recent name="klondike" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="Klondike" />
       <recent name="modelosolitario" />
       <recent name="modeloelementos" />
-      <recent name="Klondike" />
       <recent name="" />
     </key>
   </component>
@@ -189,6 +191,7 @@
       <workItem from="1695839131334" duration="74000" />
       <workItem from="1695841540821" duration="1772000" />
       <workItem from="1695846937981" duration="12380000" />
+      <workItem from="1695924639946" duration="2867000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />
@@ -255,6 +258,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Cree Tests para pila" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Solitario_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1695920095991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Solitario_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1695929795967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
