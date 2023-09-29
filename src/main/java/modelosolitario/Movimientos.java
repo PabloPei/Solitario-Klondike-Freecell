@@ -15,8 +15,6 @@ public class Movimientos {
      * @return         Devuelve true si el movimiento se realizó con éxito, false si no se pudo realizar.
      */
     public static boolean moverCarta(PilaDeCartas origen, PilaDeCartas destino) {
-
-
         Carta cartaSacada = origen.sacarCarta(false);
 
         if (!destino.agregarCarta(cartaSacada)){
@@ -24,7 +22,6 @@ public class Movimientos {
             return false;
         }
         return true;
-
     }
 
     /**
@@ -35,7 +32,6 @@ public class Movimientos {
      * @return              Devuelve true si el movimiento se realizó con éxito, false si no se pudo realizar.
      */
     public static boolean moverCartas(PilaDeCartas origen, PilaDeCartas destino, Carta primeraCarta) {
-
         // En primer lugar reviso el caso particular de si se puede agregar la carta a la nueva pila
         if(!destino.puedeAgregarCarta(primeraCarta)) return false;
 
@@ -53,7 +49,6 @@ public class Movimientos {
                 return false;
             }
         }while (primeraCarta != pilaAux.verCarta());
-
 
         // Comienzo a agregarlas a la nueva pila
         while (!pilaAux.isEmpty()) {
@@ -81,7 +76,6 @@ public class Movimientos {
      * @return         Devuelve true si el movimiento se realizó con éxito, false si no se pudo realizar.
      */
     public static boolean robarCartasDelMazo(Mazo mazo, Descarte descarte) {
-
         // Si el mazo y el descarte estan vacios no puedo robar cartas
         if (descarte.isEmpty() && mazo.isEmpty())
             return false;
@@ -98,11 +92,6 @@ public class Movimientos {
             if (carta==null) break; //si no hay mas cartas en el mazo dejo de agregar al descarte
             descarte.agregarCarta(carta);
         }
-
         return true;
     }
-
-
-
-
 }

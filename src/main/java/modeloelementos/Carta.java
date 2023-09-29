@@ -40,7 +40,6 @@ public class Carta {
         this.valor = valor;
         this.palo = palo;
         this.bocaAbajo = bocaAbajo;
-
     }
 
     /**
@@ -128,7 +127,6 @@ public class Carta {
     }
 
     public Color getColor() { return getPalo().getColor(); }
-
 }
 
 

@@ -39,6 +39,4 @@ public enum ValorCarta {
         }
         return ValorCarta.values()[this.ordinal() + 1];
     }
-
-
 }

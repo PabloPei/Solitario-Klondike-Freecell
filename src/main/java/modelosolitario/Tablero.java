@@ -83,11 +83,9 @@ public abstract class Tablero {
      * Inicializa las pilas, dependiendo la cantidad que corresponda al solitario
      */
     public void iniciarPilas(int cantidadPilas){
-
         for (int i = 0; i < cantidadPilas; i++) {
             this.getPilas().add(new Pila());
         }
-
     }
 
     /**
@@ -110,6 +108,4 @@ public abstract class Tablero {
     public ArrayList<Pila> getPilas(){
         return this.pilas;
     }
-
-
 }

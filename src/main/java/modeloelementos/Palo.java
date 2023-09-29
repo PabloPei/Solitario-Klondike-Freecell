@@ -26,5 +26,4 @@ public enum Palo {
      * @return Color del palo, puede ser ROJO o NEGRO.
      */
     public Color getColor() { return (this.equals(Palo.DIAMANTE) || this.equals(Palo.CORAZON) ? Color.ROJO : Color.NEGRO);}
-
 }

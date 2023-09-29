@@ -47,12 +47,9 @@ public class Mazo extends ArrayList<Carta> {
      *                poder iniciarlizar solitarios desde el mismo punto
      */
     public void mezclar(long semilla ) {
-
         var seed = new Random(semilla);
         Collections.shuffle(this, seed);
-
     }
-
 
     /**
      * Saca la primera carta del mazo
@@ -60,14 +57,12 @@ public class Mazo extends ArrayList<Carta> {
      * @return true si se puede agregar, false sino
      */
     public boolean agregarCarta(Carta carta){
-
         if ( this.contains(carta))
             return false;
         else
             this.add(carta);
         return true;
     }
-
 
     /**
      * Saca la primera carta del mazo
@@ -78,7 +73,6 @@ public class Mazo extends ArrayList<Carta> {
         if (isEmpty()) {
             return null;
         }
-
         Carta carta = this.remove(0);
         carta.setBocaAbajo(bocaAbajo);
         return carta;
@@ -95,15 +89,12 @@ public class Mazo extends ArrayList<Carta> {
         if (mazo == null || this.size() != mazo.size()) {
             return false;
         }
-
         // Compara cada carta en ambos mazos.
         for (int i = 0; i < this.size(); i++) {
             if (!this.get(i).equals(mazo.get(i))) {
                 return false;
             }
         }
-
         return true;
     }
-
 }

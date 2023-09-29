@@ -21,7 +21,6 @@ public class TableroKlondike extends Tablero {
      * Inicializa un tablero segun las reglas del solitario klondike
      */
     public TableroKlondike(Dificultad dificultad){
-
         super(CANTIDAD_PILAS);
 
         inciarCimientos();
@@ -32,7 +31,6 @@ public class TableroKlondike extends Tablero {
      * Inicializa un tablero segun las reglas del solitario klondike a partir de una semilla
      */
     public TableroKlondike(Dificultad dificultad, long semilla){
-
         super(CANTIDAD_PILAS, semilla);
 
         inciarCimientos();
@@ -45,7 +43,6 @@ public class TableroKlondike extends Tablero {
      */
     @Override
     public void repartirPilas() {
-
         int cartasPorPila = 1;
 
         for (Pila pila : this.getPilas()) {
@@ -56,18 +53,15 @@ public class TableroKlondike extends Tablero {
             pila.peek().voltear();
             cartasPorPila++;
         }
-
     }
 
     /**
      * Inicializa los 4 cimientos del solitario klondike
      */
     public void inciarCimientos() {
-
         for (Palo p : Palo.values()) {
             cimientos.add(new Cimiento());
         }
-
     }
 
     /**
@@ -76,7 +70,6 @@ public class TableroKlondike extends Tablero {
      * @return true si existen movimientos para agregar cartas a cimientos, false en otro caso.
      */
     private boolean hayMovimientoACimientos() {
-
         // Itero sobre cada cimiento
         for (Cimiento cimiento : getCimientos()) {
 
@@ -95,9 +88,7 @@ public class TableroKlondike extends Tablero {
                 if (cartaSuperiorEnDescarte != null && cimiento.puedeAgregarCarta(cartaSuperiorEnDescarte)) {
                     return true;
                 }
-
             }
-
         return false; //si ninguna carta de la pila puede ser agregado a ninguno de los cimientos no hay movimientos disponibles
     }
 
@@ -110,8 +101,6 @@ public class TableroKlondike extends Tablero {
 
         // Itero sobre cada pila
         for (Pila pilaActual : pilas) {
-
-
             // Itero sobre cada pila de busqueda
             for (Pila pilaBusqueda : pilas) {
                 if (pilaBusqueda != pilaActual) {
@@ -122,7 +111,6 @@ public class TableroKlondike extends Tablero {
                     }
                 }
             }
-
             // También verifica si se puede agregar la carta del descarte al tableau actual
             if ( ! (descarte.isEmpty()) ) {
                 if (pilaActual.puedeAgregarCarta(descarte.verCarta())) {
@@ -130,7 +118,6 @@ public class TableroKlondike extends Tablero {
                 }
             }
         }
-
         // No se encontraron movimientos válidos
         return false;
     }
@@ -162,5 +149,4 @@ public class TableroKlondike extends Tablero {
     public Descarte getDescarte(){ return this.descarte; }
 
     public ArrayList<Cimiento> getCimientos(){ return this.cimientos; }
-
 }

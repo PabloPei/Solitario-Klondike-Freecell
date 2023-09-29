@@ -35,7 +35,6 @@ public class Descarte extends PilaDeCartas{
             case FACIL -> this.cantidadCartas = 1;
             default -> this.cantidadCartas = 1;
         }
-
     }
 
     /**
@@ -44,5 +43,4 @@ public class Descarte extends PilaDeCartas{
     public int getCantidadCartas(){
         return this.cantidadCartas;
     }
-
 }

@@ -124,5 +124,4 @@ public class SolitarioKlondike implements Solitario {
     public Dificultad getDificultad(){
         return this.dificultad;
     }
-
 }

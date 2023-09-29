@@ -28,7 +28,6 @@ public class Pila extends PilaDeCartas {
 
         // Verifica las condiciones genericas de una pila
         if ( !super.puedeAgregarCarta(carta)) return false;
-
         // Verifica si la pila está vacía y si la carta es un Rey (valor 13) para iniciar la pila.
         if (isEmpty()){
             return (carta.getValor() == ValorCarta.REY);
@@ -38,7 +37,6 @@ public class Pila extends PilaDeCartas {
             return (Carta.esColorAlternado(tope, carta) && Carta.esValorSiguiente(carta, tope));
         }
     }
-    
 
     /**
      * Accion de retirar una carta de la pila. Chequea si hay una carta anterior boca abajo y la pone bocca arriba
@@ -46,16 +44,11 @@ public class Pila extends PilaDeCartas {
      * @return Carta la carta que saco de la pila de cartas
      */
     public Carta sacarCarta(boolean bocaAbajo) {
-
         Carta carta = super.sacarCarta(bocaAbajo);
-
         if ( ! this.isEmpty() ){
             Carta tope = this.peek();
             tope.setBocaAbajo(false);
         }
-
         return carta;
-
     }
-
 }

@@ -57,5 +57,4 @@ public interface Solitario {
      * @return dificultad la dificultad del solitario (facil,medio,dificil)
      */
     Dificultad getDificultad();
-
 }

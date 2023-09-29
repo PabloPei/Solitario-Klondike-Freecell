@@ -80,5 +80,4 @@ public class PilaDeCartas extends Stack<Carta> {
         }
         return sonIguales;
     }
-
 }

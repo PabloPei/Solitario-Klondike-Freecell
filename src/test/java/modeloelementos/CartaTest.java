@@ -162,5 +162,4 @@ public class CartaTest extends TestCase {
         Carta carta2 = new Carta(ValorCarta.DOS, Palo.CORAZON, false);
         assertTrue(Carta.esValorSiguiente(carta1, carta2));
     }
-
 }
