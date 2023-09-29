@@ -2,7 +2,6 @@ package klondike;
 
 import Klondike.Cimiento;
 import modeloelementos.Dificultad;
-import modeloelementos.PilaDeCartas;
 import modelosolitario.*;
 import modeloelementos.Palo;
 import modeloelementos.Carta;
@@ -39,11 +38,15 @@ public class TableroKlondike extends Tablero {
         Descarte descarte=new Descarte(dificultad);
     }
 
+
+    /**
+     * Inicializa un tablero segun las reglas del solitario klondike a partir de un estado del juego particular
+     */
     public TableroKlondike(Dificultad dificultad, Mazo mazo, ArrayList<Cimiento> cimientos, ArrayList<Pila> pilas){
-        super(mazo, pilas, CANTIDAD_PILAS);
+        super(mazo, pilas);
         this.cimientos = new ArrayList<>();
-        for(int i = 0; i < 4; i++){
-            this.cimientos.add(cimientos.get(i));
+        for(Cimiento cimiento : cimientos){
+            this.cimientos.add(cimiento);
         }
         this.descarte = new Descarte(dificultad);
     }
