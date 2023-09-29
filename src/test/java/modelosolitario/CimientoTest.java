@@ -3,7 +3,7 @@ package modelosolitario;
 import modeloelementos.Carta;
 import modeloelementos.Palo;
 import modeloelementos.ValorCarta;
-import modelosolitario.Cimiento;
+import Klondike.Cimiento;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

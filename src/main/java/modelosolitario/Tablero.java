@@ -1,5 +1,8 @@
 package modelosolitario;
 
+import Klondike.Cimiento;
+import modeloelementos.PilaDeCartas;
+
 import java.util.ArrayList;
 
 
@@ -30,6 +33,14 @@ public abstract class Tablero {
         this.pilas = new ArrayList<Pila>();
         iniciarPilas(cantidadPilas);
         repartirPilas();
+    }
+
+    public Tablero(Mazo mazo, ArrayList<Pila> pilas, int cantidadPilas){
+        this.mazo = mazo;
+        this.pilas = new ArrayList<Pila>();
+        for(int i = 0; i < cantidadPilas; i++){
+            this.pilas.add(pilas.get(i));
+        }
     }
 
     /**

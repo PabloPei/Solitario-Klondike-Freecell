@@ -1,6 +1,8 @@
-package klondike;
+package Klondike;
 
+import Klondike.Cimiento;
 import modeloelementos.Dificultad;
+import modeloelementos.PilaDeCartas;
 import modelosolitario.*;
 import modeloelementos.Palo;
 import modeloelementos.Carta;
@@ -22,9 +24,9 @@ public class TableroKlondike extends Tablero {
      */
     public TableroKlondike(Dificultad dificultad){
         super(CANTIDAD_PILAS);
-
+        this.cimientos = new ArrayList<>();
         inciarCimientos();
-        Descarte descarte=new Descarte(dificultad);
+        Descarte descarte = new Descarte(dificultad);
     }
 
     /**
@@ -32,11 +34,19 @@ public class TableroKlondike extends Tablero {
      */
     public TableroKlondike(Dificultad dificultad, long semilla){
         super(CANTIDAD_PILAS, semilla);
-
+        this.cimientos = new ArrayList<>();
         inciarCimientos();
         Descarte descarte=new Descarte(dificultad);
     }
 
+    public TableroKlondike(Dificultad dificultad, Mazo mazo, ArrayList<Cimiento> cimientos, ArrayList<Pila> pilas){
+        super(mazo, pilas, CANTIDAD_PILAS);
+        this.cimientos = new ArrayList<>();
+        for(int i = 0; i < 4; i++){
+            this.cimientos.add(cimientos.get(i));
+        }
+        this.descarte = new Descarte(dificultad);
+    }
 
     /**
      * Reparte las cartas iniciales en las pilas segun las reglas del solitario klondike.
@@ -84,9 +94,11 @@ public class TableroKlondike extends Tablero {
                 }
 
                 // Verifica si se puede agregar la carta superior del descarte al cimiento
-                Carta cartaSuperiorEnDescarte = descarte.verCarta();
-                if (cartaSuperiorEnDescarte != null && cimiento.puedeAgregarCarta(cartaSuperiorEnDescarte)) {
-                    return true;
+                if (descarte != null){
+                    Carta cartaSuperiorEnDescarte = descarte.verCarta();
+                    if (cartaSuperiorEnDescarte != null && cimiento.puedeAgregarCarta(cartaSuperiorEnDescarte)) {
+                        return true;
+                    }
                 }
             }
         return false; //si ninguna carta de la pila puede ser agregado a ninguno de los cimientos no hay movimientos disponibles
@@ -112,11 +124,11 @@ public class TableroKlondike extends Tablero {
                 }
             }
             // También verifica si se puede agregar la carta del descarte al tableau actual
-            if ( ! (descarte.isEmpty()) ) {
+            if (descarte != null && !(descarte.isEmpty()) ) {
                 if (pilaActual.puedeAgregarCarta(descarte.verCarta())) {
                     return true;
                 }
-            }
+            } else return false;
         }
         // No se encontraron movimientos válidos
         return false;

@@ -1,4 +1,4 @@
-package klondike;
+package Klondike;
 
 
 import modeloelementos.Dificultad;
@@ -32,6 +32,13 @@ public class SolitarioKlondike implements Solitario {
         this.movimientos=0;
         this.dificultad=dificultad;
         this.tablero = new TableroKlondike(dificultad, semilla);
+        this.estadoJuego = EstadoJuego.INICIADO;
+    }
+
+    public SolitarioKlondike(Dificultad dificultad, TableroKlondike tablero){
+        this.movimientos = 0;
+        this.dificultad = dificultad;
+        this.tablero = tablero;
         this.estadoJuego = EstadoJuego.INICIADO;
     }
 
