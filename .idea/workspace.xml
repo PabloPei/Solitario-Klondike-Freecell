@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Habia un error en los nomrbes de los paquetes que generaba un error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/klondike/TableroKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/klondike/TableroKlondike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Movimientos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Movimientos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modeloelementos/PilaDeCartasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modeloelementos/PilaDeCartasTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modelosolitario/MovimientosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modelosolitario/MovimientosTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,26 +92,11 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Solitario-Algo3">
+  <component name="RunManager" selected="JUnit.MovimientosTest.testMoverConjuntoCartasFallaPorValor">
     <configuration name="All in Solitario-Algo3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CimientoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Solitario-Algo3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="modelosolitario.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="modelosolitario" />
-      <option name="MAIN_CLASS_NAME" value="modelosolitario.CimientoTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -133,42 +116,61 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PaloTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MovimientosTest.testMoverCartaFunciona" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="modeloelementos.*" />
+          <option name="PATTERN" value="modelosolitario.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="modeloelementos" />
-      <option name="MAIN_CLASS_NAME" value="modeloelementos.PaloTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="modelosolitario" />
+      <option name="MAIN_CLASS_NAME" value="modelosolitario.MovimientosTest" />
+      <option name="METHOD_NAME" value="testMoverCartaFunciona" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="modeloelementos in Solitario-Algo3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MovimientosTest.testMoverConjuntoCartasFallaPorValor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="modeloelementos.*" />
+          <option name="PATTERN" value="modelosolitario.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="modeloelementos" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="PACKAGE_NAME" value="modelosolitario" />
+      <option name="MAIN_CLASS_NAME" value="modelosolitario.MovimientosTest" />
+      <option name="METHOD_NAME" value="testMoverConjuntoCartasFallaPorValor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovimientosTest.testMoverConjuntoDeCartasFunciona" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Solitario-Algo3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modelosolitario.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modelosolitario" />
+      <option name="MAIN_CLASS_NAME" value="modelosolitario.MovimientosTest" />
+      <option name="METHOD_NAME" value="testMoverConjuntoDeCartasFunciona" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MovimientosTest.testMoverConjuntoCartasFallaPorValor" />
+        <item itemvalue="JUnit.MovimientosTest.testMoverConjuntoDeCartasFunciona" />
+        <item itemvalue="JUnit.MovimientosTest.testMoverCartaFunciona" />
         <item itemvalue="JUnit.All in Solitario-Algo3" />
         <item itemvalue="JUnit.MovimientosTest" />
-        <item itemvalue="JUnit.CimientoTest" />
-        <item itemvalue="JUnit.modeloelementos in Solitario-Algo3" />
-        <item itemvalue="JUnit.PaloTest" />
       </list>
     </recent_temporary>
   </component>
@@ -261,6 +263,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Cree Tests para pila" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Solitario_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1695929795967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Solitario_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1695842990670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

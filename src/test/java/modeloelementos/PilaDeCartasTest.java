@@ -6,14 +6,14 @@ import static org.junit.Assert.*;
 public class PilaDeCartasTest {
 
     @Test
-    public void test_puede_agregar_carta_a_pila() {
+    public void testPuedeAgregarCartaAPila() {
         PilaDeCartas pila = new PilaDeCartas();
         Carta carta = new Carta(ValorCarta.AS, Palo.CORAZON, true);
         assertTrue(pila.agregarCarta(carta));
     }
 
     @Test
-    public void test_agregar_carta_a_pila_vacia() {
+    public void testAgregarCartaAPilaVacia() {
         var pila = new PilaDeCartas();
         Carta carta = new Carta(ValorCarta.REY, Palo.TREBOL, false);
         pila.agregarCarta(carta);
@@ -21,20 +21,20 @@ public class PilaDeCartasTest {
     }
 
     @Test
-    public void test_agregar_carta_existente_a_pila() {
+    public void testAgregarCartaExistenteAPila() {
         var pila = new PilaDeCartas();
         pila.push(new Carta(ValorCarta.REY, Palo.TREBOL, false));
         assertFalse(pila.agregarCarta(new Carta(ValorCarta.REY, Palo.TREBOL, false)));
     }
 
     @Test
-    public void test_ver_carta_en_pila_vacia() {
+    public void testVerCartaEnPilaVacia() {
         var pila = new PilaDeCartas();
         assertEquals(null, pila.verCarta());
     }
 
     @Test
-    public void test_ver_carta() {
+    public void testVerCarta() {
         var pila = new PilaDeCartas();
         pila.push(new Carta(ValorCarta.REY, Palo.TREBOL, false));
         Carta carta = new Carta(ValorCarta.DOS, Palo.CORAZON, false);
@@ -43,13 +43,13 @@ public class PilaDeCartasTest {
     }
 
     @Test
-    public void test_no_puede_quitar_carta_de_pila_vacia() {
+    public void testNoPuedeQuitarCartaDePilaVacia() {
         PilaDeCartas pila = new PilaDeCartas();
         assertNull(pila.sacarCarta(true));
     }
 
     @Test
-    public void test_no_puede_agregar_carta_existente_a_pila() {
+    public void testNoPuedeAgregarCartaExistenteAPila() {
         PilaDeCartas pila = new PilaDeCartas();
         Carta carta = new Carta(ValorCarta.AS, Palo.CORAZON, true);
         pila.agregarCarta(carta);
@@ -57,7 +57,7 @@ public class PilaDeCartasTest {
     }
 
     @Test
-    public void test_equals() {
+    public void testEquals() {
         var pila = new PilaDeCartas();
         var pila2 = new PilaDeCartas();
         Carta carta1 = new Carta(ValorCarta.REY, Palo.TREBOL, false);

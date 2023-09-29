@@ -6,7 +6,8 @@ import modeloelementos.Palo;
 import modeloelementos.PilaDeCartas;
 import modeloelementos.ValorCarta;
 import org.junit.Test;
-
+import static modelosolitario.Movimientos.moverCarta;
+import static modelosolitario.Movimientos.moverCartas;
 import static org.junit.Assert.*;
 
 public class MovimientosTest {
@@ -15,8 +16,11 @@ public class MovimientosTest {
         var pilaDestino = new Pila();
         pilaDestino.push(new Carta(ValorCarta.REY, Palo.TREBOL, false));
         var pilaOrigen = new Pila();
-        pilaOrigen.push(new Carta(ValorCarta.REINA, Palo.CORAZON, false));
-        assertTrue(Movimientos.moverCarta(pilaOrigen, pilaDestino));
+        Carta cartaAMover = new Carta(ValorCarta.REINA, Palo.CORAZON, false);
+        pilaOrigen.push(cartaAMover);
+        moverCarta(pilaOrigen, pilaDestino);
+        Carta cartaEsperada = pilaDestino.verCarta();
+        assertEquals(cartaAMover, cartaEsperada);
     }
 
     @Test
@@ -24,7 +28,7 @@ public class MovimientosTest {
         var pilaDestino = new Pila();
         var pilaOrigen = new Pila();
         pilaOrigen.push(new Carta(ValorCarta.REINA, Palo.TREBOL, false));
-        assertFalse(Movimientos.moverCarta(pilaOrigen, pilaDestino));
+        assertFalse(moverCarta(pilaOrigen, pilaDestino));
     }
 
     @Test
@@ -33,10 +37,12 @@ public class MovimientosTest {
         cartasIniciales1.push(new Carta(ValorCarta.REY, Palo.TREBOL, false));
         cartasIniciales1.push(new Carta(ValorCarta.REINA, Palo.CORAZON, false));
         cartasIniciales1.push(new Carta(ValorCarta.SOTA, Palo.PICA, false));
-        PilaDeCartas pilaOrigen = new Pila(cartasIniciales1);
-        PilaDeCartas pilaDestino = new Pila();
+        Pila pilaOrigen = new Pila(cartasIniciales1);
+        Pila pilaDestino = new Pila();
         pilaDestino.push(new Carta(ValorCarta.REY, Palo.PICA, false));
-        assertTrue(Movimientos.moverCartas(pilaOrigen, pilaDestino, pilaOrigen.get(1)));
+        moverCartas(pilaOrigen, pilaDestino, pilaOrigen.get(1));
+        assertEquals(pilaDestino.get(2),new Carta(ValorCarta.SOTA, Palo.PICA, false));
+        assertEquals(pilaDestino.get(1),new Carta(ValorCarta.REINA, Palo.CORAZON, false));
     }
 
     @Test
@@ -45,10 +51,10 @@ public class MovimientosTest {
         cartasIniciales1.push(new Carta(ValorCarta.REY, Palo.TREBOL, false));
         cartasIniciales1.push(new Carta(ValorCarta.REINA, Palo.CORAZON, false));
         cartasIniciales1.push(new Carta(ValorCarta.SOTA, Palo.PICA, false));
-        PilaDeCartas pilaOrigen = new Pila(cartasIniciales1);
-        PilaDeCartas pilaDestino = new Pila();
+        Pila pilaOrigen = new Pila(cartasIniciales1);
+        Pila pilaDestino = new Pila();
         pilaDestino.push(new Carta(ValorCarta.REY, Palo.CORAZON, false));
-        assertFalse(Movimientos.moverCartas(pilaOrigen, pilaDestino, pilaOrigen.get(1)));
+        assertFalse(moverCartas(pilaOrigen, pilaDestino, pilaOrigen.get(1)));
     }
 
     @Test
@@ -57,9 +63,9 @@ public class MovimientosTest {
         cartasIniciales1.push(new Carta(ValorCarta.REY, Palo.TREBOL, false));
         cartasIniciales1.push(new Carta(ValorCarta.REINA, Palo.CORAZON, false));
         cartasIniciales1.push(new Carta(ValorCarta.SOTA, Palo.PICA, false));
-        PilaDeCartas pilaOrigen = new Pila(cartasIniciales1);
-        PilaDeCartas pilaDestino = new Pila();
+        Pila pilaOrigen = new Pila(cartasIniciales1);
+        Pila pilaDestino = new Pila();
         pilaDestino.push(new Carta(ValorCarta.OCHO, Palo.CORAZON, false));
-        assertFalse(Movimientos.moverCartas(pilaOrigen, pilaDestino, pilaOrigen.get(1)));
+        assertFalse(moverCartas(pilaOrigen, pilaDestino, pilaOrigen.get(1)));
     }
 }
