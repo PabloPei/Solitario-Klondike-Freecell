@@ -1,13 +1,9 @@
 package klondike;
 
 import Klondike.Cimiento;
-import Klondike.SolitarioKlondike;
-import Klondike.TableroKlondike;
 import modeloelementos.*;
 import modelosolitario.Mazo;
 import modelosolitario.Pila;
-import modelosolitario.Solitario;
-import modelosolitario.Tablero;
 import org.junit.Test;
 
 import javax.swing.text.DefaultEditorKit;

@@ -1,5 +1,4 @@
-package Klondike;
-
+package klondike;
 
 import modeloelementos.Dificultad;
 import modeloelementos.EstadoJuego;

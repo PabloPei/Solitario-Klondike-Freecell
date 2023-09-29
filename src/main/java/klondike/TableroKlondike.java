@@ -1,4 +1,4 @@
-package Klondike;
+package klondike;
 
 import Klondike.Cimiento;
 import modeloelementos.Dificultad;

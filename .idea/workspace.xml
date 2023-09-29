@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Subi el diagrama de clases">
-      <change afterPath="$PROJECT_DIR$/src/test/java/klondike/SolitarioKlondikeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/klondike/TableroKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/klondike/TableroKlondike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Cimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/klondike/Cimiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modelosolitario/CimientoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modelosolitario/CimientoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,6 +274,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Subi el diagrama de clases" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Solitario_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1696005501694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Solitario_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1695842990670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
