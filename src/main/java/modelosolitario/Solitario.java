@@ -29,12 +29,6 @@ public interface Solitario {
     boolean verificarVictoria();
 
     /**
-     * Verifica si el juego ha terminado en derrota según las reglas específicas del Solitario.
-     * @return true si el juego ha terminado en derrota, false en caso contrario.
-     */
-    boolean verificarDerrota();
-
-    /**
      * Suma un movimiento al contador
      */
     void sumarMovimiento();

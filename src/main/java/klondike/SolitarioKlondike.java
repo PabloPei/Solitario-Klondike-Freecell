@@ -69,9 +69,7 @@ public class SolitarioKlondike implements Solitario {
      */
     @Override
     public EstadoJuego verificarEstado() {
-
         if (verificarVictoria()) return EstadoJuego.GANADO;
-        else if (verificarDerrota()) return EstadoJuego.PERDIDO;
         else return EstadoJuego.JUGANDO;
     }
 
@@ -82,15 +80,6 @@ public class SolitarioKlondike implements Solitario {
     @Override
     public boolean verificarVictoria() {
         return tablero.cimientosLlenos();
-    }
-
-    /**
-     * Verifica si el jugador ha perdido el juego.
-     * @return true si el juego ha sido perdido, false de lo contrario.
-     */
-    @Override
-    public boolean verificarDerrota() {
-        return !(tablero.hayMovimientosDisponibles());
     }
 
     /**
