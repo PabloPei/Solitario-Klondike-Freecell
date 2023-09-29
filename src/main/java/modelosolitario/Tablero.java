@@ -35,11 +35,14 @@ public abstract class Tablero {
         repartirPilas();
     }
 
-    public Tablero(Mazo mazo, ArrayList<Pila> pilas, int cantidadPilas){
+    /**
+     * Crea una instancia del tablero con un mazo y pila especifica.
+     */
+    public Tablero(Mazo mazo, ArrayList<Pila> pilas){
         this.mazo = mazo;
         this.pilas = new ArrayList<Pila>();
-        for(int i = 0; i < cantidadPilas; i++){
-            this.pilas.add(pilas.get(i));
+        for( Pila pila : pilas){
+            this.pilas.add(pila);
         }
     }
 

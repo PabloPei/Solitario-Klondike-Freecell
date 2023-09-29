@@ -23,18 +23,6 @@ public interface Solitario {
     EstadoJuego verificarEstado();
 
     /**
-     * Verifica si el juego ha sido ganado según las reglas específicas del Solitario.
-     * @return true si el juego ha sido ganado, false en caso contrario.
-     */
-    boolean verificarVictoria();
-
-    /**
-     * Verifica si el juego ha terminado en derrota según las reglas específicas del Solitario.
-     * @return true si el juego ha terminado en derrota, false en caso contrario.
-     */
-    boolean verificarDerrota();
-
-    /**
      * Suma un movimiento al contador
      */
     void sumarMovimiento();
