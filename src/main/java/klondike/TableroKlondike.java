@@ -85,22 +85,21 @@ public class TableroKlondike extends Tablero {
 
             // Itera a través de las pilas (tableau)
             for (Pila pila : getPilas()) {
-
                 // Verifica si se puede agregar la carta de pila al cimiento
-                Carta cartaSuperiorEnPila = pila.verCarta();
-                if (cartaSuperiorEnPila != null && cimiento.puedeAgregarCarta(cartaSuperiorEnPila)) {
-                        return true;
-                    }
-                }
-
-                // Verifica si se puede agregar la carta superior del descarte al cimiento
-                if (descarte != null){
-                    Carta cartaSuperiorEnDescarte = descarte.verCarta();
-                    if (cartaSuperiorEnDescarte != null && cimiento.puedeAgregarCarta(cartaSuperiorEnDescarte)) {
-                        return true;
-                    }
+                Carta topePila = pila.verCarta();
+                if (topePila != null && cimiento.puedeAgregarCarta(topePila)) {
+                    return true;
                 }
             }
+
+            // Verifica si se puede agregar la carta superior del descarte al cimiento
+            if (!descarte.isEmpty()){
+                Carta topeDescarte = descarte.verCarta();
+                if (cimiento.puedeAgregarCarta(topeDescarte)) {
+                    return true;
+                }
+            }
+        }
         return false; //si ninguna carta de la pila puede ser agregado a ninguno de los cimientos no hay movimientos disponibles
     }
 
@@ -110,7 +109,6 @@ public class TableroKlondike extends Tablero {
      * @return true si existen movimientos para agregar cartas a pilas, false en otro caso.
      */
     private boolean hayMovimientoAPilas() {
-
         // Itero sobre cada pila
         for (Pila pilaActual : pilas) {
             // Itero sobre cada pila de busqueda
@@ -124,11 +122,9 @@ public class TableroKlondike extends Tablero {
                 }
             }
             // También verifica si se puede agregar la carta del descarte al tableau actual
-            if (descarte != null && !(descarte.isEmpty()) ) {
-                if (pilaActual.puedeAgregarCarta(descarte.verCarta())) {
-                    return true;
-                }
-            } else return false;
+            if (!descarte.isEmpty()) {
+                if (pilaActual.puedeAgregarCarta(descarte.verCarta())) return true;
+            }
         }
         // No se encontraron movimientos válidos
         return false;
@@ -152,7 +148,7 @@ public class TableroKlondike extends Tablero {
      */
     @Override
     public boolean hayMovimientosDisponibles() {
-        return (hayMovimientoACimientos() && hayMovimientoAPilas());
+        return (hayMovimientoACimientos() || hayMovimientoAPilas());
     }
 
 
