@@ -181,7 +181,7 @@ public abstract class Solitario {
 
     /////////////////// getters & setters ///////////////////////
 
-    public int obtenerMovimientos() {
+    public int getMovimientos() {
         return this.movimientos;
     }
 

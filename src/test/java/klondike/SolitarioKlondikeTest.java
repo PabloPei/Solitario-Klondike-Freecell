@@ -133,6 +133,43 @@ public class SolitarioKlondikeTest extends TestCase {
         }
     }
 
+
+    @Test
+    public void test_MoverYGanar() {
+
+        //inicializo el juego en el estado ganado
+        ArrayList<Cimiento> cimientos = new ArrayList<Cimiento>();
+        cimientos.add( new Cimiento(12,Palo.PICA));
+        cimientos.add( new Cimiento(13,Palo.TREBOL));
+        cimientos.add( new Cimiento(13,Palo.CORAZON));
+        cimientos.add( new Cimiento(13,Palo.DIAMANTE));
+
+        ArrayList<Pila> pilas = new ArrayList<Pila>();
+        pilas.add( new Pila());
+        pilas.add( new Pila());
+        pilas.add( new Pila());
+        pilas.add( new Pila());
+        pilas.add( new Pila());
+        pilas.add( new Pila());
+        Pila pila7 = new Pila();
+        pila7.agregarCarta(new Carta (ValorCarta.REY, Palo.PICA, false));
+        pilas.add(pila7);
+
+        PilaDeCartas mazoVacio = new PilaDeCartas();
+        Mazo mazo = new Mazo(mazoVacio);
+
+        Descarte descarte = new Descarte();
+
+        SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL, mazo, pilas, cimientos, descarte);
+
+        assertFalse(solitario.verificarVictoria());
+
+        solitario.moverCarta(solitario.getPilas().get(6), solitario.getCimientos().get(0));
+
+        assertTrue(solitario.verificarVictoria());
+
+        }
+
     @Test
     public void test_verificarDificultad() {
 
@@ -154,6 +191,18 @@ public class SolitarioKlondikeTest extends TestCase {
     }
 
 
+    @Test
+    public void test_Movimientos() {
+
+
+        SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
+
+        Carta carta = solitario.getMazo().verCarta();
+
+        solitario.robarCartasDelMazo();
+
+        assertEquals ( solitario.getMovimientos(), 1);
+    }
 
     @Test
     public void testEstadoDeJuegoGanado(){
