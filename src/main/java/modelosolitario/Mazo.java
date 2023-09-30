@@ -22,16 +22,26 @@ public class Mazo extends PilaDeCartas {
      * Constructor de la clase mazo. Inicializa una baraja estandar (inglesa, alemana, etc) de 52 cartas.
      * Cada carta se crea con un valor numerico en el rango de 1 a 13 y uno de los cuatro palos posibles:
      * DIAMANTE, CORAZON, TREBOL o PICA. Todas las cartas se inicializan como ocultas.
-     * Luego de iniciar el mazo, se mezcla.
      */
     public Mazo(){
-        for( Palo palo : Palo.values() ){
-            for ( ValorCarta valor: ValorCarta.values() ){
+        for( Palo palo : Palo.values() ) {
+            for (ValorCarta valor : ValorCarta.values()) {
                 Carta carta = new Carta(valor, palo, true);
                 agregarCarta(carta);
             }
         }
     }
+
+    /**
+     * Constructor de la clase mazo. Inicializa una baraja estandar (inglesa, alemana, etc) con
+     * las cartas pasadas por parametro. No se mezcla.
+     */
+    public Mazo(PilaDeCartas mazo){
+        while (!mazo.isEmpty()){
+            agregarCarta(mazo.sacarCarta(true));
+        }
+    }
+
 
     /**
      * Mezcla el mazo de forma pseudo aleatoria

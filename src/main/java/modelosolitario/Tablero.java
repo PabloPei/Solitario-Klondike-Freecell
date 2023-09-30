@@ -1,5 +1,7 @@
 package modelosolitario;
 
+import modeloelementos.PilaDeCartas;
+
 import java.util.ArrayList;
 
 
@@ -35,8 +37,10 @@ public abstract class Tablero {
     /**
      * Crea una instancia del tablero con un mazo y pila especifica.
      */
-    public Tablero(Mazo mazo, ArrayList<Pila> pilas){
-        this.mazo = mazo;
+    public Tablero(PilaDeCartas mazo, ArrayList<Pila> pilas){
+
+        this.mazo = new Mazo(mazo);
+
         this.pilas = new ArrayList<Pila>();
         for( Pila pila : pilas){
             this.pilas.add(pila);

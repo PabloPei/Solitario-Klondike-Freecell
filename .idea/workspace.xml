@@ -6,11 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Habia un error en los nomrbes de los paquetes que generaba un error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modeloelementos/EstadoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modeloelementos/EstadoJuego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Mazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Mazo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Tablero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/klondike/SolitarioKlondikeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/klondike/SolitarioKlondikeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modeloelementos/ValorCartaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modeloelementos/ValorCartaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modelosolitario/MazoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modelosolitario/MazoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modelosolitario/PilaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modelosolitario/PilaTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +66,7 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "D:/Facultad/Algoritmos3/tp1/TrabajoPractico-Algo3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -95,7 +95,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Solitario-Algo3">
+  <component name="RunManager" selected="JUnit.PilaTest">
     <configuration name="All in Solitario-Algo3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <option name="PACKAGE_NAME" value="" />
@@ -104,7 +104,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CimientoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MazoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <extension name="coverage">
         <pattern>
@@ -113,13 +113,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="modelosolitario" />
-      <option name="MAIN_CLASS_NAME" value="modelosolitario.CimientoTest" />
+      <option name="MAIN_CLASS_NAME" value="modelosolitario.MazoTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MovimientosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MazoTest.test_add_empty_descarte" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <extension name="coverage">
         <pattern>
@@ -128,47 +128,51 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="modelosolitario" />
-      <option name="MAIN_CLASS_NAME" value="modelosolitario.MovimientosTest" />
+      <option name="MAIN_CLASS_NAME" value="modelosolitario.MazoTest" />
+      <option name="METHOD_NAME" value="test_add_empty_descarte" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MazoTest.test_agregarDescarte_vacio" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Solitario-Algo3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modelosolitario.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modelosolitario" />
+      <option name="MAIN_CLASS_NAME" value="modelosolitario.MazoTest" />
+      <option name="METHOD_NAME" value="test_agregarDescarte_vacio" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PilaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Solitario-Algo3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="modelosolitario.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="modelosolitario" />
+      <option name="MAIN_CLASS_NAME" value="modelosolitario.PilaTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="klondike in Solitario-Algo3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Solitario-Algo3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="klondike.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="klondike" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="modeloelementos in Solitario-Algo3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Solitario-Algo3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="modeloelementos.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="modeloelementos" />
-      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PilaTest" />
         <item itemvalue="JUnit.All in Solitario-Algo3" />
-        <item itemvalue="JUnit.klondike in Solitario-Algo3" />
-        <item itemvalue="JUnit.MovimientosTest" />
-        <item itemvalue="JUnit.CimientoTest" />
-        <item itemvalue="JUnit.modeloelementos in Solitario-Algo3" />
+        <item itemvalue="JUnit.MazoTest" />
+        <item itemvalue="JUnit.MazoTest.test_agregarDescarte_vacio" />
+        <item itemvalue="JUnit.MazoTest.test_add_empty_descarte" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +199,7 @@
       <workItem from="1695846937981" duration="12380000" />
       <workItem from="1695924639946" duration="2867000" />
       <workItem from="1695932532308" duration="3876000" />
-      <workItem from="1696029061186" duration="8710000" />
+      <workItem from="1696029061186" duration="11101000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />

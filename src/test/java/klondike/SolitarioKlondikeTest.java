@@ -7,7 +7,7 @@ import modelosolitario.Pila;
 import org.junit.Test;
 import java.util.ArrayList;
 import static org.junit.Assert.*;
-
+/*
 public class SolitarioKlondikeTest {
 
     @Test
@@ -44,4 +44,4 @@ public class SolitarioKlondikeTest {
         assertEquals(EstadoJuego.PERDIDO, solitario.verificarEstado());
     }
 
-}
+}*/

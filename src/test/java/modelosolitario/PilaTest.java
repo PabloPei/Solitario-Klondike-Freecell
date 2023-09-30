@@ -50,21 +50,25 @@ public class PilaTest {
 
     @Test
     public void testRetirarUnaCarta() {
-        var cartasIniciales = new PilaDeCartas();
-        cartasIniciales.push(new Carta(ValorCarta.REY, Palo.TREBOL, false));
-        cartasIniciales.push(new Carta(ValorCarta.REINA, Palo.CORAZON, false));
-        cartasIniciales.push(new Carta(ValorCarta.SOTA, Palo.PICA, false));
-        cartasIniciales.push(new Carta(ValorCarta.DIEZ, Palo.CORAZON, false));
-        cartasIniciales.push(new Carta(ValorCarta.NUEVE, Palo.TREBOL, false));
-        cartasIniciales.push(new Carta(ValorCarta.OCHO, Palo.DIAMANTE, false));
-        cartasIniciales.push(new Carta(ValorCarta.SIETE, Palo.PICA, false));
-        var pilaOriginal = new Pila(cartasIniciales);
-        int cantidadDeCartasASacar = 1;
-        var nuevaPila = new Pila();
-        nuevaPila.push(pilaOriginal.sacarCarta(false));
-        var resultadoEsperado = new Pila();
-        resultadoEsperado.push(cartasIniciales.peek());
-        assertEquals(resultadoEsperado, nuevaPila);
+        Pila pilaOriginal = new Pila();
+        pilaOriginal.push(new Carta(ValorCarta.REY, Palo.TREBOL, false));
+        pilaOriginal.push(new Carta(ValorCarta.REINA, Palo.CORAZON, false));
+        pilaOriginal.push(new Carta(ValorCarta.SOTA, Palo.PICA, false));
+        pilaOriginal.push(new Carta(ValorCarta.DIEZ, Palo.CORAZON, false));
+        pilaOriginal.push(new Carta(ValorCarta.NUEVE, Palo.TREBOL, false));
+        Carta carta1 = new Carta(ValorCarta.OCHO, Palo.DIAMANTE, false);
+        pilaOriginal.push(carta1);
+        Carta carta2 = new Carta(ValorCarta.NUEVE, Palo.CORAZON, false);
+        pilaOriginal.push(carta2);
+
+        Pila pilaDestino = new Pila();
+        Carta carta3 = new Carta(ValorCarta.DIEZ, Palo.PICA, false);
+        pilaDestino.push(carta3);
+        boolean resultado = pilaDestino.agregarCarta(pilaOriginal.sacarCarta(false));
+
+        assertTrue(resultado);
+        assertEquals(pilaDestino.verCarta(), carta2);
+        assertEquals(pilaOriginal.verCarta(),carta1);
     }
 
     @Test
