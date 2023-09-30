@@ -37,7 +37,6 @@ public abstract class Solitario {
      */
     public EstadoJuego verificarEstado(){
         if (verificarVictoria()) return EstadoJuego.GANADO;
-        else if (verificarDerrota()) return EstadoJuego.PERDIDO;
         else return EstadoJuego.JUGANDO;
     }
 
@@ -47,11 +46,6 @@ public abstract class Solitario {
      */
     public abstract boolean verificarVictoria();
 
-    /**
-     * Metodos auxiliares que cada solitario va a definir con sus reglas de perdida
-     * @return true si el juego ha sido perdido, false en caso contrario.
-     */
-    public abstract boolean verificarDerrota();
 
     /**
      * Suma un movimiento al contador

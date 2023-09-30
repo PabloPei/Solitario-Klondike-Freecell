@@ -23,14 +23,6 @@ public class SolitarioKlondike extends Solitario {
         return getTablero().tableroCompletado();
     }
 
-    /**
-     * Verifica si el jugador ha perdido el juego.
-     * @return true si el juego ha sido perdido, false de lo contrario.
-     */
-    public boolean verificarDerrota() {
-        return !(getTablero().hayMovimientosDisponibles());
-    }
-
     ////////////////////// Movimientos ///////////////////////////////
 
     /**

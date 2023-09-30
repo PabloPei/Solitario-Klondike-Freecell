@@ -6,7 +6,7 @@ import org.junit.Test;
 public class ValorCartaTest extends TestCase {
 
     @Test
-    public void test_obtener_valor() {
+    public void testObtenerValor() {
         assertEquals(1, ValorCarta.AS.getValor());
         assertEquals(4, ValorCarta.CUATRO.getValor());
         assertEquals(8, ValorCarta.OCHO.getValor());
@@ -15,7 +15,7 @@ public class ValorCartaTest extends TestCase {
     }
 
     @Test
-    public void test_a_cadena() {
+    public void testACadena() {
         assertEquals("AS", ValorCarta.AS.toString());
         assertEquals("CUATRO", ValorCarta.CUATRO.toString());
         assertEquals("OCHO", ValorCarta.OCHO.toString());
@@ -24,7 +24,7 @@ public class ValorCartaTest extends TestCase {
     }
 
     @Test
-    public void test_siguiente_valor_devuelve_siguiente_valor_correcto_excepto_para_rey() {
+    public void testSiguienteValorDevuelveSiguienteValorCorrectoExceptoParaRey() {
         assertEquals(ValorCarta.DOS, ValorCarta.AS.siguienteValor());
         assertEquals(ValorCarta.SEIS, ValorCarta.CINCO.siguienteValor());
         assertEquals(ValorCarta.SIETE, ValorCarta.SEIS.siguienteValor());
@@ -34,12 +34,12 @@ public class ValorCartaTest extends TestCase {
 
 
     @Test
-    public void test_siguiente_valor_devuelve_nulo_para_rey() {
+    public void testSiguienteValorDevuelveNuloParaRey() {
         assertNull(ValorCarta.REY.siguienteValor());
     }
 
     @Test
-    public void test_equals_devuelve_true_para_la_misma_carta() {
+    public void testEqualsDevuelveTrueParaLaMismaCarta() {
         assertTrue(ValorCarta.AS.equals(ValorCarta.AS));
         assertTrue(ValorCarta.DOS.equals(ValorCarta.DOS));
         assertTrue(ValorCarta.TRES.equals(ValorCarta.TRES));
@@ -47,7 +47,7 @@ public class ValorCartaTest extends TestCase {
     }
 
     @Test
-    public void test_AS_tiene_valor_de_1() {
+    public void testAsTieneValorDe1() {
         assertEquals(1, ValorCarta.AS.getValor());
     }
 }
