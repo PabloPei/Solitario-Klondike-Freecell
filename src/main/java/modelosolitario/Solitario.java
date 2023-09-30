@@ -27,7 +27,7 @@ public abstract class Solitario {
      */
     public Solitario(int cantidadPilas){
         this.movimientos=0;
-        this.estadoJuego = EstadoJuego.INICIADO;
+        this.estadoJuego = EstadoJuego.JUGANDO;
 
         this.mazo = new Mazo();
         this.mazo.mezclar();
@@ -46,7 +46,7 @@ public abstract class Solitario {
      */
     public Solitario( int cantidadPilas, long semilla){
         this.movimientos=0;
-        this.estadoJuego = EstadoJuego.INICIADO;
+        this.estadoJuego = EstadoJuego.JUGANDO;
 
         this.mazo = new Mazo();
         this.mazo.mezclar(semilla);
@@ -65,7 +65,7 @@ public abstract class Solitario {
     public Solitario(Mazo mazo, ArrayList<Pila> pilas){
 
         this.movimientos=0;
-        this.estadoJuego = EstadoJuego.INICIADO;
+        this.estadoJuego = EstadoJuego.JUGANDO;
 
         this.mazo = new Mazo();
         this.pilas = pilas;
@@ -104,6 +104,8 @@ public abstract class Solitario {
     public abstract boolean verificarVictoria();
 
 
+    /////////////////////// Movimientos //////////////////////////
+
     /**
      * Suma un movimiento al contador
      */
@@ -111,7 +113,6 @@ public abstract class Solitario {
         this.movimientos++;
     }
 
-    /////////////////////// Movimientos //////////////////////////
 
     /**
      * Mueve una carta desde una pila de origen a una pila de destino.

@@ -125,6 +125,15 @@ public class SolitarioKlondikeTest extends TestCase {
     }
 
     @Test
+    public void test_RepartirPilas() {
+        SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
+        ArrayList<Pila> pilas = solitario.getPilas();
+        for (Pila pila : pilas) {
+            assertEquals(pila.size(), pilas.indexOf(pila) + 1);
+        }
+    }
+
+    @Test
     public void test_verificarDificultad() {
 
         SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.MEDIO);
@@ -135,6 +144,15 @@ public class SolitarioKlondikeTest extends TestCase {
 
         assertEquals (2,solitario.getDescarte().size());
     }
+
+    @Test
+    public void test_MoverCartadeCimientoVacio() {
+        SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
+        Cimiento cimientoVacio = solitario.getCimientos().get(0);
+        Pila pilaDestino = solitario.getPilas().get(0);
+        assertFalse(solitario.moverCarta(cimientoVacio, pilaDestino));
+    }
+
 
 
     @Test
