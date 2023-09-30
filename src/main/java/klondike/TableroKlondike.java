@@ -13,6 +13,7 @@ public class TableroKlondike extends Tablero {
     public static final int CANTIDAD_PILAS = 7;
 
     ///////// Atributos ///////////
+
     private ArrayList<Cimiento> cimientos;
     private Descarte descarte;
 
@@ -137,7 +138,8 @@ public class TableroKlondike extends Tablero {
      * Verifica si los cimientos estan llenos
      * @return true si estan llenos, false en otro caso
      */
-    public boolean cimientosLlenos(){
+    @Override
+    public boolean tableroCompletado(){
         for (Cimiento cimiento : cimientos){
             if (!(cimiento.cimientoCompleto()))
                 return false;

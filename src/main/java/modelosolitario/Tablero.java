@@ -1,8 +1,5 @@
 package modelosolitario;
 
-import Klondike.Cimiento;
-import modeloelementos.PilaDeCartas;
-
 import java.util.ArrayList;
 
 
@@ -62,37 +59,7 @@ public abstract class Tablero {
         repartirPilas();
     }
 
-    /**
-     * Crea una instancia del tablero con un mazo y las pilas con el mazo y las pilas configuradas
-     * como el usuario quiera, sirve para test y para recuperar el estado del solitario.
-     * @param cantidadPilas Dependiendo la implementación de solitario, la cantidad de pilas
-     *                      en el juego sera distinta.
-     * @param mazo el mazo en el estado que se busque
-     * @param
 
-    public Tablero(int cantidadPilas) {
-
-
-    }
-
-     */
-    /**
-     * Constructor por estado, ver como hacerlo segun lo que conteste maca
-     * Crea una instancia del tablero a partir de un cierto estado.
-     * @param cantidadPilas Dependiendo la implementación de solitario, la cantidad de pilas
-     *                      en el juego sera distinta.
-     * @param semilla Semilla inicial a partir de la cual se construira el juego.
-
-    public Tablero(int cantidadPilas, Mazo mazo) {
-
-        this.mazo = new Mazo();
-        this.mazo.mezclar(semilla);
-
-        this.pilas = new ArrayList<Pila>();
-        iniciarPilas(cantidadPilas);
-        repartirPilas();
-    }
-    */
     /**
      * Inicializa las pilas, dependiendo la cantidad que corresponda al solitario
      */
@@ -111,6 +78,11 @@ public abstract class Tablero {
      * Este metodo indica si aun hay movimientos disponibles, cada solitario debe implementarlo segun sus reglas
      */
     public abstract boolean hayMovimientosDisponibles();
+
+    /**
+     * Este metodo indica si aun hay movimientos disponibles, cada solitario debe implementarlo segun sus reglas
+     */
+    public abstract boolean tableroCompletado();
 
 
     //////////// getters /////////////

@@ -12,6 +12,7 @@ import java.util.Stack;
  */
 public class PilaDeCartas extends Stack<Carta> {
 
+
     //////////////////// Métodos ////////////////////
 
     /**
@@ -27,6 +28,8 @@ public class PilaDeCartas extends Stack<Carta> {
         }
         return false;
     }
+
+
 
     /**
      * Intenta sacar la carta de arriba de la pila de cartas
@@ -70,6 +73,11 @@ public class PilaDeCartas extends Stack<Carta> {
         }
     }
 
+    /**
+     * Compara dos pilas de cartas
+     * @param pila
+     * @return true si dos pilas son iguales, false en otro caso
+     */
     public boolean equals(PilaDeCartas pila){
         if(this.size() != pila.size()) return false;
         boolean sonIguales = true;

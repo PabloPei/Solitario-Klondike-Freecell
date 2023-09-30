@@ -1,6 +1,6 @@
 package modelosolitario;
 
-
+/*
 import modeloelementos.Carta;
 import modeloelementos.Palo;
 import modeloelementos.PilaDeCartas;
@@ -69,3 +69,4 @@ public class MovimientosTest {
         assertFalse(moverCartas(pilaOrigen, pilaDestino, pilaOrigen.get(1)));
     }
 }
+*/

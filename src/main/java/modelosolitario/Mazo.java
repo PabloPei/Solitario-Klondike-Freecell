@@ -1,6 +1,7 @@
 package modelosolitario;
 
 import modeloelementos.Palo;
+import modeloelementos.PilaDeCartas;
 import modeloelementos.ValorCarta;
 import modeloelementos.Carta;
 import java.util.ArrayList;
@@ -11,12 +12,10 @@ import java.util.Random;
  * La clase Mazo representa un mazo de cartas de tipo Francesa, Inglesa, Alemana, etc que hereda de un ArrayList.
  * Este mazo se inicializa con 52 cartas, cada una con un valor numérico en el rango de 1 a 13
  * y uno de los cuatro palos posibles: DIAMANTE, CORAZON, TREBOL o PICA.
- * Todas las cartas se inicializan como ocultas (boca abajo). El mazo se almacena en una estructura
- * de datos tipo ArrayList. Se decidio de esta manera ya que brinda mas flexibilidad a la hora de insertar
- * y sacar cartas del mazo en distintas posiciones.
+ * Todas las cartas se inicializan como ocultas (boca abajo). Extiende las funcionalidades de pila de Cartas.
  */
 
-public class Mazo extends ArrayList<Carta> {
+public class Mazo extends PilaDeCartas {
 
     //////////////////// metodos ////////////////////
     /**
@@ -29,7 +28,7 @@ public class Mazo extends ArrayList<Carta> {
         for( Palo palo : Palo.values() ){
             for ( ValorCarta valor: ValorCarta.values() ){
                 Carta carta = new Carta(valor, palo, true);
-                add(carta);
+                agregarCarta(carta);
             }
         }
     }
@@ -59,8 +58,8 @@ public class Mazo extends ArrayList<Carta> {
     public boolean agregarCarta(Carta carta){
         if ( this.contains(carta))
             return false;
-        else
-            this.add(carta);
+
+        this.push(carta);
         return true;
     }
 
@@ -73,28 +72,35 @@ public class Mazo extends ArrayList<Carta> {
         if (isEmpty()) {
             return null;
         }
-        Carta carta = this.remove(0);
+        Carta carta = this.pop();
         carta.setBocaAbajo(bocaAbajo);
         return carta;
     }
 
-
     /**
-     * Compara este mazo con otro mazo para determinar si son iguales.
-     * @param mazo El mazo con el que se va a comparar.
-     * @return true si ambos mazos son iguales en términos de tamaño y contenido, false en caso contrario.
+     * Este metodo cumple la funcionalidad de agregar una pila de descarte al mazo
+     * @param descarte
      */
-    public boolean equals(Mazo mazo) {
-        // Verifica si el mazo dado es nulo o tiene un tamaño diferente.
-        if (mazo == null || this.size() != mazo.size()) {
-            return false;
+    public void agregarDescarte(Descarte descarte){
+
+        if (descarte.isEmpty()) return; //si no hay cartas en el descarte no hago nada
+
+        Mazo mazoTemp = new Mazo();
+        // Mover elementos de la pila original a la pila temporal
+        while (!this.isEmpty()) {
+            mazoTemp.agregarCarta(this.sacarCarta(true));
         }
-        // Compara cada carta en ambos mazos.
-        for (int i = 0; i < this.size(); i++) {
-            if (!this.get(i).equals(mazo.get(i))) {
-                return false;
-            }
+
+        //agrego las cartas del descarte alfinal del mazo
+        while (! descarte.isEmpty()) {
+            mazoTemp.agregarCarta(descarte.sacarCarta(true));
         }
-        return true;
+
+        // Mover elementos de la pila temporal nuevamente a la pila original
+        while (!mazoTemp.isEmpty()) {
+            this.agregarCarta(mazoTemp.sacarCarta(true));
+        }
+
     }
+
 }
