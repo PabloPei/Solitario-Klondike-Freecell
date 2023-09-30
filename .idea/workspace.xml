@@ -6,16 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Habia un error en los nomrbes de los paquetes que generaba un error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/klondike/Cimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/klondike/Cimiento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/klondike/TableroKlondike.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Descarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Descarte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Mazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Mazo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Tablero.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/klondike/SolitarioKlondikeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/klondike/SolitarioKlondikeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modelosolitario/CimientoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modelosolitario/CimientoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modelosolitario/MovimientosTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +63,7 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "sinTablero",
     "last_opened_file_path": "D:/Facultad/Algoritmos3/tp1/TrabajoPractico-Algo3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -205,7 +197,7 @@
       <workItem from="1695846937981" duration="12380000" />
       <workItem from="1695924639946" duration="2867000" />
       <workItem from="1695932532308" duration="3876000" />
-      <workItem from="1696029061186" duration="18360000" />
+      <workItem from="1696029061186" duration="18607000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />

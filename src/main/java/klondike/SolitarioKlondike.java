@@ -143,6 +143,7 @@ public class SolitarioKlondike extends Solitario {
 
         }
 
+        sumarMovimiento();
         return true;
     }
 

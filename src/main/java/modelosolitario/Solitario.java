@@ -120,13 +120,14 @@ public abstract class Solitario {
      * @param destino  La pila de destino a la que se va a agregar la carta.
      * @return         Devuelve true si el movimiento se realizó con éxito, false si no se pudo realizar.
      */
-    public static boolean moverCarta(PilaDeCartas origen, PilaDeCartas destino) {
+    public boolean moverCarta(PilaDeCartas origen, PilaDeCartas destino) {
         Carta cartaSacada = origen.sacarCarta(false);
 
         if (!destino.agregarCarta(cartaSacada)){
             origen.agregarCarta(cartaSacada); //no pudo agregar la carta la vuelvo al lugar original
             return false;
         }
+        sumarMovimiento();
         return true;
     }
 
@@ -138,7 +139,7 @@ public abstract class Solitario {
      * @param primeraCarta  La primera carta del conjunto a mover.
      * @return              Devuelve true si el movimiento se realizó con éxito, false si no se pudo realizar.
      */
-    public static boolean moverCartas(PilaDeCartas origen, PilaDeCartas destino, Carta primeraCarta) {
+    public boolean moverCartas(PilaDeCartas origen, PilaDeCartas destino, Carta primeraCarta) {
         // En primer lugar reviso el caso particular de si se puede agregar la carta a la nueva pila
         if(!destino.puedeAgregarCarta(primeraCarta)) return false;
 
@@ -172,6 +173,8 @@ public abstract class Solitario {
                 return false;
             }
         }
+
+        sumarMovimiento();
         return true;
     }
 
