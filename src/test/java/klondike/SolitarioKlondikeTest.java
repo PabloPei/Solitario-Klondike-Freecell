@@ -1,47 +1,170 @@
 package klondike;
 
-import Klondike.Cimiento;
+import junit.framework.TestCase;
 import modeloelementos.*;
-import modelosolitario.Mazo;
-import modelosolitario.Pila;
+import modelosolitario.*;
 import org.junit.Test;
+
 import java.util.ArrayList;
-import static org.junit.Assert.*;
-/*
-public class SolitarioKlondikeTest {
+
+public class SolitarioKlondikeTest extends TestCase {
+
 
     @Test
-    public void testEstadoDeJuegoPerdido(){
-        var cartasIniciales = new PilaDeCartas();
-        cartasIniciales.push(new Carta(ValorCarta.CUATRO, Palo.TREBOL, true));
-        cartasIniciales.push(new Carta(ValorCarta.SIETE, Palo.TREBOL, false));
-        var cartasIniciales2 = new PilaDeCartas();
-        cartasIniciales2.push(new Carta(ValorCarta.CINCO, Palo.TREBOL, true));
-        cartasIniciales2.push(new Carta(ValorCarta.SEIS, Palo.TREBOL, true));
-        cartasIniciales2.push(new Carta(ValorCarta.OCHO, Palo.TREBOL, true));
-        cartasIniciales2.push(new Carta(ValorCarta.NUEVE, Palo.TREBOL, true));
-        cartasIniciales2.push(new Carta(ValorCarta.DIEZ, Palo.TREBOL, true));
-        cartasIniciales2.push(new Carta(ValorCarta.SOTA, Palo.TREBOL, true));
-        cartasIniciales2.push(new Carta(ValorCarta.REINA, Palo.TREBOL, true));
-        cartasIniciales2.push(new Carta(ValorCarta.REY, Palo.TREBOL, true));
-        var pilas = new ArrayList<Pila>();
-        pilas.add(new Pila(cartasIniciales));
-        pilas.add(new Pila(cartasIniciales2));
-        for(int i = 0; i < 5; i++){
-            pilas.add(new Pila());
-        }
-        Mazo mazo = new Mazo();
-        while (!mazo.isEmpty()){
-            mazo.remove(mazo.size()-1);
-        }
-        var cimientos = new ArrayList<Cimiento>();
-        cimientos.add(new Cimiento(13, Palo.CORAZON));
-        cimientos.add(new Cimiento(13, Palo.PICA));
-        cimientos.add(new Cimiento(13, Palo.DIAMANTE));
-        cimientos.add(new Cimiento(3, Palo.TREBOL));
-        var tablero = new TableroKlondike(Dificultad.FACIL, mazo, cimientos, pilas);
-        var solitario = new SolitarioKlondike(Dificultad.FACIL, tablero);
-        assertEquals(EstadoJuego.PERDIDO, solitario.verificarEstado());
+    public void testCrearSolitario(){
+
+        SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
+        assertEquals(Dificultad.FACIL,solitario.getDificultad());
+
     }
 
-}*/
+    @Test
+    public void testMoverCartaFunciona() {
+
+        SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
+
+        var pilaDestino = new Pila();
+        pilaDestino.push(new Carta(ValorCarta.REY, Palo.TREBOL, false));
+        var pilaOrigen = new Pila();
+        Carta cartaAMover = new Carta(ValorCarta.REINA, Palo.CORAZON, false);
+        pilaOrigen.push(cartaAMover);
+        solitario.moverCarta(pilaOrigen, pilaDestino);
+        Carta cartaEsperada = pilaDestino.verCarta();
+        assertEquals(cartaAMover, cartaEsperada);
+    }
+
+    @Test
+    public void testMoverCartaFalla(){
+
+        SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
+
+        var pilaDestino = new Pila();
+        var pilaOrigen = new Pila();
+        pilaOrigen.push(new Carta(ValorCarta.REINA, Palo.TREBOL, false));
+        assertFalse(solitario.moverCarta(pilaOrigen, pilaDestino));
+    }
+
+    @Test
+    public void testMoverConjuntoDeCartasFunciona() {
+
+        SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
+
+        Pila pilaOrigen = new Pila();
+        pilaOrigen.push(new Carta(ValorCarta.REY, Palo.TREBOL, false));
+        pilaOrigen.push(new Carta(ValorCarta.REINA, Palo.CORAZON, false));
+        pilaOrigen.push(new Carta(ValorCarta.SOTA, Palo.PICA, false));
+
+        Pila pilaDestino = new Pila();
+        pilaDestino.push(new Carta(ValorCarta.REY, Palo.PICA, false));
+        solitario.moverCartas(pilaOrigen, pilaDestino, pilaOrigen.get(1));
+        assertEquals(pilaDestino.get(2),new Carta(ValorCarta.SOTA, Palo.PICA, false));
+        assertEquals(pilaDestino.get(1),new Carta(ValorCarta.REINA, Palo.CORAZON, false));
+    }
+
+    @Test
+    public void testMoverConjuntoCartasFallaPorColor(){
+
+        SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
+
+        Pila pilaOrigen = new Pila();
+        pilaOrigen.push(new Carta(ValorCarta.REY, Palo.TREBOL, false));
+        Carta cartaAMover1 = new Carta(ValorCarta.REINA, Palo.CORAZON, false);
+        pilaOrigen.push(cartaAMover1);
+        Carta cartaAMover2 = new Carta(ValorCarta.SOTA, Palo.PICA, false);
+        pilaOrigen.push(cartaAMover2);
+
+        Pila pilaDestino = new Pila();
+        pilaDestino.push(new Carta(ValorCarta.REY, Palo.CORAZON, false));
+
+        assertFalse(solitario.moverCartas(pilaOrigen, pilaDestino, pilaOrigen.get(1)));
+        assertEquals(pilaOrigen.pop(), cartaAMover2);
+        assertEquals(pilaOrigen.pop(), cartaAMover1);
+    }
+
+    @Test
+    public void testMoverConjuntoCartasFallaPorValor() {
+
+        SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
+
+        Pila pilaOrigen = new Pila();
+        pilaOrigen.push(new Carta(ValorCarta.REY, Palo.TREBOL, false));
+
+        Carta cartaAMover1 = new Carta(ValorCarta.REINA, Palo.CORAZON, false);
+        pilaOrigen.push(cartaAMover1);
+        Carta cartaAMover2 = new Carta(ValorCarta.SOTA, Palo.PICA, false);
+        pilaOrigen.push(cartaAMover2);
+
+        Pila pilaDestino = new Pila();
+        pilaDestino.push(new Carta(ValorCarta.OCHO, Palo.CORAZON, false));
+
+        assertFalse(solitario.moverCartas(pilaOrigen, pilaDestino, pilaOrigen.get(1)));
+        assertEquals(pilaOrigen.pop(), cartaAMover2);
+        assertEquals(pilaOrigen.pop(), cartaAMover1);
+    }
+
+
+    @Test
+    public void testSolitarioNoGanado() {
+
+        SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
+
+        assertFalse(solitario.verificarVictoria());
+    }
+
+    @Test
+    public void test_robarCartasdelMazo() {
+
+
+        SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
+
+        Carta carta = solitario.getMazo().verCarta();
+
+        solitario.robarCartasDelMazo();
+
+        assertEquals ( solitario.getDescarte().verCarta(), carta);
+    }
+
+    @Test
+    public void test_verificarDificultad() {
+
+        SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.MEDIO);
+
+        Carta carta = solitario.getMazo().verCarta();
+
+        solitario.robarCartasDelMazo();
+
+        assertEquals (2,solitario.getDescarte().size());
+    }
+
+
+    @Test
+    public void testEstadoDeJuegoGanado(){
+
+        //inicializo el juego en el estado ganado
+        ArrayList<Cimiento> cimientos = new ArrayList<Cimiento>();
+        cimientos.add( new Cimiento(13,Palo.PICA));
+        cimientos.add( new Cimiento(13,Palo.TREBOL));
+        cimientos.add( new Cimiento(13,Palo.CORAZON));
+        cimientos.add( new Cimiento(13,Palo.DIAMANTE));
+
+        Descarte descarte = new Descarte();
+
+        PilaDeCartas mazoVacio = new PilaDeCartas();
+        Mazo mazo = new Mazo(mazoVacio);
+
+        ArrayList<Pila> pilas = new ArrayList<Pila>();
+        pilas.add(new Pila());
+        pilas.add(new Pila());
+        pilas.add(new Pila());
+        pilas.add(new Pila());
+        pilas.add(new Pila());
+        pilas.add(new Pila());
+        pilas.add(new Pila());
+
+        SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.MEDIO, mazo, pilas,cimientos, descarte );
+
+        assertTrue(solitario.verificarVictoria());
+
+    }
+
+}

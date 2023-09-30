@@ -6,11 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Habia un error en los nomrbes de los paquetes que generaba un error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/klondike/Cimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/klondike/Cimiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/klondike/TableroKlondike.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Descarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Descarte.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Mazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Mazo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Tablero.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/klondike/SolitarioKlondikeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/klondike/SolitarioKlondikeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modelosolitario/MazoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modelosolitario/MazoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modelosolitario/PilaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modelosolitario/PilaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modelosolitario/CimientoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modelosolitario/CimientoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modelosolitario/MovimientosTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +100,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PilaTest">
+  <component name="RunManager" selected="JUnit.All in Solitario-Algo3">
     <configuration name="All in Solitario-Algo3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <option name="PACKAGE_NAME" value="" />
@@ -104,75 +109,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MazoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SolitarioKlondikeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="modelosolitario.*" />
+          <option name="PATTERN" value="klondike.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="modelosolitario" />
-      <option name="MAIN_CLASS_NAME" value="modelosolitario.MazoTest" />
+      <option name="PACKAGE_NAME" value="klondike" />
+      <option name="MAIN_CLASS_NAME" value="klondike.SolitarioKlondikeTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MazoTest.test_add_empty_descarte" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SolitarioKlondikeTest.testEstadoDeJuegoGanado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="modelosolitario.*" />
+          <option name="PATTERN" value="klondike.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="modelosolitario" />
-      <option name="MAIN_CLASS_NAME" value="modelosolitario.MazoTest" />
-      <option name="METHOD_NAME" value="test_add_empty_descarte" />
+      <option name="PACKAGE_NAME" value="klondike" />
+      <option name="MAIN_CLASS_NAME" value="klondike.SolitarioKlondikeTest" />
+      <option name="METHOD_NAME" value="testEstadoDeJuegoGanado" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MazoTest.test_agregarDescarte_vacio" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SolitarioKlondikeTest.test_robarCartasdelMazo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="modelosolitario.*" />
+          <option name="PATTERN" value="klondike.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="modelosolitario" />
-      <option name="MAIN_CLASS_NAME" value="modelosolitario.MazoTest" />
-      <option name="METHOD_NAME" value="test_agregarDescarte_vacio" />
+      <option name="PACKAGE_NAME" value="klondike" />
+      <option name="MAIN_CLASS_NAME" value="klondike.SolitarioKlondikeTest" />
+      <option name="METHOD_NAME" value="test_robarCartasdelMazo" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PilaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SolitarioKlondikeTest.test_verificarDificultad" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="modelosolitario.*" />
+          <option name="PATTERN" value="klondike.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="modelosolitario" />
-      <option name="MAIN_CLASS_NAME" value="modelosolitario.PilaTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="klondike" />
+      <option name="MAIN_CLASS_NAME" value="klondike.SolitarioKlondikeTest" />
+      <option name="METHOD_NAME" value="test_verificarDificultad" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PilaTest" />
         <item itemvalue="JUnit.All in Solitario-Algo3" />
-        <item itemvalue="JUnit.MazoTest" />
-        <item itemvalue="JUnit.MazoTest.test_agregarDescarte_vacio" />
-        <item itemvalue="JUnit.MazoTest.test_add_empty_descarte" />
+        <item itemvalue="JUnit.SolitarioKlondikeTest" />
+        <item itemvalue="JUnit.SolitarioKlondikeTest.testEstadoDeJuegoGanado" />
+        <item itemvalue="JUnit.SolitarioKlondikeTest.test_verificarDificultad" />
+        <item itemvalue="JUnit.SolitarioKlondikeTest.test_robarCartasdelMazo" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +205,7 @@
       <workItem from="1695846937981" duration="12380000" />
       <workItem from="1695924639946" duration="2867000" />
       <workItem from="1695932532308" duration="3876000" />
-      <workItem from="1696029061186" duration="11101000" />
+      <workItem from="1696029061186" duration="18360000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />
@@ -264,6 +270,21 @@
     <MESSAGE value="Cree enum ValorCarta y las clases Solitario y Tablero" />
     <MESSAGE value="Cree Tests para pila" />
     <option name="LAST_COMMIT_MESSAGE" value="Cree Tests para pila" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/klondike/SolitarioKlondikeTest.java</url>
+          <line>64</line>
+          <properties class="klondike.SolitarioKlondikeTest" method="testMoverConjuntoCartasFallaPorColor">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Solitario_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1695929795967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

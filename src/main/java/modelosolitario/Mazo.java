@@ -60,18 +60,6 @@ public class Mazo extends PilaDeCartas {
         Collections.shuffle(this, seed);
     }
 
-    /**
-     * Saca la primera carta del mazo
-     * @param carta Carta que se quiere agregar al mazo
-     * @return true si se puede agregar, false sino
-     */
-    public boolean agregarCarta(Carta carta){
-        if ( this.contains(carta))
-            return false;
-
-        this.push(carta);
-        return true;
-    }
 
     /**
      * Saca la primera carta del mazo

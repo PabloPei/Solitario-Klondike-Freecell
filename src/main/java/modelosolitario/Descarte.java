@@ -16,12 +16,8 @@ public class Descarte extends PilaDeCartas{
 
     /**
      * Constructor estandard que ademas setea la cantidad de cartas dependiendo la dificultad del soliatio.
-     * @param dificultad La dificultad del juego que determina la cantidad de cartas en el descarte.
      */
-    public Descarte(Dificultad dificultad){
-        super();
-        setCantidadCartas(dificultad);
-    }
+    public Descarte(){ super(); }
 
     /**
      * Setea la cantidad de cartas de la pila de descarte en base a la dificultad.

@@ -2,33 +2,90 @@ package modelosolitario;
 
 
 import modeloelementos.*;
-import modelosolitario.*;
+
+import java.util.ArrayList;
 
 /**
- * La claro abstracta Solitario define un conjunto de métodos que deben ser implementados
+ * La claro abstracta Solitario define un conjunto de métodos y atributos comunes a todos los solitarios.
  * por las clases que representan diferentes variantes del juego de Solitario.
  */
 
 public abstract class Solitario {
 
 
+    ///////// Atributos ///////////
     private int movimientos;
     private Dificultad dificultad;
     private EstadoJuego estadoJuego;
-    private Tablero tablero;
+    private final ArrayList<Pila> pilas;
+    private final Mazo mazo;
 
 
     /**
-     * Constructor para iniciar un juego de Solitario Klondike con una dificultad especificada.
-     * @param dificultad La dificultad del juego.
+     * Constructor para iniciar un juego de Solitario con una dificultad especificada.
+     * @param cantidadPilas Las pilas del solitario.
      */
-    public Solitario(Dificultad dificultad, Tablero tablero){
+    public Solitario(int cantidadPilas){
         this.movimientos=0;
-        this.dificultad=dificultad;
         this.estadoJuego = EstadoJuego.INICIADO;
-        this.tablero = tablero;
+
+        this.mazo = new Mazo();
+        this.mazo.mezclar();
+
+        this.pilas = new ArrayList<Pila>();
+        iniciarPilas(cantidadPilas);
+        repartirPilas();
+
     }
 
+
+    /**
+     * Constructor para iniciar un juego de Solitario con una dificultad especificada a partir de una semilla.
+     * @param cantidadPilas Las pilas del solitario.
+     * @param semilla La semilla a partir de la cual iniciar el juego.
+     */
+    public Solitario( int cantidadPilas, long semilla){
+        this.movimientos=0;
+        this.estadoJuego = EstadoJuego.INICIADO;
+
+        this.mazo = new Mazo();
+        this.mazo.mezclar(semilla);
+
+        this.pilas = new ArrayList<Pila>();
+        iniciarPilas(cantidadPilas);
+        repartirPilas();
+
+    }
+
+    /**
+     * Constructor para iniciar desde un estado especifico un juego de Solitario  con una dificultad, mazo y pilas especificas.
+     * @param mazo El mazo en el estado que se quiere iniciar.
+     * @param pilas Las pilas en el estado que se quien iniciar.
+     */
+    public Solitario(Mazo mazo, ArrayList<Pila> pilas){
+
+        this.movimientos=0;
+        this.estadoJuego = EstadoJuego.INICIADO;
+
+        this.mazo = new Mazo();
+        this.pilas = pilas;
+
+    }
+
+
+    /**
+     * Inicializa las pilas, dependiendo la cantidad que corresponda al solitario
+     */
+    public void iniciarPilas(int cantidadPilas){
+        for (int i = 0; i < cantidadPilas; i++) {
+            this.getPilas().add(new Pila());
+        }
+    }
+
+    /**
+     * Reparte las cartas iniciales en las pilas de juego (cada solitario lo implementa de distinta forma).
+     */
+    public abstract void repartirPilas();
 
 
     /**
@@ -58,6 +115,7 @@ public abstract class Solitario {
 
     /**
      * Mueve una carta desde una pila de origen a una pila de destino.
+     * En la segunda etapa del tp vamos a tomar las cordenadas del mouse para las cartas
      * @param origen   La pila de origen desde la que se va a sacar la carta.
      * @param destino  La pila de destino a la que se va a agregar la carta.
      * @return         Devuelve true si el movimiento se realizó con éxito, false si no se pudo realizar.
@@ -74,6 +132,7 @@ public abstract class Solitario {
 
     /**
      * Mueve un conjunto de cartas desde una pila de origen a una pila de destino.
+     * En la segunda etapa del tp vamos a tomar las cordenadas del mouse para las cartas
      * @param origen        La pila de origen desde la que se moverá el conjunto de cartas.
      * @param destino       La pila de destino a la que se moverá el conjunto de cartas.
      * @param primeraCarta  La primera carta del conjunto a mover.
@@ -116,48 +175,29 @@ public abstract class Solitario {
         return true;
     }
 
-
     /////////////////// getters & setters ///////////////////////
-    /**
-     * Obtiene el número total de movimientos realizados en el juego.
-     * @return El número total de movimientos.
-     */
+
     public int obtenerMovimientos() {
         return this.movimientos;
     }
 
-    /**
-     * Setea la dificultad del solitario
-     * @param dificultad del solitario
-     */
-    public void setDificultad(Dificultad dificultad){
-        this.dificultad = dificultad;
-    }
+    public void setDificultad(Dificultad dificultad){ this.dificultad = dificultad; }
 
-    /**
-     * obtiene la dificultad del solitario
-     * @return dificultad del solitario
-     */
     public Dificultad getDificultad(){
         return this.dificultad;
     }
 
-    /**
-     * obtiene el estado del juego
-     * @return EstadoJuego
-     */
     public EstadoJuego getEstadoJuego(){
         return this.estadoJuego;
     }
 
-    /**
-     * setea el estado del juego
-     * @param estado
-     */
     public void setEstadoJuego(EstadoJuego estado){this.estadoJuego=estado;}
 
-    /**
-     * obtiene el tablero
-     */
-    public Tablero getTablero(){return this.tablero; }
+    public Mazo getMazo(){
+        return this.mazo;
+    }
+
+    public ArrayList<Pila> getPilas(){
+        return this.pilas;
+    }
 }
