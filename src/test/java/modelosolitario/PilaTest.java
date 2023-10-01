@@ -70,5 +70,5 @@ public class PilaTest {
         assertEquals(pilaDestino.verCarta(), carta2);
         assertEquals(pilaOriginal.verCarta(),carta1);
     }
-    
+
 }
