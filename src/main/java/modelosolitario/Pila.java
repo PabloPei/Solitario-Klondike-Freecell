@@ -14,7 +14,7 @@ public class Pila extends PilaDeCartas {
     public Pila() { super(); }
 
     /**
-     * Constructor de la clase pila. Inicializa una baraja estandar (inglesa, alemana, etc) con
+     * Constructor de la clase pila. Inicializa una pila con
      * las cartas pasadas por parametro.
      */
     public Pila(PilaDeCartas pila){

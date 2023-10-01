@@ -65,20 +65,12 @@ public class PilaDeCartas extends Stack<Carta> {
     }
 
     /**
-     * Voltea todas las cartas en la pila para que queden boca arriba.
-     */
-    public void mostrarTodas (){
-        for (Carta carta : this){
-            carta.setBocaAbajo(false);
-        }
-    }
-
-    /**
      * Compara dos pilas de cartas
-     * @param pila
+     * @param pila a comparar
      * @return true si dos pilas son iguales, false en otro caso
      */
     public boolean equals(PilaDeCartas pila){
+
         if(this.size() != pila.size()) return false;
         boolean sonIguales = true;
         int indice = 0;

@@ -22,7 +22,8 @@ public class Cimiento extends PilaDeCartas {
     }
 
     /**
-     * Permite iniciar un cimiento en un estado particular
+     * Permite iniciar un cimiento en un estado particular a partir de indicar su palo y cantidad
+     * de cartas
      * @param cantidadCartas la cantidad de cartas que va tener el cimiento
      * @param palo el palo de las cartas del cimiento
      */
@@ -33,6 +34,17 @@ public class Cimiento extends PilaDeCartas {
             }
         }
     }
+
+    /**
+     * Permite iniciar un cimiento en un estado particular a partir de una pila de cartas
+     * pasada por parametro
+     */
+    public Cimiento(PilaDeCartas cimiento){
+        while (!cimiento.isEmpty()){
+            agregarCarta(cimiento.sacarCarta(true));
+        }
+    }
+
     /**
      * Verifica si es valido agregar una carta al cimiento segun las reglas del solitario.
      * @param carta La carta que se va a intentar agregar al cimiento.
@@ -47,7 +59,7 @@ public class Cimiento extends PilaDeCartas {
         if (cimientoCompleto())  return false;
 
         if (isEmpty()) {
-            return (carta.getValor() == ValorCarta.AS); // Solo se puede comenzar con un As.
+            return (carta.getValor() == ValorCarta.AS);
         } else {
             Carta tope = peek();
             return (Carta.esValorSiguiente(tope, carta) && Carta.esMismoPalo(tope, carta));

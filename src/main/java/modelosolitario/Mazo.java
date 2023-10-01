@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.Random;
 
 /**
- * La clase Mazo representa un mazo de cartas de tipo Francesa, Inglesa, Alemana, etc que hereda de un ArrayList.
+ * La clase Mazo representa un mazo de cartas de tipo Francesa, Inglesa, Alemana, etc.
  * Este mazo se inicializa con 52 cartas, cada una con un valor numérico en el rango de 1 a 13
  * y uno de los cuatro palos posibles: DIAMANTE, CORAZON, TREBOL o PICA.
  * Todas las cartas se inicializan como ocultas (boca abajo). Extiende las funcionalidades de pila de Cartas.
@@ -52,7 +52,7 @@ public class Mazo extends PilaDeCartas {
 
     /**
      * Mezcla el mazo de forma pseudo aleatoria
-     * @param semilla la semmila aleatoria a partir de la cual se crea el mazo. Se toma como parametro para
+     * @param semilla la semilla aleatoria a partir de la cual se crea el mazo. Se toma como parametro para
      *                poder iniciarlizar solitarios desde el mismo punto
      */
     public void mezclar(long semilla ) {
@@ -62,22 +62,9 @@ public class Mazo extends PilaDeCartas {
 
 
     /**
-     * Saca la primera carta del mazo
-     * @param bocaAbajo para indicar si se roba boca abajo o arriba
-     * @return Carta devuelve la primera carta del mazo
-     */
-    public Carta sacarCarta(boolean bocaAbajo){
-        if (isEmpty()) {
-            return null;
-        }
-        Carta carta = this.pop();
-        carta.setBocaAbajo(bocaAbajo);
-        return carta;
-    }
-
-    /**
-     * Este metodo cumple la funcionalidad de agregar una pila de descarte al mazo
-     * @param descarte
+     * Este metodo cumple la funcionalidad de insertar las cartas no utilizadas de la pila de
+     * descarte nuevamente al fondo del mazo.
+     * @param descarte pila de las cartas de descarte no utilizadas
      */
     public void agregarDescarte(Descarte descarte){
 

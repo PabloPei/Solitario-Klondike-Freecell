@@ -19,6 +19,16 @@ public class SolitarioKlondikeTest extends TestCase {
     }
 
     @Test
+    public void testCrearSolitarioConSemilla(){
+
+        SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL,13);
+        SolitarioKlondike solitario2 = new SolitarioKlondike(Dificultad.FACIL,13);
+
+        assertEquals(solitario.getMazo(),solitario2.getMazo());
+
+    }
+
+    @Test
     public void testMoverCartaFunciona() {
 
         SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
