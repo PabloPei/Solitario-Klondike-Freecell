@@ -1,4 +1,4 @@
-package klondike;
+package Klondike;
 
 import junit.framework.TestCase;
 import modeloelementos.*;

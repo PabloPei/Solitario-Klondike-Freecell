@@ -88,7 +88,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SolitarioKlondikeTest.testCrearSolitarioConSemilla">
+  <component name="RunManager" selected="JUnit.All in Solitario-Algo3">
     <configuration name="All in Solitario-Algo3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <option name="PACKAGE_NAME" value="" />
@@ -117,12 +117,12 @@
       <module name="Solitario-Algo3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="klondike.*" />
+          <option name="PATTERN" value="Klondike.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="klondike" />
-      <option name="MAIN_CLASS_NAME" value="klondike.SolitarioKlondikeTest" />
+      <option name="MAIN_CLASS_NAME" value="Klondike.SolitarioKlondikeTest" />
       <option name="METHOD_NAME" value="testCrearSolitarioConSemilla" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -138,7 +138,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="klondike" />
-      <option name="MAIN_CLASS_NAME" value="klondike.SolitarioKlondikeTest" />
+      <option name="MAIN_CLASS_NAME" value="Klondike.SolitarioKlondikeTest" />
       <option name="METHOD_NAME" value="test_MoverYGanar" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -154,7 +154,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="klondike" />
-      <option name="MAIN_CLASS_NAME" value="klondike.SolitarioKlondikeTest" />
+      <option name="MAIN_CLASS_NAME" value="Klondike.SolitarioKlondikeTest" />
       <option name="METHOD_NAME" value="test_Movimientos" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -163,8 +163,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SolitarioKlondikeTest.testCrearSolitarioConSemilla" />
         <item itemvalue="JUnit.All in Solitario-Algo3" />
+        <item itemvalue="JUnit.SolitarioKlondikeTest.testCrearSolitarioConSemilla" />
         <item itemvalue="JUnit.PilaTest.testRetirarMasDeUnaCarta" />
         <item itemvalue="JUnit.SolitarioKlondikeTest.test_MoverYGanar" />
         <item itemvalue="JUnit.SolitarioKlondikeTest.test_Movimientos" />
