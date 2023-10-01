@@ -23,7 +23,6 @@ public class MazoTest {
     // Create a new Mazo instance with particular values
     @Test
     public void test_nuevaInstanciadeMazo_particular() {
-
         PilaDeCartas pila = new PilaDeCartas();
         Carta carta1 = new Carta(ValorCarta.AS, Palo.CORAZON, true);
         Carta carta2 = new Carta(ValorCarta.DOS, Palo.CORAZON, true);
@@ -34,7 +33,6 @@ public class MazoTest {
 
     @Test
     public void test_agregarCarta() {
-
             PilaDeCartas pila = new PilaDeCartas();
             Carta carta1 = new Carta(ValorCarta.AS, Palo.CORAZON, true);
             Carta carta2 = new Carta(ValorCarta.DOS, Palo.CORAZON, true);
@@ -50,7 +48,6 @@ public class MazoTest {
 
     @Test
     public void test_agregarCarta_repetida() {
-
         PilaDeCartas pila = new PilaDeCartas();
         Carta carta1 = new Carta(ValorCarta.AS, Palo.CORAZON, true);
         Carta carta2 = new Carta(ValorCarta.DOS, Palo.CORAZON, true);
@@ -86,7 +83,6 @@ public class MazoTest {
         mazo2.mezclar(seed);
         assertEquals(mazo1, mazo2);
     }
-
 
     // Create a new Mazo instance and pop all 52 cards. Verify that the Mazo is empty.
     @Test

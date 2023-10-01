@@ -22,7 +22,6 @@ public class SolitarioKlondike extends Solitario {
     private ArrayList<Cimiento> cimientos;
     private Descarte descarte;
 
-
     ///////// Metodos ///////////
     /**
      * Constructor para iniciar un juego de Solitario Klondike.
@@ -121,7 +120,6 @@ public class SolitarioKlondike extends Solitario {
      * @return         Devuelve true si el movimiento se realizó con éxito, false si no se pudo realizar.
      */
     public boolean robarCartasDelMazo() {
-
         Mazo mazo = getMazo();
         Descarte descarte = getDescarte();
 
@@ -132,17 +130,13 @@ public class SolitarioKlondike extends Solitario {
         // Paso las cartas del descarte al mazo
         mazo.agregarDescarte(descarte);
 
-
         // Saco las cartas del mazo y las coloca en la pila de descarte.
 
         for (int i = 0; i < descarte.getCantidadCartas(); i++) {
             Carta carta = mazo.sacarCarta(false);
-
             if( ! descarte.agregarCarta(carta))
                 break; // no tengo mas cartas en el mazo
-
         }
-
         sumarMovimiento();
         return true;
     }
@@ -152,6 +146,4 @@ public class SolitarioKlondike extends Solitario {
     public Descarte getDescarte(){ return this.descarte; }
 
     public ArrayList<Cimiento> getCimientos(){ return this.cimientos; }
-
-
 }

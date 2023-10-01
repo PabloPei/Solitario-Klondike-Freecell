@@ -25,7 +25,6 @@ public class Carta {
     /** Indica si la carta esta visible o no para el usuario. */
     private boolean bocaAbajo;
 
-
     //////////////////// metodos ////////////////////
 
     /**
@@ -67,12 +66,10 @@ public class Carta {
         return valor.toString() + " - " + palo.toString();
     }
 
-
     /**
      * Voltea la orientación de la carta. Si la carta estaba boca abajo antes de llamar a este método,
      * no lo estará después y si estaba boca arriba, entonces estará oculta después de la llamada.
      */
-
     public void voltear(){
         bocaAbajo = !bocaAbajo;
     }

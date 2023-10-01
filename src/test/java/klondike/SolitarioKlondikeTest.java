@@ -12,7 +12,6 @@ public class SolitarioKlondikeTest extends TestCase {
 
     @Test
     public void testCrearSolitario(){
-
         SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
         assertEquals(Dificultad.FACIL,solitario.getDificultad());
 
@@ -20,7 +19,6 @@ public class SolitarioKlondikeTest extends TestCase {
 
     @Test
     public void testCrearSolitarioConSemilla(){
-
         SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL,13);
         SolitarioKlondike solitario2 = new SolitarioKlondike(Dificultad.FACIL,13);
 
@@ -30,7 +28,6 @@ public class SolitarioKlondikeTest extends TestCase {
 
     @Test
     public void testMoverCartaFunciona() {
-
         SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
 
         var pilaDestino = new Pila();
@@ -45,7 +42,6 @@ public class SolitarioKlondikeTest extends TestCase {
 
     @Test
     public void testMoverCartaFalla(){
-
         SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
 
         var pilaDestino = new Pila();
@@ -56,7 +52,6 @@ public class SolitarioKlondikeTest extends TestCase {
 
     @Test
     public void testMoverConjuntoDeCartasFunciona() {
-
         SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
 
         Pila pilaOrigen = new Pila();
@@ -73,7 +68,6 @@ public class SolitarioKlondikeTest extends TestCase {
 
     @Test
     public void testMoverConjuntoCartasFallaPorColor(){
-
         SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
 
         Pila pilaOrigen = new Pila();
@@ -93,7 +87,6 @@ public class SolitarioKlondikeTest extends TestCase {
 
     @Test
     public void testMoverConjuntoCartasFallaPorValor() {
-
         SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
 
         Pila pilaOrigen = new Pila();
@@ -112,19 +105,14 @@ public class SolitarioKlondikeTest extends TestCase {
         assertEquals(pilaOrigen.pop(), cartaAMover1);
     }
 
-
     @Test
     public void testSolitarioNoGanado() {
-
         SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
-
         assertFalse(solitario.verificarVictoria());
     }
 
     @Test
-    public void test_robarCartasdelMazo() {
-
-
+    public void testRobarCartasdelMazo() {
         SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
 
         Carta carta = solitario.getMazo().verCarta();
@@ -143,10 +131,8 @@ public class SolitarioKlondikeTest extends TestCase {
         }
     }
 
-
     @Test
     public void test_MoverYGanar() {
-
         //inicializo el juego en el estado ganado
         ArrayList<Cimiento> cimientos = new ArrayList<Cimiento>();
         cimientos.add( new Cimiento(12,Palo.PICA));
@@ -177,12 +163,10 @@ public class SolitarioKlondikeTest extends TestCase {
         solitario.moverCarta(solitario.getPilas().get(6), solitario.getCimientos().get(0));
 
         assertTrue(solitario.verificarVictoria());
-
         }
 
     @Test
     public void test_verificarDificultad() {
-
         SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.MEDIO);
 
         Carta carta = solitario.getMazo().verCarta();
@@ -200,23 +184,16 @@ public class SolitarioKlondikeTest extends TestCase {
         assertFalse(solitario.moverCarta(cimientoVacio, pilaDestino));
     }
 
-
     @Test
     public void test_Movimientos() {
-
-
         SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
-
         Carta carta = solitario.getMazo().verCarta();
-
         solitario.robarCartasDelMazo();
-
         assertEquals ( solitario.getMovimientos(), 1);
     }
 
     @Test
     public void testEstadoDeJuegoGanado(){
-
         //inicializo el juego en el estado ganado
         ArrayList<Cimiento> cimientos = new ArrayList<Cimiento>();
         cimientos.add( new Cimiento(13,Palo.PICA));
@@ -241,7 +218,5 @@ public class SolitarioKlondikeTest extends TestCase {
         SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.MEDIO, mazo, pilas,cimientos, descarte );
 
         assertTrue(solitario.verificarVictoria());
-
     }
-
 }

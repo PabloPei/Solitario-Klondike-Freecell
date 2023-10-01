@@ -24,7 +24,6 @@ public class Descarte extends PilaDeCartas{
      * @param dificultad La dificultad del juego que determina la cantidad de cartas en el descarte.
      */
     public void setCantidadCartas(Dificultad dificultad){
-
         switch (dificultad) {
             case DIFICIL -> this.cantidadCartas = 3;
             case MEDIO -> this.cantidadCartas = 2;

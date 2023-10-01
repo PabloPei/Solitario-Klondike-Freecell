@@ -51,7 +51,6 @@ public class Cimiento extends PilaDeCartas {
      * @return true si la carta se ha agregado correctamente, false si no se pudo agregar debido a reglas del juego o si el cimiento está completo.
      */
     public boolean puedeAgregarCarta(Carta carta) {
-
         // Verifica las condiciones genericas de una pila
         if ( !super.puedeAgregarCarta(carta)) return false;
 
@@ -65,7 +64,6 @@ public class Cimiento extends PilaDeCartas {
             return (Carta.esValorSiguiente(tope, carta) && Carta.esMismoPalo(tope, carta));
         }
     }
-
 
     /**
      * Verifica si el cimiento está completo, es decir, si tiene 13 cartas en orden ascendente.

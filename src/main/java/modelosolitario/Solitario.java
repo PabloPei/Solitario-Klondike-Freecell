@@ -62,7 +62,6 @@ public abstract class Solitario {
      * @param pilas Las pilas en el estado que se quien iniciar.
      */
     public Solitario(Mazo mazo, ArrayList<Pila> pilas){
-
         this.movimientos=0;
         this.estadoJuego = EstadoJuego.JUGANDO;
 
@@ -70,7 +69,6 @@ public abstract class Solitario {
         this.pilas = pilas;
 
     }
-
 
     /**
      * Inicializa las pilas, dependiendo la cantidad que corresponda al solitario
@@ -111,7 +109,6 @@ public abstract class Solitario {
     public void sumarMovimiento(){
         this.movimientos++;
     }
-
 
     /**
      * Mueve una carta desde una pila de origen a una pila de destino.
@@ -173,7 +170,6 @@ public abstract class Solitario {
                 return false;
             }
         }
-
         sumarMovimiento();
         return true;
     }

@@ -29,8 +29,6 @@ public class PilaDeCartas extends Stack<Carta> {
         return false;
     }
 
-
-
     /**
      * Intenta sacar la carta de arriba de la pila de cartas
      */
@@ -42,7 +40,6 @@ public class PilaDeCartas extends Stack<Carta> {
         carta.setBocaAbajo(bocaAbajo);
         return carta;
     }
-
 
     /**
      * Intenta ver la carta de arriba de la pila de cartas
@@ -70,7 +67,6 @@ public class PilaDeCartas extends Stack<Carta> {
      * @return true si dos pilas son iguales, false en otro caso
      */
     public boolean equals(PilaDeCartas pila){
-
         if(this.size() != pila.size()) return false;
         boolean sonIguales = true;
         int indice = 0;

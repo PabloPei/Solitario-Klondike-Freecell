@@ -42,7 +42,6 @@ public class Mazo extends PilaDeCartas {
         }
     }
 
-
     /**
      * Mezcla el mazo de forma pseudo aleatoria
      */
@@ -60,14 +59,12 @@ public class Mazo extends PilaDeCartas {
         Collections.shuffle(this, seed);
     }
 
-
     /**
      * Este metodo cumple la funcionalidad de insertar las cartas no utilizadas de la pila de
      * descarte nuevamente al fondo del mazo.
      * @param descarte pila de las cartas de descarte no utilizadas
      */
     public void agregarDescarte(Descarte descarte){
-
         if (descarte.isEmpty()) return; //si no hay cartas en el descarte no hago nada
 
         Mazo mazoTemp = new Mazo();
@@ -85,7 +82,5 @@ public class Mazo extends PilaDeCartas {
         while (!mazoTemp.isEmpty()) {
             this.agregarCarta(mazoTemp.sacarCarta(true));
         }
-
     }
-
 }

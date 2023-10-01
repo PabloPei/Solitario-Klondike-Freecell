@@ -32,7 +32,6 @@ public class ValorCartaTest extends TestCase {
         assertEquals(ValorCarta.REINA, ValorCarta.SOTA.siguienteValor());
     }
 
-
     @Test
     public void testSiguienteValorDevuelveNuloParaRey() {
         assertNull(ValorCarta.REY.siguienteValor());
