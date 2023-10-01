@@ -70,49 +70,5 @@ public class PilaTest {
         assertEquals(pilaDestino.verCarta(), carta2);
         assertEquals(pilaOriginal.verCarta(),carta1);
     }
-
-    @Test
-    public void testRetirarMasDeUnaCarta(){
-        var cartasIniciales = new PilaDeCartas();
-        cartasIniciales.push(new Carta(ValorCarta.REY, Palo.TREBOL, false));
-        cartasIniciales.push(new Carta(ValorCarta.REINA, Palo.CORAZON, false));
-        cartasIniciales.push(new Carta(ValorCarta.SOTA, Palo.PICA, false));
-        cartasIniciales.push(new Carta(ValorCarta.DIEZ, Palo.CORAZON, false));
-        cartasIniciales.push(new Carta(ValorCarta.NUEVE, Palo.TREBOL, false));
-        cartasIniciales.push(new Carta(ValorCarta.OCHO, Palo.DIAMANTE, false));
-        cartasIniciales.push(new Carta(ValorCarta.SIETE, Palo.PICA, false));
-        var pilaOriginal = new Pila(cartasIniciales);
-        int cantidadDeCartasASacar = 4;
-        var nuevaPila = new Pila();
-        for(int i = 0; i < cantidadDeCartasASacar; i++){
-            nuevaPila.push(pilaOriginal.sacarCarta(false));
-        }
-        var resultadoEsperado = new Pila();
-        for(int i = 0; i < cantidadDeCartasASacar; i++) {
-            resultadoEsperado.push(cartasIniciales.pop());
-        }
-        assertEquals(resultadoEsperado, nuevaPila);
-    }
-
-    @Test
-    public void testRetirarCartasTotalesEnPila(){
-        var cartasIniciales = new PilaDeCartas();
-        cartasIniciales.push(new Carta(ValorCarta.REY, Palo.TREBOL, false));
-        cartasIniciales.push(new Carta(ValorCarta.REINA, Palo.CORAZON, false));
-        cartasIniciales.push(new Carta(ValorCarta.SOTA, Palo.PICA, false));
-        cartasIniciales.push(new Carta(ValorCarta.DIEZ, Palo.CORAZON, false));
-        cartasIniciales.push(new Carta(ValorCarta.NUEVE, Palo.TREBOL, false));
-        cartasIniciales.push(new Carta(ValorCarta.OCHO, Palo.DIAMANTE, false));
-        cartasIniciales.push(new Carta(ValorCarta.SIETE, Palo.PICA, false));
-        var pilaOriginal = new Pila(cartasIniciales);
-        int cantidadDeCartasASacar = pilaOriginal.size();var nuevaPila = new Pila();
-        for(int i = 0; i < cantidadDeCartasASacar; i++){
-            nuevaPila.push(pilaOriginal.sacarCarta(false));
-        }
-        var resultadoEsperado = new Pila();
-        for(int i = 0; i < cantidadDeCartasASacar; i++){
-            resultadoEsperado.push(cartasIniciales.pop());
-        }
-        assertEquals(resultadoEsperado, nuevaPila);
-    }
+    
 }

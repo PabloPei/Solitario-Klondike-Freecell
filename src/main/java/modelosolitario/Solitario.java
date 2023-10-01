@@ -35,7 +35,6 @@ public abstract class Solitario {
         this.pilas = new ArrayList<Pila>();
         iniciarPilas(cantidadPilas);
         repartirPilas();
-
     }
 
 

@@ -13,9 +13,13 @@ public class Pila extends PilaDeCartas {
 
     public Pila() { super(); }
 
+    /**
+     * Constructor de la clase pila. Inicializa una baraja estandar (inglesa, alemana, etc) con
+     * las cartas pasadas por parametro.
+     */
     public Pila(PilaDeCartas pila){
-        for (int i = 0; i < pila.size(); i++){
-            push(pila.get(i));
+        while (!pila.isEmpty()){
+            agregarCarta(pila.sacarCarta(true));
         }
     }
 
