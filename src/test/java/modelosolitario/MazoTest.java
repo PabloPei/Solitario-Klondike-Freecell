@@ -10,9 +10,8 @@ import java.util.EmptyStackException;
 
 public class MazoTest {
 
-    // Create a new Mazo instance and verify that it has 52 cards and they are all face down.
     @Test
-    public void test_nuevaInstanciadeMazo() {
+    public void testNuevaInstanciadeMazo() {
         Mazo mazo = new Mazo();
         assertEquals(52, mazo.size());
         for (Carta carta : mazo) {
@@ -20,9 +19,8 @@ public class MazoTest {
         }
     }
 
-    // Create a new Mazo instance with particular values
     @Test
-    public void test_nuevaInstanciadeMazo_particular() {
+    public void testNuevaInstanciadeMazoParticular() {
         PilaDeCartas pila = new PilaDeCartas();
         Carta carta1 = new Carta(ValorCarta.AS, Palo.CORAZON, true);
         Carta carta2 = new Carta(ValorCarta.DOS, Palo.CORAZON, true);
@@ -32,7 +30,7 @@ public class MazoTest {
     }
 
     @Test
-    public void test_agregarCarta() {
+    public void testAgregarCarta() {
             PilaDeCartas pila = new PilaDeCartas();
             Carta carta1 = new Carta(ValorCarta.AS, Palo.CORAZON, true);
             Carta carta2 = new Carta(ValorCarta.DOS, Palo.CORAZON, true);
@@ -47,7 +45,7 @@ public class MazoTest {
     }
 
     @Test
-    public void test_agregarCarta_repetida() {
+    public void testAgregarCartaRepetida() {
         PilaDeCartas pila = new PilaDeCartas();
         Carta carta1 = new Carta(ValorCarta.AS, Palo.CORAZON, true);
         Carta carta2 = new Carta(ValorCarta.DOS, Palo.CORAZON, true);
@@ -63,19 +61,16 @@ public class MazoTest {
         assertFalse(result);
     }
 
-
-    // Call the mezclar() method and verify that the order of the cards has changed.
     @Test
-    public void test_mezclar() {
+    public void testMezclar() {
         Mazo mazo = new Mazo();
         Mazo originalMazo = new Mazo();
         mazo.mezclar();
         assertNotEquals(originalMazo, mazo);
     }
 
-    // Call the mezclar(long semilla) method with a specific seed and verify that the order of the cards is the same every time.
     @Test
-    public void test_mezclar_semilla() {
+    public void testMezclarSemilla() {
         long seed = 12345;
         Mazo mazo1 = new Mazo();
         Mazo mazo2 = new Mazo();
@@ -84,9 +79,8 @@ public class MazoTest {
         assertEquals(mazo1, mazo2);
     }
 
-    // Create a new Mazo instance and pop all 52 cards. Verify that the Mazo is empty.
     @Test
-    public void test_sacarTodasLasCartas() {
+    public void testSacarTodasLasCartas() {
         Mazo mazo = new Mazo();
         for (int i = 0; i < 52; i++) {
             mazo.sacarCarta(true);
@@ -94,9 +88,8 @@ public class MazoTest {
         assertTrue(mazo.isEmpty());
     }
 
-    // Create a new Mazo instance and pop 51 cards. Verify that the Mazo has one card left.
     @Test
-    public void test_pop51Cards() {
+    public void testSacar51Cartas() {
         Mazo mazo = new Mazo();
         for (int i = 0; i < 51; i++) {
             mazo.sacarCarta(true);

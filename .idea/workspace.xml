@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Habia un error en los nomrbes de los paquetes que generaba un error" />
+    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Habia un error en los nomrbes de los paquetes que generaba un error">
+      <change beforePath="$PROJECT_DIR$/src/test/java/modelosolitario/MazoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modelosolitario/MazoTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -266,18 +268,18 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/klondike/SolitarioKlondikeTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/Klondike/SolitarioKlondikeTest.java</url>
           <line>74</line>
-          <properties class="klondike.SolitarioKlondikeTest" method="testMoverConjuntoCartasFallaPorColor">
+          <properties class="Klondike.SolitarioKlondikeTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/klondike/SolitarioKlondikeTest.java</url>
+          <url>file://$PROJECT_DIR$/src/test/java/Klondike/SolitarioKlondikeTest.java</url>
           <line>195</line>
-          <properties class="klondike.SolitarioKlondikeTest" method="test_MoverCartadeCimientoVacio">
+          <properties class="Klondike.SolitarioKlondikeTest" method="testEstadoDeJuegoGanado">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
