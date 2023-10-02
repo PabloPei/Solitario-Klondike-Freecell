@@ -2,6 +2,8 @@
 
 Integrantes del grupo:
 
-  -Axel Zielonka. Padron: 110310
+  -Axel Zielonka. Padrón: 110310
   
-  -Sofía M. Acuña. Padron: 98764
+  -Sofía M. Acuña. Padrón: 98764
+
+  -Pablo Peiretti. Padrón: 103592
