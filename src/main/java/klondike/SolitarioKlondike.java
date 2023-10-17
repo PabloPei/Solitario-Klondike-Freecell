@@ -1,4 +1,4 @@
-package Klondike;
+package klondike;
 
 import modeloelementos.Carta;
 import modeloelementos.Dificultad;

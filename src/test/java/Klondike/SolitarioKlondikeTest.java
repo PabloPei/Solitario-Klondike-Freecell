@@ -1,6 +1,7 @@
 package Klondike;
 
 import junit.framework.TestCase;
+import klondike.SolitarioKlondike;
 import modeloelementos.*;
 import modelosolitario.*;
 import org.junit.Test;

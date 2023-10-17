@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Habia un error en los nomrbes de los paquetes que generaba un error">
-      <change beforePath="$PROJECT_DIR$/src/test/java/modelosolitario/MazoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modelosolitario/MazoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Klondike/SolitarioKlondikeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Klondike/SolitarioKlondikeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,7 +270,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/Klondike/SolitarioKlondikeTest.java</url>
-          <line>74</line>
+          <line>75</line>
           <properties class="Klondike.SolitarioKlondikeTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -278,7 +279,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/Klondike/SolitarioKlondikeTest.java</url>
-          <line>195</line>
+          <line>196</line>
           <properties class="Klondike.SolitarioKlondikeTest" method="testEstadoDeJuegoGanado">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
