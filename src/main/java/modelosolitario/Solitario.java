@@ -42,7 +42,7 @@ public abstract class Solitario {
         this.movimientos=0;
         this.estadoJuego = EstadoJuego.JUGANDO;
 
-        this.mazo = new Mazo();
+        this.mazo = mazo;
         this.pilas = pilas;
 
     }
