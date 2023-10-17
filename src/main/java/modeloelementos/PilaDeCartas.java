@@ -12,14 +12,6 @@ import java.util.Stack;
  */
 public class PilaDeCartas extends Stack<Carta> {
 
-
-    //////////////////// Métodos ////////////////////
-
-    /**
-     * Intenta agregar una carta a la pila de cartas.
-     * @param carta La carta que se va a intentar agregar a la pila.
-     * @return true si la carta se ha agregado correctamente, false si no se pudo agregar debido a reglas del juego.
-     */
     public boolean agregarCarta(Carta carta) {
 
         if(puedeAgregarCarta(carta)) {
@@ -29,9 +21,6 @@ public class PilaDeCartas extends Stack<Carta> {
         return false;
     }
 
-    /**
-     * Intenta sacar la carta de arriba de la pila de cartas
-     */
     public Carta sacarCarta(boolean bocaAbajo) {
         if(isEmpty()) {
             return null;
@@ -41,10 +30,6 @@ public class PilaDeCartas extends Stack<Carta> {
         return carta;
     }
 
-    /**
-     * Intenta ver la carta de arriba de la pila de cartas
-     * @return Carta la carta que saco de la pila de cartas
-     */
     public Carta verCarta() {
         if(isEmpty()) {
             return null;
@@ -52,20 +37,10 @@ public class PilaDeCartas extends Stack<Carta> {
         return peek();
     }
 
-    /**
-     * Verifica si es valido agregar una carta a una pila de cartas generica.
-     * @param carta La carta que se va a intentar agregar al cimiento.
-     * @return true si la carta se puede agregar, false en otro caso.
-     */
     public boolean puedeAgregarCarta(Carta carta) {
         return (carta != null && !this.contains(carta));
     }
 
-    /**
-     * Compara dos pilas de cartas
-     * @param pila a comparar
-     * @return true si dos pilas son iguales, false en otro caso
-     */
     public boolean equals(PilaDeCartas pila){
         if(this.size() != pila.size()) return false;
         boolean sonIguales = true;

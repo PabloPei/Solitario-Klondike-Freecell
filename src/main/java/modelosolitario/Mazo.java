@@ -17,12 +17,6 @@ import java.util.Random;
 
 public class Mazo extends PilaDeCartas {
 
-    //////////////////// metodos ////////////////////
-    /**
-     * Constructor de la clase mazo. Inicializa una baraja estandar (inglesa, alemana, etc) de 52 cartas.
-     * Cada carta se crea con un valor numerico en el rango de 1 a 13 y uno de los cuatro palos posibles:
-     * DIAMANTE, CORAZON, TREBOL o PICA. Todas las cartas se inicializan como ocultas.
-     */
     public Mazo(){
         for( Palo palo : Palo.values() ) {
             for (ValorCarta valor : ValorCarta.values()) {
@@ -32,38 +26,21 @@ public class Mazo extends PilaDeCartas {
         }
     }
 
-    /**
-     * Constructor de la clase mazo. Inicializa una baraja estandar (inglesa, alemana, etc) con
-     * las cartas pasadas por parametro. No se mezcla.
-     */
     public Mazo(PilaDeCartas mazo){
         while (!mazo.isEmpty()){
             agregarCarta(mazo.sacarCarta(true));
         }
     }
 
-    /**
-     * Mezcla el mazo de forma pseudo aleatoria
-     */
     public void mezclar() {
         Collections.shuffle(this);
     }
 
-    /**
-     * Mezcla el mazo de forma pseudo aleatoria
-     * @param semilla la semilla aleatoria a partir de la cual se crea el mazo. Se toma como parametro para
-     *                poder iniciarlizar solitarios desde el mismo punto
-     */
     public void mezclar(long semilla ) {
         var seed = new Random(semilla);
         Collections.shuffle(this, seed);
     }
 
-    /**
-     * Este metodo cumple la funcionalidad de insertar las cartas no utilizadas de la pila de
-     * descarte nuevamente al fondo del mazo.
-     * @param descarte pila de las cartas de descarte no utilizadas
-     */
     public void agregarDescarte(Descarte descarte){
         if (descarte.isEmpty()) return; //si no hay cartas en el descarte no hago nada
 

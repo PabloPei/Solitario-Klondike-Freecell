@@ -1,8 +1,5 @@
 package modeloelementos;
 
-/**
- * Representa el estado de un juego solitario
- */
 public enum EstadoJuego {
     GANADO, JUGANDO;
 }

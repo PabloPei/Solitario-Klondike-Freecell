@@ -10,7 +10,6 @@ import java.util.ArrayList;
 
 public class SolitarioKlondikeTest extends TestCase {
 
-
     @Test
     public void testCrearSolitario(){
         SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
@@ -24,7 +23,6 @@ public class SolitarioKlondikeTest extends TestCase {
         SolitarioKlondike solitario2 = new SolitarioKlondike(Dificultad.FACIL,13);
 
         assertEquals(solitario.getMazo(),solitario2.getMazo());
-
     }
 
     @Test
@@ -115,9 +113,7 @@ public class SolitarioKlondikeTest extends TestCase {
     @Test
     public void testRobarCartasdelMazo() {
         SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.FACIL);
-
         Carta carta = solitario.getMazo().verCarta();
-
         solitario.robarCartasDelMazo();
 
         assertEquals ( solitario.getDescarte().verCarta(), carta);
@@ -169,9 +165,7 @@ public class SolitarioKlondikeTest extends TestCase {
     @Test
     public void test_verificarDificultad() {
         SolitarioKlondike solitario = new SolitarioKlondike(Dificultad.MEDIO);
-
         Carta carta = solitario.getMazo().verCarta();
-
         solitario.robarCartasDelMazo();
 
         assertEquals (2,solitario.getDescarte().size());
