@@ -20,7 +20,7 @@ public abstract class Solitario {
         this.mazo = new Mazo();
         this.mazo.mezclar();
 
-        this.pilas = new ArrayList<Pila>();
+        this.pilas = new ArrayList<>();
         iniciarPilas(cantidadPilas);
         repartirPilas();
     }
@@ -32,7 +32,7 @@ public abstract class Solitario {
         this.mazo = new Mazo();
         this.mazo.mezclar(semilla);
 
-        this.pilas = new ArrayList<Pila>();
+        this.pilas = new ArrayList<>();
         iniciarPilas(cantidadPilas);
         repartirPilas();
 
@@ -77,21 +77,21 @@ public abstract class Solitario {
         return true;
     }
 
-    public boolean moverCartas(PilaDeCartas origen, PilaDeCartas destino, Carta primeraCarta) {
-        if(!destino.puedeAgregarCarta(primeraCarta)) return false;
-
-        Carta ultimaCarta = origen.verCarta();
-
-        PilaDeCartas pilaAux = new PilaDeCartas();
+    private PilaDeCartas moverCartasAPilaAuxiliar(PilaDeCartas origen, Carta primeraCarta){
+        PilaDeCartas pilaActual = new PilaDeCartas();
         do{
-            if ( ! (pilaAux.agregarCarta(origen.sacarCarta(false)))) {
-                while (!(pilaAux.isEmpty())) {
-                    origen.agregarCarta(pilaAux.sacarCarta(false));
+            if ( ! (pilaActual.agregarCarta(origen.sacarCarta(false)))) {
+                while (!(pilaActual.isEmpty())) {
+                    origen.agregarCarta(pilaActual.sacarCarta(false));
                 }
-                return false;
+                return null;
             }
-        }while (primeraCarta != pilaAux.verCarta());
+        }while (primeraCarta != pilaActual.verCarta());
+        return pilaActual;
+    }
 
+    private boolean moverCartasALaNuevaPila(PilaDeCartas origen, PilaDeCartas destino, PilaDeCartas pilaAux){
+        Carta ultimaCarta = origen.verCarta();
         while (!pilaAux.isEmpty()) {
             if (!(destino.agregarCarta(pilaAux.pop()))) {
                 while (destino.peek() != ultimaCarta) {
@@ -105,6 +105,15 @@ public abstract class Solitario {
         }
         sumarMovimiento();
         return true;
+    }
+
+    public boolean moverCartas(PilaDeCartas origen, PilaDeCartas destino, Carta primeraCarta) {
+        if(!destino.puedeAgregarCarta(primeraCarta)) return false;
+        PilaDeCartas pilaAux = moverCartasAPilaAuxiliar(origen, primeraCarta);
+        if (pilaAux == null) return false;
+        else {
+            return moverCartasALaNuevaPila(origen, destino, pilaAux);
+        }
     }
 
     public int getMovimientos() {
