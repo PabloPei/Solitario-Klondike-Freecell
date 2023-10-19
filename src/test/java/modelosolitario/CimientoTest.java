@@ -2,7 +2,6 @@ package modelosolitario;
 
 import modeloelementos.Carta;
 import modeloelementos.Palo;
-import modeloelementos.PilaDeCartas;
 import modeloelementos.ValorCarta;
 import org.junit.Test;
 
