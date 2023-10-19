@@ -10,8 +10,8 @@ import java.util.ArrayList;
 public class SolitarioKlondike extends Solitario {
 
     public static final int CANTIDAD_PILAS = 7;
-    private ArrayList<Cimiento> cimientos;
-    private Descarte descarte;
+    private final ArrayList<Cimiento> cimientos;
+    private final Descarte descarte;
 
     public SolitarioKlondike(){
 

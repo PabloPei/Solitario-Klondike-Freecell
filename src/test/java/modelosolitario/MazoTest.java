@@ -24,6 +24,7 @@ public class MazoTest {
         pila.agregarCarta(carta1);
         pila.agregarCarta(carta2);
         Mazo mazo = new Mazo(pila);
+        assertNotNull(mazo);
     }
 
     @Test

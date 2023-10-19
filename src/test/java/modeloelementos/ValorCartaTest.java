@@ -1,9 +1,9 @@
 package modeloelementos;
 
-import junit.framework.TestCase;
 import org.junit.Test;
+import static org.junit.Assert.*;
 
-public class ValorCartaTest extends TestCase {
+public class ValorCartaTest {
 
     @Test
     public void testObtenerValor() {
@@ -35,14 +35,6 @@ public class ValorCartaTest extends TestCase {
     @Test
     public void testSiguienteValorDevuelveNuloParaRey() {
         assertNull(ValorCarta.REY.siguienteValor());
-    }
-
-    @Test
-    public void testEqualsDevuelveTrueParaLaMismaCarta() {
-        assertTrue(ValorCarta.AS.equals(ValorCarta.AS));
-        assertTrue(ValorCarta.DOS.equals(ValorCarta.DOS));
-        assertTrue(ValorCarta.TRES.equals(ValorCarta.TRES));
-        assertTrue(ValorCarta.REY.equals(ValorCarta.REY));
     }
 
     @Test

@@ -4,7 +4,7 @@ import modeloelementos.PilaDeCartas;
 
 public class Descarte extends PilaDeCartas{
 
-    private int cantidadCartas = 1;
+    private final int cantidadCartas = 1;
 
     public Descarte(){ super(); }
 
