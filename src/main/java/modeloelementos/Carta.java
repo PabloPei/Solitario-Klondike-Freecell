@@ -2,12 +2,6 @@ package modeloelementos;
 
 import java.io.*;
 
-/**
- * La clase Carta representa una carta de una baraja de cartas estándar (Francesa,
- * Inglesa, Alemana, etc). Cada carta tiene un valor desde el As (valor=1), hasta
- * el rey (valor=13) y un palo que toma los valores de Corazones, Diamantes,
- * Tréboles o Picas.
- */
 
 public class Carta implements Serializable {
 

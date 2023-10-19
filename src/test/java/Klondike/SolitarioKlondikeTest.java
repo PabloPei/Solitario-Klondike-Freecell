@@ -11,8 +11,12 @@ import java.util.ArrayList;
 public class SolitarioKlondikeTest extends TestCase {
 
     @Test
-    public void testCrearSolitario(){
+    public void testCrearSolitarioCimientosVacios(){
         SolitarioKlondike solitario = new SolitarioKlondike();
+        ArrayList<Cimiento> cimientos = solitario.getCimientos();
+        for(Cimiento c: cimientos){
+            assertTrue(c.isEmpty());
+        }
     }
 
     @Test

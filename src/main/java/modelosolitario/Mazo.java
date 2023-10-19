@@ -4,7 +4,6 @@ import modeloelementos.Palo;
 import modeloelementos.PilaDeCartas;
 import modeloelementos.ValorCarta;
 import modeloelementos.Carta;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
