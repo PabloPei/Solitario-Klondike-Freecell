@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Habia un error en los nomrbes de los paquetes que generaba un error">
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" afterDir="false" />
+    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Modifique el metodo moverCartas de Solitario para que cumpla SRP">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modeloelementos/Carta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modeloelementos/Carta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modeloelementos/PilaDeCartas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modeloelementos/PilaDeCartas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modeloelementos/CartaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modeloelementos/CartaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modeloelementos/PilaDeCartasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modeloelementos/PilaDeCartasTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +21,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -84,9 +88,9 @@
       <recent name="klondike" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="modeloelementos" />
       <recent name="Klondike" />
       <recent name="modelosolitario" />
-      <recent name="modeloelementos" />
       <recent name="" />
     </key>
   </component>
@@ -199,6 +203,11 @@
       <workItem from="1696029061186" duration="21072000" />
       <workItem from="1696115179404" duration="935000" />
       <workItem from="1696174016832" duration="3802000" />
+      <workItem from="1697673309965" duration="24000" />
+      <workItem from="1697674295179" duration="25000" />
+      <workItem from="1697674340272" duration="31000" />
+      <workItem from="1697674383960" duration="64000" />
+      <workItem from="1697674473600" duration="1001000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />
@@ -240,7 +249,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695839153668</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Modifique el metodo moverCartas de Solitario para que cumpla SRP">
+      <option name="closed" value="true" />
+      <created>1697654090268</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1697654090268</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,7 +279,8 @@
     <MESSAGE value="Arregle la prueba mezclar en MazoTest" />
     <MESSAGE value="Cree enum ValorCarta y las clases Solitario y Tablero" />
     <MESSAGE value="Cree Tests para pila" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cree Tests para pila" />
+    <MESSAGE value="Modifique el metodo moverCartas de Solitario para que cumpla SRP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modifique el metodo moverCartas de Solitario para que cumpla SRP" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,6 +1,9 @@
 package modeloelementos;
 
 import org.junit.Test;
+
+import java.io.IOException;
+
 import static org.junit.Assert.*;
 
 public class PilaDeCartasTest {
@@ -30,7 +33,7 @@ public class PilaDeCartasTest {
     @Test
     public void testVerCartaEnPilaVacia() {
         var pila = new PilaDeCartas();
-        assertEquals(null, pila.verCarta());
+        assertNull(pila.verCarta());
     }
 
     @Test
@@ -67,5 +70,16 @@ public class PilaDeCartasTest {
         pila2.push(carta1);
         pila2.push(carta2);
         assertTrue(pila.equals(pila2));
+    }
+
+    @Test
+    public void testPersistencia() throws IOException, ClassNotFoundException {
+        PilaDeCartas p = new PilaDeCartas();
+        p.push(new Carta(ValorCarta.AS, Palo.TREBOL, false));
+        p.push(new Carta(ValorCarta.REINA, Palo.CORAZON, true));
+        p.serializar("PruebaPilas.txt");
+        PilaDeCartas deserializada = PilaDeCartas.deSerializar("PruebaPilas.txt");
+        assertNotNull(deserializada);
+        assertEquals(p, deserializada);
     }
 }

@@ -1,5 +1,7 @@
 package modeloelementos;
 
+import java.io.*;
+
 /**
  * La clase Carta representa una carta de una baraja de cartas estándar (Francesa,
  * Inglesa, Alemana, etc). Cada carta tiene un valor desde el As (valor=1), hasta
@@ -7,7 +9,7 @@ package modeloelementos;
  * Tréboles o Picas.
  */
 
-public class Carta {
+public class Carta implements Serializable {
 
     private final ValorCarta valor;
 
@@ -72,6 +74,22 @@ public class Carta {
     }
 
     public Color getColor() { return getPalo().getColor(); }
+
+    public void serializar(String nomArchivo) throws IOException {
+        ObjectOutputStream o =
+                new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(nomArchivo)));
+        o.writeObject(this);
+        o.close();
+    }
+
+    public static Carta deSerializar(String nomArchivo) throws IOException, ClassNotFoundException {
+        ObjectInputStream o = new ObjectInputStream(new BufferedInputStream(new FileInputStream(nomArchivo)));
+        Carta c = (Carta) o.readObject();
+        o.close();
+        return c;
+    }
+
+
 }
 
 

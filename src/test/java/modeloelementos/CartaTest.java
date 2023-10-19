@@ -1,9 +1,12 @@
 package modeloelementos;
 
-import junit.framework.TestCase;
 import org.junit.Test;
 
-public class CartaTest extends TestCase {
+import java.io.IOException;
+
+import static org.junit.Assert.*;
+
+public class CartaTest {
 
     @Test
     public void test_creacion_de_carta_con_parametros_validos() {
@@ -59,7 +62,7 @@ public class CartaTest extends TestCase {
 
         Carta carta = new Carta(valor, palo, bocaAbajo);
 
-        assertFalse(carta.equals(null));
+        assertNotEquals(null, carta);
     }
 
     @Test
@@ -123,7 +126,7 @@ public class CartaTest extends TestCase {
         Carta carta1 = new Carta(valor1, palo1, bocaAbajo1);
         Carta carta2 = new Carta(valor2, palo2, bocaAbajo2);
 
-        assertTrue(carta1.equals(carta2));
+        assertEquals(carta1, carta2);
     }
 
     @Test
@@ -139,7 +142,7 @@ public class CartaTest extends TestCase {
         Carta carta1 = new Carta(valor1, palo1, bocaAbajo1);
         Carta carta2 = new Carta(valor2, palo2, bocaAbajo2);
 
-        assertFalse(carta1.equals(carta2));
+        assertNotEquals(carta1, carta2);
     }
 
     @Test
@@ -161,5 +164,14 @@ public class CartaTest extends TestCase {
         Carta carta1 = new Carta(ValorCarta.AS, Palo.CORAZON, false);
         Carta carta2 = new Carta(ValorCarta.DOS, Palo.CORAZON, false);
         assertTrue(Carta.esValorSiguiente(carta1, carta2));
+    }
+
+    @Test
+    public void testPersistencia() throws IOException, ClassNotFoundException {
+        Carta c = new Carta(ValorCarta.AS, Palo.TREBOL, false);
+        c.serializar("PruebaCartas.txt");
+        Carta deserializada = Carta.deSerializar("PruebaCartas.txt");
+        assertNotNull(deserializada);
+        assertEquals(c, deserializada);
     }
 }

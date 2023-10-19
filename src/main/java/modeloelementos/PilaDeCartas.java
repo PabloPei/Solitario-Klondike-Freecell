@@ -1,7 +1,6 @@
 package modeloelementos;
-import modelosolitario.Pila;
 
-import java.util.Collections;
+import java.io.*;
 import java.util.Stack;
 
 /**
@@ -10,7 +9,7 @@ import java.util.Stack;
  * No confundir con la clase pila que representa una "pila" o "tableu" en un juego de solitario.
  * (Se utilizara en el futuro para definir la posicion, ancho y alto de las pilas.)
  */
-public class PilaDeCartas extends Stack<Carta> {
+public class PilaDeCartas extends Stack<Carta> implements Serializable {
 
     public boolean agregarCarta(Carta carta) {
 
@@ -50,5 +49,19 @@ public class PilaDeCartas extends Stack<Carta> {
             else indice++;
         }
         return sonIguales;
+    }
+
+    public void serializar(String nomArchivo) throws IOException {
+        ObjectOutputStream o =
+                new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(nomArchivo)));
+        o.writeObject(this);
+        o.close();
+    }
+
+    public static PilaDeCartas deSerializar(String nomArchivo) throws IOException, ClassNotFoundException {
+        ObjectInputStream o = new ObjectInputStream(new BufferedInputStream(new FileInputStream(nomArchivo)));
+        PilaDeCartas p = (PilaDeCartas) o.readObject();
+        o.close();
+        return p;
     }
 }
