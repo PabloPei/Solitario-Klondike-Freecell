@@ -5,7 +5,6 @@ import org.junit.Test;
 
 public class PaloTest {
 
-    // Verificar que toString() devuelve la representación de cadena correcta de cada valor enum.
     @Test
     public void test_toString_devuelveRepresentacionCadenaCorrecta() {
         assertEquals("DIAMANTE", Palo.DIAMANTE.toString());
@@ -14,16 +13,6 @@ public class PaloTest {
         assertEquals("PICA", Palo.PICA.toString());
     }
 
-    // Verificar que equals() devuelve true al comparar dos valores enum iguales.
-    @Test
-    public void test_equals_devuelveTrueParaValoresEnumIguales() {
-        assertTrue(Palo.DIAMANTE == Palo.DIAMANTE);
-        assertTrue(Palo.CORAZON == Palo.CORAZON);
-        assertTrue(Palo.TREBOL == Palo.TREBOL);
-        assertTrue(Palo.PICA == Palo.PICA);
-    }
-
-    // Verificar que el método ordinal() devuelve el valor entero correcto para cada valor enum.
     @Test
     public void test_ordinal_devuelveValorEnteroCorrecto() {
         assertEquals(0, Palo.DIAMANTE.ordinal());
@@ -32,16 +21,14 @@ public class PaloTest {
         assertEquals(3, Palo.PICA.ordinal());
     }
 
-    // Verificar que equals() devuelve false al comparar dos valores enum diferentes.
     @Test
     public void test_equals_devuelveFalseParaValoresEnumDiferentes() {
-        assertFalse(Palo.DIAMANTE == Palo.CORAZON);
-        assertFalse(Palo.CORAZON == Palo.TREBOL);
-        assertFalse(Palo.TREBOL == Palo.PICA);
-        assertFalse(Palo.PICA == Palo.DIAMANTE);
+        assertNotSame(Palo.DIAMANTE, Palo.CORAZON);
+        assertNotSame(Palo.CORAZON, Palo.TREBOL);
+        assertNotSame(Palo.TREBOL, Palo.PICA);
+        assertNotSame(Palo.PICA, Palo.DIAMANTE);
     }
 
-    // Verificar que el método ordinal() devuelve un valor entero único para cada valor enum.
     @Test
     public void test_ordinal_devuelveValorEnteroUnico() {
         assertNotEquals(Palo.DIAMANTE.ordinal(), Palo.CORAZON.ordinal());
@@ -50,7 +37,6 @@ public class PaloTest {
         assertNotEquals(Palo.PICA.ordinal(), Palo.DIAMANTE.ordinal());
     }
 
-    // Verificar que el método values() devuelve un array de todos los valores enum en el orden correcto.
     @Test
     public void test_values_devuelveArrayConOrdenCorrecto() {
         Palo[] expectedValues = {Palo.DIAMANTE, Palo.CORAZON, Palo.TREBOL, Palo.PICA};

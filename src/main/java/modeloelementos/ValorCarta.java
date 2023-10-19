@@ -6,7 +6,7 @@ public enum ValorCarta {
 
     private final int value;
 
-    private ValorCarta(int value) {
+    ValorCarta(int value) {
         this.value = value;
     }
 

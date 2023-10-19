@@ -3,9 +3,6 @@ package modelosolitario;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import modeloelementos.*;
-import modelosolitario.*;
-
-import java.util.EmptyStackException;
 
 
 public class MazoTest {
@@ -27,6 +24,7 @@ public class MazoTest {
         pila.agregarCarta(carta1);
         pila.agregarCarta(carta2);
         Mazo mazo = new Mazo(pila);
+        assertNotNull(mazo);
     }
 
     @Test
