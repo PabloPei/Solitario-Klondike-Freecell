@@ -2,6 +2,7 @@ package modeloelementos;
 
 import java.io.*;
 
+
 public class Carta implements Serializable {
 
     private final ValorCarta valor;

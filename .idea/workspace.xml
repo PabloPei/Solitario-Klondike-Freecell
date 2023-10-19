@@ -4,15 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Corregi el nombre del paquete klondike. Saque comentarios. Corregi warnings">
+    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Modifique el metodo moverCartas de Solitario para que cumpla SRP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Cimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Cimiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modeloelementos/Carta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modeloelementos/Carta.java" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Mazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Mazo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Klondike/SolitarioKlondikeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Klondike/SolitarioKlondikeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modeloelementos/CartaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modeloelementos/CartaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modeloelementos/PilaDeCartasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modeloelementos/PilaDeCartasTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/modelosolitario/MazoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modelosolitario/MazoTest.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/modeloelementos/EstadoJuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modeloelementos/EstadoJuego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modeloelementos/ValorCarta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modeloelementos/ValorCarta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Descarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Descarte.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Mazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Mazo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Pila.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Pila.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modelosolitario/CimientoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modelosolitario/CimientoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modelosolitario/MazoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modelosolitario/MazoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modelosolitario/PilaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modelosolitario/PilaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Klondike/SolitarioKlondikeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/klondike/SolitarioKlondikeTest.java" afterDir="false" />
+>>>>>>> 36ec2e4608c1202ae5c474b8f810ca4b3e5af75d
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +130,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SolitarioKlondikeTest.testCrearSolitario" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Solitario-Algo3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Klondike.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Klondike" />
+      <option name="MAIN_CLASS_NAME" value="Klondike.SolitarioKlondikeTest" />
+      <option name="METHOD_NAME" value="testCrearSolitario" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SolitarioKlondikeTest.testCrearSolitarioConSemilla" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <extension name="coverage">
@@ -154,6 +178,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
+=======
     <configuration name="SolitarioKlondikeTest.test_Movimientos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <extension name="coverage">
@@ -170,13 +196,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+>>>>>>> 36ec2e4608c1202ae5c474b8f810ca4b3e5af75d
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in Solitario-Algo3" />
+        <item itemvalue="JUnit.SolitarioKlondikeTest.testCrearSolitario" />
         <item itemvalue="JUnit.SolitarioKlondikeTest.testCrearSolitarioConSemilla" />
         <item itemvalue="JUnit.PilaTest.testRetirarMasDeUnaCarta" />
         <item itemvalue="JUnit.SolitarioKlondikeTest.test_MoverYGanar" />
-        <item itemvalue="JUnit.SolitarioKlondikeTest.test_Movimientos" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +238,6 @@
       <workItem from="1697674340272" duration="31000" />
       <workItem from="1697674383960" duration="64000" />
       <workItem from="1697674473600" duration="1001000" />
-      <workItem from="1697739546498" duration="943000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />
@@ -261,15 +287,7 @@
       <option name="project" value="LOCAL" />
       <updated>1697654090268</updated>
     </task>
-    <task id="LOCAL-00007" summary="Corregi el nombre del paquete klondike. Saque comentarios. Corregi warnings">
-      <option name="closed" value="true" />
-      <created>1697738335602</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1697738335602</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,11 +310,28 @@
     <MESSAGE value="Cree enum ValorCarta y las clases Solitario y Tablero" />
     <MESSAGE value="Cree Tests para pila" />
     <MESSAGE value="Modifique el metodo moverCartas de Solitario para que cumpla SRP" />
-    <MESSAGE value="Corregi el nombre del paquete klondike. Saque comentarios. Corregi warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corregi el nombre del paquete klondike. Saque comentarios. Corregi warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modifique el metodo moverCartas de Solitario para que cumpla SRP" />
   </component>
+<<<<<<< HEAD
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/Klondike/SolitarioKlondikeTest.java</url>
+          <line>75</line>
+          <properties class="Klondike.SolitarioKlondikeTest">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+=======
+>>>>>>> 36ec2e4608c1202ae5c474b8f810ca4b3e5af75d
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Solitario_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1697738294787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Solitario_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1696200827601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/TrabajoPractico_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1696110172820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

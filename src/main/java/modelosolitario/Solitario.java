@@ -1,7 +1,6 @@
 package modelosolitario;
 
 import modeloelementos.*;
-
 import java.util.ArrayList;
 
 

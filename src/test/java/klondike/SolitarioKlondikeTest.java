@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class SolitarioKlondikeTest {
 
     @Test
-    public void testCrearSolitario(){
+    public void testCrearSolitarioCimientosVacios(){
         SolitarioKlondike solitario = new SolitarioKlondike();
         assertNotNull(solitario);
     }
