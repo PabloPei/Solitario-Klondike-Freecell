@@ -5,11 +5,7 @@ import modeloelementos.PilaDeCartas;
 import modeloelementos.Carta;
 import modeloelementos.ValorCarta;
 
-/**
- * Representa el cimiento en el juego de solitario. Hereda de la clase pila de cartas genericas y suma funcionalidades
- * propias de un cimiento.
- * El cimiento es donde se colocan las cartas en orden ascendente por palo, comenzando por el As.
- */
+
 public class Cimiento extends PilaDeCartas {
 
     public Cimiento(){
@@ -31,12 +27,8 @@ public class Cimiento extends PilaDeCartas {
     }
 
     public boolean puedeAgregarCarta(Carta carta) {
-        // Verifica las condiciones genericas de una pila
         if ( !super.puedeAgregarCarta(carta)) return false;
-
-        // Verifica si el cimiento esta completo
         if (cimientoCompleto())  return false;
-
         if (isEmpty()) {
             return (carta.getValor() == ValorCarta.AS);
         } else {

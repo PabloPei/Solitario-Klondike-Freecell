@@ -1,7 +1,6 @@
 package klondike;
 
 import modeloelementos.Carta;
-import modeloelementos.Dificultad;
 import modeloelementos.Palo;
 import modelosolitario.*;
 
@@ -14,30 +13,27 @@ public class SolitarioKlondike extends Solitario {
     private ArrayList<Cimiento> cimientos;
     private Descarte descarte;
 
-    public SolitarioKlondike(Dificultad dificultad){
+    public SolitarioKlondike(){
 
         super(CANTIDAD_PILAS);
         this.cimientos = new ArrayList<>();
         inciarCimientos();
         this.descarte = new Descarte();
-        this.setDificultad(dificultad);
     }
 
-    public SolitarioKlondike(Dificultad dificultad, long semilla){
+    public SolitarioKlondike(long semilla){
 
         super(CANTIDAD_PILAS, semilla);
         this.cimientos = new ArrayList<>();
         inciarCimientos();
         this.descarte = new Descarte();
-        this.setDificultad(dificultad);
     }
 
-    public SolitarioKlondike(Dificultad dificultad, Mazo mazo, ArrayList<Pila> pilas, ArrayList<Cimiento> cimientos, Descarte descarte){
+    public SolitarioKlondike(Mazo mazo, ArrayList<Pila> pilas, ArrayList<Cimiento> cimientos, Descarte descarte){
 
         super(mazo,pilas);
         this.cimientos = cimientos;
         this.descarte = descarte;
-        this.setDificultad(dificultad);
     }
 
     @Override
@@ -67,11 +63,6 @@ public class SolitarioKlondike extends Solitario {
                 return false;
         }
         return true;
-    }
-
-    public void setDificultad(Dificultad dificultad){
-        super.setDificultad(dificultad);
-        this.getDescarte().setCantidadCartas(dificultad);
     }
 
     public boolean robarCartasDelMazo() {

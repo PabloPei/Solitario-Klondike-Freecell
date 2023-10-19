@@ -88,8 +88,5 @@ public class Carta implements Serializable {
         o.close();
         return c;
     }
-
-
 }
-
 

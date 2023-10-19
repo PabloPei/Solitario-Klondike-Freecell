@@ -6,10 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Modifique el metodo moverCartas de Solitario para que cumpla SRP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modeloelementos/Carta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modeloelementos/Carta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modeloelementos/Dificultad.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modeloelementos/PilaDeCartas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modeloelementos/PilaDeCartas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modeloelementos/CartaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modeloelementos/CartaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/modeloelementos/PilaDeCartasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/modeloelementos/PilaDeCartasTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Cimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Cimiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Descarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Descarte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Mazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Mazo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Pila.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Pila.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Klondike/SolitarioKlondikeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Klondike/SolitarioKlondikeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,27 +293,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/Klondike/SolitarioKlondikeTest.java</url>
-          <line>73</line>
+          <line>71</line>
           <properties class="Klondike.SolitarioKlondikeTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/Klondike/SolitarioKlondikeTest.java</url>
-          <line>190</line>
-          <properties class="Klondike.SolitarioKlondikeTest" method="testEstadoDeJuegoGanado">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Solitario_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1696200827601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/TrabajoPractico_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1696110172820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/TrabajoPractico_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1696177067601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Solitario_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1695842990670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

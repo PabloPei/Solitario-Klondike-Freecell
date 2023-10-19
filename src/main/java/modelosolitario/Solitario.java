@@ -8,7 +8,6 @@ import java.util.ArrayList;
 public abstract class Solitario {
 
     private int movimientos;
-    private Dificultad dificultad;
     private EstadoJuego estadoJuego;
     private final ArrayList<Pila> pilas;
     private final Mazo mazo;
@@ -70,7 +69,7 @@ public abstract class Solitario {
         Carta cartaSacada = origen.sacarCarta(false);
 
         if (!destino.agregarCarta(cartaSacada)){
-            origen.agregarCarta(cartaSacada); //no pudo agregar la carta la vuelvo al lugar original
+            origen.agregarCarta(cartaSacada);
             return false;
         }
         sumarMovimiento();
@@ -118,12 +117,6 @@ public abstract class Solitario {
 
     public int getMovimientos() {
         return this.movimientos;
-    }
-
-    public void setDificultad(Dificultad dificultad){ this.dificultad = dificultad; }
-
-    public Dificultad getDificultad(){
-        return this.dificultad;
     }
 
     public EstadoJuego getEstadoJuego(){
