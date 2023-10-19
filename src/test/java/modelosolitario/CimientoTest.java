@@ -2,8 +2,11 @@ package modelosolitario;
 
 import modeloelementos.Carta;
 import modeloelementos.Palo;
+import modeloelementos.PilaDeCartas;
 import modeloelementos.ValorCarta;
 import org.junit.Test;
+
+import java.io.IOException;
 
 import static org.junit.Assert.*;
 
@@ -42,5 +45,16 @@ public class CimientoTest {
     public void testCimientoCompleto(){
         Cimiento c = new Cimiento(13, Palo.TREBOL);
         assertTrue(c.cimientoCompleto());
+    }
+
+    @Test
+    public void testPersistencia() throws IOException, ClassNotFoundException {
+        Cimiento c = new Cimiento();
+        c.push(new Carta(ValorCarta.AS, Palo.TREBOL, false));
+        c.push(new Carta(ValorCarta.DOS , Palo.TREBOL, false));
+        c.serializar("PruebaCimientos.txt");
+        Cimiento deserializado = Cimiento.deSerializar("PruebaCimientos.txt");
+        assertNotNull(deserializado);
+        assertEquals(c, deserializado);
     }
 }

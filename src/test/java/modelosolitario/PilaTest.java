@@ -6,6 +6,8 @@ import modeloelementos.PilaDeCartas;
 import modeloelementos.ValorCarta;
 import org.junit.Test;
 
+import java.io.IOException;
+
 import static org.junit.Assert.*;
 
 public class PilaTest {
@@ -69,5 +71,16 @@ public class PilaTest {
         assertTrue(resultado);
         assertEquals(pilaDestino.verCarta(), carta2);
         assertEquals(pilaOriginal.verCarta(),carta1);
+    }
+
+    @Test
+    public void testPersistencia() throws IOException, ClassNotFoundException {
+        Pila p = new Pila();
+        p.push(new Carta(ValorCarta.AS, Palo.TREBOL, false));
+        p.push(new Carta(ValorCarta.REINA, Palo.CORAZON, true));
+        p.serializar("PruebaPila.txt");
+        Pila deserializada = Pila.deSerializar("PruebaPila.txt");
+        assertNotNull(deserializada);
+        assertEquals(p, deserializada);
     }
 }

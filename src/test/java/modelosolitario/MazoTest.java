@@ -4,6 +4,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import modeloelementos.*;
 
+import java.io.IOException;
+
 
 public class MazoTest {
 
@@ -93,5 +95,17 @@ public class MazoTest {
             mazo.sacarCarta(true);
         }
         assertEquals(1, mazo.size());
+    }
+
+    @Test
+    public void testPersistencia() throws IOException, ClassNotFoundException {
+        PilaDeCartas p = new PilaDeCartas();
+        p.push(new Carta(ValorCarta.AS, Palo.TREBOL, false));
+        p.push(new Carta(ValorCarta.REINA, Palo.CORAZON, true));
+        Mazo m = new Mazo(p);
+        m.serializar("PruebaMazo.txt");
+        Mazo deserializado = Mazo.deSerializar("PruebaMazo.txt");
+        assertNotNull(deserializado);
+        assertEquals(m, deserializado);
     }
 }

@@ -5,6 +5,11 @@ import modeloelementos.PilaDeCartas;
 import modeloelementos.Carta;
 import modeloelementos.ValorCarta;
 
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
 
 public class Cimiento extends PilaDeCartas {
 
@@ -39,5 +44,12 @@ public class Cimiento extends PilaDeCartas {
 
     public boolean cimientoCompleto() {
         return this.size() == 13;
+    }
+
+    public static Cimiento deSerializar(String nomArchivo) throws IOException, ClassNotFoundException {
+        ObjectInputStream o = new ObjectInputStream(new BufferedInputStream(new FileInputStream(nomArchivo)));
+        Cimiento c = (Cimiento) o.readObject();
+        o.close();
+        return c;
     }
 }

@@ -4,6 +4,11 @@ import modeloelementos.Carta;
 import modeloelementos.PilaDeCartas;
 import modeloelementos.ValorCarta;
 
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
 public class Pila extends PilaDeCartas {
 
     public Pila() { super(); }
@@ -32,4 +37,12 @@ public class Pila extends PilaDeCartas {
         }
         return carta;
     }
+
+    public static Pila deSerializar(String nomArchivo) throws IOException, ClassNotFoundException {
+        ObjectInputStream o = new ObjectInputStream(new BufferedInputStream(new FileInputStream(nomArchivo)));
+        Pila p = (Pila) o.readObject();
+        o.close();
+        return p;
+    }
+
 }
