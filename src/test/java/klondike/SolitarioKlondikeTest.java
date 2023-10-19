@@ -10,9 +10,18 @@ import java.util.ArrayList;
 public class SolitarioKlondikeTest {
 
     @Test
-    public void testCrearSolitarioCimientosVacios(){
+    public void testCrearSolitario(){
         SolitarioKlondike solitario = new SolitarioKlondike();
         assertNotNull(solitario);
+    }
+
+    @Test
+    public void testCrearSolitarioCimientosVacios(){
+        SolitarioKlondike solitario = new SolitarioKlondike();
+        ArrayList<Cimiento> cimientos = solitario.getCimientos();
+        for(Cimiento c: cimientos){
+            assertTrue(c.isEmpty());
+        }
     }
 
     @Test
