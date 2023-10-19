@@ -4,6 +4,11 @@ import modeloelementos.Palo;
 import modeloelementos.PilaDeCartas;
 import modeloelementos.ValorCarta;
 import modeloelementos.Carta;
+
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.util.Collections;
 import java.util.Random;
 
@@ -34,20 +39,35 @@ public class Mazo extends PilaDeCartas {
         Collections.shuffle(this, seed);
     }
 
+    private static void pasarCartasDeUnMazoAOtro(Mazo mazoViejo, Mazo mazoNuevo){
+        while (!mazoViejo.isEmpty()){
+            mazoNuevo.agregarCarta(mazoViejo.sacarCarta(true));
+        }
+    }
+
+    private void agregarCartasDesdeDescarte(Descarte descarte){
+        while (!descarte.isEmpty()){
+            this.agregarCarta(descarte.sacarCarta(true));
+        }
+    }
+
     public void agregarDescarte(Descarte descarte){
         if (descarte.isEmpty()) return;
 
         Mazo mazoTemp = new Mazo();
-        while (!this.isEmpty()) {
-            mazoTemp.agregarCarta(this.sacarCarta(true));
-        }
-
-        while (! descarte.isEmpty()) {
-            mazoTemp.agregarCarta(descarte.sacarCarta(true));
-        }
-
-        while (!mazoTemp.isEmpty()) {
-            this.agregarCarta(mazoTemp.sacarCarta(true));
-        }
+        mazoTemp.removeAllElements();
+        pasarCartasDeUnMazoAOtro(this, mazoTemp);
+        mazoTemp.agregarCartasDesdeDescarte(descarte);
+        pasarCartasDeUnMazoAOtro(mazoTemp, this);
     }
+
+    public static Mazo deSerializar(String nomArchivo) throws IOException, ClassNotFoundException {
+        ObjectInputStream o = new ObjectInputStream(new BufferedInputStream(new FileInputStream(nomArchivo)));
+        Mazo m = (Mazo) o.readObject();
+        o.close();
+        return m;
+    }
+
+
+
 }
