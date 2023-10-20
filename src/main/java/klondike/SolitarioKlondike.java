@@ -4,6 +4,7 @@ import modeloelementos.Carta;
 import modeloelementos.Palo;
 import modelosolitario.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 
@@ -86,4 +87,28 @@ public class SolitarioKlondike extends Solitario {
     public Descarte getDescarte(){ return this.descarte; }
 
     public ArrayList<Cimiento> getCimientos(){ return this.cimientos; }
+
+    private void guardarPilas() throws IOException {
+        String tituloPredeterminado = "PilaKlondike_";
+        for(int i = 0; i < CANTIDAD_PILAS; i++){
+            pilas.get(i).serializar(tituloPredeterminado + i + ".txt");
+        }
+    }
+
+    private void guardarCimientos() throws IOException {
+        String tituloPredeterminado = "CimientoKlondike_";
+        for(int i = 0; i < this.cimientos.size(); i++){
+            cimientos.get(i).serializar(tituloPredeterminado + i + ".txt");
+        }
+    }
+
+    private void guardarDescarte() throws IOException {
+        this.descarte.serializar( "DescarteKlondike.txt");
+    }
+    public void guardarEstadoJuego() throws IOException {
+        super.guardarEstadoJuego();
+        guardarPilas();
+        guardarCimientos();
+        guardarDescarte();
+    }
 }

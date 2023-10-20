@@ -1,6 +1,8 @@
 package modelosolitario;
 
 import modeloelementos.*;
+
+import java.io.IOException;
 import java.util.ArrayList;
 
 
@@ -8,8 +10,8 @@ public abstract class Solitario {
 
     private int movimientos;
     private EstadoJuego estadoJuego;
-    private final ArrayList<Pila> pilas;
-    private final Mazo mazo;
+    protected final ArrayList<Pila> pilas;
+    protected final Mazo mazo;
 
     public Solitario(int cantidadPilas){
         this.movimientos=0;
@@ -132,4 +134,10 @@ public abstract class Solitario {
         return this.pilas;
     }
 
+    private void guardarMazo(){
+
+    }
+    public void guardarEstadoJuego() throws IOException {
+        mazo.serializar("Mazo.txt");
+    }
 }

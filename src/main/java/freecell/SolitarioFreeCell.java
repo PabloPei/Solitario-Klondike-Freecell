@@ -4,35 +4,43 @@ import modeloelementos.Carta;
 import modeloelementos.Palo;
 import modelosolitario.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class SolitarioFreeCell extends Solitario {
 
     public static final int CANTIDAD_PILAS = 8;
     private final ArrayList<Cimiento> cimientos;
-    private  ArrayList<Carta> celdas;
+    private final ArrayList<PilaSuperior> pilasDeApoyo;
 
     public SolitarioFreeCell(){
 
         super(CANTIDAD_PILAS);
         this.cimientos = new ArrayList<>();
-        inciarCimientos();
-        this.celdas = new ArrayList<>();
+        iniciarCimientos();
+        this.pilasDeApoyo = new ArrayList<>();
+        for(int i = 0; i < 4; i++){
+            pilasDeApoyo.add(new PilaSuperior());
+        }
     }
 
     public SolitarioFreeCell(long semilla){
 
         super(CANTIDAD_PILAS, semilla);
         this.cimientos = new ArrayList<>();
-        inciarCimientos();
-        this.celdas = new ArrayList<>();
+        iniciarCimientos();
+        this.pilasDeApoyo = new ArrayList<>();
+        for(int i = 0; i < 4; i++){
+            pilasDeApoyo.add(new PilaSuperior());
+        }
     }
 
-    public SolitarioFreeCell(Mazo mazo, ArrayList<Pila> pilas, ArrayList<Cimiento> cimientos, ArrayList<Carta> celdas){
+    public SolitarioFreeCell(Mazo mazo, ArrayList<Pila> pilas, ArrayList<Cimiento> cimientos,
+                             ArrayList<PilaSuperior> pilasSuperiores){
 
         super(mazo,pilas);
         this.cimientos = cimientos;
-        this.celdas = celdas;
+        this.pilasDeApoyo = pilasSuperiores;
     }
 
     @Override
@@ -61,9 +69,37 @@ public class SolitarioFreeCell extends Solitario {
         return false;
     }
 
-    private void inciarCimientos() {
+    private void iniciarCimientos() {
         for (Palo p : Palo.values()) {
             cimientos.add(new Cimiento());
         }
+    }
+
+    private void guardarPilas() throws IOException {
+        String tituloPredeterminado = "PilaFreeCell_";
+        for(int i = 0; i < CANTIDAD_PILAS; i++){
+            pilas.get(i).serializar(tituloPredeterminado + i + ".txt");
+        }
+    }
+
+    private void guardarCimientos() throws IOException {
+        String tituloPredeterminado = "CimientoFreeCell_";
+        for(int i = 0; i < cimientos.size(); i++){
+            cimientos.get(i).serializar(tituloPredeterminado + i + ".txt");
+        }
+    }
+
+    private void guardarPilasSuperiores() throws IOException {
+        String tituloPredeterminado = "PilaSuperiorFreeCell_";
+        for(int i = 0; i < pilasDeApoyo.size(); i++){
+            pilasDeApoyo.get(i).serializar(tituloPredeterminado + i + ".txt");
+        }
+    }
+    @Override
+    public void guardarEstadoJuego() throws IOException {
+        super.guardarEstadoJuego();
+        guardarPilas();
+        guardarCimientos();
+        guardarPilasSuperiores();
     }
 }
