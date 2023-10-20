@@ -50,7 +50,7 @@ public class SolitarioKlondike extends Solitario {
         }
     }
 
-    public void inciarCimientos() {
+    private void inciarCimientos() {
         for (Palo p : Palo.values()) {
             cimientos.add(new Cimiento());
         }

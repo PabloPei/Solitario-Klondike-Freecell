@@ -131,4 +131,5 @@ public abstract class Solitario {
     public ArrayList<Pila> getPilas(){
         return this.pilas;
     }
+
 }
