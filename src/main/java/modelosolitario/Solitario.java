@@ -35,7 +35,6 @@ public abstract class Solitario {
         this.pilas = new ArrayList<>();
         iniciarPilas(cantidadPilas);
         repartirPilas();
-
     }
 
     public Solitario(Mazo mazo, ArrayList<Pila> pilas){
@@ -44,7 +43,6 @@ public abstract class Solitario {
 
         this.mazo = mazo;
         this.pilas = pilas;
-
     }
 
     public void iniciarPilas(int cantidadPilas){

@@ -7,17 +7,13 @@ import modelosolitario.*;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class SolitarioFreeCell extends Solitario {
+public class SolitarioFreeCell extends SolitarioConCimientos {
 
     public static final int CANTIDAD_PILAS = 8;
-    private final ArrayList<Cimiento> cimientos;
     private final ArrayList<PilaSuperior> pilasDeApoyo;
 
     public SolitarioFreeCell(){
-
         super(CANTIDAD_PILAS);
-        this.cimientos = new ArrayList<>();
-        iniciarCimientos();
         this.pilasDeApoyo = new ArrayList<>();
         for(int i = 0; i < 4; i++){
             pilasDeApoyo.add(new PilaSuperior());
@@ -25,10 +21,7 @@ public class SolitarioFreeCell extends Solitario {
     }
 
     public SolitarioFreeCell(long semilla){
-
         super(CANTIDAD_PILAS, semilla);
-        this.cimientos = new ArrayList<>();
-        iniciarCimientos();
         this.pilasDeApoyo = new ArrayList<>();
         for(int i = 0; i < 4; i++){
             pilasDeApoyo.add(new PilaSuperior());
@@ -37,9 +30,7 @@ public class SolitarioFreeCell extends Solitario {
 
     public SolitarioFreeCell(Mazo mazo, ArrayList<Pila> pilas, ArrayList<Cimiento> cimientos,
                              ArrayList<PilaSuperior> pilasSuperiores){
-
-        super(mazo,pilas);
-        this.cimientos = cimientos;
+        super(mazo,pilas,cimientos);
         this.pilasDeApoyo = pilasSuperiores;
     }
 
@@ -64,28 +55,10 @@ public class SolitarioFreeCell extends Solitario {
         }
     }
 
-    @Override
-    public boolean verificarVictoria() {
-        return false;
-    }
-
-    private void iniciarCimientos() {
-        for (Palo p : Palo.values()) {
-            cimientos.add(new Cimiento());
-        }
-    }
-
     private void guardarPilas() throws IOException {
         String tituloPredeterminado = "PilaFreeCell_";
         for(int i = 0; i < CANTIDAD_PILAS; i++){
             pilas.get(i).serializar(tituloPredeterminado + i + ".txt");
-        }
-    }
-
-    private void guardarCimientos() throws IOException {
-        String tituloPredeterminado = "CimientoFreeCell_";
-        for(int i = 0; i < cimientos.size(); i++){
-            cimientos.get(i).serializar(tituloPredeterminado + i + ".txt");
         }
     }
 

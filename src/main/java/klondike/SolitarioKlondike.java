@@ -8,32 +8,23 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 
-public class SolitarioKlondike extends Solitario {
+public class SolitarioKlondike extends SolitarioConCimientos {
 
     public static final int CANTIDAD_PILAS = 7;
-    private final ArrayList<Cimiento> cimientos;
     private final Descarte descarte;
 
     public SolitarioKlondike(){
-
         super(CANTIDAD_PILAS);
-        this.cimientos = new ArrayList<>();
-        inciarCimientos();
         this.descarte = new Descarte();
     }
 
     public SolitarioKlondike(long semilla){
-
         super(CANTIDAD_PILAS, semilla);
-        this.cimientos = new ArrayList<>();
-        inciarCimientos();
         this.descarte = new Descarte();
     }
 
     public SolitarioKlondike(Mazo mazo, ArrayList<Pila> pilas, ArrayList<Cimiento> cimientos, Descarte descarte){
-
-        super(mazo,pilas);
-        this.cimientos = cimientos;
+        super(mazo,pilas,cimientos);
         this.descarte = descarte;
     }
 
@@ -49,21 +40,6 @@ public class SolitarioKlondike extends Solitario {
             pila.peek().voltear();
             cartasPorPila++;
         }
-    }
-
-    private void inciarCimientos() {
-        for (Palo p : Palo.values()) {
-            cimientos.add(new Cimiento());
-        }
-    }
-
-    @Override
-    public boolean verificarVictoria() {
-        for (Cimiento cimiento : cimientos){
-            if (!(cimiento.cimientoCompleto()))
-                return false;
-        }
-        return true;
     }
 
     public boolean robarCartasDelMazo() {
@@ -86,19 +62,10 @@ public class SolitarioKlondike extends Solitario {
 
     public Descarte getDescarte(){ return this.descarte; }
 
-    public ArrayList<Cimiento> getCimientos(){ return this.cimientos; }
-
     private void guardarPilas() throws IOException {
         String tituloPredeterminado = "PilaKlondike_";
         for(int i = 0; i < CANTIDAD_PILAS; i++){
             pilas.get(i).serializar(tituloPredeterminado + i + ".txt");
-        }
-    }
-
-    private void guardarCimientos() throws IOException {
-        String tituloPredeterminado = "CimientoKlondike_";
-        for(int i = 0; i < this.cimientos.size(); i++){
-            cimientos.get(i).serializar(tituloPredeterminado + i + ".txt");
         }
     }
 
