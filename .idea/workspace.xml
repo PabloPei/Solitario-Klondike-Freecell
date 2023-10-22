@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Modifique el metodo moverCartas de Solitario para que cumpla SRP">
-      <change afterPath="$PROJECT_DIR$/src/test/java/freecell/SolitarioFreeCellTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaCartas.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PruebaPilas.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/freecell/SolitarioFreeCellTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/freecell/SolitarioFreeCellTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +91,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Solitario-Algo3">
+  <component name="RunManager" selected="JUnit.SolitarioFreeCellTest.testMoverCartadeCimientoVacio">
     <configuration name="All in Solitario-Algo3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <option name="PACKAGE_NAME" value="" />
@@ -102,18 +100,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PilaTest.testRetirarMasDeUnaCarta" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SolitarioFreeCellTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="modelosolitario.*" />
+          <option name="PATTERN" value="freecell.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="modelosolitario" />
-      <option name="MAIN_CLASS_NAME" value="modelosolitario.PilaTest" />
-      <option name="METHOD_NAME" value="testRetirarMasDeUnaCarta" />
+      <option name="PACKAGE_NAME" value="freecell" />
+      <option name="MAIN_CLASS_NAME" value="freecell.SolitarioFreeCellTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SolitarioFreeCellTest.testMoverCartadeCimientoVacio" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Solitario-Algo3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="freecell.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="freecell" />
+      <option name="MAIN_CLASS_NAME" value="freecell.SolitarioFreeCellTest" />
+      <option name="METHOD_NAME" value="testMoverCartadeCimientoVacio" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SolitarioKlondikeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Solitario-Algo3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="klondike.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="klondike" />
+      <option name="MAIN_CLASS_NAME" value="klondike.SolitarioKlondikeTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -134,61 +162,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SolitarioKlondikeTest.testCrearSolitarioConSemilla" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Solitario-Algo3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="klondike.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="klondike" />
-      <option name="MAIN_CLASS_NAME" value="klondike.SolitarioKlondikeTest" />
-      <option name="METHOD_NAME" value="testCrearSolitarioConSemilla" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SolitarioKlondikeTest.test_MoverYGanar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Solitario-Algo3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="modelosolitario.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="klondike" />
-      <option name="MAIN_CLASS_NAME" value="klondike.SolitarioKlondikeTest" />
-      <option name="METHOD_NAME" value="test_MoverYGanar" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SolitarioKlondikeTest.test_Movimientos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Solitario-Algo3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="modelosolitario.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="klondike" />
-      <option name="MAIN_CLASS_NAME" value="klondike.SolitarioKlondikeTest" />
-      <option name="METHOD_NAME" value="test_Movimientos" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SolitarioFreeCellTest.testMoverCartadeCimientoVacio" />
+        <item itemvalue="JUnit.SolitarioKlondikeTest" />
+        <item itemvalue="JUnit.SolitarioFreeCellTest" />
         <item itemvalue="JUnit.All in Solitario-Algo3" />
         <item itemvalue="JUnit.SolitarioKlondikeTest.testCrearSolitario" />
-        <item itemvalue="JUnit.SolitarioKlondikeTest.testCrearSolitarioConSemilla" />
-        <item itemvalue="JUnit.PilaTest.testRetirarMasDeUnaCarta" />
-        <item itemvalue="JUnit.SolitarioKlondikeTest.test_MoverYGanar" />
       </list>
     </recent_temporary>
   </component>

@@ -3,8 +3,11 @@ package freecell;
 import klondike.SolitarioKlondike;
 import modeloelementos.Carta;
 import modeloelementos.Palo;
+import modeloelementos.PilaDeCartas;
 import modeloelementos.ValorCarta;
 import modelosolitario.Cimiento;
+import modelosolitario.Descarte;
+import modelosolitario.Mazo;
 import modelosolitario.Pila;
 import org.junit.Test;
 
@@ -48,5 +51,58 @@ public class SolitarioFreeCellTest {
         solitario.moverCarta(pilaOrigen, pilaDestino);
         Carta cartaEsperada = pilaDestino.verCarta();
         assertEquals(cartaAMover, cartaEsperada);
+    }
+
+    @Test
+    public void testMoverConjuntoCartasFallaPorColor(){
+        SolitarioFreeCell solitario = new SolitarioFreeCell();
+
+        Pila pilaOrigen = new Pila();
+        pilaOrigen.push(new Carta(ValorCarta.REY, Palo.TREBOL, false));
+        Carta cartaAMover1 = new Carta(ValorCarta.REINA, Palo.CORAZON, false);
+        pilaOrigen.push(cartaAMover1);
+        Carta cartaAMover2 = new Carta(ValorCarta.SOTA, Palo.PICA, false);
+        pilaOrigen.push(cartaAMover2);
+
+        Pila pilaDestino = new Pila();
+        pilaDestino.push(new Carta(ValorCarta.REY, Palo.CORAZON, false));
+
+        assertFalse(solitario.moverCartas(pilaOrigen, pilaDestino, pilaOrigen.get(1)));
+        assertEquals(pilaOrigen.pop(), cartaAMover2);
+        assertEquals(pilaOrigen.pop(), cartaAMover1);
+    }
+
+    @Test
+    public void testMoverConjuntoCartasFallaPorValor() {
+        SolitarioFreeCell solitario = new SolitarioFreeCell();
+
+        Pila pilaOrigen = new Pila();
+        pilaOrigen.push(new Carta(ValorCarta.REY, Palo.TREBOL, false));
+
+        Carta cartaAMover1 = new Carta(ValorCarta.REINA, Palo.CORAZON, false);
+        pilaOrigen.push(cartaAMover1);
+        Carta cartaAMover2 = new Carta(ValorCarta.SOTA, Palo.PICA, false);
+        pilaOrigen.push(cartaAMover2);
+
+        Pila pilaDestino = new Pila();
+        pilaDestino.push(new Carta(ValorCarta.OCHO, Palo.CORAZON, false));
+
+        assertFalse(solitario.moverCartas(pilaOrigen, pilaDestino, pilaOrigen.get(1)));
+        assertEquals(pilaOrigen.pop(), cartaAMover2);
+        assertEquals(pilaOrigen.pop(), cartaAMover1);
+    }
+
+    @Test
+    public void testSolitarioNoGanado() {
+        SolitarioFreeCell solitario = new SolitarioFreeCell();
+        assertFalse(solitario.verificarVictoria());
+    }
+
+    @Test
+    public void testMoverCartadeCimientoVacio() {
+        SolitarioFreeCell solitario = new SolitarioFreeCell();
+        Cimiento cimientoVacio = solitario.getCimientos().get(0);
+        Pila pilaDestino = solitario.getPilas().get(0);
+        assertFalse(solitario.moverCarta(cimientoVacio, pilaDestino));
     }
 }
