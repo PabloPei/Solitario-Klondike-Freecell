@@ -11,6 +11,7 @@ import java.util.ArrayList;
 public class SolitarioKlondike extends SolitarioConCimientos {
 
     public static final int CANTIDAD_PILAS = 7;
+    private  static final String NOMBRE_ARCHIVO = "PilaKlondike_";
     private final Descarte descarte;
 
     public SolitarioKlondike(){
@@ -62,19 +63,12 @@ public class SolitarioKlondike extends SolitarioConCimientos {
 
     public Descarte getDescarte(){ return this.descarte; }
 
-    private void guardarPilas() throws IOException {
-        String tituloPredeterminado = "PilaKlondike_";
-        for(int i = 0; i < CANTIDAD_PILAS; i++){
-            pilas.get(i).serializar(tituloPredeterminado + i + ".txt");
-        }
-    }
-
     private void guardarDescarte() throws IOException {
         this.descarte.serializar( "DescarteKlondike.txt");
     }
     public void guardarEstadoJuego() throws IOException {
         super.guardarEstadoJuego();
-        guardarPilas();
+        guardarPilas(NOMBRE_ARCHIVO, CANTIDAD_PILAS);
         guardarCimientos();
         guardarDescarte();
     }

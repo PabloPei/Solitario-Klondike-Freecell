@@ -132,6 +132,12 @@ public abstract class Solitario {
         return this.pilas;
     }
 
+    protected void guardarPilas(String tituloPredeterminado, int cantidadPilas) throws IOException {
+        for(int i = 0; i < cantidadPilas; i++){
+            pilas.get(i).serializar(tituloPredeterminado + i + ".txt");
+        }
+    }
+
     private void guardarMazo(){
 
     }

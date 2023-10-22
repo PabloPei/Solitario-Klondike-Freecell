@@ -27,8 +27,6 @@ public abstract class SolitarioConCimientos extends Solitario{
         this.cimientos = cimientos;
     }
 
-//    public abstract void repartirPilas();
-
     private void inciarCimientos() {
         for (Palo p : Palo.values()) {
             cimientos.add(new Cimiento());

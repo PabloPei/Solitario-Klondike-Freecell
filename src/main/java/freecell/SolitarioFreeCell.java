@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class SolitarioFreeCell extends SolitarioConCimientos {
 
     public static final int CANTIDAD_PILAS = 8;
+    private static final String NOMBRE_ARCHIVO = "PilaFreeCell_";
     private final ArrayList<PilaSuperior> pilasDeApoyo;
 
     public SolitarioFreeCell(){
@@ -55,13 +56,6 @@ public class SolitarioFreeCell extends SolitarioConCimientos {
         }
     }
 
-    private void guardarPilas() throws IOException {
-        String tituloPredeterminado = "PilaFreeCell_";
-        for(int i = 0; i < CANTIDAD_PILAS; i++){
-            pilas.get(i).serializar(tituloPredeterminado + i + ".txt");
-        }
-    }
-
     private void guardarPilasSuperiores() throws IOException {
         String tituloPredeterminado = "PilaSuperiorFreeCell_";
         for(int i = 0; i < pilasDeApoyo.size(); i++){
@@ -71,7 +65,7 @@ public class SolitarioFreeCell extends SolitarioConCimientos {
     @Override
     public void guardarEstadoJuego() throws IOException {
         super.guardarEstadoJuego();
-        guardarPilas();
+        guardarPilas(NOMBRE_ARCHIVO, CANTIDAD_PILAS);
         guardarCimientos();
         guardarPilasSuperiores();
     }
