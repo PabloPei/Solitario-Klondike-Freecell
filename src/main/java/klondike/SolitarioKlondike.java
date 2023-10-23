@@ -3,6 +3,7 @@ package klondike;
 import modeloelementos.Carta;
 import modelosolitario.*;
 
+import javax.management.NotCompliantMBeanException;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -11,7 +12,7 @@ public class SolitarioKlondike extends SolitarioConCimientos {
 
     public static final int CANTIDAD_PILAS = 7;
     private  static final String NOMBRE_ARCHIVO = "PilaKlondike_";
-    private final Descarte descarte;
+    private Descarte descarte;
 
     public SolitarioKlondike(){
         super(CANTIDAD_PILAS);
@@ -70,5 +71,16 @@ public class SolitarioKlondike extends SolitarioConCimientos {
         guardarPilas(NOMBRE_ARCHIVO, CANTIDAD_PILAS);
         guardarCimientos();
         guardarDescarte();
+    }
+
+    private void cargarDescarte() throws IOException, ClassNotFoundException {
+        this.descarte.clear();
+        this.descarte = Descarte.deSerializar("DescarteKlondike.txt");
+    }
+    public void cargarJuegoExistente() throws IOException, ClassNotFoundException {
+        super.cargarJuegoExistente();
+        cargarCimientos();
+        cargarDescarte();
+        cargarPilas(NOMBRE_ARCHIVO, CANTIDAD_PILAS);
     }
 }

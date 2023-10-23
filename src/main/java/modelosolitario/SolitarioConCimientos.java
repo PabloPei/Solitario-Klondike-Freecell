@@ -3,6 +3,7 @@ package modelosolitario;
 import modeloelementos.Palo;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public abstract class SolitarioConCimientos extends Solitario{
@@ -39,6 +40,14 @@ public abstract class SolitarioConCimientos extends Solitario{
         String tituloPredeterminado = "CimientoFreeCell_";
         for(int i = 0; i < cimientos.size(); i++){
             cimientos.get(i).serializar(tituloPredeterminado + i + ".txt");
+        }
+    }
+
+    protected void cargarCimientos() throws IOException, ClassNotFoundException {
+        String tituloPredeterminado = "CimientoFreeCell_";
+        this.cimientos.clear();
+        for (int i = 0; i < 4; i++) {
+            cimientos.add(Cimiento.deSerializar(tituloPredeterminado + i + ".txt"));
         }
     }
 

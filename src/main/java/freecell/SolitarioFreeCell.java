@@ -68,4 +68,18 @@ public class SolitarioFreeCell extends SolitarioConCimientos {
         guardarCimientos();
         guardarPilasSuperiores();
     }
+
+    private void cargarPilasSuperiores() throws IOException, ClassNotFoundException {
+        this.pilasDeApoyo.clear();
+        for(int i = 0; i < 4; i++){
+            this.pilasDeApoyo.add(PilaSuperior.deSerializar(NOMBRE_ARCHIVO + i + ".txt"));
+        }
+    }
+
+    public void cargarJuegoExistente() throws IOException, ClassNotFoundException {
+        super.cargarJuegoExistente();
+        cargarPilas(NOMBRE_ARCHIVO, CANTIDAD_PILAS);
+        cargarPilasSuperiores();
+        cargarCimientos();
+    }
 }

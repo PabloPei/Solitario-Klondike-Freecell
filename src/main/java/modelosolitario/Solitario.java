@@ -11,7 +11,7 @@ public abstract class Solitario {
     private int movimientos;
     private EstadoJuego estadoJuego;
     protected final ArrayList<Pila> pilas;
-    protected final Mazo mazo;
+    protected Mazo mazo;
 
     public Solitario(int cantidadPilas){
         this.movimientos=0;
@@ -138,10 +138,22 @@ public abstract class Solitario {
         }
     }
 
-    private void guardarMazo(){
-
+    protected void cargarPilas(String tituloPredeterminado, int cantidadPilas) throws IOException, ClassNotFoundException {
+        this.pilas.clear();
+        for(int i = 0; i < cantidadPilas; i++){
+            pilas.add(Pila.deSerializar(tituloPredeterminado + i + ".txt"));
+        }
     }
+
     public void guardarEstadoJuego() throws IOException {
         mazo.serializar("Mazo.txt");
+    }
+
+    public void cargarMazo() throws IOException, ClassNotFoundException {
+        this.mazo.clear();
+        this.mazo = Mazo.deSerializar("Mazo.txt");
+    }
+    public void cargarJuegoExistente() throws IOException, ClassNotFoundException{
+        cargarMazo();
     }
 }
