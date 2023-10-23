@@ -90,7 +90,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SolitarioFreeCellTest.testMoverCartadeCimientoVacio">
+  <component name="RunManager" selected="JUnit.All in Solitario-Algo3">
     <configuration name="All in Solitario-Algo3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <option name="PACKAGE_NAME" value="" />
@@ -163,10 +163,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in Solitario-Algo3" />
         <item itemvalue="JUnit.SolitarioFreeCellTest.testMoverCartadeCimientoVacio" />
         <item itemvalue="JUnit.SolitarioKlondikeTest" />
         <item itemvalue="JUnit.SolitarioFreeCellTest" />
-        <item itemvalue="JUnit.All in Solitario-Algo3" />
         <item itemvalue="JUnit.SolitarioKlondikeTest.testCrearSolitario" />
       </list>
     </recent_temporary>

@@ -1,7 +1,6 @@
 package freecell;
 
 import modeloelementos.Carta;
-import modeloelementos.Palo;
 import modelosolitario.*;
 
 import java.io.IOException;
