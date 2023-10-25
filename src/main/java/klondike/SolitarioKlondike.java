@@ -10,7 +10,6 @@ import java.util.ArrayList;
 public class SolitarioKlondike extends SolitarioConCimientos implements Serializable{
 
     public static final int CANTIDAD_PILAS = 7;
-    private  static final String NOMBRE_ARCHIVO = "PilaKlondike_";
     private Descarte descarte;
 
     public SolitarioKlondike(){
@@ -60,43 +59,12 @@ public class SolitarioKlondike extends SolitarioConCimientos implements Serializ
         return true;
     }
 
-    public Descarte getDescarte(){ return this.descarte; }
-
-    private void guardarDescarte() throws IOException {
-        this.descarte.serializar( "DescarteKlondike.txt");
-    }
-    public void guardarEstadoJuego() throws IOException {
-        super.guardarEstadoJuego();
-        guardarPilas(NOMBRE_ARCHIVO, CANTIDAD_PILAS);
-        guardarCimientos();
-        guardarDescarte();
-    }
-
-    private void cargarDescarte() throws IOException, ClassNotFoundException {
-        this.descarte.clear();
-        this.descarte = Descarte.deSerializar("DescarteKlondike.txt");
-    }
-
-    public void serializar(String nomArchivo) throws IOException {
-        ObjectOutputStream o =
-                new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(nomArchivo)));
-        o.writeObject(this);
-        o.close();
-    }
 
     public static SolitarioKlondike deSerializar(String nomArchivo) throws IOException, ClassNotFoundException {
-        ObjectInputStream o = new ObjectInputStream(new BufferedInputStream(new FileInputStream(nomArchivo)));
-        SolitarioKlondike p = (SolitarioKlondike) o.readObject();
-        o.close();
-        return p;
+        return (SolitarioKlondike) Solitario.deSerializar(nomArchivo);
     }
 
-    public void cargarJuegoExistente() throws IOException, ClassNotFoundException {
-        super.cargarJuegoExistente();
-        cargarCimientos();
-        cargarDescarte();
-        cargarPilas(NOMBRE_ARCHIVO, CANTIDAD_PILAS);
-    }
+    public Descarte getDescarte(){ return this.descarte; }
 
 
 }

@@ -1,9 +1,9 @@
 package modelosolitario;
 
+import klondike.SolitarioKlondike;
 import modeloelementos.*;
 
-import java.io.IOException;
-import java.io.Serializable;
+import java.io.*;
 import java.util.ArrayList;
 
 
@@ -115,6 +115,20 @@ public abstract class Solitario implements Serializable {
         }
     }
 
+    public void serializar(String nomArchivo) throws IOException {
+        ObjectOutputStream o =
+                new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(nomArchivo)));
+        o.writeObject(this);
+        o.close();
+    }
+
+    public static Solitario deSerializar(String nomArchivo) throws IOException, ClassNotFoundException {
+        ObjectInputStream o = new ObjectInputStream(new BufferedInputStream(new FileInputStream(nomArchivo)));
+        Solitario p = (Solitario) o.readObject();
+        o.close();
+        return p;
+    }
+
     public int getMovimientos() {
         return this.movimientos;
     }
@@ -133,28 +147,4 @@ public abstract class Solitario implements Serializable {
         return this.pilas;
     }
 
-    protected void guardarPilas(String tituloPredeterminado, int cantidadPilas) throws IOException {
-        for(int i = 0; i < cantidadPilas; i++){
-            pilas.get(i).serializar(tituloPredeterminado + i + ".txt");
-        }
-    }
-
-    protected void cargarPilas(String tituloPredeterminado, int cantidadPilas) throws IOException, ClassNotFoundException {
-        this.pilas.clear();
-        for(int i = 0; i < cantidadPilas; i++){
-            pilas.add(Pila.deSerializar(tituloPredeterminado + i + ".txt"));
-        }
-    }
-
-    public void guardarEstadoJuego() throws IOException {
-        mazo.serializar("Mazo.txt");
-    }
-
-    public void cargarMazo() throws IOException, ClassNotFoundException {
-        this.mazo.clear();
-        this.mazo = Mazo.deSerializar("Mazo.txt");
-    }
-    public void cargarJuegoExistente() throws IOException, ClassNotFoundException{
-        cargarMazo();
-    }
 }

@@ -9,7 +9,6 @@ import java.util.ArrayList;
 public class SolitarioFreeCell extends SolitarioConCimientos {
 
     public static final int CANTIDAD_PILAS = 8;
-    private static final String NOMBRE_ARCHIVO = "PilaFreeCell_";
     private final ArrayList<PilaSuperior> pilasDeApoyo;
 
     public SolitarioFreeCell(){
@@ -55,31 +54,12 @@ public class SolitarioFreeCell extends SolitarioConCimientos {
         }
     }
 
-    private void guardarPilasSuperiores() throws IOException {
-        String tituloPredeterminado = "PilaSuperiorFreeCell_";
-        for(int i = 0; i < pilasDeApoyo.size(); i++){
-            pilasDeApoyo.get(i).serializar(tituloPredeterminado + i + ".txt");
-        }
-    }
-    @Override
-    public void guardarEstadoJuego() throws IOException {
-        super.guardarEstadoJuego();
-        guardarPilas(NOMBRE_ARCHIVO, CANTIDAD_PILAS);
-        guardarCimientos();
-        guardarPilasSuperiores();
+    public static SolitarioFreeCell deSerializar(String nomArchivo) throws IOException, ClassNotFoundException {
+        return (SolitarioFreeCell) Solitario.deSerializar(nomArchivo);
     }
 
-    private void cargarPilasSuperiores() throws IOException, ClassNotFoundException {
-        this.pilasDeApoyo.clear();
-        for(int i = 0; i < 4; i++){
-            this.pilasDeApoyo.add(PilaSuperior.deSerializar(NOMBRE_ARCHIVO + i + ".txt"));
-        }
+    public ArrayList<PilaSuperior> getPilasSuperiores() {
+        return this.pilasDeApoyo;
     }
 
-    public void cargarJuegoExistente() throws IOException, ClassNotFoundException {
-        super.cargarJuegoExistente();
-        cargarPilas(NOMBRE_ARCHIVO, CANTIDAD_PILAS);
-        cargarPilasSuperiores();
-        cargarCimientos();
-    }
 }

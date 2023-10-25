@@ -8,8 +8,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/freecell/SolitarioFreeCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freecell/SolitarioFreeCell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modeloelementos/PilaDeCartas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modeloelementos/PilaDeCartas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/SolitarioConCimientos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/SolitarioConCimientos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/freecell/SolitarioFreeCellTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/freecell/SolitarioFreeCellTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/klondike/SolitarioKlondikeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/klondike/SolitarioKlondikeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +109,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SolitarioFreeCellTest.testMoverCartadeCimientoVacio" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SolitarioFreeCellTest.testGuardarSolitario" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <extension name="coverage">
         <pattern>
@@ -115,7 +119,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="freecell" />
       <option name="MAIN_CLASS_NAME" value="freecell.SolitarioFreeCellTest" />
-      <option name="METHOD_NAME" value="testMoverCartadeCimientoVacio" />
+      <option name="METHOD_NAME" value="testGuardarSolitario" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -136,7 +140,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SolitarioKlondikeTest.testCrearSolitario (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SolitarioKlondikeTest.testEstadoDeJuegoGanado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <extension name="coverage">
         <pattern>
@@ -146,7 +150,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="klondike" />
       <option name="MAIN_CLASS_NAME" value="klondike.SolitarioKlondikeTest" />
-      <option name="METHOD_NAME" value="testCrearSolitario" />
+      <option name="METHOD_NAME" value="testEstadoDeJuegoGanado" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -171,10 +175,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in Solitario-Algo3" />
-        <item itemvalue="JUnit.SolitarioKlondikeTest.testGuardarSolitario" />
-        <item itemvalue="JUnit.SolitarioKlondikeTest.testCrearSolitario (1)" />
-        <item itemvalue="JUnit.SolitarioFreeCellTest.testMoverCartadeCimientoVacio" />
+        <item itemvalue="JUnit.SolitarioFreeCellTest.testGuardarSolitario" />
         <item itemvalue="JUnit.SolitarioKlondikeTest" />
+        <item itemvalue="JUnit.SolitarioKlondikeTest.testEstadoDeJuegoGanado" />
+        <item itemvalue="JUnit.SolitarioKlondikeTest.testGuardarSolitario" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +213,7 @@
       <workItem from="1697674340272" duration="31000" />
       <workItem from="1697674383960" duration="64000" />
       <workItem from="1697674473600" duration="1001000" />
-      <workItem from="1698233582053" duration="1035000" />
+      <workItem from="1698233582053" duration="5872000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />

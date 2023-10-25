@@ -34,14 +34,20 @@ public class PilaDeCartas extends Stack<Carta> implements Serializable {
     }
 
     public boolean equals(PilaDeCartas pila){
-        if(this.size() != pila.size()) return false;
-        boolean sonIguales = true;
-        int indice = 0;
-        while (sonIguales && indice < this.size()){
-            if (this.get(indice) != pila.get(indice)) sonIguales = false;
-            else indice++;
+
+        if (this.size() != pila.size()) {
+            return false;
         }
-        return sonIguales;
+        while (!this.isEmpty() && !pila.isEmpty()) {
+            Carta carta1 = this.pop();
+            Carta carta2 = pila.pop();
+
+            if (!carta1.equals(carta2)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     public void serializar(String nomArchivo) throws IOException {

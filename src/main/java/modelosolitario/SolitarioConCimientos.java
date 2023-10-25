@@ -34,22 +34,6 @@ public abstract class SolitarioConCimientos extends Solitario{
         }
     }
 
-    public ArrayList<Cimiento> getCimientos(){ return this.cimientos; }
-
-    protected void guardarCimientos() throws IOException {
-        String tituloPredeterminado = "CimientoFreeCell_";
-        for(int i = 0; i < cimientos.size(); i++){
-            cimientos.get(i).serializar(tituloPredeterminado + i + ".txt");
-        }
-    }
-
-    protected void cargarCimientos() throws IOException, ClassNotFoundException {
-        String tituloPredeterminado = "CimientoFreeCell_";
-        this.cimientos.clear();
-        for (int i = 0; i < 4; i++) {
-            cimientos.add(Cimiento.deSerializar(tituloPredeterminado + i + ".txt"));
-        }
-    }
 
     public boolean verificarVictoria() {
         for (Cimiento cimiento : cimientos){
@@ -58,4 +42,6 @@ public abstract class SolitarioConCimientos extends Solitario{
         }
         return true;
     }
+
+    public ArrayList<Cimiento> getCimientos(){ return this.cimientos; }
 }

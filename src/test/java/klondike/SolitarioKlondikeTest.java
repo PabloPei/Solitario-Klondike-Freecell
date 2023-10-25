@@ -17,27 +17,6 @@ public class SolitarioKlondikeTest {
     }
 
     @Test
-    public void testGuardarSolitario() throws IOException, ClassNotFoundException {
-
-        SolitarioKlondike solitario = new SolitarioKlondike();
-        Mazo mazo = solitario.getMazo();
-        Carta cartaMazo = mazo.verCarta();
-        Pila pila = solitario.getPilas().get(1);
-        Carta cartaPila = pila.verCarta();
-
-        solitario.serializar("test.txt");
-        SolitarioKlondike solitarioAux = SolitarioKlondike.deSerializar("test.txt");
-
-        Mazo mazoAux = solitarioAux.getMazo();
-        Carta cartaMazoAux = mazoAux.verCarta();
-        Pila pilaAux = solitario.getPilas().get(1);
-        Carta cartaPilaAux = pila.verCarta();
-
-        assertEquals(cartaMazo, cartaMazoAux);
-        assertEquals(cartaPila, cartaPilaAux);
-    }
-
-    @Test
     public void testCrearSolitarioCimientosVacios(){
         SolitarioKlondike solitario = new SolitarioKlondike();
         ArrayList<Cimiento> cimientos = solitario.getCimientos();
@@ -208,7 +187,7 @@ public class SolitarioKlondikeTest {
     }
 
     @Test
-    public void testEstadoDeJuegoGanado(){
+    public void testEstadoDeJuegoGanado() throws IOException, ClassNotFoundException {
         //inicializo el juego en el estado ganado
         ArrayList<Cimiento> cimientos = new ArrayList<>();
         cimientos.add( new Cimiento(13,Palo.PICA));
@@ -233,5 +212,74 @@ public class SolitarioKlondikeTest {
         SolitarioKlondike solitario = new SolitarioKlondike(mazo, pilas,cimientos, descarte );
 
         assertTrue(solitario.verificarVictoria());
+    }
+
+    @Test
+    public void testGuardarSolitario() throws IOException, ClassNotFoundException {
+
+        SolitarioKlondike solitario = new SolitarioKlondike();
+
+        solitario.serializar("test.txt");
+        SolitarioKlondike solitarioAux = SolitarioKlondike.deSerializar("test.txt");
+
+        //verifico que los mazos y la cantidad de movimientos sean iguales
+        boolean mazoIgual = solitario.getMazo().equals(solitarioAux.getMazo());
+        boolean movIgual = (solitario.getMovimientos() == solitarioAux.getMovimientos());
+
+        //verifico que las pilas sean iguales
+        int i = 0;
+        boolean pilasIgual = true;
+        for (Pila pila : solitarioAux.getPilas()) {
+            if (! pila.equals(solitario.getPilas().get(i))){
+                pilasIgual = false;
+            }
+            i++;
+        }
+
+        //verifico que los cimientos sean iguales
+        int j = 0;
+        boolean cimientoIgual = true;
+        for (Cimiento cimiento : solitarioAux.getCimientos()) {
+            if (! cimiento.equals(solitario.getCimientos().get(j))){
+                cimientoIgual = false;
+            }
+            j++;
+        }
+
+        assertTrue(cimientoIgual);
+        assertTrue(pilasIgual);
+        assertTrue(mazoIgual);
+        assertTrue(movIgual);
+
+    }
+
+    @Test
+    public void testGuardarJuegoGanado() throws IOException, ClassNotFoundException {
+        //inicializo el juego en el estado ganado
+        ArrayList<Cimiento> cimientos = new ArrayList<>();
+        cimientos.add( new Cimiento(13,Palo.PICA));
+        cimientos.add( new Cimiento(13,Palo.TREBOL));
+        cimientos.add( new Cimiento(13,Palo.CORAZON));
+        cimientos.add( new Cimiento(13,Palo.DIAMANTE));
+
+        Descarte descarte = new Descarte();
+
+        PilaDeCartas mazoVacio = new PilaDeCartas();
+        Mazo mazo = new Mazo(mazoVacio);
+
+        ArrayList<Pila> pilas = new ArrayList<>();
+        pilas.add(new Pila());
+        pilas.add(new Pila());
+        pilas.add(new Pila());
+        pilas.add(new Pila());
+        pilas.add(new Pila());
+        pilas.add(new Pila());
+        pilas.add(new Pila());
+
+        SolitarioKlondike solitario = new SolitarioKlondike(mazo, pilas,cimientos, descarte );
+        solitario.serializar("test.txt");
+        SolitarioKlondike solitarioAux = SolitarioKlondike.deSerializar("test.txt");
+
+        assertTrue(solitarioAux.verificarVictoria());
     }
 }
