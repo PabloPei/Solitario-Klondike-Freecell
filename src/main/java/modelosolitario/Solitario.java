@@ -3,10 +3,11 @@ package modelosolitario;
 import modeloelementos.*;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
-public abstract class Solitario {
+public abstract class Solitario implements Serializable {
 
     private int movimientos;
     private EstadoJuego estadoJuego;

@@ -5,6 +5,7 @@ import modelosolitario.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class SolitarioKlondikeTest {
@@ -13,6 +14,27 @@ public class SolitarioKlondikeTest {
     public void testCrearSolitario(){
         SolitarioKlondike solitario = new SolitarioKlondike();
         assertNotNull(solitario);
+    }
+
+    @Test
+    public void testGuardarSolitario() throws IOException, ClassNotFoundException {
+
+        SolitarioKlondike solitario = new SolitarioKlondike();
+        Mazo mazo = solitario.getMazo();
+        Carta cartaMazo = mazo.verCarta();
+        Pila pila = solitario.getPilas().get(1);
+        Carta cartaPila = pila.verCarta();
+
+        solitario.serializar("test.txt");
+        SolitarioKlondike solitarioAux = SolitarioKlondike.deSerializar("test.txt");
+
+        Mazo mazoAux = solitarioAux.getMazo();
+        Carta cartaMazoAux = mazoAux.verCarta();
+        Pila pilaAux = solitario.getPilas().get(1);
+        Carta cartaPilaAux = pila.verCarta();
+
+        assertEquals(cartaMazo, cartaMazoAux);
+        assertEquals(cartaPila, cartaPilaAux);
     }
 
     @Test

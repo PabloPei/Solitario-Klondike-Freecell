@@ -3,12 +3,11 @@ package klondike;
 import modeloelementos.Carta;
 import modelosolitario.*;
 
-import javax.management.NotCompliantMBeanException;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 
-public class SolitarioKlondike extends SolitarioConCimientos {
+public class SolitarioKlondike extends SolitarioConCimientos implements Serializable{
 
     public static final int CANTIDAD_PILAS = 7;
     private  static final String NOMBRE_ARCHIVO = "PilaKlondike_";
@@ -77,10 +76,27 @@ public class SolitarioKlondike extends SolitarioConCimientos {
         this.descarte.clear();
         this.descarte = Descarte.deSerializar("DescarteKlondike.txt");
     }
+
+    public void serializar(String nomArchivo) throws IOException {
+        ObjectOutputStream o =
+                new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(nomArchivo)));
+        o.writeObject(this);
+        o.close();
+    }
+
+    public static SolitarioKlondike deSerializar(String nomArchivo) throws IOException, ClassNotFoundException {
+        ObjectInputStream o = new ObjectInputStream(new BufferedInputStream(new FileInputStream(nomArchivo)));
+        SolitarioKlondike p = (SolitarioKlondike) o.readObject();
+        o.close();
+        return p;
+    }
+
     public void cargarJuegoExistente() throws IOException, ClassNotFoundException {
         super.cargarJuegoExistente();
         cargarCimientos();
         cargarDescarte();
         cargarPilas(NOMBRE_ARCHIVO, CANTIDAD_PILAS);
     }
+
+
 }
