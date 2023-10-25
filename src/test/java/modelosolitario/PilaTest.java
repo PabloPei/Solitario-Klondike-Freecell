@@ -6,6 +6,8 @@ import modeloelementos.PilaDeCartas;
 import modeloelementos.ValorCarta;
 import org.junit.Test;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 import static org.junit.Assert.*;
@@ -78,8 +80,12 @@ public class PilaTest {
         Pila p = new Pila();
         p.push(new Carta(ValorCarta.AS, Palo.TREBOL, false));
         p.push(new Carta(ValorCarta.REINA, Palo.CORAZON, true));
-        p.serializar("PruebaPila.txt");
-        Pila deserializada = Pila.deSerializar("PruebaPila.txt");
+
+        FileOutputStream os = new FileOutputStream("test.txt");
+        p.serializar(os);
+        FileInputStream is = new FileInputStream("test.txt");
+        Pila deserializada = Pila.deSerializar(is);
+
         assertNotNull(deserializada);
         assertEquals(p, deserializada);
     }

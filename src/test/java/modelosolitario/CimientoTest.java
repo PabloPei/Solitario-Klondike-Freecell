@@ -5,6 +5,8 @@ import modeloelementos.Palo;
 import modeloelementos.ValorCarta;
 import org.junit.Test;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 import static org.junit.Assert.*;
@@ -51,8 +53,12 @@ public class CimientoTest {
         Cimiento c = new Cimiento();
         c.push(new Carta(ValorCarta.AS, Palo.TREBOL, false));
         c.push(new Carta(ValorCarta.DOS , Palo.TREBOL, false));
-        c.serializar("PruebaCimientos.txt");
-        Cimiento deserializado = Cimiento.deSerializar("PruebaCimientos.txt");
+
+        FileOutputStream os = new FileOutputStream("test.txt");
+        c.serializar(os);
+        FileInputStream is = new FileInputStream("test.txt");
+        Cimiento deserializado = Cimiento.deSerializar(is);
+
         assertNotNull(deserializado);
         assertEquals(c, deserializado);
     }

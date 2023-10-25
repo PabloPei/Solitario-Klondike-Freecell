@@ -50,15 +50,15 @@ public class PilaDeCartas extends Stack<Carta> implements Serializable {
         return true;
     }
 
-    public void serializar(String nomArchivo) throws IOException {
+    public void serializar(OutputStream os) throws IOException {
         ObjectOutputStream o =
-                new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(nomArchivo)));
+                new ObjectOutputStream(new BufferedOutputStream(os));
         o.writeObject(this);
         o.close();
     }
 
-    public static PilaDeCartas deSerializar(String nomArchivo) throws IOException, ClassNotFoundException {
-        ObjectInputStream o = new ObjectInputStream(new BufferedInputStream(new FileInputStream(nomArchivo)));
+    public static PilaDeCartas deSerializar(InputStream is) throws IOException, ClassNotFoundException {
+        ObjectInputStream o = new ObjectInputStream(new BufferedInputStream(is));
         PilaDeCartas p = (PilaDeCartas) o.readObject();
         o.close();
         return p;

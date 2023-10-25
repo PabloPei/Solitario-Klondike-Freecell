@@ -1,7 +1,12 @@
 package modeloelementos;
 
 import org.junit.Test;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
+
 import static org.junit.Assert.*;
 
 public class CartaTest {
@@ -167,8 +172,11 @@ public class CartaTest {
     @Test
     public void testPersistencia() throws IOException, ClassNotFoundException {
         Carta c = new Carta(ValorCarta.AS, Palo.TREBOL, false);
-        c.serializar("PruebaCartas.txt");
-        Carta deserializada = Carta.deSerializar("PruebaCartas.txt");
+
+        FileOutputStream os = new FileOutputStream("test.txt");
+        c.serializar(os);
+        FileInputStream is = new FileInputStream("test.txt");
+        Carta deserializada = Carta.deSerializar(is);
         assertNotNull(deserializada);
         assertEquals(c, deserializada);
     }

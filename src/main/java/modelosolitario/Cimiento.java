@@ -1,14 +1,12 @@
 package modelosolitario;
 
+import klondike.SolitarioKlondike;
 import modeloelementos.Palo;
 import modeloelementos.PilaDeCartas;
 import modeloelementos.Carta;
 import modeloelementos.ValorCarta;
 
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
+import java.io.*;
 
 
 public class Cimiento extends PilaDeCartas {
@@ -46,10 +44,7 @@ public class Cimiento extends PilaDeCartas {
         return this.size() == 13;
     }
 
-    public static Cimiento deSerializar(String nomArchivo) throws IOException, ClassNotFoundException {
-        ObjectInputStream o = new ObjectInputStream(new BufferedInputStream(new FileInputStream(nomArchivo)));
-        Cimiento c = (Cimiento) o.readObject();
-        o.close();
-        return c;
+    public static Cimiento deSerializar(InputStream is) throws IOException, ClassNotFoundException {
+        return (Cimiento) PilaDeCartas.deSerializar(is);
     }
 }

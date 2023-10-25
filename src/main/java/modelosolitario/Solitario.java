@@ -1,6 +1,5 @@
 package modelosolitario;
 
-import klondike.SolitarioKlondike;
 import modeloelementos.*;
 
 import java.io.*;
@@ -115,15 +114,15 @@ public abstract class Solitario implements Serializable {
         }
     }
 
-    public void serializar(String nomArchivo) throws IOException {
+    public void serializar(OutputStream os) throws IOException {
         ObjectOutputStream o =
-                new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(nomArchivo)));
+                new ObjectOutputStream(new BufferedOutputStream(os));
         o.writeObject(this);
         o.close();
     }
 
-    public static Solitario deSerializar(String nomArchivo) throws IOException, ClassNotFoundException {
-        ObjectInputStream o = new ObjectInputStream(new BufferedInputStream(new FileInputStream(nomArchivo)));
+    public static Solitario deSerializar(InputStream is) throws IOException, ClassNotFoundException {
+        ObjectInputStream o = new ObjectInputStream(new BufferedInputStream(is));
         Solitario p = (Solitario) o.readObject();
         o.close();
         return p;

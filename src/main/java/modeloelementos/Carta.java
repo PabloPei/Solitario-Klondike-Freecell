@@ -69,15 +69,15 @@ public class Carta implements Serializable {
 
     public Color getColor() { return getPalo().getColor(); }
 
-    public void serializar(String nomArchivo) throws IOException {
+    public void serializar(OutputStream os) throws IOException {
         ObjectOutputStream o =
-                new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(nomArchivo)));
+                new ObjectOutputStream(new BufferedOutputStream(os));
         o.writeObject(this);
         o.close();
     }
 
-    public static Carta deSerializar(String nomArchivo) throws IOException, ClassNotFoundException {
-        ObjectInputStream o = new ObjectInputStream(new BufferedInputStream(new FileInputStream(nomArchivo)));
+    public static Carta deSerializar(InputStream is) throws IOException, ClassNotFoundException {
+        ObjectInputStream o = new ObjectInputStream(new BufferedInputStream(is));
         Carta c = (Carta) o.readObject();
         o.close();
         return c;

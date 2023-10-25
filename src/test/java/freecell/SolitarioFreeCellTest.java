@@ -11,7 +11,7 @@ import modelosolitario.Mazo;
 import modelosolitario.Pila;
 import org.junit.Test;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 import static org.junit.Assert.*;
@@ -112,8 +112,10 @@ public class SolitarioFreeCellTest {
 
         SolitarioFreeCell solitario = new SolitarioFreeCell();
 
-        solitario.serializar("test.txt");
-        SolitarioFreeCell solitarioAux = SolitarioFreeCell.deSerializar("test.txt");
+        FileOutputStream os = new FileOutputStream("test.txt");
+        solitario.serializar(os);
+        FileInputStream is = new FileInputStream("test.txt");
+        SolitarioFreeCell solitarioAux = SolitarioFreeCell.deSerializar(is);
 
         //verifico que los mazos y la cantidad de movimientos sean iguales
         boolean mazoIgual = solitario.getMazo().equals(solitarioAux.getMazo());

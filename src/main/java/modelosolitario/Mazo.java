@@ -5,10 +5,7 @@ import modeloelementos.PilaDeCartas;
 import modeloelementos.ValorCarta;
 import modeloelementos.Carta;
 
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
+import java.io.*;
 import java.util.Collections;
 import java.util.Random;
 
@@ -61,11 +58,8 @@ public class Mazo extends PilaDeCartas {
         pasarCartasDeUnMazoAOtro(mazoTemp, this);
     }
 
-    public static Mazo deSerializar(String nomArchivo) throws IOException, ClassNotFoundException {
-        ObjectInputStream o = new ObjectInputStream(new BufferedInputStream(new FileInputStream(nomArchivo)));
-        Mazo m = (Mazo) o.readObject();
-        o.close();
-        return m;
+    public static Mazo deSerializar(InputStream is) throws IOException, ClassNotFoundException {
+        return (Mazo) PilaDeCartas.deSerializar(is);
     }
 
 

@@ -60,8 +60,8 @@ public class SolitarioKlondike extends SolitarioConCimientos implements Serializ
     }
 
 
-    public static SolitarioKlondike deSerializar(String nomArchivo) throws IOException, ClassNotFoundException {
-        return (SolitarioKlondike) Solitario.deSerializar(nomArchivo);
+    public static SolitarioKlondike deSerializar(InputStream is) throws IOException, ClassNotFoundException {
+        return (SolitarioKlondike) Solitario.deSerializar(is);
     }
 
     public Descarte getDescarte(){ return this.descarte; }

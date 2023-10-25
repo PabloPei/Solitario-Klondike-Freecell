@@ -4,6 +4,7 @@ import modeloelementos.Carta;
 import modelosolitario.*;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 public class SolitarioFreeCell extends SolitarioConCimientos {
@@ -54,8 +55,8 @@ public class SolitarioFreeCell extends SolitarioConCimientos {
         }
     }
 
-    public static SolitarioFreeCell deSerializar(String nomArchivo) throws IOException, ClassNotFoundException {
-        return (SolitarioFreeCell) Solitario.deSerializar(nomArchivo);
+    public static SolitarioFreeCell deSerializar(InputStream is) throws IOException, ClassNotFoundException {
+        return (SolitarioFreeCell) Solitario.deSerializar(is);
     }
 
     public ArrayList<PilaSuperior> getPilasSuperiores() {

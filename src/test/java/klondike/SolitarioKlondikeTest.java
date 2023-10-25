@@ -5,7 +5,7 @@ import modelosolitario.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class SolitarioKlondikeTest {
@@ -219,8 +219,10 @@ public class SolitarioKlondikeTest {
 
         SolitarioKlondike solitario = new SolitarioKlondike();
 
-        solitario.serializar("test.txt");
-        SolitarioKlondike solitarioAux = SolitarioKlondike.deSerializar("test.txt");
+        FileOutputStream os = new FileOutputStream("test.txt");
+        solitario.serializar(os);
+        FileInputStream is = new FileInputStream("test.txt");
+        SolitarioKlondike solitarioAux = SolitarioKlondike.deSerializar(is);
 
         //verifico que los mazos y la cantidad de movimientos sean iguales
         boolean mazoIgual = solitario.getMazo().equals(solitarioAux.getMazo());
@@ -277,8 +279,10 @@ public class SolitarioKlondikeTest {
         pilas.add(new Pila());
 
         SolitarioKlondike solitario = new SolitarioKlondike(mazo, pilas,cimientos, descarte );
-        solitario.serializar("test.txt");
-        SolitarioKlondike solitarioAux = SolitarioKlondike.deSerializar("test.txt");
+        FileOutputStream os = new FileOutputStream("test.txt");
+        solitario.serializar(os);
+        FileInputStream is = new FileInputStream("test.txt");
+        SolitarioKlondike solitarioAux = SolitarioKlondike.deSerializar(is);
 
         assertTrue(solitarioAux.verificarVictoria());
     }

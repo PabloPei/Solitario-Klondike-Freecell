@@ -4,10 +4,7 @@ import modeloelementos.Carta;
 import modeloelementos.PilaDeCartas;
 import modeloelementos.ValorCarta;
 
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
+import java.io.*;
 
 public class Pila extends PilaDeCartas {
 
@@ -38,11 +35,8 @@ public class Pila extends PilaDeCartas {
         return carta;
     }
 
-    public static Pila deSerializar(String nomArchivo) throws IOException, ClassNotFoundException {
-        ObjectInputStream o = new ObjectInputStream(new BufferedInputStream(new FileInputStream(nomArchivo)));
-        Pila p = (Pila) o.readObject();
-        o.close();
-        return p;
+    public static Pila deSerializar(InputStream is) throws IOException, ClassNotFoundException {
+        return (Pila) PilaDeCartas.deSerializar(is);
     }
 
 }

@@ -4,7 +4,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import modeloelementos.*;
 
-import java.io.IOException;
+import java.io.*;
 
 
 public class MazoTest {
@@ -103,8 +103,13 @@ public class MazoTest {
         p.push(new Carta(ValorCarta.AS, Palo.TREBOL, false));
         p.push(new Carta(ValorCarta.REINA, Palo.CORAZON, true));
         Mazo m = new Mazo(p);
-        m.serializar("PruebaMazo.txt");
-        Mazo deserializado = Mazo.deSerializar("PruebaMazo.txt");
+
+        OutputStream os = new FileOutputStream("test.txt");
+        m.serializar(os);
+
+        InputStream is = new FileInputStream("test.txt");
+        Mazo deserializado = (Mazo) Mazo.deSerializar(is);
+
         assertNotNull(deserializado);
         assertEquals(m, deserializado);
     }
