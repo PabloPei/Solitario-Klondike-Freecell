@@ -1,6 +1,5 @@
 package modelosolitario;
 
-import klondike.SolitarioKlondike;
 import modeloelementos.Palo;
 import modeloelementos.PilaDeCartas;
 import modeloelementos.Carta;

@@ -181,13 +181,12 @@ public class SolitarioKlondikeTest {
     @Test
     public void testMovimientos() {
         SolitarioKlondike solitario = new SolitarioKlondike();
-        Carta carta = solitario.getMazo().verCarta();
         solitario.robarCartasDelMazo();
         assertEquals ( solitario.getMovimientos(), 1);
     }
 
     @Test
-    public void testEstadoDeJuegoGanado() throws IOException, ClassNotFoundException {
+    public void testEstadoDeJuegoGanado() {
         //inicializo el juego en el estado ganado
         ArrayList<Cimiento> cimientos = new ArrayList<>();
         cimientos.add( new Cimiento(13,Palo.PICA));

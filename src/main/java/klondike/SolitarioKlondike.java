@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class SolitarioKlondike extends SolitarioConCimientos implements Serializable{
 
     public static final int CANTIDAD_PILAS = 7;
-    private Descarte descarte;
+    private final Descarte descarte;
 
     public SolitarioKlondike(){
         super(CANTIDAD_PILAS);

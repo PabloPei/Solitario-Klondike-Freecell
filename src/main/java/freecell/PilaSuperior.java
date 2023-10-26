@@ -2,8 +2,6 @@ package freecell;
 
 import modeloelementos.Carta;
 import modeloelementos.PilaDeCartas;
-import modelosolitario.Cimiento;
-
 import java.io.*;
 
 public class PilaSuperior extends PilaDeCartas {

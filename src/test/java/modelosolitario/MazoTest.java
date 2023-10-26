@@ -108,7 +108,7 @@ public class MazoTest {
         m.serializar(os);
 
         InputStream is = new FileInputStream("test.txt");
-        Mazo deserializado = (Mazo) Mazo.deSerializar(is);
+        Mazo deserializado = Mazo.deSerializar(is);
 
         assertNotNull(deserializado);
         assertEquals(m, deserializado);

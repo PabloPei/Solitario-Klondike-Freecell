@@ -1,9 +1,5 @@
 package modelosolitario;
 
-import modeloelementos.Palo;
-
-import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public abstract class SolitarioConCimientos extends Solitario{
@@ -29,7 +25,7 @@ public abstract class SolitarioConCimientos extends Solitario{
     }
 
     private void inciarCimientos() {
-        for (Palo p : Palo.values()) {
+        for (int i = 0; i < 4; i++) {
             cimientos.add(new Cimiento());
         }
     }
