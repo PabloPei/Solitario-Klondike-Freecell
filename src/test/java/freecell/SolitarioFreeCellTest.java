@@ -1,13 +1,9 @@
 package freecell;
 
-import klondike.SolitarioKlondike;
 import modeloelementos.Carta;
 import modeloelementos.Palo;
-import modeloelementos.PilaDeCartas;
 import modeloelementos.ValorCarta;
 import modelosolitario.Cimiento;
-import modelosolitario.Descarte;
-import modelosolitario.Mazo;
 import modelosolitario.Pila;
 import org.junit.Test;
 
