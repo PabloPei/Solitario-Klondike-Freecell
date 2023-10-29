@@ -2,8 +2,10 @@ package freecell;
 
 import modeloelementos.Carta;
 import modeloelementos.Palo;
+import modeloelementos.PilaDeCartas;
 import modeloelementos.ValorCarta;
 import modelosolitario.Cimiento;
+import modelosolitario.Mazo;
 import modelosolitario.Pila;
 import org.junit.Test;
 
@@ -104,6 +106,76 @@ public class SolitarioFreeCellTest {
     }
 
     @Test
+    public void testRepartirPilas() {
+        SolitarioFreeCell solitario = new SolitarioFreeCell();
+        ArrayList<Pila> pilas = solitario.getPilas();
+        for (Pila pila : pilas) {
+            int indicePila = pilas.indexOf(pila);
+            if (indicePila < 4)
+                assertEquals(pila.size(), 7);
+            else
+                assertEquals(pila.size(), 6);
+        }
+    }
+
+    @Test
+    public void testMoverYGanar() {
+        ArrayList<Cimiento> cimientos = new ArrayList<>();
+        cimientos.add( new Cimiento(12,Palo.PICA));
+        cimientos.add( new Cimiento(13,Palo.TREBOL));
+        cimientos.add( new Cimiento(13,Palo.CORAZON));
+        cimientos.add( new Cimiento(13,Palo.DIAMANTE));
+
+        ArrayList<Pila> pilas = new ArrayList<>();
+        for (int i = 0; i < 7 ;i++) {
+            pilas.add( new Pila());
+        }
+        Pila pila8 = new Pila();
+        pila8.agregarCarta(new Carta (ValorCarta.REY, Palo.PICA, false));
+        pilas.add(pila8);
+
+        PilaDeCartas mazoVacio = new PilaDeCartas();
+        Mazo mazo = new Mazo(mazoVacio);
+
+        ArrayList<PilaSuperior> pilasSuperiores = new ArrayList<>();
+
+        SolitarioFreeCell solitario = new SolitarioFreeCell(mazo, pilas, cimientos, pilasSuperiores);
+
+        assertFalse(solitario.verificarVictoria());
+
+        solitario.moverCarta(solitario.getPilas().get(7), solitario.getCimientos().get(0));
+
+        assertTrue(solitario.verificarVictoria());
+    }
+
+    @Test
+    public void testEstadoDeJuegoGanado() {
+        ArrayList<Cimiento> cimientos = new ArrayList<>();
+        cimientos.add( new Cimiento(13,Palo.PICA));
+        cimientos.add( new Cimiento(13,Palo.TREBOL));
+        cimientos.add( new Cimiento(13,Palo.CORAZON));
+        cimientos.add( new Cimiento(13,Palo.DIAMANTE));
+
+        PilaDeCartas mazoVacio = new PilaDeCartas();
+        Mazo mazo = new Mazo(mazoVacio);
+
+        ArrayList<PilaSuperior> pilasSuperiores = new ArrayList<>();
+
+        ArrayList<Pila> pilas = new ArrayList<>();
+        pilas.add(new Pila());
+        pilas.add(new Pila());
+        pilas.add(new Pila());
+        pilas.add(new Pila());
+        pilas.add(new Pila());
+        pilas.add(new Pila());
+        pilas.add(new Pila());
+
+        SolitarioFreeCell solitario = new SolitarioFreeCell(mazo, pilas,cimientos, pilasSuperiores);
+
+        assertTrue(solitario.verificarVictoria());
+    }
+
+    @Test
     public void testGuardarSolitario() throws IOException, ClassNotFoundException {
 
         SolitarioFreeCell solitario = new SolitarioFreeCell();
@@ -113,11 +185,9 @@ public class SolitarioFreeCellTest {
         FileInputStream is = new FileInputStream("test.txt");
         SolitarioFreeCell solitarioAux = SolitarioFreeCell.deSerializar(is);
 
-        //verifico que los mazos y la cantidad de movimientos sean iguales
         boolean mazoIgual = solitario.getMazo().equals(solitarioAux.getMazo());
         boolean movIgual = (solitario.getMovimientos() == solitarioAux.getMovimientos());
 
-        //verifico que las pilas sean iguales
         int i = 0;
         boolean pilasIgual = true;
         for (Pila pila : solitarioAux.getPilas()) {
@@ -127,7 +197,6 @@ public class SolitarioFreeCellTest {
             i++;
         }
 
-        //verifico que las pilas superiores sean iguales
         int j = 0;
         boolean apoyoIgual = true;
         for (PilaSuperior pilaSuperior : solitarioAux.getPilasSuperiores()) {
@@ -141,7 +210,6 @@ public class SolitarioFreeCellTest {
         assertTrue(pilasIgual);
         assertTrue(mazoIgual);
         assertTrue(movIgual);
-
     }
 
 }

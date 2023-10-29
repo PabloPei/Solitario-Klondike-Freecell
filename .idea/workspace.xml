@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Borre imports de mas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Mazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Mazo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/SolitarioConCimientos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/SolitarioConCimientos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/freecell/SolitarioFreeCellTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/freecell/SolitarioFreeCellTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/klondike/SolitarioKlondikeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/klondike/SolitarioKlondikeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,43 +95,11 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Solitario-Algo3">
+  <component name="RunManager" selected="JUnit.SolitarioFreeCellTest.testEstadoDeJuegoGanado">
     <configuration name="All in Solitario-Algo3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MazoTest.testPersistencia" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Solitario-Algo3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="modelosolitario.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="modelosolitario" />
-      <option name="MAIN_CLASS_NAME" value="modelosolitario.MazoTest" />
-      <option name="METHOD_NAME" value="testPersistencia" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SolitarioFreeCellTest.agregarCartaFalla" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Solitario-Algo3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="freecell.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="freecell" />
-      <option name="MAIN_CLASS_NAME" value="freecell.SolitarioFreeCellTest" />
-      <option name="METHOD_NAME" value="agregarCartaFalla" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -148,7 +120,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SolitarioFreeCellTest.testGuardarSolitario" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SolitarioFreeCellTest.testEstadoDeJuegoGanado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
       <extension name="coverage">
         <pattern>
@@ -158,7 +130,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="freecell" />
       <option name="MAIN_CLASS_NAME" value="freecell.SolitarioFreeCellTest" />
-      <option name="METHOD_NAME" value="testGuardarSolitario" />
+      <option name="METHOD_NAME" value="testEstadoDeJuegoGanado" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SolitarioFreeCellTest.testMoverYGanar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Solitario-Algo3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="freecell.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="freecell" />
+      <option name="MAIN_CLASS_NAME" value="freecell.SolitarioFreeCellTest" />
+      <option name="METHOD_NAME" value="testMoverYGanar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SolitarioFreeCellTest.testRepartirPilas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Solitario-Algo3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="freecell.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="freecell" />
+      <option name="MAIN_CLASS_NAME" value="freecell.SolitarioFreeCellTest" />
+      <option name="METHOD_NAME" value="testRepartirPilas" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -166,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SolitarioFreeCellTest.testEstadoDeJuegoGanado" />
         <item itemvalue="JUnit.All in Solitario-Algo3" />
+        <item itemvalue="JUnit.SolitarioFreeCellTest.testMoverYGanar" />
+        <item itemvalue="JUnit.SolitarioFreeCellTest.testRepartirPilas" />
         <item itemvalue="JUnit.SolitarioFreeCellTest.agregarCartaNoFalla" />
-        <item itemvalue="JUnit.SolitarioFreeCellTest.agregarCartaFalla" />
-        <item itemvalue="JUnit.MazoTest.testPersistencia" />
-        <item itemvalue="JUnit.SolitarioFreeCellTest.testGuardarSolitario" />
       </list>
     </recent_temporary>
   </component>
@@ -305,7 +309,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Solitario_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1698340404071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/TrabajoPractico_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1696110172820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/TrabajoPractico_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1698554009843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Solitario_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1696200827601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

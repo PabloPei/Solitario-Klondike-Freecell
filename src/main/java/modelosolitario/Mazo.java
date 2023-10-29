@@ -62,6 +62,4 @@ public class Mazo extends PilaDeCartas {
         return (Mazo) PilaDeCartas.deSerializar(is);
     }
 
-
-
 }

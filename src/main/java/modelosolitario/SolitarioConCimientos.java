@@ -30,7 +30,6 @@ public abstract class SolitarioConCimientos extends Solitario{
         }
     }
 
-
     public boolean verificarVictoria() {
         for (Cimiento cimiento : cimientos){
             if (!(cimiento.cimientoCompleto()))

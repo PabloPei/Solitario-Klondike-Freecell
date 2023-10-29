@@ -138,7 +138,6 @@ public class SolitarioKlondikeTest {
 
     @Test
     public void testMoverYGanar() {
-        //inicializo el juego en el estado ganado
         ArrayList<Cimiento> cimientos = new ArrayList<>();
         cimientos.add( new Cimiento(12,Palo.PICA));
         cimientos.add( new Cimiento(13,Palo.TREBOL));
