@@ -39,4 +39,12 @@ public class Pila extends PilaDeCartas {
         return (Pila) PilaDeCartas.deSerializar(is);
     }
 
+    public Pila invertir() {
+        Pila pilaInvertida = new Pila();
+        Pila copia = (Pila) this.clone();
+        while (!copia.isEmpty()) {
+            pilaInvertida.push(copia.pop());
+        }
+        return  pilaInvertida;
+    }
 }

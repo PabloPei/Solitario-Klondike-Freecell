@@ -46,7 +46,6 @@ public class PilaDeCartas extends Stack<Carta> implements Serializable {
                 return false;
             }
         }
-
         return true;
     }
 
