@@ -6,8 +6,7 @@ import modelosolitario.Pila;
 
 public class VistaPila extends StackPane {
     private static final double posicionY = 17;//cambiar
-    public VistaPila(Pila pila, double posicionX) {
-        this.setTranslateX(posicionX);
+    public VistaPila(Pila pila) {
         Pila pilaInvertida =  pila.invertir();
         int corrimiento = 0;
         while(!pilaInvertida.isEmpty()) {
