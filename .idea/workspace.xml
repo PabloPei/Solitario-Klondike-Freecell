@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Borre imports de mas">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/VistaPilas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ui/VistaMazo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaPila.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VistaPila.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaCarta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VistaCarta.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,27 +103,19 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SolitarioFreeCellTest.testEstadoDeJuegoGanado">
-    <configuration name="All in Solitario-Algo3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Solitario-Algo3" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="--module-path $USER_HOME$/Downloads/javafx-sdk-21.0.1/lib/ --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SolitarioFreeCellTest.agregarCartaNoFalla" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in Solitario-Algo3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Solitario-Algo3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="freecell.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="freecell" />
-      <option name="MAIN_CLASS_NAME" value="freecell.SolitarioFreeCellTest" />
-      <option name="METHOD_NAME" value="agregarCartaNoFalla" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -176,13 +168,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.All in Solitario-Algo3" />
+      <item itemvalue="JUnit.SolitarioFreeCellTest.testEstadoDeJuegoGanado" />
+      <item itemvalue="JUnit.SolitarioFreeCellTest.testMoverYGanar" />
+      <item itemvalue="JUnit.SolitarioFreeCellTest.testRepartirPilas" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SolitarioFreeCellTest.testEstadoDeJuegoGanado" />
         <item itemvalue="JUnit.All in Solitario-Algo3" />
         <item itemvalue="JUnit.SolitarioFreeCellTest.testMoverYGanar" />
         <item itemvalue="JUnit.SolitarioFreeCellTest.testRepartirPilas" />
-        <item itemvalue="JUnit.SolitarioFreeCellTest.agregarCartaNoFalla" />
       </list>
     </recent_temporary>
   </component>
@@ -218,6 +217,7 @@
       <workItem from="1697674383960" duration="64000" />
       <workItem from="1697674473600" duration="1001000" />
       <workItem from="1698233582053" duration="7347000" />
+      <workItem from="1700010093686" duration="2090000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />
@@ -313,21 +313,11 @@
           </properties>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ui/VistaPila.java</url>
-          <line>9</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TrabajoPractico_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1698554744639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Solitario_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1696200827601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Solitario_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1698602156208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/TrabajoPractico_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1696110172820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
