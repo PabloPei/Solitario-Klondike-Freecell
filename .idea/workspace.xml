@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Borre imports de mas">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/VistaMazo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Cree la clase VistaMazo, y agregue un par de metodos en VistaCarta">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ui/freecell/VistaDescarte.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaCarta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VistaCarta.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +215,7 @@
       <workItem from="1697674383960" duration="64000" />
       <workItem from="1697674473600" duration="1001000" />
       <workItem from="1698233582053" duration="7347000" />
-      <workItem from="1700010093686" duration="2090000" />
+      <workItem from="1700010093686" duration="2640000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />
@@ -275,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698080402426</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Cree la clase VistaMazo, y agregue un par de metodos en VistaCarta">
+      <option name="closed" value="true" />
+      <created>1700012313253</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1700012313253</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +305,8 @@
     <MESSAGE value="Cree Tests para pila" />
     <MESSAGE value="Modifique el metodo moverCartas de Solitario para que cumpla SRP" />
     <MESSAGE value="Borre imports de mas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Borre imports de mas" />
+    <MESSAGE value="Cree la clase VistaMazo, y agregue un par de metodos en VistaCarta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cree la clase VistaMazo, y agregue un par de metodos en VistaCarta" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

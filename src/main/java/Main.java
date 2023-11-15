@@ -6,10 +6,12 @@ import javafx.stage.Stage;
 import modeloelementos.Carta;
 import modeloelementos.Palo;
 import modeloelementos.ValorCarta;
+import modelosolitario.Descarte;
 import modelosolitario.Mazo;
 import modelosolitario.Pila;
 import ui.VistaMazo;
 import ui.VistaPilas;
+import ui.freecell.VistaDescarte;
 
 import java.util.ArrayList;
 
