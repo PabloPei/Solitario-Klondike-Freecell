@@ -5,6 +5,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import modelosolitario.Descarte;
 import ui.VistaCarta;
+import ui.VistaCimiento;
+import ui.VistaMazo;
 
 public class VistaDescarte extends HBox {
     private Descarte descarte;
@@ -13,7 +15,13 @@ public class VistaDescarte extends HBox {
     public VistaDescarte(Descarte descarte){
         setPadding(new Insets(PADDING));
         this.descarte = descarte;
-        ImageView imagen = new ImageView(VistaCarta.getImagenCarta(descarte.verCarta()));
+        ImageView imagen;
+        if (descarte.isEmpty()){
+            imagen = new ImageView(VistaCarta.getReverso());
+        } else {
+            imagen = new ImageView(VistaCarta.getImagenCarta(descarte.verCarta()));
+        }
+
         imagen.setVisible(false);
         getChildren().add(imagen);
     }
