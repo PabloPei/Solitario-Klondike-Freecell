@@ -9,8 +9,6 @@ import java.util.Map;
 
 public class VistaCarta extends ImageView {
     private static final String rutaImagenesCartas = "file:src/main/recursos/imagenesCartas/";
-    private static final int ancho = 40;
-    private static final int alto = 60;
 
     public VistaCarta(Carta carta) {
         String rutaImagen;
@@ -20,11 +18,9 @@ public class VistaCarta extends ImageView {
             rutaImagen = rutaImagenesCartas + carta.getPalo() + "_" + carta.getValor() + ".png";
         }
         Image imagenCarta = new Image(rutaImagen);
+        setFitWidth(Configuracion.ANCHO_VENTANA/13);
+        setFitHeight(Configuracion.ALTO_VENTANA/6);
         setImage(imagenCarta);
-
-        setFitWidth(ancho);
-        setFitHeight(alto);
-        setPreserveRatio(true);
     }
 
     public static Image getReverso(){

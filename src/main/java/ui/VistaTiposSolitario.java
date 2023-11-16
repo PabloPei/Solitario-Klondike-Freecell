@@ -1,12 +1,11 @@
 package ui;
 
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import modelosolitario.Solitario;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
+import klondike.SolitarioKlondike;
 import modelosolitario.TiposSolitario;
 import ui.klondike.KlondikeUI;
 
@@ -34,8 +33,9 @@ public class VistaTiposSolitario extends StackPane {
                     System.out.println("Seleccionaste la opción 2");
                 }
                 case KLONDIKE -> {
-                    KlondikeUI ui = new KlondikeUI();
-                    ui.mostrar(stage);
+                    SolitarioKlondike solitario = new SolitarioKlondike();
+                    KlondikeUI ui = new KlondikeUI(stage, solitario);
+                    ui.mostrar();
                 }
             }
 

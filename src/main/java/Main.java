@@ -7,6 +7,7 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 import modelosolitario.Solitario;
 import modelosolitario.TiposSolitario;
+import ui.Configuracion;
 import ui.VistaTiposSolitario;
 
 
@@ -17,14 +18,9 @@ public class Main extends Application  {
     @Override
     public void start(Stage primaryStage) {
 
-        // Obtén las dimensiones de la pantalla
-        Screen screen = Screen.getPrimary();
-        double ancho = (screen.getBounds().getWidth()) * 1 / 2;
-        double alto = (screen.getBounds().getHeight()) * 1 / 2;
-
         GridPane layout = new GridPane();
-        layout.setStyle("-fx-background-color: green");
-        layout.setPadding(new Insets(alto * 1/5,10,alto * 1/5, 10));
+        layout.setStyle(Configuracion.BACKGROUD_COLOR);
+        layout.setPadding(new Insets(Configuracion.ANCHO_VENTANA * 1/10,10,Configuracion.ALTO_VENTANA * 1/10, 10));
 
         int cantidadTipos = TiposSolitario.values().length;
 
@@ -40,8 +36,9 @@ public class Main extends Application  {
             layout.add(tipoSolitario, tipo.ordinal(), 0);
         }
 
-        Scene scene = new Scene(layout, ancho, alto);
+        Scene scene = new Scene(layout, Configuracion.ANCHO_VENTANA, Configuracion.ALTO_VENTANA);
         primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
         primaryStage.setTitle("Seleccionar Solitario");
         primaryStage.show();
     }
