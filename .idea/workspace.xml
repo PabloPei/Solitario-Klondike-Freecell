@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Cree la clase VistaDescarte">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/VistaMovimientos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ui/VistaPilaDeCartas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modeloelementos/PilaDeCartas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modeloelementos/PilaDeCartas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Pila.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Pila.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaCimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VistaCimiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaMazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaMazo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaPilas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaPila.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VistaPila.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/klondike/KlondikeUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/klondike/KlondikeUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaDescarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaDescarte.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -344,7 +344,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Solitario_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1698602156208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/TrabajoPractico_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1696110172820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/TrabajoPractico_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1698554744639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Solitario_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1696200827601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

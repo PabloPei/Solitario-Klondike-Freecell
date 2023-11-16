@@ -1,5 +1,7 @@
 package modeloelementos;
 
+import modelosolitario.Pila;
+
 import java.io.*;
 import java.util.Stack;
 
@@ -61,5 +63,14 @@ public class PilaDeCartas extends Stack<Carta> implements Serializable {
         PilaDeCartas p = (PilaDeCartas) o.readObject();
         o.close();
         return p;
+    }
+
+    public PilaDeCartas invertir() {
+        PilaDeCartas pilaInvertida = new PilaDeCartas();
+        PilaDeCartas copia = (PilaDeCartas) this.clone();
+        while (!copia.isEmpty()) {
+            pilaInvertida.push(copia.pop());
+        }
+        return  pilaInvertida;
     }
 }

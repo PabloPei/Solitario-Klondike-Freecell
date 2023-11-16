@@ -4,6 +4,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import klondike.SolitarioKlondike;
+import modelosolitario.Cimiento;
 import ui.*;
 import java.util.ArrayList;
 
@@ -28,12 +29,11 @@ public class KlondikeUI extends GridPane {
         tablero.add(new VistaMazo(solitario),0,0);
         tablero.add(new VistaDescarte(solitario),1,0);
 
-        ArrayList<VistaCimiento> cimientos = new ArrayList<>();
+        ArrayList<VistaCimiento> vistaCimientos = new ArrayList<>();
+        ArrayList<Cimiento> cimientos = solitario.getCimientos();
         for(int i = 0; i < 4; i++){
-            VistaCimiento cimiento = new VistaCimiento();
-            cimientos.add(new VistaCimiento());
-            tablero.add(cimientos.get(i), 3 + i, 0);
-
+            vistaCimientos.add(new VistaCimiento(cimientos.get(i)));
+            tablero.add(vistaCimientos.get(i), 3 + i, 0);
         }
 
         for (int i = 0; i < solitario.getPilas().size(); i++) {
@@ -49,7 +49,4 @@ public class KlondikeUI extends GridPane {
         stage.setScene(scene);
         stage.show();
     }
-
-
-
 }
