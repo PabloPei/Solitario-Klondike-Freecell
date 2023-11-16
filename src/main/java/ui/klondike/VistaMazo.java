@@ -1,4 +1,4 @@
-package ui;
+package ui.klondike;
 
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -11,6 +11,7 @@ import javafx.scene.layout.StackPane;
 import klondike.SolitarioKlondike;
 import modeloelementos.Carta;
 import modelosolitario.Mazo;
+import ui.Configuracion;
 import ui.Listener;
 import ui.VistaCarta;
 

@@ -6,7 +6,7 @@ import javafx.scene.layout.StackPane;
 
 public class VistaCimiento extends StackPane {
 
-    private static final int PADDING = 5;
+    private static final int PADDING = 2;
 
     public VistaCimiento(){
 

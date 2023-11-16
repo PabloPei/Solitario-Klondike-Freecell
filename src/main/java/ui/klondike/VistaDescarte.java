@@ -9,7 +9,7 @@ import ui.Listener;
 import ui.VistaCarta;
 
 public class VistaDescarte extends StackPane implements Listener {
-    private static final int PADDING = 5;
+
     private SolitarioKlondike solitario;
 
     public VistaDescarte(SolitarioKlondike s){
