@@ -1,42 +1,52 @@
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
-import klondike.SolitarioKlondike;
-import modelosolitario.Descarte;
-import modelosolitario.Mazo;
-import ui.VistaCimiento;
-import ui.klondike.VistaMazo;
-import ui.klondike.VistaDescarte;
-
-import java.util.ArrayList;
+import modelosolitario.Solitario;
+import modelosolitario.TiposSolitario;
+import ui.VistaTiposSolitario;
 
 
-public class Main extends Application {
-     @Override
-     public void start(Stage primaryStage) {
-//         Mazo m = new Mazo();
-         GridPane tablero = new GridPane();
-         tablero.setStyle("-fx-background-color: green");
-         SolitarioKlondike s = new SolitarioKlondike();
-         tablero.add(new VistaMazo(s),0,0);
-         tablero.add(new VistaDescarte(s),1,0);
-         ArrayList<VistaCimiento> cimientos = new ArrayList<>();
-         for(int i = 0; i < 4; i++){
-             cimientos.add(new VistaCimiento());
-             tablero.add(cimientos.get(i), 5 + i, 0);
-         }
-         Scene scene = new Scene(tablero, 500, 400);
-         primaryStage.setResizable(false);
-         primaryStage.setScene(scene);
-         primaryStage.show();
+public class Main extends Application  {
 
 
+    // se deberia chequear de que no haya algun solitario guardado
+    @Override
+    public void start(Stage primaryStage) {
 
-     }
+        // Obtén las dimensiones de la pantalla
+        Screen screen = Screen.getPrimary();
+        double ancho = (screen.getBounds().getWidth()) * 1 / 2;
+        double alto = (screen.getBounds().getHeight()) * 1 / 2;
 
-        public static void main(String[] args) {
-            launch(args);
+        GridPane layout = new GridPane();
+        layout.setStyle("-fx-background-color: green");
+        layout.setPadding(new Insets(alto * 1/5,10,alto * 1/5, 10));
+
+        int cantidadTipos = TiposSolitario.values().length;
+
+        // Configurar ColumnConstraints para ajustar automáticamente el ancho
+        for (int i = 0; i < cantidadTipos; i++) {
+            ColumnConstraints column = new ColumnConstraints();
+            column.setPercentWidth(100.0 / cantidadTipos);
+            layout.getColumnConstraints().add(column);
+        }
+
+        for (TiposSolitario tipo : TiposSolitario.values()) {
+            VistaTiposSolitario tipoSolitario = new VistaTiposSolitario(tipo, primaryStage);
+            layout.add(tipoSolitario, tipo.ordinal(), 0);
+        }
+
+        Scene scene = new Scene(layout, ancho, alto);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Seleccionar Solitario");
+        primaryStage.show();
+    }
+
+        public static void main(String[] args) {launch(args);
         }
 }
 

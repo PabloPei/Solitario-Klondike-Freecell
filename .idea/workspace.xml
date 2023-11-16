@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Cree la clase VistaCimiento">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/Listener.java" afterDir="false" />
+    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Cree la clase VistaDescarte">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaMazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaMazo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/freecell/VistaDescarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaDescarte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/klondike/KlondikeUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/klondike/KlondikeUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaDescarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaDescarte.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,10 +19,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
-        <option value="JUnit4 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="JUnit4 Test Class" />
+        <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -71,7 +70,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lenovo/Documents/Algoritmos III/TrabajoPractico-Algo3&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Facultad/Algoritmos3/testInterfaz&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -220,7 +219,12 @@
       <workItem from="1697674473600" duration="1001000" />
       <workItem from="1698233582053" duration="7347000" />
       <workItem from="1700010093686" duration="5206000" />
-      <workItem from="1700145243388" duration="1989000" />
+      <workItem from="1700082310713" duration="2226000" />
+      <workItem from="1700084555977" duration="105000" />
+      <workItem from="1700084674709" duration="4864000" />
+      <workItem from="1700146307396" duration="7054000" />
+      <workItem from="1700154430204" duration="229000" />
+      <workItem from="1700154670536" duration="833000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />
