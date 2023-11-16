@@ -56,6 +56,7 @@ public class SolitarioKlondike extends SolitarioConCimientos implements Serializ
                 break;
         }
         sumarMovimiento();
+        notificar();
         return true;
     }
 

@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Cree la clase VistaDescarte">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/VistaCimiento.java" afterDir="false" />
+    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Cree la clase VistaCimiento">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ui/Listener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/freecell/VistaDescarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/freecell/VistaDescarte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaMazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaMazo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/freecell/VistaDescarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaDescarte.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +21,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -218,6 +220,7 @@
       <workItem from="1697674473600" duration="1001000" />
       <workItem from="1698233582053" duration="7347000" />
       <workItem from="1700010093686" duration="5206000" />
+      <workItem from="1700145243388" duration="1989000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />

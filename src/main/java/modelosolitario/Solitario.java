@@ -1,9 +1,11 @@
 package modelosolitario;
 
 import modeloelementos.*;
+import ui.Listener;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public abstract class Solitario implements Serializable {
@@ -12,6 +14,8 @@ public abstract class Solitario implements Serializable {
     private EstadoJuego estadoJuego;
     protected final ArrayList<Pila> pilas;
     protected Mazo mazo;
+
+    private List<Listener> listeners = new ArrayList<>();
 
     public Solitario(int cantidadPilas){
         this.movimientos=0;
@@ -144,6 +148,13 @@ public abstract class Solitario implements Serializable {
 
     public ArrayList<Pila> getPilas(){
         return this.pilas;
+    }
+
+    public void agregarListener(Listener l) {listeners.add(l);}
+    protected void notificar(){
+        for(Listener l : listeners){
+            l.escuchar();
+        }
     }
 
 }
