@@ -1,5 +1,6 @@
 package ui;
 
+import freecell.SolitarioFreeCell;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
@@ -7,6 +8,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import klondike.SolitarioKlondike;
 import modelosolitario.TiposSolitario;
+import ui.freecell.FreecellUI;
 import ui.klondike.KlondikeUI;
 
 
@@ -30,7 +32,9 @@ public class VistaTiposSolitario extends StackPane {
 
             switch (tipoSolitario) {
                 case FREECELL -> {
-                    System.out.println("Seleccionaste la opción 2");
+                    SolitarioFreeCell solitario = new SolitarioFreeCell();
+                    FreecellUI ui = new FreecellUI(stage, solitario);
+                    ui.mostrar();
                 }
                 case KLONDIKE -> {
                     SolitarioKlondike solitario = new SolitarioKlondike();
