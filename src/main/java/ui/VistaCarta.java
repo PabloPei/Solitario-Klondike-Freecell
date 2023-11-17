@@ -4,8 +4,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import modeloelementos.Carta;
 
-import java.util.HashMap;
-import java.util.Map;
+
 
 public class VistaCarta extends ImageView {
     private static final String rutaImagenesCartas = "file:src/main/recursos/imagenesCartas/";
@@ -21,6 +20,8 @@ public class VistaCarta extends ImageView {
         setFitWidth(Configuracion.ANCHO_VENTANA/13);
         setFitHeight(Configuracion.ALTO_VENTANA/6);
         setImage(imagenCarta);
+
+
     }
 
     public static Image getReverso(){

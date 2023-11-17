@@ -33,20 +33,18 @@ public class VistaMazo extends HBox {
 
         getChildren().add(boton);
 
-        boton.setOnMousePressed(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent mouseEvent) {
+        boton.setOnMousePressed(mouseEvent -> {
                     ((Button)mouseEvent.getSource()).setStyle(Configuracion.BOTON_APRETADO);
-                }
+
         });
 
-        boton.setOnMouseReleased(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent mouseEvent) {
-                ((Button)mouseEvent.getSource()).setStyle(Configuracion.BOTON_ESTADO_NORMAL);
-                s.robarCartasDelMazo();
-            }
+        boton.setOnMouseReleased(mouseEvent -> {
+            ((Button) mouseEvent.getSource()).setStyle(Configuracion.BOTON_ESTADO_NORMAL);
+            s.robarCartasDelMazo();
         });
+
+
+
 
     }
 

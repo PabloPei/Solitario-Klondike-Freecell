@@ -13,11 +13,7 @@ public class VistaMovimientos extends HBox implements Listener {
     public VistaMovimientos(SolitarioKlondike s) {
         this.solitario = s;
         label = new Label("Movimientos: 0 ");  // Inicializar label
-        label.setStyle("-fx-font-family: 'Courier New';" +
-                "-fx-font-size: 30px;" +
-                "-fx-font-weight: bold;" +
-                "-fx-text-fill: #FFFFFF;"+
-                "-fx-alignment: center;");
+        label.setStyle(Configuracion.ESTILO_TITULO);
         getChildren().add(label);
 
         solitario.agregarListener(this);

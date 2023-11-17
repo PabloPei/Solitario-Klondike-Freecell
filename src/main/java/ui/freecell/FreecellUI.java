@@ -42,7 +42,7 @@ public class FreecellUI extends GridPane {
         }
 
         for (int i = 0; i < solitario.getPilas().size(); i++) {
-            VistaPila vistaPila = new VistaPila(solitario.getPilas().get(i));
+            VistaPilaDeCartas vistaPila = new VistaPilaDeCartas(solitario.getPilas().get(i), true);
             tablero.add(vistaPila,  i, 10);
         }
 
