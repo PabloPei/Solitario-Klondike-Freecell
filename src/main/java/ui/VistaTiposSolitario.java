@@ -1,11 +1,14 @@
 package ui;
 
 import freecell.SolitarioFreeCell;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
+import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
@@ -13,6 +16,8 @@ import klondike.SolitarioKlondike;
 import modelosolitario.TiposSolitario;
 import ui.freecell.FreecellUI;
 import ui.klondike.KlondikeUI;
+
+import java.awt.event.MouseEvent;
 
 
 public class VistaTiposSolitario extends GridPane {
@@ -41,6 +46,16 @@ public class VistaTiposSolitario extends GridPane {
             Image imagenSolitario = new Image(rutaImagen);
             ImageView imageView = new ImageView(imagenSolitario);
             Button seleccionarButton = new Button("",imageView);
+            seleccionarButton.setStyle(Configuracion.BOTON_SELECCION_ESTADO_NORMAL);
+
+            seleccionarButton.setOnMouseEntered(mouseEvent  -> {
+                seleccionarButton.setStyle(Configuracion.BOTON_SELECCION_MOUSE_ARRIBA);
+            });
+
+            seleccionarButton.setOnMouseExited(mouseEvent  -> {
+                seleccionarButton.setStyle(Configuracion.BOTON_SELECCION_ESTADO_NORMAL);
+            });
+
 
             seleccionarButton.setOnAction(e -> {
                  switch (tipo) {
