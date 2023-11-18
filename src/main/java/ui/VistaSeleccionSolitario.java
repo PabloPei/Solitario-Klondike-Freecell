@@ -1,32 +1,26 @@
 package ui;
 
 import freecell.SolitarioFreeCell;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
-import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.StackPane;
 import klondike.SolitarioKlondike;
 import modelosolitario.TiposSolitario;
 import ui.freecell.FreecellUI;
 import ui.klondike.KlondikeUI;
 
-import java.awt.event.MouseEvent;
 
-
-public class VistaTiposSolitario extends GridPane {
+public class VistaSeleccionSolitario extends GridPane {
 
 
     private static final String RUTAIMAGENTIPOSSOLITARIOS = "file:src/main/recursos/imagenesSolitarios/";
 
 
-    public VistaTiposSolitario(Stage stage) {
+    public VistaSeleccionSolitario(Stage stage) {
 
         setStyle(Configuracion.BACKGROUD_COLOR);
         setPadding(new Insets(Configuracion.ANCHO_VENTANA * 1/10,Configuracion.ANCHO_VENTANA * 1/10,Configuracion.ALTO_VENTANA * 1/10, Configuracion.ANCHO_VENTANA * 1/10));

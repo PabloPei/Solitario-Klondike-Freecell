@@ -1,14 +1,9 @@
 import javafx.application.Application;
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
-import modelosolitario.Solitario;
-import modelosolitario.TiposSolitario;
 import ui.Configuracion;
-import ui.VistaTiposSolitario;
+import ui.VistaSeleccionSolitario;
 
 
 public class Main extends Application  {
@@ -18,7 +13,7 @@ public class Main extends Application  {
     @Override
     public void start(Stage primaryStage) {
 
-        GridPane layout = new VistaTiposSolitario(primaryStage);
+        GridPane layout = new VistaSeleccionSolitario(primaryStage);
 
         Scene scene = new Scene(layout, Configuracion.ANCHO_VENTANA, Configuracion.ALTO_VENTANA);
         primaryStage.setScene(scene);

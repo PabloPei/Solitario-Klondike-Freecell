@@ -17,8 +17,10 @@ public class VistaCarta extends ImageView {
             rutaImagen = rutaImagenesCartas + carta.getPalo() + "_" + carta.getValor() + ".png";
         }
         Image imagenCarta = new Image(rutaImagen);
+
         setFitWidth(Configuracion.ANCHO_VENTANA/13);
         setFitHeight(Configuracion.ALTO_VENTANA/6);
+
         setImage(imagenCarta);
 
 
