@@ -3,14 +3,15 @@ package ui;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import klondike.SolitarioKlondike;
+import modelosolitario.Solitario;
 import ui.Listener;
 
 public class VistaMovimientos extends HBox implements Listener {
 
-    private SolitarioKlondike solitario;
+    private Solitario solitario;
     private Label label;  // Declarar label como un atributo de clase
 
-    public VistaMovimientos(SolitarioKlondike s) {
+    public VistaMovimientos(Solitario s) {
         this.solitario = s;
         label = new Label("Movimientos: 0 ");  // Inicializar label
         label.setStyle(Configuracion.ESTILO_TITULO);

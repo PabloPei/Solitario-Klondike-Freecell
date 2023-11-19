@@ -46,9 +46,9 @@ public class FreecellUI extends GridPane {
             tablero.add(vistaPila,  i, 10);
         }
 
-//        tablero.add(new VistaMovimientos(solitario), 8,0 );
+        tablero.add(new VistaMovimientos(solitario), 12,1 );
 
-        Scene scene = new Scene(tablero, Configuracion.ANCHO_VENTANA, Configuracion.ALTO_VENTANA);
+        Scene scene = new Scene(tablero, Configuracion.ANCHO_VENTANA*1.2, Configuracion.ALTO_VENTANA);
 
         stage.setResizable(false);
         stage.setScene(scene);
