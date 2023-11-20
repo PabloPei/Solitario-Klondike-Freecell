@@ -18,8 +18,8 @@ public class VistaCarta extends ImageView {
         }
         Image imagenCarta = new Image(rutaImagen);
 
-        setFitWidth(Configuracion.ANCHO_VENTANA/13);
-        setFitHeight(Configuracion.ALTO_VENTANA/6);
+        setFitWidth(ConfiguracionUI.ANCHO_VENTANA/13);
+        setFitHeight(ConfiguracionUI.ALTO_VENTANA/6);
 
         setImage(imagenCarta);
 

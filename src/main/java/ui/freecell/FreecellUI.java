@@ -23,9 +23,9 @@ public class FreecellUI extends GridPane {
 
     public void mostrar() {
         GridPane tablero = new GridPane();
-        tablero.setHgap(Configuracion.ANCHO_VENTANA/80);
-        tablero.setVgap(Configuracion.ALTO_VENTANA/80);
-        tablero.setStyle(Configuracion.BACKGROUD_COLOR);
+        tablero.setHgap(ConfiguracionUI.ANCHO_VENTANA/80);
+        tablero.setVgap(ConfiguracionUI.ALTO_VENTANA/80);
+        tablero.setStyle(ConfiguracionUI.BACKGROUD_COLOR);
 
         ArrayList<VistaPilaSuperior> vistaPilasSuperiores = new ArrayList<>();
         ArrayList<PilaSuperior> pilasSuperiores = solitario.getPilasSuperiores();
@@ -48,7 +48,7 @@ public class FreecellUI extends GridPane {
 
         tablero.add(new VistaMovimientos(solitario), 12,1 );
 
-        Scene scene = new Scene(tablero, Configuracion.ANCHO_VENTANA*1.2, Configuracion.ALTO_VENTANA);
+        Scene scene = new Scene(tablero, ConfiguracionUI.ANCHO_VENTANA*1.2, ConfiguracionUI.ALTO_VENTANA);
 
         stage.setResizable(false);
         stage.setScene(scene);

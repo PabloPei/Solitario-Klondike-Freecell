@@ -3,9 +3,7 @@ package ui.freecell;
 import freecell.PilaSuperior;
 import javafx.geometry.Insets;
 import javafx.scene.image.ImageView;
-import modeloelementos.PilaDeCartas;
-import modelosolitario.Cimiento;
-import ui.Configuracion;
+import ui.ConfiguracionUI;
 import ui.VistaCarta;
 import ui.VistaPilaDeCartas;
 
@@ -15,9 +13,9 @@ public class VistaPilaSuperior extends VistaPilaDeCartas {
     public VistaPilaSuperior(PilaSuperior pilaSuperior){
         super(pilaSuperior, false);
         if (pilaSuperior.isEmpty()){
-            setStyle(Configuracion.ESTILO_BORDE);
+            setStyle(ConfiguracionUI.ESTILO_BORDE);
             setPadding(new Insets(PADDING));
-            setPrefSize(Configuracion.ANCHO_VENTANA/13,Configuracion.ALTO_VENTANA/6);
+            setPrefSize(ConfiguracionUI.ANCHO_VENTANA/13, ConfiguracionUI.ALTO_VENTANA/6);
             final ImageView imagen = new ImageView(VistaCarta.getReverso());
             imagen.setVisible(false);
             getChildren().add(imagen);

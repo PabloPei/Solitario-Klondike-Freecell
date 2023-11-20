@@ -1,10 +1,10 @@
 package ui.klondike;
 
 import javafx.scene.Scene;
-import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import klondike.SolitarioKlondike;
+import modeloelementos.Palo;
 import modelosolitario.Cimiento;
 import ui.*;
 import java.util.ArrayList;
@@ -23,19 +23,16 @@ public class KlondikeUI extends GridPane {
 
 
         GridPane tablero = new GridPane();
-        tablero.setStyle(Configuracion.BACKGROUD_COLOR);
-        tablero.setHgap(Configuracion.ANCHO_VENTANA/80);
-        tablero.setVgap(Configuracion.ALTO_VENTANA/80);
+        tablero.setStyle(ConfiguracionUI.BACKGROUD_COLOR);
+        tablero.setHgap(ConfiguracionUI.ANCHO_VENTANA/80);
+        tablero.setVgap(ConfiguracionUI.ALTO_VENTANA/80);
 
         tablero.add(new VistaMazo(solitario),0,0);
         tablero.add(new VistaDescarte(solitario),1,0);
 
-        ArrayList<VistaCimiento> vistaCimientos = new ArrayList<>();
-
-        ArrayList<Cimiento> cimientos = solitario.getCimientos();
-        for(int i = 0; i < 4; i++){
-            vistaCimientos.add(new VistaCimiento(cimientos.get(i)));
-            tablero.add(vistaCimientos.get(i), 2 + i, 0);
+        for(Palo palo : Palo.values()){
+            VistaPilaDeCartas vistaCimiento = new VistaPilaDeCartas(solitario.getCimientos().get(palo.ordinal()),false);
+            tablero.add(vistaCimiento, 2 + palo.ordinal(), 0);
         }
 
         VistaTableu tableu = new VistaTableu(solitario);
@@ -44,7 +41,7 @@ public class KlondikeUI extends GridPane {
 
         tablero.add(new VistaMovimientos(solitario), 8,0 );
 
-        Scene scene = new Scene(tablero, Configuracion.ANCHO_VENTANA, Configuracion.ALTO_VENTANA);
+        Scene scene = new Scene(tablero, ConfiguracionUI.ANCHO_VENTANA, ConfiguracionUI.ALTO_VENTANA);
 
         stage.setResizable(false);
         stage.setScene(scene);

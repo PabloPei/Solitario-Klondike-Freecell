@@ -2,9 +2,7 @@ package ui;
 
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
-import klondike.SolitarioKlondike;
 import modelosolitario.Solitario;
-import ui.Listener;
 
 public class VistaMovimientos extends HBox implements Listener {
 
@@ -14,7 +12,7 @@ public class VistaMovimientos extends HBox implements Listener {
     public VistaMovimientos(Solitario s) {
         this.solitario = s;
         label = new Label("Movimientos: 0 ");  // Inicializar label
-        label.setStyle(Configuracion.ESTILO_TITULO);
+        label.setStyle(ConfiguracionUI.ESTILO_TITULO);
         getChildren().add(label);
 
         solitario.agregarListener(this);

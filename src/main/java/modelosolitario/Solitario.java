@@ -3,6 +3,7 @@ package modelosolitario;
 import modeloelementos.*;
 import ui.Listener;
 
+import javax.swing.plaf.synth.SynthTextAreaUI;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -69,13 +70,24 @@ public abstract class Solitario implements Serializable {
     }
 
     public boolean moverCarta(PilaDeCartas origen, PilaDeCartas destino) {
+
+        for (Carta carta : destino){
+            System.out.println("carta:" + carta.getValor());
+            System.out.println("estado:" + carta.getBocaAbajo());
+        }
+
         Carta cartaSacada = origen.sacarCarta(false);
 
         if (!destino.agregarCarta(cartaSacada)){
-            origen.agregarCarta(cartaSacada);
+            origen.peek().setBocaAbajo(true);
+            origen.push(cartaSacada);
+
+
             return false;
         }
+
         sumarMovimiento();
+        notificar();
         return true;
     }
 
@@ -84,7 +96,7 @@ public abstract class Solitario implements Serializable {
         do{
             if ( ! (pilaActual.agregarCarta(origen.sacarCarta(false)))) {
                 while (!(pilaActual.isEmpty())) {
-                    origen.agregarCarta(pilaActual.sacarCarta(false));
+                    origen.push(pilaActual.pop());
                 }
                 return null;
             }
@@ -97,10 +109,10 @@ public abstract class Solitario implements Serializable {
         while (!pilaAux.isEmpty()) {
             if (!(destino.agregarCarta(pilaAux.pop()))) {
                 while (destino.peek() != ultimaCarta) {
-                    origen.agregarCarta(destino.sacarCarta(false));
+                    origen.push(destino.pop());
                 }
                 while (!(pilaAux.isEmpty())) {
-                    origen.agregarCarta(pilaAux.sacarCarta(false));
+                    origen.push(pilaAux.pop());
                 }
                 return false;
             }
@@ -152,7 +164,7 @@ public abstract class Solitario implements Serializable {
 
     public void agregarListener(Listener l) {listeners.add(l);}
     protected void notificar(){
-        for(Listener l : listeners){
+        for (Listener l : listeners) {
             l.escuchar();
         }
     }

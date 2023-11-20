@@ -22,8 +22,8 @@ public class VistaSeleccionSolitario extends GridPane {
 
     public VistaSeleccionSolitario(Stage stage) {
 
-        setStyle(Configuracion.BACKGROUD_COLOR);
-        setPadding(new Insets(Configuracion.ANCHO_VENTANA * 1/10,Configuracion.ANCHO_VENTANA * 1/10,Configuracion.ALTO_VENTANA * 1/10, Configuracion.ANCHO_VENTANA * 1/10));
+        setStyle(ConfiguracionUI.BACKGROUD_COLOR);
+        setPadding(new Insets(ConfiguracionUI.ANCHO_VENTANA * 1/10, ConfiguracionUI.ANCHO_VENTANA * 1/10, ConfiguracionUI.ALTO_VENTANA * 1/10, ConfiguracionUI.ANCHO_VENTANA * 1/10));
 
         int cantidadTipos = TiposSolitario.values().length;
 
@@ -40,14 +40,14 @@ public class VistaSeleccionSolitario extends GridPane {
             Image imagenSolitario = new Image(rutaImagen);
             ImageView imageView = new ImageView(imagenSolitario);
             Button seleccionarButton = new Button("",imageView);
-            seleccionarButton.setStyle(Configuracion.BOTON_SELECCION_ESTADO_NORMAL);
+            seleccionarButton.setStyle(ConfiguracionUI.BOTON_SELECCION_ESTADO_NORMAL);
 
             seleccionarButton.setOnMouseEntered(mouseEvent  -> {
-                seleccionarButton.setStyle(Configuracion.BOTON_SELECCION_MOUSE_ARRIBA);
+                seleccionarButton.setStyle(ConfiguracionUI.BOTON_SELECCION_MOUSE_ARRIBA);
             });
 
             seleccionarButton.setOnMouseExited(mouseEvent  -> {
-                seleccionarButton.setStyle(Configuracion.BOTON_SELECCION_ESTADO_NORMAL);
+                seleccionarButton.setStyle(ConfiguracionUI.BOTON_SELECCION_ESTADO_NORMAL);
             });
 
 
