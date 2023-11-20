@@ -1,5 +1,6 @@
 package ui;
 
+import com.sun.javafx.geom.Rectangle;
 import javafx.geometry.Insets;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -20,21 +21,7 @@ public class VistaPilaDeCartas extends StackPane implements Listener{
         this.pila = pilaDeCartas;
         agregarVistaPila(corrimientoY);
 
-/*
-        //Agrego eventos a la ultima carta
-        if (!getChildren().isEmpty()) {
-            VistaCarta ultimaCarta = (VistaCarta) getChildren().get(getChildren().size() - 1);
 
-            ultimaCarta.setOnMouseEntered(event -> ultimaCarta.setStyle(ConfiguracionUI.CARTA_MOUSE_ARRIBA));
-            ultimaCarta.setOnMouseExited(mouseEvent  -> ultimaCarta.setStyle(ConfiguracionUI.BOTON_ESTADO_NORMAL));
-            ultimaCarta.setOnMousePressed(event -> {
-
-                ultimaCarta.setUserData(new double[]{event.getSceneX(), event.getSceneY()});
-            });
-
-        }
-
- */
     }
 
 
@@ -71,6 +58,16 @@ public class VistaPilaDeCartas extends StackPane implements Listener{
                 if (corrimientoY) {
                     corrimiento++;
                 }
+
+            }
+            if (!getChildren().isEmpty()) {
+
+                //VistaCarta ultimaCarta = (VistaCarta) getChildren().get(getChildren().size() - 1);
+
+                //ultimaCarta.setOnMouseClicked(event -> ultimaCarta.setStyle(ConfiguracionUI.CARTA_MOUSE_ARRIBA));
+                //ultimaCarta.setOnMouseExited(mouseEvent  -> ultimaCarta.setStyle(ConfiguracionUI.BOTON_ESTADO_NORMAL));
+
+
             }
         }
     }
