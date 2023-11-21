@@ -12,6 +12,7 @@ import java.util.Random;
 
 public class Mazo extends PilaDeCartas {
 
+
     public Mazo(){
         for( Palo palo : Palo.values() ) {
             for (ValorCarta valor : ValorCarta.values()) {

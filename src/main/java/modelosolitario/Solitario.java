@@ -11,9 +11,12 @@ import java.util.List;
 public abstract class Solitario implements Serializable {
 
     private int movimientos;
+    private Carta cartaOrigen;
+    private PilaDeCartas pilaOrigen;
     private EstadoJuego estadoJuego;
     protected final ArrayList<Pila> pilas;
     protected Mazo mazo;
+
 
     private List<Listener> listeners = new ArrayList<>();
 
@@ -69,13 +72,19 @@ public abstract class Solitario implements Serializable {
     }
 
     public boolean moverCarta(PilaDeCartas origen, PilaDeCartas destino) {
+
         Carta cartaSacada = origen.sacarCarta(false);
 
         if (!destino.agregarCarta(cartaSacada)){
-            origen.agregarCarta(cartaSacada);
+            origen.peek().setBocaAbajo(true);
+            origen.push(cartaSacada);
+
+
             return false;
         }
+
         sumarMovimiento();
+        notificar();
         return true;
     }
 
@@ -84,7 +93,7 @@ public abstract class Solitario implements Serializable {
         do{
             if ( ! (pilaActual.agregarCarta(origen.sacarCarta(false)))) {
                 while (!(pilaActual.isEmpty())) {
-                    origen.agregarCarta(pilaActual.sacarCarta(false));
+                    origen.push(pilaActual.pop());
                 }
                 return null;
             }
@@ -97,25 +106,36 @@ public abstract class Solitario implements Serializable {
         while (!pilaAux.isEmpty()) {
             if (!(destino.agregarCarta(pilaAux.pop()))) {
                 while (destino.peek() != ultimaCarta) {
-                    origen.agregarCarta(destino.sacarCarta(false));
+                    origen.push(destino.pop());
                 }
                 while (!(pilaAux.isEmpty())) {
-                    origen.agregarCarta(pilaAux.sacarCarta(false));
+                    origen.push(pilaAux.pop());
                 }
                 return false;
             }
         }
         sumarMovimiento();
+        notificar();
         return true;
     }
 
     public boolean moverCartas(PilaDeCartas origen, PilaDeCartas destino, Carta primeraCarta) {
-        if(!destino.puedeAgregarCarta(primeraCarta)) return false;
+
+        if(!destino.puedeAgregarCarta(primeraCarta)) {
+            notificar();
+            return false;
+        }
+
         PilaDeCartas pilaAux = moverCartasAPilaAuxiliar(origen, primeraCarta);
-        if (pilaAux == null) return false;
+
+        if (pilaAux == null){
+            notificar();
+            return false;
+        }
         else {
             return moverCartasALaNuevaPila(origen, destino, pilaAux);
         }
+
     }
 
     public void serializar(OutputStream os) throws IOException {
@@ -142,6 +162,20 @@ public abstract class Solitario implements Serializable {
 
     public void setEstadoJuego(EstadoJuego estado){this.estadoJuego=estado;}
 
+    public void setCartaOrigen(Carta carta){this.cartaOrigen=carta;}
+
+    public void setPilaOrigen(PilaDeCartas pila){this.pilaOrigen=pila;}
+
+
+    public PilaDeCartas getPilaOrigen(){
+        return this.pilaOrigen;
+    }
+
+    public Carta getCartaOrigen(){
+        return this.cartaOrigen;
+    }
+
+
     public Mazo getMazo(){
         return this.mazo;
     }
@@ -151,8 +185,9 @@ public abstract class Solitario implements Serializable {
     }
 
     public void agregarListener(Listener l) {listeners.add(l);}
+
     protected void notificar(){
-        for(Listener l : listeners){
+        for (Listener l : listeners) {
             l.escuchar();
         }
     }

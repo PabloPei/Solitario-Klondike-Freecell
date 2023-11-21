@@ -3,6 +3,7 @@ package ui.freecell;
 import freecell.PilaSuperior;
 import javafx.geometry.Insets;
 import javafx.scene.image.ImageView;
+import modelosolitario.Solitario;
 import ui.Configuracion;
 import ui.VistaCarta;
 import ui.VistaPilaDeCartas;
@@ -10,7 +11,9 @@ import ui.VistaPilaDeCartas;
 public class VistaPilaSuperior extends VistaPilaDeCartas {
     private static final int PADDING = 2;
 
-    public VistaPilaSuperior(PilaSuperior pilaSuperior){
+    public VistaPilaSuperior(Solitario solitario, PilaSuperior pila){
+        super(solitario, pila, false);
+        /*
         super(pilaSuperior, false);
         if (pilaSuperior.isEmpty()){
             setStyle(Configuracion.ESTILO_BORDE);
@@ -20,5 +23,7 @@ public class VistaPilaSuperior extends VistaPilaDeCartas {
             imagen.setVisible(false);
             getChildren().add(imagen);
         }
+
+         */
     }
 }

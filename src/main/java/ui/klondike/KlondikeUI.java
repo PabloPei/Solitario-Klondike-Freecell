@@ -4,6 +4,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import klondike.SolitarioKlondike;
+import modeloelementos.Palo;
 import modelosolitario.Cimiento;
 import ui.*;
 import java.util.ArrayList;
@@ -27,15 +28,14 @@ public class KlondikeUI extends GridPane {
         tablero.setVgap(Configuracion.ALTO_VENTANA/80);
 
         tablero.add(new VistaMazo(solitario),0,0);
-        tablero.add(new VistaDescarte(solitario),1,0);
+        tablero.add(new VistaCimiento(solitario, solitario.getDescarte(),false),1,0);
 
-        ArrayList<VistaCimiento> vistaCimientos = new ArrayList<>();
 
-        ArrayList<Cimiento> cimientos = solitario.getCimientos();
-        for(int i = 0; i < 4; i++){
-            vistaCimientos.add(new VistaCimiento(cimientos.get(i)));
-            tablero.add(vistaCimientos.get(i), 2 + i, 0);
+        for(Palo palo : Palo.values()){
+            VistaPilaDeCartas vistaCimiento = new VistaPilaDeCartas(solitario, solitario.getCimientos().get(palo.ordinal()),false);
+            tablero.add(vistaCimiento, 2 + palo.ordinal(), 0);
         }
+
 
         VistaTableau tableau = new VistaTableau(solitario);
         tablero.setColumnSpan(tableau,7);

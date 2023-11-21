@@ -22,6 +22,7 @@ public class FreecellUI extends GridPane {
     }
 
     public void mostrar() {
+        /*
         GridPane tablero = new GridPane();
         tablero.setHgap(Configuracion.ANCHO_VENTANA/80);
         tablero.setVgap(Configuracion.ALTO_VENTANA/80);
@@ -53,5 +54,7 @@ public class FreecellUI extends GridPane {
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
+
+         */
     }
 }
