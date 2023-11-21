@@ -1,10 +1,6 @@
 package ui;
 
-import javafx.event.EventHandler;
-import javafx.scene.effect.DropShadow;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
 import modeloelementos.PilaDeCartas;
 
 

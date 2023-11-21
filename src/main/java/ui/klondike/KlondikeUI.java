@@ -1,7 +1,6 @@
 package ui.klondike;
 
 import javafx.scene.Scene;
-import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import klondike.SolitarioKlondike;

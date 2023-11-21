@@ -3,8 +3,6 @@ package ui.freecell;
 import freecell.PilaSuperior;
 import javafx.geometry.Insets;
 import javafx.scene.image.ImageView;
-import modeloelementos.PilaDeCartas;
-import modelosolitario.Cimiento;
 import ui.Configuracion;
 import ui.VistaCarta;
 import ui.VistaPilaDeCartas;

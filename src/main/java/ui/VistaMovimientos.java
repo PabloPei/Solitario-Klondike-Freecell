@@ -2,9 +2,7 @@ package ui;
 
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
-import klondike.SolitarioKlondike;
 import modelosolitario.Solitario;
-import ui.Listener;
 
 public class VistaMovimientos extends HBox implements Listener {
 
