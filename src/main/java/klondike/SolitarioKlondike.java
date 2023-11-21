@@ -44,7 +44,8 @@ public class SolitarioKlondike extends SolitarioConCimientos implements Serializ
     public boolean robarCartasDelMazo() {
         Mazo mazo = getMazo();
         Descarte descarte = getDescarte();
-
+        System.out.println(descarte);
+        System.out.println(mazo);
         if (descarte.isEmpty() && mazo.isEmpty())
             return false;
 
@@ -52,11 +53,12 @@ public class SolitarioKlondike extends SolitarioConCimientos implements Serializ
         for (int i = 0; i < descarte.getCantidadCartas(); i++) {
             if(mazo.isEmpty()){
                 mazo.agregarDescarte(descarte);
-                descarte.agregarCarta(null);
             }
-            Carta carta = mazo.sacarCarta(false);
-            if( ! descarte.agregarCarta(carta))
-                break;
+            else {
+                Carta carta = mazo.sacarCarta(false);
+                descarte.agregarCarta(carta);
+
+            }
         }
         sumarMovimiento();
         notificar();

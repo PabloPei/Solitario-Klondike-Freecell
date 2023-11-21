@@ -4,12 +4,11 @@ import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import klondike.SolitarioKlondike;
+import modeloelementos.EstadoJuego;
 import modeloelementos.Palo;
-import modelosolitario.Cimiento;
 import ui.*;
-import java.util.ArrayList;
 
-public class KlondikeUI extends GridPane {
+public class KlondikeUI extends GridPane implements Listener{
 
     private Stage stage;
     private SolitarioKlondike solitario;
@@ -28,7 +27,7 @@ public class KlondikeUI extends GridPane {
         tablero.setVgap(Configuracion.ALTO_VENTANA/80);
 
         tablero.add(new VistaMazo(solitario),0,0);
-        tablero.add(new VistaCimiento(solitario, solitario.getDescarte(),false),1,0);
+        tablero.add(new VistaDescarte(solitario, solitario.getDescarte(),false),1,0);
 
 
         for(Palo palo : Palo.values()){
@@ -48,5 +47,13 @@ public class KlondikeUI extends GridPane {
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
+    }
+
+
+    @Override
+    public void escuchar() {
+        if ( solitario.verificarEstado()== EstadoJuego.GANADO){
+            
+        }
     }
 }

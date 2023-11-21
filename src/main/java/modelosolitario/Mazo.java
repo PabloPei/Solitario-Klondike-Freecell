@@ -37,12 +37,6 @@ public class Mazo extends PilaDeCartas {
         Collections.shuffle(this, seed);
     }
 
-    private static void pasarCartasDeUnMazoAOtro(Mazo mazoViejo, Mazo mazoNuevo){
-        while (!mazoViejo.isEmpty()){
-            mazoNuevo.agregarCarta(mazoViejo.sacarCarta(true));
-        }
-    }
-
     private void agregarCartasDesdeDescarte(Descarte descarte){
         while (!descarte.isEmpty()){
             this.agregarCarta(descarte.sacarCarta(true));
@@ -51,12 +45,8 @@ public class Mazo extends PilaDeCartas {
 
     public void agregarDescarte(Descarte descarte){
         if (descarte.isEmpty()) return;
-
-        Mazo mazoTemp = new Mazo();
-        mazoTemp.removeAllElements();
-        pasarCartasDeUnMazoAOtro(this, mazoTemp);
-        mazoTemp.agregarCartasDesdeDescarte(descarte);
-        pasarCartasDeUnMazoAOtro(mazoTemp, this);
+        this.agregarCartasDesdeDescarte(descarte);
+        this.invertir();
     }
 
     public static Mazo deSerializar(InputStream is) throws IOException, ClassNotFoundException {

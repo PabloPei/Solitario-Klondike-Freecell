@@ -9,15 +9,9 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Mazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Mazo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Configuracion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Configuracion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaCarta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VistaCarta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaCimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VistaCimiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaCimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VistaDescarte.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaPilaDeCartas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VistaPilaDeCartas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/freecell/FreecellUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/freecell/FreecellUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/freecell/VistaPilaSuperior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/freecell/VistaPilaSuperior.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/klondike/KlondikeUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/klondike/KlondikeUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaDescarte.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaTableau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaTableau.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -110,7 +110,7 @@ public class VistaPilaDeCartas extends StackPane implements Listener {
 
 
     public PilaDeCartas getPilaDeCartas(){return this.pila; }
-
+    public Solitario getSolitario(){return this.solitario; }
     @Override
     public void escuchar() {
         //actualizo la pantalla

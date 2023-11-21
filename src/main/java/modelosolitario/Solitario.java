@@ -71,23 +71,6 @@ public abstract class Solitario implements Serializable {
         this.movimientos++;
     }
 
-    public boolean moverCarta(PilaDeCartas origen, PilaDeCartas destino) {
-
-        Carta cartaSacada = origen.sacarCarta(false);
-
-        if (!destino.agregarCarta(cartaSacada)){
-            origen.peek().setBocaAbajo(true);
-            origen.push(cartaSacada);
-
-
-            return false;
-        }
-
-        sumarMovimiento();
-        notificar();
-        return true;
-    }
-
     private PilaDeCartas moverCartasAPilaAuxiliar(PilaDeCartas origen, Carta primeraCarta){
         PilaDeCartas pilaActual = new PilaDeCartas();
         do{
