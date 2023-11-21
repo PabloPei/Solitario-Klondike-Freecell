@@ -38,9 +38,9 @@ public class KlondikeUI extends GridPane {
             tablero.add(vistaCimientos.get(i), 2 + i, 0);
         }
 
-        VistaTableu tableu = new VistaTableu(solitario);
-        tablero.setColumnSpan(tableu,7);
-        tablero.add(tableu,1,1);
+        VistaTableau tableau = new VistaTableau(solitario);
+        tablero.setColumnSpan(tableau,7);
+        tablero.add(tableau,1,1);
 
         tablero.add(new VistaMovimientos(solitario), 8,0 );
 

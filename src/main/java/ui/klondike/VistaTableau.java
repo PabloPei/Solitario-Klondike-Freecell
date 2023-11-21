@@ -13,10 +13,10 @@ import ui.Configuracion;
 import ui.VistaPilaDeCartas;
 
 
-public class VistaTableu extends GridPane {
+public class VistaTableau extends GridPane {
 
 
-    public VistaTableu(SolitarioKlondike solitario) {
+    public VistaTableau(SolitarioKlondike solitario) {
 
         for (int i = 0; i < solitario.getPilas().size(); i++) {
             VistaPilaDeCartas vistaPila = new VistaPilaDeCartas(solitario.getPilas().get(i), true);

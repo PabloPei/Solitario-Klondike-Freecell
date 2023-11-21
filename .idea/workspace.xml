@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Cree la clase VistaDescarte">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaMovimientos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VistaMovimientos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/freecell/FreecellUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/freecell/FreecellUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaTableu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaTableau.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
