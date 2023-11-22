@@ -18,7 +18,6 @@ public class KlondikeUI extends SolitarioUI{
     public void mostrar() {
 
         SolitarioKlondike solitario = (SolitarioKlondike) getSolitario();
-        solitario.agregarListener(this);
 
         GridPane tablero = new GridPane();
         tablero.setStyle(Configuracion.BACKGROUD_COLOR);
@@ -35,9 +34,10 @@ public class KlondikeUI extends SolitarioUI{
         }
 
 
-        VistaTableau tableau = new VistaTableau(solitario);
-        tablero.setColumnSpan(tableau,7);
-        tablero.add(tableau,1,1);
+        for (int i = 0; i < solitario.getPilas().size(); i++) {
+            VistaPilaDeCartas vistaPila = new VistaPilaDeCartas(solitario, solitario.getPilas().get(i), true);
+            tablero.add(vistaPila,  1+i, 1);
+        }
 
         tablero.add(new VistaMovimientos(solitario), 8,0 );
 
