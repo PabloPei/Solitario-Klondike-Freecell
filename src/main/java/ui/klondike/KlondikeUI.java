@@ -20,6 +20,7 @@ public class KlondikeUI extends GridPane implements Listener{
 
     public void mostrar() {
 
+        solitario.agregarListener(this);
 
         GridPane tablero = new GridPane();
         tablero.setStyle(Configuracion.BACKGROUD_COLOR);
@@ -52,8 +53,10 @@ public class KlondikeUI extends GridPane implements Listener{
 
     @Override
     public void escuchar() {
-        if ( solitario.verificarEstado()== EstadoJuego.GANADO){
-            
+
+        if ( solitario.verificarEstado() == EstadoJuego.GANADO){
+            System.out.println("gano");
+            //hacer animacion de victoria y terminar juego
         }
     }
 }

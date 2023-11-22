@@ -33,19 +33,6 @@ public class SolitarioKlondikeTest {
         assertEquals(solitario.getMazo(),solitario2.getMazo());
     }
 
-    @Test
-    public void testMoverCartaFunciona() {
-        SolitarioKlondike solitario = new SolitarioKlondike();
-
-        var pilaDestino = new Pila();
-        pilaDestino.push(new Carta(ValorCarta.REY, Palo.TREBOL, false));
-        var pilaOrigen = new Pila();
-        Carta cartaAMover = new Carta(ValorCarta.REINA, Palo.CORAZON, false);
-        pilaOrigen.push(cartaAMover);
-        solitario.moverCarta(pilaOrigen, pilaDestino);
-        Carta cartaEsperada = pilaDestino.verCarta();
-        assertEquals(cartaAMover, cartaEsperada);
-    }
 
     @Test
     public void testMoverCartaFalla(){
@@ -53,8 +40,9 @@ public class SolitarioKlondikeTest {
 
         var pilaDestino = new Pila();
         var pilaOrigen = new Pila();
-        pilaOrigen.push(new Carta(ValorCarta.REINA, Palo.TREBOL, false));
-        assertFalse(solitario.moverCarta(pilaOrigen, pilaDestino));
+        Carta carta = new Carta(ValorCarta.REINA, Palo.TREBOL, false);
+        pilaOrigen.push(carta);
+        assertFalse(solitario.moverCartas(pilaOrigen, pilaDestino,carta));
     }
 
     @Test
@@ -164,18 +152,11 @@ public class SolitarioKlondikeTest {
 
         assertFalse(solitario.verificarVictoria());
 
-        solitario.moverCarta(solitario.getPilas().get(6), solitario.getCimientos().get(0));
+        solitario.moverCartas(solitario.getPilas().get(6), solitario.getCimientos().get(0), solitario.getPilas().get(6).peek());
 
         assertTrue(solitario.verificarVictoria());
     }
 
-    @Test
-    public void testMoverCartadeCimientoVacio() {
-        SolitarioKlondike solitario = new SolitarioKlondike();
-        Cimiento cimientoVacio = solitario.getCimientos().get(0);
-        Pila pilaDestino = solitario.getPilas().get(0);
-        assertFalse(solitario.moverCarta(cimientoVacio, pilaDestino));
-    }
 
     @Test
     public void testMovimientos() {

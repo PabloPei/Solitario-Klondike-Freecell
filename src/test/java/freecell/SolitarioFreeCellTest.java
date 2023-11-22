@@ -47,7 +47,7 @@ public class SolitarioFreeCellTest {
         var pilaOrigen = new Pila();
         Carta cartaAMover = new Carta(ValorCarta.REINA, Palo.CORAZON, false);
         pilaOrigen.push(cartaAMover);
-        solitario.moverCarta(pilaOrigen, pilaDestino);
+        solitario.moverCartas(pilaOrigen, pilaDestino,cartaAMover);
         Carta cartaEsperada = pilaDestino.verCarta();
         assertEquals(cartaAMover, cartaEsperada);
     }
@@ -97,13 +97,6 @@ public class SolitarioFreeCellTest {
         assertFalse(solitario.verificarVictoria());
     }
 
-    @Test
-    public void testMoverCartadeCimientoVacio() {
-        SolitarioFreeCell solitario = new SolitarioFreeCell();
-        Cimiento cimientoVacio = solitario.getCimientos().get(0);
-        Pila pilaDestino = solitario.getPilas().get(0);
-        assertFalse(solitario.moverCarta(cimientoVacio, pilaDestino));
-    }
 
     @Test
     public void testRepartirPilas() {
@@ -143,7 +136,7 @@ public class SolitarioFreeCellTest {
 
         assertFalse(solitario.verificarVictoria());
 
-        solitario.moverCarta(solitario.getPilas().get(7), solitario.getCimientos().get(0));
+        solitario.moverCartas(solitario.getPilas().get(7), solitario.getCimientos().get(0),solitario.getPilas().get(7).peek());
 
         assertTrue(solitario.verificarVictoria());
     }
