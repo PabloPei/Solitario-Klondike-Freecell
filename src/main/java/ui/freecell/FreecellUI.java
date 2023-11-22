@@ -34,17 +34,17 @@ public class FreecellUI extends SolitarioUI {
 
         for(Palo palo : Palo.values()){
             VistaPilaDeCartas vistaCimiento = new VistaPilaDeCartas(solitario, solitario.getCimientos().get(palo.ordinal()),false);
-            tablero.add(vistaCimiento, 5 + palo.ordinal(), 0);
+            tablero.add(vistaCimiento, 4 + palo.ordinal(), 0);
         }
 
         for (int i = 0; i < solitario.getPilas().size(); i++) {
-            VistaPilaDeCartas vistaPila = new VistaPilaDeCartas(solitario, solitario.getPilas().get(i), true);
-            tablero.add(vistaPila,  i, 10);
+                VistaPilaDeCartas vistaPila = new VistaPilaDeCartas(solitario, solitario.getPilas().get(i), true);
+                tablero.add(vistaPila, i, 1);
         }
 
-        tablero.add(new VistaMovimientos(solitario), 12,1 );
+        tablero.add(new VistaMovimientos(solitario), 9,0);
 
-        Scene scene = new Scene(tablero, Configuracion.ANCHO_VENTANA*1.2, Configuracion.ALTO_VENTANA);
+        Scene scene = new Scene(tablero, Configuracion.ANCHO_VENTANA, Configuracion.ALTO_VENTANA);
 
         Stage stage = getStage();
         stage.setResizable(false);

@@ -85,39 +85,47 @@ public abstract class Solitario implements Serializable {
     }
 
     private boolean moverCartasALaNuevaPila(PilaDeCartas origen, PilaDeCartas destino, PilaDeCartas pilaAux){
-        Carta ultimaCarta = origen.verCarta();
+
+        Carta ultimaCarta = pilaAux.verCarta();
+
         while (!pilaAux.isEmpty()) {
-            if (!(destino.agregarCarta(pilaAux.pop()))) {
-                while (destino.peek() != ultimaCarta) {
-                    origen.push(destino.pop());
-                }
+
+            Carta cartaAAgregar;
+            Carta cartaAux = pilaAux.pop();
+
+            if (!(destino.agregarCarta(cartaAux))) {
+
+                do {
+                    cartaAAgregar = destino.pop();
+                    origen.push(cartaAAgregar);
+                } while (cartaAAgregar != ultimaCarta);
+
+                origen.push(cartaAux);
+
                 while (!(pilaAux.isEmpty())) {
                     origen.push(pilaAux.pop());
                 }
                 return false;
             }
         }
-        sumarMovimiento();
-        notificar();
         return true;
     }
 
     public boolean moverCartas(PilaDeCartas origen, PilaDeCartas destino, Carta primeraCarta) {
 
-        if(!destino.puedeAgregarCarta(primeraCarta)) {
-            notificar();
-            return false;
+        boolean movimiento_valido = false;
+
+        if(destino.puedeAgregarCarta(primeraCarta)) {
+
+            PilaDeCartas pilaAux = moverCartasAPilaAuxiliar(origen, primeraCarta);
+
+            if (pilaAux != null){
+                movimiento_valido = moverCartasALaNuevaPila(origen, destino, pilaAux);
+            }
         }
 
-        PilaDeCartas pilaAux = moverCartasAPilaAuxiliar(origen, primeraCarta);
-
-        if (pilaAux == null){
-            notificar();
-            return false;
-        }
-        else {
-            return moverCartasALaNuevaPila(origen, destino, pilaAux);
-        }
+        notificar();
+        return movimiento_valido;
 
     }
 
@@ -139,11 +147,6 @@ public abstract class Solitario implements Serializable {
         return this.movimientos;
     }
 
-    public EstadoJuego getEstadoJuego(){
-        return this.estadoJuego;
-    }
-
-    public void setEstadoJuego(EstadoJuego estado){this.estadoJuego=estado;}
 
     public void setCartaOrigen(Carta carta){this.cartaOrigen=carta;}
 

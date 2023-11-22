@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Cree la clase VistaDescarte">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaSeleccionSolitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VistaSeleccionSolitario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/klondike/KlondikeUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/klondike/KlondikeUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaTableau.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/freecell/FreecellUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/freecell/FreecellUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +224,7 @@
       <workItem from="1700146307396" duration="7054000" />
       <workItem from="1700154430204" duration="229000" />
       <workItem from="1700154670536" duration="10839000" />
-      <workItem from="1700684197447" duration="2733000" />
+      <workItem from="1700684197447" duration="6815000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />
@@ -332,12 +332,16 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/Klondike/SolitarioKlondikeTest.java</url>
           <line>75</line>
-          <properties class="klondike.SolitarioKlondikeTest" method="testMoverConjuntoCartasFallaPorColor">
+          <properties class="klondike.SolitarioKlondikeTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.EmptyStackException" package="java.util" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

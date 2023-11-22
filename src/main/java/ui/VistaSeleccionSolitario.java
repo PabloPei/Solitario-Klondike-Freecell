@@ -23,9 +23,6 @@ import java.util.ArrayList;
 public class VistaSeleccionSolitario extends GridPane {
 
 
-    private static final String RUTAIMAGENTIPOSSOLITARIOS = "file:src/main/recursos/imagenesSolitarios/";
-
-
     public VistaSeleccionSolitario(Stage stage) {
 
         setStyle(Configuracion.BACKGROUD_COLOR);
@@ -42,7 +39,7 @@ public class VistaSeleccionSolitario extends GridPane {
 
         // Agrego un boton por cada tipo de solitario
         for (TiposSolitario tipo : TiposSolitario.values()) {
-            String rutaImagen = RUTAIMAGENTIPOSSOLITARIOS + tipo.toString() + ".png";
+            String rutaImagen = Configuracion.RUTA_RECURSOS + "imagenesSolitarios/" + tipo.toString() + ".png";
             Image imagenSolitario = new Image(rutaImagen);
             ImageView imageView = new ImageView(imagenSolitario);
             Button seleccionarButton = new Button("",imageView);
