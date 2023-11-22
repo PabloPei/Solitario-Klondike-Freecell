@@ -1,11 +1,14 @@
-package ui;
+package ui.klondike;
 
 import javafx.scene.layout.StackPane;
 import modeloelementos.Carta;
 import modeloelementos.PilaDeCartas;
 import modelosolitario.Solitario;
+import ui.Configuracion;
+import ui.VistaCarta;
+import ui.VistaPilaDeCartas;
 
-public class VistaDescarte extends VistaPilaDeCartas{
+public class VistaDescarte extends VistaPilaDeCartas {
 
     public VistaDescarte(Solitario solitario, PilaDeCartas pilaDeCartas, boolean corrimientoY) {
         super(solitario, pilaDeCartas, corrimientoY);

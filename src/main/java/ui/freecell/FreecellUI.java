@@ -25,11 +25,11 @@ public class FreecellUI extends SolitarioUI {
 
 
         SolitarioFreeCell solitario = (SolitarioFreeCell) getSolitario();
-        ArrayList<VistaPilaSuperior> vistaPilasSuperiores = new ArrayList<>();
         ArrayList<PilaSuperior> pilasSuperiores = solitario.getPilasSuperiores();
+
         for(int i = 0; i < 4; i++){
-            vistaPilasSuperiores.add(new VistaPilaSuperior(solitario, pilasSuperiores.get(i)));
-            tablero.add(vistaPilasSuperiores.get(i), i, 0);
+            VistaPilaDeCartas pilaSuperior = new VistaPilaDeCartas(solitario, pilasSuperiores.get(i), false);
+            tablero.add(pilaSuperior, i, 0);
         }
 
         for(Palo palo : Palo.values()){

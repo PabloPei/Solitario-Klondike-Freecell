@@ -1,13 +1,9 @@
 package ui.klondike;
 
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import klondike.SolitarioKlondike;
-import modeloelementos.EstadoJuego;
 import modeloelementos.Palo;
 import ui.*;
 
