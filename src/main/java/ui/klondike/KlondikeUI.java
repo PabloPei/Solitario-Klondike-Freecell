@@ -1,25 +1,27 @@
 package ui.klondike;
 
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import klondike.SolitarioKlondike;
 import modeloelementos.EstadoJuego;
 import modeloelementos.Palo;
 import ui.*;
 
-public class KlondikeUI extends GridPane implements Listener{
+public class KlondikeUI extends SolitarioUI{
 
-    private final Stage stage;
-    private final SolitarioKlondike solitario;
 
     public KlondikeUI(Stage stage, SolitarioKlondike solitario) {
-        this.stage = stage;
-        this.solitario = solitario;
+        super(stage, solitario);
     }
 
+    @Override
     public void mostrar() {
 
+        SolitarioKlondike solitario = (SolitarioKlondike) getSolitario();
         solitario.agregarListener(this);
 
         GridPane tablero = new GridPane();
@@ -45,18 +47,10 @@ public class KlondikeUI extends GridPane implements Listener{
 
         Scene scene = new Scene(tablero, Configuracion.ANCHO_VENTANA, Configuracion.ALTO_VENTANA);
 
+        Stage stage = getStage();
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }
 
-
-    @Override
-    public void escuchar() {
-
-        if ( solitario.verificarEstado() == EstadoJuego.GANADO){
-            System.out.println("gano");
-            //hacer animacion de victoria y terminar juego
-        }
-    }
 }

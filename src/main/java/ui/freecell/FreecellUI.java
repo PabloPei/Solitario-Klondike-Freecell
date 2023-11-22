@@ -11,14 +11,10 @@ import ui.*;
 
 import java.util.ArrayList;
 
-public class FreecellUI extends GridPane {
-
-    private final Stage stage;
-    private final SolitarioFreeCell solitario;
+public class FreecellUI extends SolitarioUI {
 
     public FreecellUI(Stage stage, SolitarioFreeCell solitario) {
-        this.stage = stage;
-        this.solitario = solitario;
+        super(stage, solitario);
     }
 
     public void mostrar() {
@@ -28,6 +24,7 @@ public class FreecellUI extends GridPane {
         tablero.setVgap(Configuracion.ALTO_VENTANA/80);
 
 
+        SolitarioFreeCell solitario = (SolitarioFreeCell) getSolitario();
         ArrayList<VistaPilaSuperior> vistaPilasSuperiores = new ArrayList<>();
         ArrayList<PilaSuperior> pilasSuperiores = solitario.getPilasSuperiores();
         for(int i = 0; i < 4; i++){
@@ -49,6 +46,7 @@ public class FreecellUI extends GridPane {
 
         Scene scene = new Scene(tablero, Configuracion.ANCHO_VENTANA*1.2, Configuracion.ALTO_VENTANA);
 
+        Stage stage = getStage();
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();

@@ -9,10 +9,15 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.scene.image.ImageView;
 import klondike.SolitarioKlondike;
+import modeloelementos.Carta;
+import modeloelementos.Palo;
+import modeloelementos.PilaDeCartas;
+import modeloelementos.ValorCarta;
 import modelosolitario.*;
 import ui.freecell.FreecellUI;
 import ui.klondike.KlondikeUI;
 
+import java.util.ArrayList;
 
 
 public class VistaSeleccionSolitario extends GridPane {
@@ -56,7 +61,7 @@ public class VistaSeleccionSolitario extends GridPane {
                                 ui.mostrar();
                             }
                             case KLONDIKE -> {
-                          /*
+
                                 ArrayList<Cimiento> cimientos = new ArrayList<>();
                                 cimientos.add( new Cimiento(12, Palo.PICA));
                                 cimientos.add( new Cimiento(13,Palo.TREBOL));
@@ -82,9 +87,11 @@ public class VistaSeleccionSolitario extends GridPane {
                                 SolitarioKlondike solitario = new SolitarioKlondike(mazo, pilas, cimientos, descarte);
 
                                 KlondikeUI ui = new KlondikeUI(stage, solitario);
-                           */
+                           /*
                                 SolitarioKlondike solitario = new SolitarioKlondike();
                                 KlondikeUI ui = new KlondikeUI(stage, solitario);
+
+                            */
                                 ui.mostrar();
                             }
                         }

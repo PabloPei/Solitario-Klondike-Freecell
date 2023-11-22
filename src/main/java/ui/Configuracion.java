@@ -13,5 +13,5 @@ public class Configuracion {
     public static final String BOTON_SELECCION_MOUSE_ARRIBA = "-fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10, 0.5 , 0 , 0 );";
     public static final String BOTON_SELECCION_ESTADO_NORMAL = "-fx-background-color: WHITE; -fx-padding:5,5,5,5;";
     public static final String ESTILO_TITULO = "-fx-font-family: 'Courier New'; -fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #FFFFFF; -fx-alignment: center";
-    public static final String rutaImagenesCartas = "file:src/main/recursos/imagenesCartas/";
+    public static final String RUTA_RECURSOS = "file:src/main/recursos/";
 }

@@ -38,7 +38,7 @@ public class VistaPilaDeCartas extends StackPane implements Listener {
         int corrimiento = 0;
 
         if (pila.isEmpty()) {
-            final ImageView imagen = new ImageView(new Image(Configuracion.rutaImagenesCartas + "libre.png"));
+            final ImageView imagen = new ImageView(new Image(Configuracion.RUTA_RECURSOS + "imagenesCartas/" + "libre.png"));
             imagen.setOnMouseClicked(event -> manejoPilaVaciaClick());
             imagen.setFitHeight( Configuracion.ALTO_VENTANA / 6);
             imagen.setFitWidth(Configuracion.ANCHO_VENTANA / 13);

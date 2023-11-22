@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Cree la clase VistaDescarte">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ui/SolitarioUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/Configuracion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Configuracion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaCarta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VistaCarta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaMovimientos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VistaMovimientos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaPilaDeCartas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VistaPilaDeCartas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaSeleccionSolitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VistaSeleccionSolitario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/freecell/FreecellUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/freecell/FreecellUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/freecell/VistaPilaSuperior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/freecell/VistaPilaSuperior.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/klondike/KlondikeUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/klondike/KlondikeUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaMazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaMazo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/recursos/imagenesSolitarios/victoria.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/recursos/imagenesSolitarios/victoria.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,6 +230,7 @@
       <workItem from="1700146307396" duration="7054000" />
       <workItem from="1700154430204" duration="229000" />
       <workItem from="1700154670536" duration="10839000" />
+      <workItem from="1700684197447" duration="2018000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />
