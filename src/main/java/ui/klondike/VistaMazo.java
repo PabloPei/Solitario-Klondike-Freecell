@@ -10,7 +10,7 @@ import ui.Configuracion;
 public class VistaMazo extends HBox {
 
 
-    private SolitarioKlondike solitario;
+    private final SolitarioKlondike solitario;
 
 
     public VistaMazo(SolitarioKlondike s){
@@ -25,10 +25,7 @@ public class VistaMazo extends HBox {
 
         getChildren().add(boton);
 
-        boton.setOnMousePressed(mouseEvent -> {
-                    ((Button)mouseEvent.getSource()).setStyle(Configuracion.BOTON_APRETADO);
-
-        });
+        boton.setOnMousePressed(mouseEvent -> ((Button)mouseEvent.getSource()).setStyle(Configuracion.BOTON_APRETADO));
 
         boton.setOnMouseReleased(mouseEvent -> {
             ((Button) mouseEvent.getSource()).setStyle(Configuracion.BOTON_ESTADO_NORMAL);

@@ -9,7 +9,7 @@ import modeloelementos.Carta;
 public class VistaCarta extends ImageView {
 
     private static final String rutaImagenesCartas = "file:src/main/recursos/imagenesCartas/";
-    private Carta carta;
+    private final Carta carta;
 
     public VistaCarta(Carta carta) {
 
@@ -38,8 +38,7 @@ public class VistaCarta extends ImageView {
     public Carta getCarta(){ return this.carta; }
 
     public static Image getImagenCarta(Carta carta){
-        Image imagen = new Image(rutaImagenesCartas + carta.getPalo() + "_" + carta.getValor() + ".png");
-        return imagen;
+        return new Image(rutaImagenesCartas + carta.getPalo() + "_" + carta.getValor() + ".png");
     }
 }
 

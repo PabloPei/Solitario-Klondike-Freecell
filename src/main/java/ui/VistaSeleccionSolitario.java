@@ -9,15 +9,10 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.scene.image.ImageView;
 import klondike.SolitarioKlondike;
-import modeloelementos.Carta;
-import modeloelementos.Palo;
-import modeloelementos.PilaDeCartas;
-import modeloelementos.ValorCarta;
 import modelosolitario.*;
 import ui.freecell.FreecellUI;
 import ui.klondike.KlondikeUI;
 
-import java.util.ArrayList;
 
 
 public class VistaSeleccionSolitario extends GridPane {
@@ -48,13 +43,9 @@ public class VistaSeleccionSolitario extends GridPane {
             Button seleccionarButton = new Button("",imageView);
             seleccionarButton.setStyle(Configuracion.BOTON_SELECCION_ESTADO_NORMAL);
 
-            seleccionarButton.setOnMouseEntered(mouseEvent  -> {
-                seleccionarButton.setStyle(Configuracion.BOTON_SELECCION_MOUSE_ARRIBA);
-            });
+            seleccionarButton.setOnMouseEntered(mouseEvent  -> seleccionarButton.setStyle(Configuracion.BOTON_SELECCION_MOUSE_ARRIBA));
 
-            seleccionarButton.setOnMouseExited(mouseEvent  -> {
-                seleccionarButton.setStyle(Configuracion.BOTON_SELECCION_ESTADO_NORMAL);
-            });
+            seleccionarButton.setOnMouseExited(mouseEvent  -> seleccionarButton.setStyle(Configuracion.BOTON_SELECCION_ESTADO_NORMAL));
 
 
             seleccionarButton.setOnAction(e -> {

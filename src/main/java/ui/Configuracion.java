@@ -1,6 +1,5 @@
 package ui;
 
-import javafx.stage.Screen;
 
 public class Configuracion {
 

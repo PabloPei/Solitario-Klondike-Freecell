@@ -6,8 +6,8 @@ import modelosolitario.Solitario;
 
 public class VistaMovimientos extends HBox implements Listener {
 
-    private Solitario solitario;
-    private Label label;  // Declarar label como un atributo de clase
+    private final Solitario solitario;
+    private final Label label;  // Declarar label como un atributo de clase
 
     public VistaMovimientos(Solitario s) {
         this.solitario = s;

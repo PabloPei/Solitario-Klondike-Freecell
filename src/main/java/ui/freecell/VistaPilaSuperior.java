@@ -13,9 +13,7 @@ public class VistaPilaSuperior extends VistaPilaDeCartas {
 
     public VistaPilaSuperior(Solitario solitario, PilaSuperior pila){
         super(solitario, pila, false);
-        /*
-        super(pilaSuperior, false);
-        if (pilaSuperior.isEmpty()){
+        if (pila.isEmpty()){
             setStyle(Configuracion.ESTILO_BORDE);
             setPadding(new Insets(PADDING));
             setPrefSize(Configuracion.ANCHO_VENTANA/13,Configuracion.ALTO_VENTANA/6);
@@ -23,7 +21,5 @@ public class VistaPilaSuperior extends VistaPilaDeCartas {
             imagen.setVisible(false);
             getChildren().add(imagen);
         }
-
-         */
     }
 }

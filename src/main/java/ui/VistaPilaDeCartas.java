@@ -1,6 +1,5 @@
 package ui;
 
-import javafx.scene.Node;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
@@ -12,9 +11,9 @@ import modelosolitario.Solitario;
 public class VistaPilaDeCartas extends StackPane implements Listener {
 
     private static final double posicionY = 20;
-    private Solitario solitario;
-    private PilaDeCartas pila;
-    private boolean corrimiento;
+    private final Solitario solitario;
+    private final PilaDeCartas pila;
+    private final boolean corrimiento;
 
     public VistaPilaDeCartas(Solitario solitario, PilaDeCartas pilaDeCartas, boolean corrimientoY) {
 
@@ -40,7 +39,7 @@ public class VistaPilaDeCartas extends StackPane implements Listener {
 
         if (pila.isEmpty()) {
             final ImageView imagen = new ImageView(new Image(Configuracion.rutaImagenesCartas + "libre.png"));
-            imagen.setOnMouseClicked(event -> manejoPilaVaciaClick(imagen, this));
+            imagen.setOnMouseClicked(event -> manejoPilaVaciaClick());
             imagen.setFitHeight( Configuracion.ALTO_VENTANA / 6);
             imagen.setFitWidth(Configuracion.ANCHO_VENTANA / 13);
             getChildren().add(imagen);
@@ -93,7 +92,7 @@ public class VistaPilaDeCartas extends StackPane implements Listener {
         }
     }
 
-    protected void manejoPilaVaciaClick(ImageView vistaCarta, VistaPilaDeCartas vistaPila) {
+    protected void manejoPilaVaciaClick() {
 
 
         if (solitario.getPilaOrigen() == null) {

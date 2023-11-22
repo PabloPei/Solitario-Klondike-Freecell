@@ -10,8 +10,8 @@ import ui.*;
 
 public class KlondikeUI extends GridPane implements Listener{
 
-    private Stage stage;
-    private SolitarioKlondike solitario;
+    private final Stage stage;
+    private final SolitarioKlondike solitario;
 
     public KlondikeUI(Stage stage, SolitarioKlondike solitario) {
         this.stage = stage;

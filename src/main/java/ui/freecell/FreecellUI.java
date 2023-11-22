@@ -5,7 +5,7 @@ import freecell.SolitarioFreeCell;
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import modelosolitario.Cimiento;
+import modeloelementos.Palo;
 import ui.*;
 
 
@@ -13,8 +13,8 @@ import java.util.ArrayList;
 
 public class FreecellUI extends GridPane {
 
-    private Stage stage;
-    private SolitarioFreeCell solitario;
+    private final Stage stage;
+    private final SolitarioFreeCell solitario;
 
     public FreecellUI(Stage stage, SolitarioFreeCell solitario) {
         this.stage = stage;
@@ -22,28 +22,26 @@ public class FreecellUI extends GridPane {
     }
 
     public void mostrar() {
-        /*
         GridPane tablero = new GridPane();
+        tablero.setStyle(Configuracion.BACKGROUD_COLOR);
         tablero.setHgap(Configuracion.ANCHO_VENTANA/80);
         tablero.setVgap(Configuracion.ALTO_VENTANA/80);
-        tablero.setStyle(Configuracion.BACKGROUD_COLOR);
+
 
         ArrayList<VistaPilaSuperior> vistaPilasSuperiores = new ArrayList<>();
         ArrayList<PilaSuperior> pilasSuperiores = solitario.getPilasSuperiores();
         for(int i = 0; i < 4; i++){
-            vistaPilasSuperiores.add(new VistaPilaSuperior(pilasSuperiores.get(i)));
-            tablero.add(vistaPilasSuperiores.get(i), i, 1);
+            vistaPilasSuperiores.add(new VistaPilaSuperior(solitario, pilasSuperiores.get(i)));
+            tablero.add(vistaPilasSuperiores.get(i), i, 0);
         }
 
-        ArrayList<VistaCimiento> vistaCimientos = new ArrayList<>();
-        ArrayList<Cimiento> cimientos = solitario.getCimientos();
-        for(int i = 0; i < 4; i++){
-            vistaCimientos.add(new VistaCimiento(cimientos.get(i)));
-            tablero.add(vistaCimientos.get(i), 5 + i, 1);
+        for(Palo palo : Palo.values()){
+            VistaPilaDeCartas vistaCimiento = new VistaPilaDeCartas(solitario, solitario.getCimientos().get(palo.ordinal()),false);
+            tablero.add(vistaCimiento, 5 + palo.ordinal(), 0);
         }
 
         for (int i = 0; i < solitario.getPilas().size(); i++) {
-            VistaPilaDeCartas vistaPila = new VistaPilaDeCartas(solitario.getPilas().get(i), true);
+            VistaPilaDeCartas vistaPila = new VistaPilaDeCartas(solitario, solitario.getPilas().get(i), true);
             tablero.add(vistaPila,  i, 10);
         }
 
@@ -54,7 +52,5 @@ public class FreecellUI extends GridPane {
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
-
-         */
     }
 }
