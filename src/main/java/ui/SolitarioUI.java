@@ -28,9 +28,9 @@ public abstract class SolitarioUI extends GridPane implements Listener {
 
         if ( solitario.verificarEstado() == EstadoJuego.GANADO){
 
-            ImageView imagenVictoria = new ImageView(new Image(Configuracion.RUTA_RECURSOS + "imagenesSolitarios/victoria.png"));
-            imagenVictoria.setFitWidth(Configuracion.ANCHO_VENTANA);
-            imagenVictoria.setFitHeight(Configuracion.ALTO_VENTANA);
+            ImageView imagenVictoria = new ImageView(new Image(ConfiguracionUI.RUTA_RECURSOS + "imagenesSolitarios/victoria.png"));
+            imagenVictoria.setFitWidth(ConfiguracionUI.ANCHO_VENTANA);
+            imagenVictoria.setFitHeight(ConfiguracionUI.ALTO_VENTANA);
 
             VBox contenedorVictoria = new VBox();
             contenedorVictoria.getChildren().add(imagenVictoria);

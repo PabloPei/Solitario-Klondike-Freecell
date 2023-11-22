@@ -38,10 +38,10 @@ public class VistaPilaDeCartas extends StackPane implements Listener {
         int corrimiento = 0;
 
         if (pila.isEmpty()) {
-            final ImageView imagen = new ImageView(new Image(Configuracion.RUTA_RECURSOS + "imagenesCartas/" + "libre.png"));
+            final ImageView imagen = new ImageView(new Image(ConfiguracionUI.RUTA_RECURSOS + "imagenesCartas/" + "libre.png"));
             imagen.setOnMouseClicked(event -> manejoPilaVaciaClick());
-            imagen.setFitHeight( Configuracion.ALTO_VENTANA / 6);
-            imagen.setFitWidth(Configuracion.ANCHO_VENTANA / 13);
+            imagen.setFitHeight( ConfiguracionUI.ALTO_VENTANA / 6);
+            imagen.setFitWidth(ConfiguracionUI.ANCHO_VENTANA / 13);
             getChildren().add(imagen);
         } else {
             while (!pilaInvertida.isEmpty()) {
@@ -66,16 +66,23 @@ public class VistaPilaDeCartas extends StackPane implements Listener {
             VistaCarta vistaCartaAux;
             int i = vistaPila.getChildren().size()-1;
 
-            //selecciono desde la que apreto hacia abajo siempre que no este boca abajo
+            //selecciono desde la que apreto hacia abajo siempre que no este boca abajo y que cumpla las reglas del solitario
             do {
                 vistaCartaAux = (VistaCarta) vistaPila.getChildren().get(i);
                 cartaAux = vistaCartaAux.getCarta();
+                vistaCartaAux.setStyle(ConfiguracionUI.CARTA_APRETADA);
 
-                if (cartaAux.getBocaAbajo()){
-                    break;
+                //si la pila tiene mas de un elemento verifico que no este boca abajo y que sea alternado
+                if(i>1){
+                    vistaCartaAux = (VistaCarta) vistaPila.getChildren().get(i-1);
+
+                    if (cartaAux.getBocaAbajo() ||
+                            !(Carta.esValorSiguiente(cartaAux,vistaCartaAux.getCarta()) &&
+                                    Carta.esColorAlternado(vistaCartaAux.getCarta(), cartaAux))){
+                        break;
+                    }
                 }
 
-                vistaCartaAux.setStyle(Configuracion.CARTA_APRETADA);
                 i--;
             } while (carta != cartaAux );
 

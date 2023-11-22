@@ -20,9 +20,9 @@ public class KlondikeUI extends SolitarioUI{
         SolitarioKlondike solitario = (SolitarioKlondike) getSolitario();
 
         GridPane tablero = new GridPane();
-        tablero.setStyle(Configuracion.BACKGROUD_COLOR);
-        tablero.setHgap(Configuracion.ANCHO_VENTANA/80);
-        tablero.setVgap(Configuracion.ALTO_VENTANA/80);
+        tablero.setStyle(ConfiguracionUI.BACKGROUD_COLOR);
+        tablero.setHgap(ConfiguracionUI.ANCHO_VENTANA/80);
+        tablero.setVgap(ConfiguracionUI.ALTO_VENTANA/80);
 
         tablero.add(new VistaMazo(solitario),0,0);
         tablero.add(new VistaDescarte(solitario, solitario.getDescarte(),false),1,0);
@@ -41,7 +41,7 @@ public class KlondikeUI extends SolitarioUI{
 
         tablero.add(new VistaMovimientos(solitario), 8,0 );
 
-        Scene scene = new Scene(tablero, Configuracion.ANCHO_VENTANA, Configuracion.ALTO_VENTANA);
+        Scene scene = new Scene(tablero, ConfiguracionUI.ANCHO_VENTANA, ConfiguracionUI.ALTO_VENTANA);
 
         Stage stage = getStage();
         stage.setResizable(false);

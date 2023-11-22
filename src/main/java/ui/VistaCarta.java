@@ -16,14 +16,14 @@ public class VistaCarta extends ImageView {
 
         String rutaImagen;
         if (carta.getBocaAbajo()) {
-            rutaImagen = Configuracion.RUTA_RECURSOS + "imagenesCartas/REVERSO_CARTA.png";
+            rutaImagen = ConfiguracionUI.RUTA_RECURSOS + "imagenesCartas/REVERSO_CARTA.png";
         } else {
-            rutaImagen =  Configuracion.RUTA_RECURSOS + "imagenesCartas/" + carta.getPalo() + "_" + carta.getValor() + ".png";
+            rutaImagen =  ConfiguracionUI.RUTA_RECURSOS + "imagenesCartas/" + carta.getPalo() + "_" + carta.getValor() + ".png";
         }
         Image imagenCarta = new Image(rutaImagen);
 
-        setFitWidth(Configuracion.ANCHO_VENTANA/13);
-        setFitHeight(Configuracion.ALTO_VENTANA/6);
+        setFitWidth(ConfiguracionUI.ANCHO_VENTANA/13);
+        setFitHeight(ConfiguracionUI.ALTO_VENTANA/6);
 
         setImage(imagenCarta);
 

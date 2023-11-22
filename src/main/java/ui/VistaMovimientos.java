@@ -7,14 +7,13 @@ import modelosolitario.Solitario;
 public class VistaMovimientos extends HBox implements Listener {
 
     private final Solitario solitario;
-    private final Label label;  // Declarar label como un atributo de clase
+    private final Label label;
 
     public VistaMovimientos(Solitario s) {
         this.solitario = s;
         label = new Label("Movimientos: 0 ");  // Inicializar label
-        label.setStyle(Configuracion.ESTILO_TITULO);
+        label.setStyle(ConfiguracionUI.ESTILO_TITULO);
         getChildren().add(label);
-
         solitario.agregarListener(this);
     }
 

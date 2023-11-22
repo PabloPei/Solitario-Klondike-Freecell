@@ -2,7 +2,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import ui.Configuracion;
+import ui.ConfiguracionUI;
 import ui.VistaSeleccionSolitario;
 
 
@@ -15,7 +15,7 @@ public class Main extends Application  {
 
         GridPane layout = new VistaSeleccionSolitario(primaryStage);
 
-        Scene scene = new Scene(layout, Configuracion.ANCHO_VENTANA, Configuracion.ALTO_VENTANA);
+        Scene scene = new Scene(layout, ConfiguracionUI.ANCHO_VENTANA, ConfiguracionUI.ALTO_VENTANA);
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.setTitle("Seleccionar Solitario");

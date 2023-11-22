@@ -19,9 +19,9 @@ public class FreecellUI extends SolitarioUI {
 
     public void mostrar() {
         GridPane tablero = new GridPane();
-        tablero.setStyle(Configuracion.BACKGROUD_COLOR);
-        tablero.setHgap(Configuracion.ANCHO_VENTANA/80);
-        tablero.setVgap(Configuracion.ALTO_VENTANA/80);
+        tablero.setStyle(ConfiguracionUI.BACKGROUD_COLOR);
+        tablero.setHgap(ConfiguracionUI.ANCHO_VENTANA/80);
+        tablero.setVgap(ConfiguracionUI.ALTO_VENTANA/80);
 
 
         SolitarioFreeCell solitario = (SolitarioFreeCell) getSolitario();
@@ -44,7 +44,7 @@ public class FreecellUI extends SolitarioUI {
 
         tablero.add(new VistaMovimientos(solitario), 9,0);
 
-        Scene scene = new Scene(tablero, Configuracion.ANCHO_VENTANA, Configuracion.ALTO_VENTANA);
+        Scene scene = new Scene(tablero, ConfiguracionUI.ANCHO_VENTANA, ConfiguracionUI.ALTO_VENTANA);
 
         Stage stage = getStage();
         stage.setResizable(false);

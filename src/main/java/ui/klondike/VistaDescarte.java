@@ -4,7 +4,7 @@ import javafx.scene.layout.StackPane;
 import modeloelementos.Carta;
 import modeloelementos.PilaDeCartas;
 import modelosolitario.Solitario;
-import ui.Configuracion;
+import ui.ConfiguracionUI;
 import ui.VistaCarta;
 import ui.VistaPilaDeCartas;
 
@@ -21,7 +21,7 @@ public class VistaDescarte extends VistaPilaDeCartas {
 
         if (super.getPilaDeCartas().isEmpty()) {
             final StackPane descarte = new StackPane();
-            descarte.setPrefSize(Configuracion.ANCHO_VENTANA / 13,  Configuracion.ALTO_VENTANA / 6);
+            descarte.setPrefSize(ConfiguracionUI.ANCHO_VENTANA / 13,  ConfiguracionUI.ALTO_VENTANA / 6);
             getChildren().add(descarte);
         } else {
             while (!pilaInvertida.isEmpty()) {
@@ -37,7 +37,7 @@ public class VistaDescarte extends VistaPilaDeCartas {
         if (super.getSolitario().getPilaOrigen() == null) {
 
             Carta carta = vistaCarta.getCarta();
-            vistaCarta.setStyle(Configuracion.CARTA_APRETADA);
+            vistaCarta.setStyle(ConfiguracionUI.CARTA_APRETADA);
 
             super.getSolitario().setPilaOrigen(this.getPilaDeCartas());
             super.getSolitario().setCartaOrigen(carta);
