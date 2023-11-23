@@ -11,10 +11,7 @@ import ui.VistaSeleccionSolitario;
 import ui.freecell.FreecellUI;
 import ui.klondike.KlondikeUI;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.ObjectOutputStream;
-import java.io.OutputStream;
+import java.io.*;
 
 
 public class Main extends Application  {
@@ -39,9 +36,9 @@ public class Main extends Application  {
         }
     }
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws FileNotFoundException {
 
-        InputStream is = null;
+        InputStream is = new FileInputStream(ConfiguracionUI.RUTA_SERIALIZACION);
         Solitario s = null;
         buscarSerializacion(is, s, primaryStage);
         if (s == null){
@@ -60,7 +57,7 @@ public class Main extends Application  {
 
     @Override
     public void stop() throws IOException {
-        OutputStream os = null;
+        OutputStream os = new FileOutputStream(ConfiguracionUI.RUTA_SERIALIZACION);
         solitario.serializar(os);
     }
 

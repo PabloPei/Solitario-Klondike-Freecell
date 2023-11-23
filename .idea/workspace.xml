@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Borre imports de mas y corregi un par de warnings, descomente FreecellUI porque funciona bien">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/SolitarioUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/SolitarioUI.java" afterDir="false" />
-    </list>
+    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Primer intento para serializacion. Agregue que cuando se gana un solitario al apretar la pantalla se vuelve a la eleccion de solitario" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -224,7 +220,7 @@
       <workItem from="1700154430204" duration="229000" />
       <workItem from="1700154670536" duration="10839000" />
       <workItem from="1700684197447" duration="17166000" />
-      <workItem from="1700754903131" duration="571000" />
+      <workItem from="1700754903131" duration="893000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />
@@ -298,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700012882799</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Primer intento para serializacion. Agregue que cuando se gana un solitario al apretar la pantalla se vuelve a la eleccion de solitario">
+      <option name="closed" value="true" />
+      <created>1700755792324</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1700755792324</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,7 +328,8 @@
     <MESSAGE value="Borre imports de mas" />
     <MESSAGE value="Cree la clase VistaMazo, y agregue un par de metodos en VistaCarta" />
     <MESSAGE value="Cree la clase VistaDescarte" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cree la clase VistaDescarte" />
+    <MESSAGE value="Primer intento para serializacion. Agregue que cuando se gana un solitario al apretar la pantalla se vuelve a la eleccion de solitario" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primer intento para serializacion. Agregue que cuando se gana un solitario al apretar la pantalla se vuelve a la eleccion de solitario" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
