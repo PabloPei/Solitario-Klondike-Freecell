@@ -121,10 +121,14 @@ public abstract class Solitario implements Serializable {
 
             if (pilaAux != null){
                 movimiento_valido = moverCartasALaNuevaPila(origen, destino, pilaAux);
+
+                if(movimiento_valido) // si es valido sumo movimiento
+                    sumarMovimiento();
             }
         }
 
         notificar();
+
         return movimiento_valido;
 
     }
@@ -160,7 +164,6 @@ public abstract class Solitario implements Serializable {
     public Carta getCartaOrigen(){
         return this.cartaOrigen;
     }
-
 
     public Mazo getMazo(){
         return this.mazo;

@@ -5,9 +5,13 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import modeloelementos.EstadoJuego;
 import modelosolitario.Solitario;
+
+import java.io.File;
 
 public abstract class SolitarioUI extends GridPane implements Listener {
 
@@ -28,7 +32,11 @@ public abstract class SolitarioUI extends GridPane implements Listener {
 
         if ( solitario.verificarEstado() == EstadoJuego.GANADO){
 
-            ImageView imagenVictoria = new ImageView(new Image(ConfiguracionUI.RUTA_RECURSOS + "imagenesSolitarios/victoria.png"));
+            Media sonido = new Media(new File(ConfiguracionUI.RUTA_SONIDOS + "win.mp3").toURI().toString());
+            MediaPlayer sonidoVictoria = new MediaPlayer(sonido);
+            sonidoVictoria.play();
+
+            ImageView imagenVictoria = new ImageView(new Image(ConfiguracionUI.RUTA_IMAGENES_SOLITARIOS+ "victoria.png"));
             imagenVictoria.setFitWidth(ConfiguracionUI.ANCHO_VENTANA);
             imagenVictoria.setFitHeight(ConfiguracionUI.ALTO_VENTANA);
 

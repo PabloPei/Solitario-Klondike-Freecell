@@ -1,12 +1,16 @@
 package ui.klondike;
 
 import javafx.scene.layout.StackPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import modeloelementos.Carta;
 import modeloelementos.PilaDeCartas;
 import modelosolitario.Solitario;
 import ui.ConfiguracionUI;
 import ui.VistaCarta;
 import ui.VistaPilaDeCartas;
+
+import java.io.File;
 
 public class VistaDescarte extends VistaPilaDeCartas {
 
@@ -45,7 +49,9 @@ public class VistaDescarte extends VistaPilaDeCartas {
         }
         else {
             //no puedo mover cartas de ninguna pila al descarte
-            System.out.println("error");
+            Media sonido = new Media(new File(ConfiguracionUI.RUTA_SONIDOS + "movefail.mp3").toURI().toString());
+            MediaPlayer sonidoMovimientoInvalido = new MediaPlayer(sonido);
+            sonidoMovimientoInvalido.play();
         }
     }
 

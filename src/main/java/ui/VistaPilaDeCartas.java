@@ -6,6 +6,10 @@ import javafx.scene.layout.StackPane;
 import modeloelementos.Carta;
 import modeloelementos.PilaDeCartas;
 import modelosolitario.Solitario;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import java.io.File;
+
 
 
 public class VistaPilaDeCartas extends StackPane implements Listener {
@@ -38,7 +42,7 @@ public class VistaPilaDeCartas extends StackPane implements Listener {
         int corrimiento = 0;
 
         if (pila.isEmpty()) {
-            final ImageView imagen = new ImageView(new Image(ConfiguracionUI.RUTA_RECURSOS + "imagenesCartas/" + "libre.png"));
+            final ImageView imagen = new ImageView(new Image(ConfiguracionUI.RUTA_IMAGENES_CARTAS + "libre.png"));
             imagen.setOnMouseClicked(event -> manejoPilaVaciaClick());
             imagen.setFitHeight( ConfiguracionUI.ALTO_VENTANA / 6);
             imagen.setFitWidth(ConfiguracionUI.ANCHO_VENTANA / 13);
@@ -73,7 +77,7 @@ public class VistaPilaDeCartas extends StackPane implements Listener {
                 vistaCartaAux.setStyle(ConfiguracionUI.CARTA_APRETADA);
 
                 //si la pila tiene mas de un elemento verifico que no este boca abajo y que sea alternado
-                if(i>1){
+                if(i>0){
                     vistaCartaAux = (VistaCarta) vistaPila.getChildren().get(i-1);
 
                     if (cartaAux.getBocaAbajo() ||
@@ -84,7 +88,7 @@ public class VistaPilaDeCartas extends StackPane implements Listener {
                 }
 
                 i--;
-            } while (carta != cartaAux );
+            } while (carta != cartaAux && i>=0);
 
             solitario.setPilaOrigen(this.getPilaDeCartas());
             solitario.setCartaOrigen(carta);
@@ -92,7 +96,11 @@ public class VistaPilaDeCartas extends StackPane implements Listener {
         }
         else {
             if( ! solitario.moverCartas(solitario.getPilaOrigen(),this.getPilaDeCartas(),solitario.getCartaOrigen())) {
-               System.out.println("error");
+
+                Media sonido = new Media(new File(ConfiguracionUI.RUTA_SONIDOS + "movefail.mp3").toURI().toString());
+                MediaPlayer sonidoMovimientoInvalido = new MediaPlayer(sonido);
+                sonidoMovimientoInvalido.play();
+
             }
             solitario.setPilaOrigen(null);
             solitario.setCartaOrigen(null);
@@ -101,13 +109,15 @@ public class VistaPilaDeCartas extends StackPane implements Listener {
 
     protected void manejoPilaVaciaClick() {
 
+        Media sonido = new Media(new File(ConfiguracionUI.RUTA_SONIDOS + "movefail.mp3").toURI().toString());
+        MediaPlayer sonidoMovimientoInvalido = new MediaPlayer(sonido);
 
         if (solitario.getPilaOrigen() == null) {
-            System.out.println("error");
+            sonidoMovimientoInvalido.play();
         }
         else {
             if( ! solitario.moverCartas(solitario.getPilaOrigen(),this.getPilaDeCartas(),solitario.getCartaOrigen())) {
-                System.out.println("error");
+                sonidoMovimientoInvalido.play();
             }
             solitario.setPilaOrigen(null);
             solitario.setCartaOrigen(null);

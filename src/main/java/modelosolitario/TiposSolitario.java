@@ -1,8 +1,9 @@
 package modelosolitario;
 
 public enum TiposSolitario {
-    FREECELL,
-    KLONDIKE;
+    KLONDIKE,
+    FREECELL;
+
 
     @Override
     public String toString(){

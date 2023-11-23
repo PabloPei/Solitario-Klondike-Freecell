@@ -44,8 +44,6 @@ public class SolitarioKlondike extends SolitarioConCimientos implements Serializ
     public boolean robarCartasDelMazo() {
         Mazo mazo = getMazo();
         Descarte descarte = getDescarte();
-        System.out.println(descarte);
-        System.out.println(mazo);
         if (descarte.isEmpty() && mazo.isEmpty())
             return false;
 

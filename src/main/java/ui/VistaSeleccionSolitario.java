@@ -33,7 +33,7 @@ public class VistaSeleccionSolitario extends GridPane {
 
         // Agrego un boton por cada tipo de solitario
         for (TiposSolitario tipo : TiposSolitario.values()) {
-            String rutaImagen = ConfiguracionUI.RUTA_RECURSOS + "imagenesSolitarios/" + tipo.toString() + ".png";
+            String rutaImagen = ConfiguracionUI.RUTA_IMAGENES_SOLITARIOS + tipo.toString() + ".png";
             Image imagenSolitario = new Image(rutaImagen);
             ImageView imageView = new ImageView(imagenSolitario);
             Button seleccionarButton = new Button("",imageView);
@@ -52,37 +52,8 @@ public class VistaSeleccionSolitario extends GridPane {
                                 ui.mostrar();
                             }
                             case KLONDIKE -> {
-/*
-                                ArrayList<Cimiento> cimientos = new ArrayList<>();
-                                cimientos.add( new Cimiento(12, Palo.PICA));
-                                cimientos.add( new Cimiento(13,Palo.TREBOL));
-                                cimientos.add( new Cimiento(13,Palo.CORAZON));
-                                cimientos.add( new Cimiento(13,Palo.DIAMANTE));
-
-                                ArrayList<Pila> pilas = new ArrayList<>();
-                                pilas.add( new Pila());
-                                pilas.add( new Pila());
-                                pilas.add( new Pila());
-                                pilas.add( new Pila());
-                                pilas.add( new Pila());
-                                pilas.add( new Pila());
-                                Pila pila7 = new Pila();
-                                pila7.agregarCarta(new Carta(ValorCarta.REY, Palo.PICA, false));
-                                pilas.add(pila7);
-
-                                PilaDeCartas mazoVacio = new PilaDeCartas();
-                                Mazo mazo = new Mazo(mazoVacio);
-
-                                Descarte descarte = new Descarte();
-
-                                SolitarioKlondike solitario = new SolitarioKlondike(mazo, pilas, cimientos, descarte);
-
-                                KlondikeUI ui = new KlondikeUI(stage, solitario);
-                           */
                                 SolitarioKlondike solitario = new SolitarioKlondike();
                                 KlondikeUI ui = new KlondikeUI(stage, solitario);
-
-
                                 ui.mostrar();
                             }
                         }

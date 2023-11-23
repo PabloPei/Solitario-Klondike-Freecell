@@ -6,17 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Cree la clase VistaDescarte">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Configuracion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/ConfiguracionUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Solitario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/TiposSolitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/TiposSolitario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/ConfiguracionUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/ConfiguracionUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/SolitarioUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/SolitarioUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaCarta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VistaCarta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaMovimientos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VistaMovimientos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaPilaDeCartas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VistaPilaDeCartas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaSeleccionSolitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VistaSeleccionSolitario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/freecell/FreecellUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/freecell/FreecellUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/klondike/KlondikeUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/klondike/KlondikeUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaDescarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaDescarte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaMazo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaMazo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +231,7 @@
       <workItem from="1700146307396" duration="7054000" />
       <workItem from="1700154430204" duration="229000" />
       <workItem from="1700154670536" duration="10839000" />
-      <workItem from="1700684197447" duration="8788000" />
+      <workItem from="1700684197447" duration="17166000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />
