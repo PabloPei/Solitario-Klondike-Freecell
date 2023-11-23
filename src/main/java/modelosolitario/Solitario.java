@@ -20,39 +20,34 @@ public abstract class Solitario implements Serializable {
 
     private List<Listener> listeners = new ArrayList<>();
 
-    public Solitario(int cantidadPilas){
+    public Solitario(int cantidadPilas) {
         this.movimientos=0;
         this.estadoJuego = EstadoJuego.JUGANDO;
-
         this.mazo = new Mazo();
         this.mazo.mezclar();
-
         this.pilas = new ArrayList<>();
         iniciarPilas(cantidadPilas);
         repartirPilas();
     }
 
-    public Solitario( int cantidadPilas, long semilla){
+    public Solitario( int cantidadPilas, long semilla) {
         this.movimientos=0;
         this.estadoJuego = EstadoJuego.JUGANDO;
-
         this.mazo = new Mazo();
         this.mazo.mezclar(semilla);
-
         this.pilas = new ArrayList<>();
         iniciarPilas(cantidadPilas);
         repartirPilas();
     }
 
-    public Solitario(Mazo mazo, ArrayList<Pila> pilas){
+    public Solitario(Mazo mazo, ArrayList<Pila> pilas) {
         this.movimientos=0;
         this.estadoJuego = EstadoJuego.JUGANDO;
-
         this.mazo = mazo;
         this.pilas = pilas;
     }
 
-    public void iniciarPilas(int cantidadPilas){
+    public void iniciarPilas(int cantidadPilas) {
         for (int i = 0; i < cantidadPilas; i++) {
             this.getPilas().add(new Pila());
         }
@@ -60,16 +55,14 @@ public abstract class Solitario implements Serializable {
 
     public abstract void repartirPilas();
 
-    public EstadoJuego verificarEstado(){
+    public EstadoJuego verificarEstado() {
         if (verificarVictoria()) return EstadoJuego.GANADO;
         else return EstadoJuego.JUGANDO;
     }
 
     public abstract boolean verificarVictoria();
 
-    public void sumarMovimiento(){
-        this.movimientos++;
-    }
+    public void sumarMovimiento() { this.movimientos++; }
 
     private PilaDeCartas moverCartasAPilaAuxiliar(PilaDeCartas origen, Carta primeraCarta){
         PilaDeCartas pilaActual = new PilaDeCartas();
@@ -85,7 +78,6 @@ public abstract class Solitario implements Serializable {
     }
 
     private boolean moverCartasALaNuevaPila(PilaDeCartas origen, PilaDeCartas destino, PilaDeCartas pilaAux){
-
         Carta ultimaCarta = pilaAux.verCarta();
 
         while (!pilaAux.isEmpty()) {
@@ -112,7 +104,6 @@ public abstract class Solitario implements Serializable {
     }
 
     public boolean moverCartas(PilaDeCartas origen, PilaDeCartas destino, Carta primeraCarta) {
-
         boolean movimiento_valido = false;
 
         if(destino.puedeAgregarCarta(primeraCarta)) {
@@ -126,11 +117,8 @@ public abstract class Solitario implements Serializable {
                     sumarMovimiento();
             }
         }
-
         notificar();
-
         return movimiento_valido;
-
     }
 
     public void serializar(OutputStream os) throws IOException {
@@ -151,10 +139,9 @@ public abstract class Solitario implements Serializable {
         return this.movimientos;
     }
 
+    public void setCartaOrigen(Carta carta) { this.cartaOrigen=carta; }
 
-    public void setCartaOrigen(Carta carta){this.cartaOrigen=carta;}
-
-    public void setPilaOrigen(PilaDeCartas pila){this.pilaOrigen=pila;}
+    public void setPilaOrigen(PilaDeCartas pila) { this.pilaOrigen=pila; }
 
 
     public PilaDeCartas getPilaOrigen(){
@@ -180,5 +167,4 @@ public abstract class Solitario implements Serializable {
             l.escuchar();
         }
     }
-
 }

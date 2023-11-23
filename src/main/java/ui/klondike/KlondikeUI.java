@@ -7,7 +7,7 @@ import klondike.SolitarioKlondike;
 import modeloelementos.Palo;
 import ui.*;
 
-public class KlondikeUI extends SolitarioUI{
+public class KlondikeUI extends SolitarioUI {
 
 
     public KlondikeUI(Stage stage, SolitarioKlondike solitario) {
@@ -28,7 +28,7 @@ public class KlondikeUI extends SolitarioUI{
         tablero.add(new VistaDescarte(solitario, solitario.getDescarte(),false),1,0);
 
 
-        for(Palo palo : Palo.values()){
+        for(Palo palo : Palo.values()) {
             VistaPilaDeCartas vistaCimiento = new VistaPilaDeCartas(solitario, solitario.getCimientos().get(palo.ordinal()),false);
             tablero.add(vistaCimiento, 2 + palo.ordinal(), 0);
         }

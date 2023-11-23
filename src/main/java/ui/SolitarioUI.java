@@ -69,6 +69,6 @@ public abstract class SolitarioUI extends GridPane implements Listener {
 
     public abstract void mostrar();
 
-    public Solitario getSolitario(){ return this.solitario; }
-    public Stage getStage(){ return this.stage; }
+    public Solitario getSolitario() { return this.solitario; }
+    public Stage getStage() { return this.stage; }
 }

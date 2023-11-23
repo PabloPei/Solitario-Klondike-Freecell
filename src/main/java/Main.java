@@ -19,7 +19,7 @@ public class Main extends Application  {
 
     // se deberia chequear de que no haya algun solitario guardado
 
-    private void seleccionSolitario(Stage primaryStage){
+    private void seleccionSolitario(Stage primaryStage) {
         GridPane layout = new VistaSeleccionSolitario(primaryStage);
 
         Scene scene = new Scene(layout, ConfiguracionUI.ANCHO_VENTANA, ConfiguracionUI.ALTO_VENTANA);
@@ -28,7 +28,7 @@ public class Main extends Application  {
         primaryStage.setTitle("Seleccionar Solitario");
     }
 
-    private void buscarSerializacion(InputStream is, Solitario s, Stage stage){
+    private void buscarSerializacion(InputStream is, Solitario s, Stage stage) {
         try {
             s = Solitario.deSerializar(is);
         } catch (IOException | ClassNotFoundException e) {
@@ -41,11 +41,11 @@ public class Main extends Application  {
         InputStream is = new FileInputStream(ConfiguracionUI.RUTA_SERIALIZACION);
         Solitario s = null;
         buscarSerializacion(is, s, primaryStage);
-        if (s == null){
+        if (s == null) {
             seleccionSolitario(primaryStage);
         } else {
             SolitarioUI ui;
-            if (s.getClass() == SolitarioKlondike.class){
+            if (s.getClass() == SolitarioKlondike.class) {
                 ui = new KlondikeUI(primaryStage, (SolitarioKlondike) s);
             } else {
                 ui = new FreecellUI(primaryStage, (SolitarioFreeCell) s);
@@ -61,9 +61,9 @@ public class Main extends Application  {
         solitario.serializar(os);
     }
 
-        public static void main(String[] args) {
-            launch(args);
-        }
+    public static void main(String[] args) {
+        launch(args);
+    }
 }
 
 

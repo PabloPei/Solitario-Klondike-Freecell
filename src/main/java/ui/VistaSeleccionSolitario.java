@@ -50,17 +50,16 @@ public class VistaSeleccionSolitario extends GridPane {
                                 SolitarioFreeCell solitario = new SolitarioFreeCell();
                                 FreecellUI ui = new FreecellUI(stage, solitario);
                                 ui.mostrar();
-                            }
-                            case KLONDIKE -> {
-                                SolitarioKlondike solitario = new SolitarioKlondike();
-                                KlondikeUI ui = new KlondikeUI(stage, solitario);
-                                ui.mostrar();
-                            }
-                        }
+                      }
+                      case KLONDIKE -> {
+                        SolitarioKlondike solitario = new SolitarioKlondike();
+                        KlondikeUI ui = new KlondikeUI(stage, solitario);
+                        ui.mostrar();
+                      }
+                 }
             });
 
             add(seleccionarButton,tipo.ordinal(),0);
-
         }
     }
 }

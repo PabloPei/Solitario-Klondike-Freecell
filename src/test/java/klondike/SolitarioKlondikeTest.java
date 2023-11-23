@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class SolitarioKlondikeTest {
 
     @Test
-    public void testCrearSolitario(){
+    public void testCrearSolitario() {
         SolitarioKlondike solitario = new SolitarioKlondike();
         assertNotNull(solitario);
     }
@@ -20,13 +20,13 @@ public class SolitarioKlondikeTest {
     public void testCrearSolitarioCimientosVacios(){
         SolitarioKlondike solitario = new SolitarioKlondike();
         ArrayList<Cimiento> cimientos = solitario.getCimientos();
-        for(Cimiento c: cimientos){
+        for(Cimiento c: cimientos) {
             assertTrue(c.isEmpty());
         }
     }
 
     @Test
-    public void testCrearSolitarioConSemilla(){
+    public void testCrearSolitarioConSemilla() {
         SolitarioKlondike solitario = new SolitarioKlondike(13);
         SolitarioKlondike solitario2 = new SolitarioKlondike(13);
 
@@ -35,7 +35,7 @@ public class SolitarioKlondikeTest {
 
 
     @Test
-    public void testMoverCartaFalla(){
+    public void testMoverCartaFalla() {
         SolitarioKlondike solitario = new SolitarioKlondike();
 
         var pilaDestino = new Pila();
@@ -62,7 +62,7 @@ public class SolitarioKlondikeTest {
     }
 
     @Test
-    public void testMoverConjuntoCartasFallaPorColor(){
+    public void testMoverConjuntoCartasFallaPorColor() {
         SolitarioKlondike solitario = new SolitarioKlondike();
 
         Pila pilaOrigen = new Pila();
@@ -236,7 +236,6 @@ public class SolitarioKlondikeTest {
 
     @Test
     public void testGuardarJuegoGanado() throws IOException, ClassNotFoundException {
-        //inicializo el juego en el estado ganado
         ArrayList<Cimiento> cimientos = new ArrayList<>();
         cimientos.add( new Cimiento(13,Palo.PICA));
         cimientos.add( new Cimiento(13,Palo.TREBOL));

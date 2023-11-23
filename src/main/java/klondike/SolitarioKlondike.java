@@ -7,22 +7,22 @@ import java.io.*;
 import java.util.ArrayList;
 
 
-public class SolitarioKlondike extends SolitarioConCimientos implements Serializable{
+public class SolitarioKlondike extends SolitarioConCimientos implements Serializable {
 
     public static final int CANTIDAD_PILAS = 7;
     private final Descarte descarte;
 
-    public SolitarioKlondike(){
+    public SolitarioKlondike() {
         super(CANTIDAD_PILAS);
         this.descarte = new Descarte();
     }
 
-    public SolitarioKlondike(long semilla){
+    public SolitarioKlondike(long semilla) {
         super(CANTIDAD_PILAS, semilla);
         this.descarte = new Descarte();
     }
 
-    public SolitarioKlondike(Mazo mazo, ArrayList<Pila> pilas, ArrayList<Cimiento> cimientos, Descarte descarte){
+    public SolitarioKlondike(Mazo mazo, ArrayList<Pila> pilas, ArrayList<Cimiento> cimientos, Descarte descarte) {
         super(mazo,pilas,cimientos);
         this.descarte = descarte;
     }
@@ -67,5 +67,5 @@ public class SolitarioKlondike extends SolitarioConCimientos implements Serializ
         return (SolitarioKlondike) Solitario.deSerializar(is);
     }
 
-    public Descarte getDescarte(){ return this.descarte; }
+    public Descarte getDescarte() { return this.descarte; }
 }

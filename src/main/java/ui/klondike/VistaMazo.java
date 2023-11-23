@@ -13,7 +13,7 @@ public class VistaMazo extends HBox {
     private final SolitarioKlondike solitario;
 
 
-    public VistaMazo(SolitarioKlondike s){
+    public VistaMazo(SolitarioKlondike s) {
 
         this.solitario = s;
 
@@ -31,10 +31,5 @@ public class VistaMazo extends HBox {
             ((Button) mouseEvent.getSource()).setStyle(ConfiguracionUI.BOTON_ESTADO_NORMAL);
             solitario.robarCartasDelMazo();
         });
-
-
-
-
     }
-
 }
