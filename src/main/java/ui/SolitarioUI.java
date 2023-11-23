@@ -1,8 +1,10 @@
 package ui;
 
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
@@ -44,6 +46,18 @@ public abstract class SolitarioUI extends GridPane implements Listener {
             contenedorVictoria.getChildren().add(imagenVictoria);
 
             Scene sceneVictoria = new Scene(contenedorVictoria);
+            sceneVictoria.setOnMousePressed(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent mouseEvent) {
+                    GridPane layout = new VistaSeleccionSolitario(stage);
+
+                    Scene scene = new Scene(layout, ConfiguracionUI.ANCHO_VENTANA, ConfiguracionUI.ALTO_VENTANA);
+                    stage.setScene(scene);
+                    stage.setResizable(false);
+                    stage.setTitle("Seleccionar Solitario");
+                    stage.show();
+                }
+            });
 
             stage.setResizable(false);
             stage.show();
