@@ -15,8 +15,6 @@ import java.io.*;
 
 
 public class Main extends Application  {
-    private Solitario solitario;
-
     // se deberia chequear de que no haya algun solitario guardado
 
     private void seleccionSolitario(Stage primaryStage) {
@@ -40,14 +38,10 @@ public class Main extends Application  {
         InputStream is = null;
         try {
             is = new FileInputStream(ConfiguracionUI.RUTA_SERIALIZACION);
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
-        }
+        } catch (FileNotFoundException e) {}
         Solitario s = null;
         buscarSerializacion(is, s, primaryStage);
-        if (s == null) {
-            seleccionSolitario(primaryStage);
-        } else {
+        if (s != null){
             SolitarioUI ui;
             if (s.getClass() == SolitarioKlondike.class) {
                 ui = new KlondikeUI(primaryStage, (SolitarioKlondike) s);
@@ -62,19 +56,6 @@ public class Main extends Application  {
     @Override
     public void stop() {
 
-        OutputStream os = null;
-        try {
-            os = new FileOutputStream(ConfiguracionUI.RUTA_SERIALIZACION);
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
-        }
-        if (os != null){
-            try {
-                solitario.serializar(os);
-            } catch (IOException e){
-                System.out.println(e.getMessage());
-            }
-        }
     }
     public static void main(String[] args) {
         launch(args);

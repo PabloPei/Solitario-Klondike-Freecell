@@ -1,6 +1,7 @@
 package modelosolitario;
 
 import modeloelementos.*;
+import ui.ConfiguracionUI;
 import ui.Listener;
 
 import java.io.*;
@@ -17,10 +18,13 @@ public abstract class Solitario implements Serializable {
     protected final ArrayList<Pila> pilas;
     protected Mazo mazo;
 
+    protected OutputStream serializacion;
+
 
     private List<Listener> listeners = new ArrayList<>();
 
     public Solitario(int cantidadPilas) {
+        setArchivoSerializacion();
         this.movimientos=0;
         this.estadoJuego = EstadoJuego.JUGANDO;
         this.mazo = new Mazo();
@@ -31,6 +35,7 @@ public abstract class Solitario implements Serializable {
     }
 
     public Solitario( int cantidadPilas, long semilla) {
+        setArchivoSerializacion();
         this.movimientos=0;
         this.estadoJuego = EstadoJuego.JUGANDO;
         this.mazo = new Mazo();
@@ -41,10 +46,19 @@ public abstract class Solitario implements Serializable {
     }
 
     public Solitario(Mazo mazo, ArrayList<Pila> pilas) {
+        setArchivoSerializacion();
         this.movimientos=0;
         this.estadoJuego = EstadoJuego.JUGANDO;
         this.mazo = mazo;
         this.pilas = pilas;
+    }
+
+    private void setArchivoSerializacion(){
+        try {
+            serializacion = new FileOutputStream(ConfiguracionUI.RUTA_SERIALIZACION);
+        } catch (FileNotFoundException e) {
+            System.out.println("Hola");
+        }
     }
 
     public void iniciarPilas(int cantidadPilas) {
@@ -118,6 +132,11 @@ public abstract class Solitario implements Serializable {
             }
         }
         notificar();
+        try {
+            serializar(serializacion);
+        } catch (IOException e){
+            System.out.println(e.getMessage());
+        }
         return movimiento_valido;
     }
 
