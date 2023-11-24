@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Primer intento para serializacion. Agregue que cuando se gana un solitario al apretar la pantalla se vuelve a la eleccion de solitario" />
+    <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="Me habia olvidado de poner la ruta del archivo">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/ConfiguracionUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/ConfiguracionUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaPilaDeCartas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VistaPilaDeCartas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/VistaSeleccionSolitario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/VistaSeleccionSolitario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaDescarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/klondike/VistaDescarte.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -221,6 +228,8 @@
       <workItem from="1700154670536" duration="10839000" />
       <workItem from="1700684197447" duration="17166000" />
       <workItem from="1700754903131" duration="893000" />
+      <workItem from="1700776356766" duration="70000" />
+      <workItem from="1700844469111" duration="1700000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />
@@ -351,7 +360,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TrabajoPractico_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1698554744639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Solitario_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1696200827601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Solitario_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1698602156208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/TrabajoPractico_Algo3$All_in_Solitario_Algo3.ic" NAME="All in Solitario-Algo3 Coverage Results" MODIFIED="1696110172820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

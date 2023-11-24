@@ -21,7 +21,6 @@ public class Main extends Application  {
 
     private void seleccionSolitario(Stage primaryStage) {
         GridPane layout = new VistaSeleccionSolitario(primaryStage);
-
         Scene scene = new Scene(layout, ConfiguracionUI.ANCHO_VENTANA, ConfiguracionUI.ALTO_VENTANA);
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
@@ -36,9 +35,14 @@ public class Main extends Application  {
         }
     }
     @Override
-    public void start(Stage primaryStage) throws FileNotFoundException {
+    public void start(Stage primaryStage) {
 
-        InputStream is = new FileInputStream(ConfiguracionUI.RUTA_SERIALIZACION);
+        InputStream is = null;
+        try {
+            is = new FileInputStream(ConfiguracionUI.RUTA_SERIALIZACION);
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
         Solitario s = null;
         buscarSerializacion(is, s, primaryStage);
         if (s == null) {
@@ -56,11 +60,22 @@ public class Main extends Application  {
     }
 
     @Override
-    public void stop() throws IOException {
-        OutputStream os = new FileOutputStream(ConfiguracionUI.RUTA_SERIALIZACION);
-        solitario.serializar(os);
-    }
+    public void stop() {
 
+        OutputStream os = null;
+        try {
+            os = new FileOutputStream(ConfiguracionUI.RUTA_SERIALIZACION);
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
+        if (os != null){
+            try {
+                solitario.serializar(os);
+            } catch (IOException e){
+                System.out.println(e.getMessage());
+            }
+        }
+    }
     public static void main(String[] args) {
         launch(args);
     }
