@@ -2,7 +2,6 @@ package ui;
 
 
 public class ConfiguracionUI {
-
     public static final double ANCHO_VENTANA = 1024;
     public static final double ALTO_VENTANA = 576;
     public static final String BACKGROUD_COLOR = "-fx-background-color: green";

@@ -5,7 +5,6 @@ import javafx.scene.image.ImageView;
 import modeloelementos.Carta;
 
 
-
 public class VistaCarta extends ImageView {
 
     private final Carta carta;

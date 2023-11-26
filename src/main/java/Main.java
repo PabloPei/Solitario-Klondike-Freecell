@@ -48,8 +48,6 @@ public class Main extends Application  {
         primaryStage.show();
     }
 
-
-
     @Override
     public void stop() throws IOException {
         if (solitario != null && solitario.verificarVictoria()) return;
@@ -59,6 +57,7 @@ public class Main extends Application  {
         solitario.serializar(new FileOutputStream(ConfiguracionUI.RUTA_SERIALIZACION));
 
     }
+
     public static void main(String[] args) {
         launch(args);
     }

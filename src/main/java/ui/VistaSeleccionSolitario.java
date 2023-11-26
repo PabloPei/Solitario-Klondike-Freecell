@@ -13,10 +13,6 @@ import modelosolitario.*;
 import ui.freecell.FreecellUI;
 import ui.klondike.KlondikeUI;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-
 
 public class VistaSeleccionSolitario extends GridPane {
 

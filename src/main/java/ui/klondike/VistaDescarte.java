@@ -20,7 +20,6 @@ public class VistaDescarte extends VistaPilaDeCartas {
 
     @Override
     protected void agregarVistaPila(boolean corrimientoY) {
-
         PilaDeCartas pilaInvertida = super.getPilaDeCartas().invertir();
 
         if (super.getPilaDeCartas().isEmpty()) {
@@ -31,28 +30,21 @@ public class VistaDescarte extends VistaPilaDeCartas {
             while (!pilaInvertida.isEmpty()) {
                 super.agregarVistaCarta(new VistaCarta(pilaInvertida.pop()), 0);
             }
-
         }
     }
 
     protected void manejoPilaLlenaClick(VistaCarta vistaCarta, VistaPilaDeCartas vistaPila) {
-
-
         if (super.getSolitario().getPilaOrigen() == null) {
-
             Carta carta = vistaCarta.getCarta();
             vistaCarta.setStyle(ConfiguracionUI.CARTA_APRETADA);
 
             super.getSolitario().setPilaOrigen(this.getPilaDeCartas());
             super.getSolitario().setCartaOrigen(carta);
-
         }
         else {
-            //no puedo mover cartas de ninguna pila al descarte
-//            Media sonido = new Media(new File(ConfiguracionUI.RUTA_SONIDOS + "movefail.mp3").toURI().toString());
-//            MediaPlayer sonidoMovimientoInvalido = new MediaPlayer(sonido);
-//            sonidoMovimientoInvalido.play();
+            Media sonido = new Media(new File(ConfiguracionUI.RUTA_SONIDOS + "movefail.mp3").toURI().toString());
+            MediaPlayer sonidoMovimientoInvalido = new MediaPlayer(sonido);
+            sonidoMovimientoInvalido.play();
         }
     }
-
 }

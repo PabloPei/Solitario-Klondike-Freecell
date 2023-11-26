@@ -9,14 +9,12 @@ import ui.*;
 
 public class KlondikeUI extends SolitarioUI {
 
-
     public KlondikeUI(Stage stage, SolitarioKlondike solitario) {
         super(stage, solitario);
     }
 
     @Override
     public void mostrar() {
-
         SolitarioKlondike solitario = (SolitarioKlondike) getSolitario();
 
         GridPane tablero = new GridPane();
@@ -27,12 +25,10 @@ public class KlondikeUI extends SolitarioUI {
         tablero.add(new VistaMazo(solitario),0,0);
         tablero.add(new VistaDescarte(solitario, solitario.getDescarte(),false),1,0);
 
-
         for(Palo palo : Palo.values()) {
             VistaPilaDeCartas vistaCimiento = new VistaPilaDeCartas(solitario, solitario.getCimientos().get(palo.ordinal()),false);
             tablero.add(vistaCimiento, 2 + palo.ordinal(), 0);
         }
-
 
         for (int i = 0; i < solitario.getPilas().size(); i++) {
             VistaPilaDeCartas vistaPila = new VistaPilaDeCartas(solitario, solitario.getPilas().get(i), true);
@@ -48,5 +44,4 @@ public class KlondikeUI extends SolitarioUI {
         stage.setScene(scene);
         stage.show();
     }
-
 }

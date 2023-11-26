@@ -9,12 +9,10 @@ import ui.ConfiguracionUI;
 
 public class VistaMazo extends HBox {
 
-
     private final SolitarioKlondike solitario;
 
 
     public VistaMazo(SolitarioKlondike s) {
-
         this.solitario = s;
 
         Button boton = new Button();
