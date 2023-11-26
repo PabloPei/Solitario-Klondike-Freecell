@@ -16,7 +16,7 @@ public class VistaCarta extends ImageView {
         if (carta.getBocaAbajo()) {
             rutaImagen = ConfiguracionUI.RUTA_IMAGENES_CARTAS + "REVERSO_CARTA.png";
         } else {
-            rutaImagen =  ConfiguracionUI.RUTA_IMAGENES_CARTAS + "" + carta.getPalo() + "_" + carta.getValor() + ".png";
+            rutaImagen =  ConfiguracionUI.RUTA_IMAGENES_CARTAS + carta.getPalo() + "_" + carta.getValor() + ".png";
         }
         Image imagenCarta = new Image(rutaImagen);
 

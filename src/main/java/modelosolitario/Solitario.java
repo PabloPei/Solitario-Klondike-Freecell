@@ -1,7 +1,6 @@
 package modelosolitario;
 
 import modeloelementos.*;
-import ui.ConfiguracionUI;
 import ui.Listener;
 
 import java.io.*;
@@ -14,14 +13,12 @@ public abstract class Solitario implements Serializable {
     private int movimientos;
     private Carta cartaOrigen;
     private PilaDeCartas pilaOrigen;
-    private EstadoJuego estadoJuego;
     protected final ArrayList<Pila> pilas;
     protected Mazo mazo;
-    private List<Listener> listeners = new ArrayList<>();
+    private final List<Listener> listeners = new ArrayList<>();
 
     public Solitario(int cantidadPilas) {
         this.movimientos=0;
-        this.estadoJuego = EstadoJuego.JUGANDO;
         this.mazo = new Mazo();
         this.mazo.mezclar();
         this.pilas = new ArrayList<>();
@@ -31,7 +28,6 @@ public abstract class Solitario implements Serializable {
 
     public Solitario( int cantidadPilas, long semilla) {
         this.movimientos=0;
-        this.estadoJuego = EstadoJuego.JUGANDO;
         this.mazo = new Mazo();
         this.mazo.mezclar(semilla);
         this.pilas = new ArrayList<>();
@@ -41,7 +37,6 @@ public abstract class Solitario implements Serializable {
 
     public Solitario(Mazo mazo, ArrayList<Pila> pilas) {
         this.movimientos=0;
-        this.estadoJuego = EstadoJuego.JUGANDO;
         this.mazo = mazo;
         this.pilas = pilas;
     }

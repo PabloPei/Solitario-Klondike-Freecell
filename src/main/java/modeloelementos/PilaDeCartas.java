@@ -1,7 +1,5 @@
 package modeloelementos;
 
-import modelosolitario.Pila;
-
 import java.io.*;
 import java.util.Stack;
 
