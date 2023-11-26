@@ -62,21 +62,17 @@ public class VistaPilaDeCartas extends StackPane implements Listener, Serializab
 
     protected void manejoPilaLlenaClick(VistaCarta vistaCarta, VistaPilaDeCartas vistaPila) {
 
-
         if (solitario.getPilaOrigen() == null) {
-
             Carta carta = vistaCarta.getCarta();
             Carta cartaAux;
             VistaCarta vistaCartaAux;
             int i = vistaPila.getChildren().size()-1;
 
-            //selecciono desde la que apreto hacia abajo siempre que no este boca abajo y que cumpla las reglas del solitario
             do {
                 vistaCartaAux = (VistaCarta) vistaPila.getChildren().get(i);
                 cartaAux = vistaCartaAux.getCarta();
                 vistaCartaAux.setStyle(ConfiguracionUI.CARTA_APRETADA);
 
-                //si la pila tiene mas de un elemento verifico que no este boca abajo y que sea alternado
                 if(i>0){
                     vistaCartaAux = (VistaCarta) vistaPila.getChildren().get(i-1);
 
@@ -86,21 +82,17 @@ public class VistaPilaDeCartas extends StackPane implements Listener, Serializab
                         break;
                     }
                 }
-
                 i--;
             } while (carta != cartaAux && i>=0);
 
             solitario.setPilaOrigen(this.getPilaDeCartas());
             solitario.setCartaOrigen(carta);
-
         }
         else {
             if( ! solitario.moverCartas(solitario.getPilaOrigen(),this.getPilaDeCartas(),solitario.getCartaOrigen())) {
-
                 Media sonido = new Media(new File(ConfiguracionUI.RUTA_SONIDOS + "movefail.mp3").toURI().toString());
                 MediaPlayer sonidoMovimientoInvalido = new MediaPlayer(sonido);
                 sonidoMovimientoInvalido.play();
-
             }
             solitario.setPilaOrigen(null);
             solitario.setCartaOrigen(null);
@@ -124,14 +116,13 @@ public class VistaPilaDeCartas extends StackPane implements Listener, Serializab
         }
     }
 
+    public PilaDeCartas getPilaDeCartas() { return this.pila; }
 
-    public PilaDeCartas getPilaDeCartas(){return this.pila; }
-    public Solitario getSolitario(){return this.solitario; }
+    public Solitario getSolitario() { return this.solitario; }
+
     @Override
     public void escuchar() {
-        //actualizo la pantalla
         getChildren().clear();
         agregarVistaPila(this.corrimiento);
     }
-
 }

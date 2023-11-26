@@ -15,6 +15,5 @@ public class ConfiguracionUI {
     public static final String RUTA_IMAGENES_CARTAS = "file:src/main/recursos/imagenesCartas/";
     public static final String RUTA_IMAGENES_SOLITARIOS = "file:src/main/recursos/imagenesSolitarios/";
     public static final String RUTA_SONIDOS = "src/main/recursos/sonidos/";
-
     public static final String RUTA_SERIALIZACION = "sol.txt";
 }

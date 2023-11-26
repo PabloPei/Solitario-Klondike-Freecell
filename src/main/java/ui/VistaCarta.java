@@ -13,7 +13,6 @@ public class VistaCarta extends ImageView {
     public VistaCarta(Carta carta) {
 
         this.carta = carta;
-
         String rutaImagen;
         if (carta.getBocaAbajo()) {
             rutaImagen = ConfiguracionUI.RUTA_IMAGENES_CARTAS + "REVERSO_CARTA.png";
@@ -26,12 +25,7 @@ public class VistaCarta extends ImageView {
         setFitHeight(ConfiguracionUI.ALTO_VENTANA/6);
 
         setImage(imagenCarta);
-
-
     }
 
     public Carta getCarta(){ return this.carta; }
-
 }
-
-

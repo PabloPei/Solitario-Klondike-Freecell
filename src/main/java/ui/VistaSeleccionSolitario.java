@@ -28,14 +28,12 @@ public class VistaSeleccionSolitario extends GridPane {
 
         int cantidadTipos = TiposSolitario.values().length;
 
-        // Configurar ColumnConstraints para ajustar automáticamente el ancho
         for (int i = 0; i < cantidadTipos; i++) {
             ColumnConstraints column = new ColumnConstraints();
             column.setPercentWidth(100.0 / cantidadTipos);
             getColumnConstraints().add(column);
         }
 
-        // Agrego un boton por cada tipo de solitario
         for (TiposSolitario tipo : TiposSolitario.values()) {
             String rutaImagen = ConfiguracionUI.RUTA_IMAGENES_SOLITARIOS + tipo.toString() + ".png";
             Image imagenSolitario = new Image(rutaImagen);
@@ -44,9 +42,7 @@ public class VistaSeleccionSolitario extends GridPane {
             seleccionarButton.setStyle(ConfiguracionUI.BOTON_SELECCION_ESTADO_NORMAL);
 
             seleccionarButton.setOnMouseEntered(mouseEvent  -> seleccionarButton.setStyle(ConfiguracionUI.BOTON_SELECCION_MOUSE_ARRIBA));
-
             seleccionarButton.setOnMouseExited(mouseEvent  -> seleccionarButton.setStyle(ConfiguracionUI.BOTON_SELECCION_ESTADO_NORMAL));
-
 
             seleccionarButton.setOnAction(e -> {
                  switch (tipo) {
@@ -62,9 +58,9 @@ public class VistaSeleccionSolitario extends GridPane {
                       }
                  }
             });
-
             add(seleccionarButton,tipo.ordinal(),0);
         }
     }
-    public Solitario getSolitario() {return actual;}
+
+    public Solitario getSolitario() { return actual; }
 }

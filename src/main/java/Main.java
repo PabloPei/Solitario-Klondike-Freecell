@@ -9,14 +9,12 @@ import ui.SolitarioUI;
 import ui.VistaSeleccionSolitario;
 import ui.freecell.FreecellUI;
 import ui.klondike.KlondikeUI;
-
 import java.io.*;
 
 
 public class Main extends Application  {
     private VistaSeleccionSolitario vistaSeleccion;
     private Solitario solitario;
-    // se deberia chequear de que no haya algun solitario guardado
 
     private void seleccionSolitario(Stage primaryStage) {
         vistaSeleccion = new VistaSeleccionSolitario(primaryStage);
@@ -25,6 +23,7 @@ public class Main extends Application  {
         primaryStage.setResizable(false);
         primaryStage.setTitle("Seleccionar Solitario");
     }
+
     @Override
     public void start(Stage primaryStage) {
 
@@ -49,8 +48,6 @@ public class Main extends Application  {
         }
         primaryStage.show();
     }
-
-
 
     @Override
     public void stop() throws IOException {

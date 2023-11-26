@@ -18,7 +18,6 @@ import java.io.Serializable;
 
 public abstract class SolitarioUI extends GridPane implements Listener, Serializable {
 
-
     private final Stage stage;
     private final Solitario solitario;
 
@@ -28,7 +27,6 @@ public abstract class SolitarioUI extends GridPane implements Listener, Serializ
         this.stage = stage;
         this.solitario = solitario;
     }
-
 
     @Override
     public void escuchar() {
@@ -51,7 +49,6 @@ public abstract class SolitarioUI extends GridPane implements Listener, Serializ
                 @Override
                 public void handle(MouseEvent mouseEvent) {
                     GridPane layout = new VistaSeleccionSolitario(stage);
-
                     Scene scene = new Scene(layout, ConfiguracionUI.ANCHO_VENTANA, ConfiguracionUI.ALTO_VENTANA);
                     stage.setScene(scene);
                     stage.setResizable(false);
@@ -63,13 +60,12 @@ public abstract class SolitarioUI extends GridPane implements Listener, Serializ
             stage.setResizable(false);
             stage.show();
             this.stage.setScene(sceneVictoria);
-
         }
     }
-
 
     public abstract void mostrar();
 
     public Solitario getSolitario() { return this.solitario; }
+
     public Stage getStage() { return this.stage; }
 }
