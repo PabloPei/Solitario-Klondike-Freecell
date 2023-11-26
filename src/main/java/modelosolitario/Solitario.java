@@ -63,29 +63,26 @@ public abstract class Solitario implements Serializable {
 
     public void sumarMovimiento() { this.movimientos++; }
 
-    private PilaDeCartas moverCartasAPilaAuxiliar(PilaDeCartas origen, Carta primeraCarta){
+    private PilaDeCartas moverCartasAPilaAuxiliar(PilaDeCartas origen, Carta primeraCarta) {
         PilaDeCartas pilaActual = new PilaDeCartas();
-        do{
+        do {
             if ( ! (pilaActual.agregarCarta(origen.sacarCarta(false)))) {
                 while (!(pilaActual.isEmpty())) {
                     origen.push(pilaActual.pop());
                 }
                 return null;
             }
-        }while (primeraCarta != pilaActual.verCarta());
+        } while (primeraCarta != pilaActual.verCarta());
         return pilaActual;
     }
 
-    private boolean moverCartasALaNuevaPila(PilaDeCartas origen, PilaDeCartas destino, PilaDeCartas pilaAux){
+    private boolean moverCartasALaNuevaPila(PilaDeCartas origen, PilaDeCartas destino, PilaDeCartas pilaAux) {
         Carta ultimaCarta = pilaAux.verCarta();
-
         while (!pilaAux.isEmpty()) {
-
             Carta cartaAAgregar;
             Carta cartaAux = pilaAux.pop();
 
             if (!(destino.agregarCarta(cartaAux))) {
-
                 do {
                     cartaAAgregar = destino.pop();
                     origen.push(cartaAAgregar);
@@ -112,7 +109,7 @@ public abstract class Solitario implements Serializable {
             if (pilaAux != null){
                 movimiento_valido = moverCartasALaNuevaPila(origen, destino, pilaAux);
 
-                if(movimiento_valido) // si es valido sumo movimiento
+                if(movimiento_valido)
                     sumarMovimiento();
             }
         }
@@ -160,9 +157,9 @@ public abstract class Solitario implements Serializable {
         return this.pilas;
     }
 
-    public void agregarListener(Listener l) {listeners.add(l);}
+    public void agregarListener(Listener l) { listeners.add(l); }
 
-    protected void notificar(){
+    protected void notificar() {
         for (Listener l : listeners) {
             l.escuchar();
         }

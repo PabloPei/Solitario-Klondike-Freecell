@@ -12,7 +12,6 @@ public class Carta implements Serializable {
     private boolean bocaAbajo;
 
     public Carta(ValorCarta valor, Palo palo, boolean bocaAbajo){
-
         this.valor = valor;
         this.palo = palo;
         this.bocaAbajo = bocaAbajo;
@@ -48,8 +47,6 @@ public class Carta implements Serializable {
     public static boolean esColorAlternado(Carta carta1, Carta carta2) {
         return (carta1.getPalo().getColor() != carta2.getPalo().getColor());
     }
-
-    //// Getters & Setters ////
 
     public void setBocaAbajo(boolean bocaAbajo){
         this.bocaAbajo = bocaAbajo;

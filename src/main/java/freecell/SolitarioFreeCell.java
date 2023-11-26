@@ -10,42 +10,41 @@ import java.util.ArrayList;
 public class SolitarioFreeCell extends SolitarioConCimientos {
 
     public static final int CANTIDAD_PILAS = 8;
+    public static final int CARTAS_POR_PILA_MITAD_IZQ = 7;
+    public static final int CARTAS_POR_PILA_MITAD_DER = 6;
+    public static final int PILAS_POR_MITAD = 4;
     private final ArrayList<PilaSuperior> pilasDeApoyo;
 
-    public SolitarioFreeCell(){
+    public SolitarioFreeCell() {
         super(CANTIDAD_PILAS);
         this.pilasDeApoyo = new ArrayList<>();
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i < 4; i++) {
             pilasDeApoyo.add(new PilaSuperior());
         }
     }
 
-    public SolitarioFreeCell(long semilla){
+    public SolitarioFreeCell(long semilla) {
         super(CANTIDAD_PILAS, semilla);
         this.pilasDeApoyo = new ArrayList<>();
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i < 4; i++) {
             pilasDeApoyo.add(new PilaSuperior());
         }
     }
 
     public SolitarioFreeCell(Mazo mazo, ArrayList<Pila> pilas, ArrayList<Cimiento> cimientos,
-                             ArrayList<PilaSuperior> pilasSuperiores){
+                             ArrayList<PilaSuperior> pilasSuperiores) {
         super(mazo,pilas,cimientos);
         this.pilasDeApoyo = pilasSuperiores;
     }
 
     @Override
     public void repartirPilas() {
-        int cartasPorPilaMitadIzq = 7;
-        int cartasPorPilaMitadDer = 6;
-        int pilasPorMitad = 4;
-
-        int cartasPorPila = cartasPorPilaMitadIzq;
+        int cartasPorPila = CARTAS_POR_PILA_MITAD_IZQ;
         int posicionPila = 0;
 
         for (Pila pila : this.getPilas()) {
-            if(posicionPila == pilasPorMitad)
-                cartasPorPila = cartasPorPilaMitadDer;
+            if(posicionPila == PILAS_POR_MITAD)
+                cartasPorPila = CARTAS_POR_PILA_MITAD_DER;
             while (pila.size() < cartasPorPila) {
                 Carta cartaAux = this.getMazo().sacarCarta(true);
                 pila.push(cartaAux);
@@ -62,5 +61,4 @@ public class SolitarioFreeCell extends SolitarioConCimientos {
     public ArrayList<PilaSuperior> getPilasSuperiores() {
         return this.pilasDeApoyo;
     }
-
 }

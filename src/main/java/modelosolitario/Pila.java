@@ -10,17 +10,17 @@ public class Pila extends PilaDeCartas {
 
     public Pila() { super(); }
 
-    public Pila(PilaDeCartas pila){
-        while (!pila.isEmpty()){
+    public Pila(PilaDeCartas pila) {
+        while (!pila.isEmpty()) {
             agregarCarta(pila.sacarCarta(true));
         }
     }
 
     public boolean puedeAgregarCarta(Carta carta) {
         if ( !super.puedeAgregarCarta(carta)) return false;
-        if (isEmpty()){
+        if (isEmpty()) {
             return (carta.getValor() == ValorCarta.REY);
-        }else {
+        } else {
             Carta tope = this.peek();
             return (Carta.esColorAlternado(tope, carta) && Carta.esValorSiguiente(carta, tope));
         }

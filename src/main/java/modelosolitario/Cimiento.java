@@ -14,16 +14,16 @@ public class Cimiento extends PilaDeCartas {
         super();
     }
 
-    public Cimiento(int cantidadCartas, Palo palo){
-        for(ValorCarta v : ValorCarta.values()){
-            if (v.ordinal() < cantidadCartas){
+    public Cimiento(int cantidadCartas, Palo palo) {
+        for(ValorCarta v : ValorCarta.values()) {
+            if (v.ordinal() < cantidadCartas) {
                 this.agregarCarta(new Carta(v, palo, false));
             }
         }
     }
 
-    public Cimiento(PilaDeCartas cimiento){
-        while (!cimiento.isEmpty()){
+    public Cimiento(PilaDeCartas cimiento) {
+        while (!cimiento.isEmpty()) {
             agregarCarta(cimiento.sacarCarta(true));
         }
     }

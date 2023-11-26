@@ -4,11 +4,11 @@ import modeloelementos.PilaDeCartas;
 
 import java.io.*;
 
-public class Descarte extends PilaDeCartas{
+public class Descarte extends PilaDeCartas {
 
     private final int cantidadCartas = 1;
 
-    public Descarte(){ super(); }
+    public Descarte() { super(); }
 
     public int getCantidadCartas(){
         return this.cantidadCartas;

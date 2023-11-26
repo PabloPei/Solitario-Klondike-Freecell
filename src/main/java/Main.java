@@ -26,7 +26,6 @@ public class Main extends Application  {
 
     @Override
     public void start(Stage primaryStage) {
-
         FileInputStream is;
         Solitario s = null;
         try {
@@ -55,7 +54,6 @@ public class Main extends Application  {
             solitario = vistaSeleccion.getSolitario();
         }
         solitario.serializar(new FileOutputStream(ConfiguracionUI.RUTA_SERIALIZACION));
-
     }
 
     public static void main(String[] args) {

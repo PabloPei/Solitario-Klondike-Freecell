@@ -35,15 +35,13 @@ public class PilaDeCartas extends Stack<Carta> implements Serializable {
         return (carta != null && !this.contains(carta));
     }
 
-    public boolean equals(PilaDeCartas pila){
-
+    public boolean equals(PilaDeCartas pila) {
         if (this.size() != pila.size()) {
             return false;
         }
         while (!this.isEmpty() && !pila.isEmpty()) {
             Carta carta1 = this.pop();
             Carta carta2 = pila.pop();
-
             if (!carta1.equals(carta2)) {
                 return false;
             }

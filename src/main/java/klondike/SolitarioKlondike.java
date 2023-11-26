@@ -48,15 +48,13 @@ public class SolitarioKlondike extends SolitarioConCimientos implements Serializ
         if (descarte.isEmpty() && mazo.isEmpty())
             return false;
 
-
         for (int i = 0; i < descarte.getCantidadCartas(); i++) {
-            if(mazo.isEmpty()){
+            if(mazo.isEmpty()) {
                 mazo.agregarDescarte(descarte);
             }
             else {
                 Carta carta = mazo.sacarCarta(false);
                 descarte.agregarCarta(carta);
-
             }
         }
         sumarMovimiento();

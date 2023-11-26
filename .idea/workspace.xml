@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c85c3c20-f03a-4d68-baa3-6b7bc68b788a" name="Changes" comment="No hay mas excepciones pero no funciona la serializacion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sol.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/freecell/SolitarioFreeCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freecell/SolitarioFreeCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/klondike/SolitarioKlondike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modeloelementos/Carta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modeloelementos/Carta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modeloelementos/PilaDeCartas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modeloelementos/PilaDeCartas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Cimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Cimiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelosolitario/Descarte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelosolitario/Descarte.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

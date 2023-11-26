@@ -20,13 +20,11 @@ public class VistaPilaDeCartas extends StackPane implements Listener, Serializab
     private final boolean corrimiento;
 
     public VistaPilaDeCartas(Solitario solitario, PilaDeCartas pilaDeCartas, boolean corrimientoY) {
-
         this.solitario = solitario;
         this.pila = pilaDeCartas;
         this.corrimiento = corrimientoY;
         solitario.agregarListener(this);
         agregarVistaPila(corrimientoY);
-
     }
 
 
@@ -37,7 +35,6 @@ public class VistaPilaDeCartas extends StackPane implements Listener, Serializab
     }
 
     protected void agregarVistaPila(boolean corrimientoY) {
-
         PilaDeCartas pilaInvertida = this.pila.invertir();
         int corrimiento = 0;
 
@@ -53,15 +50,12 @@ public class VistaPilaDeCartas extends StackPane implements Listener, Serializab
                 if (corrimientoY) {
                     corrimiento++;
                 }
-
             }
-
         }
     }
 
 
     protected void manejoPilaLlenaClick(VistaCarta vistaCarta, VistaPilaDeCartas vistaPila) {
-
         if (solitario.getPilaOrigen() == null) {
             Carta carta = vistaCarta.getCarta();
             Carta cartaAux;
@@ -75,7 +69,6 @@ public class VistaPilaDeCartas extends StackPane implements Listener, Serializab
 
                 if(i>0){
                     vistaCartaAux = (VistaCarta) vistaPila.getChildren().get(i-1);
-
                     if (cartaAux.getBocaAbajo() ||
                             !(Carta.esValorSiguiente(cartaAux,vistaCartaAux.getCarta()) &&
                                     Carta.esColorAlternado(vistaCartaAux.getCarta(), cartaAux))){
@@ -100,7 +93,6 @@ public class VistaPilaDeCartas extends StackPane implements Listener, Serializab
     }
 
     protected void manejoPilaVaciaClick() {
-
         Media sonido = new Media(new File(ConfiguracionUI.RUTA_SONIDOS + "movefail.mp3").toURI().toString());
         MediaPlayer sonidoMovimientoInvalido = new MediaPlayer(sonido);
 

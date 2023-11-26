@@ -7,19 +7,19 @@ public abstract class SolitarioConCimientos extends Solitario{
     protected final ArrayList<Cimiento> cimientos;
 
 
-    public SolitarioConCimientos(int cantidadPilas){
+    public SolitarioConCimientos(int cantidadPilas) {
         super(cantidadPilas);
         this.cimientos = new ArrayList<>();
         inciarCimientos();
     }
 
-    public SolitarioConCimientos(int cantidadPilas, long semilla){
+    public SolitarioConCimientos(int cantidadPilas, long semilla) {
         super(cantidadPilas,semilla);
         this.cimientos = new ArrayList<>();
         inciarCimientos();
     }
 
-    public SolitarioConCimientos(Mazo mazo, ArrayList<Pila> pilas, ArrayList<Cimiento> cimientos){
+    public SolitarioConCimientos(Mazo mazo, ArrayList<Pila> pilas, ArrayList<Cimiento> cimientos) {
         super(mazo,pilas);
         this.cimientos = cimientos;
     }

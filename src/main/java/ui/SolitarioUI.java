@@ -17,7 +17,6 @@ import java.io.File;
 import java.io.Serializable;
 
 public abstract class SolitarioUI extends GridPane implements Listener, Serializable {
-
     private final Stage stage;
     private final Solitario solitario;
 
@@ -30,9 +29,7 @@ public abstract class SolitarioUI extends GridPane implements Listener, Serializ
 
     @Override
     public void escuchar() {
-
         if ( solitario.verificarEstado() == EstadoJuego.GANADO){
-
             Media sonido = new Media(new File(ConfiguracionUI.RUTA_SONIDOS + "win.mp3").toURI().toString());
             MediaPlayer sonidoVictoria = new MediaPlayer(sonido);
             sonidoVictoria.play();

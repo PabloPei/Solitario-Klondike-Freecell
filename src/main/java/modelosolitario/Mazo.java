@@ -12,7 +12,6 @@ import java.util.Random;
 
 public class Mazo extends PilaDeCartas {
 
-
     public Mazo(){
         for( Palo palo : Palo.values() ) {
             for (ValorCarta valor : ValorCarta.values()) {
@@ -23,7 +22,7 @@ public class Mazo extends PilaDeCartas {
     }
 
     public Mazo(PilaDeCartas mazo){
-        while (!mazo.isEmpty()){
+        while (!mazo.isEmpty()) {
             agregarCarta(mazo.sacarCarta(true));
         }
     }
@@ -38,7 +37,7 @@ public class Mazo extends PilaDeCartas {
     }
 
     private void agregarCartasDesdeDescarte(Descarte descarte){
-        while (!descarte.isEmpty()){
+        while (!descarte.isEmpty()) {
             this.agregarCarta(descarte.sacarCarta(true));
         }
     }
@@ -52,5 +51,4 @@ public class Mazo extends PilaDeCartas {
     public static Mazo deSerializar(InputStream is) throws IOException, ClassNotFoundException {
         return (Mazo) PilaDeCartas.deSerializar(is);
     }
-
 }

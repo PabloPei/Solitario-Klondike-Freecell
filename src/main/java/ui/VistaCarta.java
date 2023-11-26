@@ -10,7 +10,6 @@ public class VistaCarta extends ImageView {
     private final Carta carta;
 
     public VistaCarta(Carta carta) {
-
         this.carta = carta;
         String rutaImagen;
         if (carta.getBocaAbajo()) {
@@ -26,5 +25,5 @@ public class VistaCarta extends ImageView {
         setImage(imagenCarta);
     }
 
-    public Carta getCarta(){ return this.carta; }
+    public Carta getCarta() { return this.carta; }
 }
