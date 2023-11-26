@@ -9,6 +9,7 @@ import ui.SolitarioUI;
 import ui.VistaSeleccionSolitario;
 import ui.freecell.FreecellUI;
 import ui.klondike.KlondikeUI;
+
 import java.io.*;
 
 
@@ -21,7 +22,6 @@ public class Main extends Application  {
         Scene scene = new Scene(vistaSeleccion, ConfiguracionUI.ANCHO_VENTANA, ConfiguracionUI.ALTO_VENTANA);
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
-        primaryStage.setTitle("Seleccionar Solitario");
     }
 
     @Override
@@ -34,7 +34,6 @@ public class Main extends Application  {
             s = Solitario.deSerializar(is);
         } catch (IOException | ClassNotFoundException e) {
             seleccionSolitario(primaryStage);
-            solitario = vistaSeleccion.getSolitario();
         }
         if (s != null){
             solitario = s;
@@ -49,13 +48,16 @@ public class Main extends Application  {
         primaryStage.show();
     }
 
+
+
     @Override
     public void stop() throws IOException {
-            if (solitario != null && solitario.verificarVictoria()) return;
-        if (vistaSeleccion == null){
-            solitario.serializar(new FileOutputStream(ConfiguracionUI.RUTA_SERIALIZACION));
+        if (solitario != null && solitario.verificarVictoria()) return;
+        if (solitario == null) {
+            solitario = vistaSeleccion.getSolitario();
         }
         solitario.serializar(new FileOutputStream(ConfiguracionUI.RUTA_SERIALIZACION));
+
     }
     public static void main(String[] args) {
         launch(args);
