@@ -47,14 +47,14 @@ public class VistaSeleccionSolitario extends GridPane {
             seleccionarButton.setOnAction(e -> {
                  switch (tipo) {
                       case FREECELL -> {
-                                actual = new SolitarioFreeCell();
-                                FreecellUI ui = new FreecellUI(stage, (SolitarioFreeCell) actual);
-                                ui.mostrar();
+                          actual = new SolitarioFreeCell();
+                          FreecellUI ui = new FreecellUI(stage, (SolitarioFreeCell) actual);
+                          ui.mostrar();
                       }
                       case KLONDIKE -> {
-                        actual = new SolitarioKlondike();
-                        KlondikeUI ui = new KlondikeUI(stage, (SolitarioKlondike) actual);
-                        ui.mostrar();
+                          actual = new SolitarioKlondike();
+                          KlondikeUI ui = new KlondikeUI(stage, (SolitarioKlondike) actual);
+                          ui.mostrar();
                       }
                  }
             });
