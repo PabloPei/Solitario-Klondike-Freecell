@@ -13,10 +13,14 @@ import modelosolitario.*;
 import ui.freecell.FreecellUI;
 import ui.klondike.KlondikeUI;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 
 public class VistaSeleccionSolitario extends GridPane {
 
-
+    Solitario actual;
     public VistaSeleccionSolitario(Stage stage) {
 
         setStyle(ConfiguracionUI.BACKGROUD_COLOR);
@@ -47,13 +51,13 @@ public class VistaSeleccionSolitario extends GridPane {
             seleccionarButton.setOnAction(e -> {
                  switch (tipo) {
                       case FREECELL -> {
-                                SolitarioFreeCell solitario = new SolitarioFreeCell();
-                                FreecellUI ui = new FreecellUI(stage, solitario);
+                                actual = new SolitarioFreeCell();
+                                FreecellUI ui = new FreecellUI(stage, (SolitarioFreeCell) actual);
                                 ui.mostrar();
                       }
                       case KLONDIKE -> {
-                        SolitarioKlondike solitario = new SolitarioKlondike();
-                        KlondikeUI ui = new KlondikeUI(stage, solitario);
+                        actual = new SolitarioKlondike();
+                        KlondikeUI ui = new KlondikeUI(stage, (SolitarioKlondike) actual);
                         ui.mostrar();
                       }
                  }
@@ -62,4 +66,5 @@ public class VistaSeleccionSolitario extends GridPane {
             add(seleccionarButton,tipo.ordinal(),0);
         }
     }
+    public Solitario getSolitario() {return actual;}
 }

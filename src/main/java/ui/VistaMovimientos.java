@@ -4,7 +4,9 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import modelosolitario.Solitario;
 
-public class VistaMovimientos extends HBox implements Listener {
+import java.io.Serializable;
+
+public class VistaMovimientos extends HBox implements Listener, Serializable {
 
     private final Solitario solitario;
     private final Label label;

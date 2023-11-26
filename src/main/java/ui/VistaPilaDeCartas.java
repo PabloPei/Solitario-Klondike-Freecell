@@ -9,10 +9,10 @@ import modelosolitario.Solitario;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import java.io.File;
+import java.io.Serializable;
 
 
-
-public class VistaPilaDeCartas extends StackPane implements Listener {
+public class VistaPilaDeCartas extends StackPane implements Listener, Serializable {
 
     private static final double posicionY = 20;
     private final Solitario solitario;

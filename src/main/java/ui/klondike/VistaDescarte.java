@@ -49,9 +49,9 @@ public class VistaDescarte extends VistaPilaDeCartas {
         }
         else {
             //no puedo mover cartas de ninguna pila al descarte
-            Media sonido = new Media(new File(ConfiguracionUI.RUTA_SONIDOS + "movefail.mp3").toURI().toString());
-            MediaPlayer sonidoMovimientoInvalido = new MediaPlayer(sonido);
-            sonidoMovimientoInvalido.play();
+//            Media sonido = new Media(new File(ConfiguracionUI.RUTA_SONIDOS + "movefail.mp3").toURI().toString());
+//            MediaPlayer sonidoMovimientoInvalido = new MediaPlayer(sonido);
+//            sonidoMovimientoInvalido.play();
         }
     }
 

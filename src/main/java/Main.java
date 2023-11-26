@@ -1,7 +1,6 @@
 import freecell.SolitarioFreeCell;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import klondike.SolitarioKlondike;
 import modelosolitario.Solitario;
@@ -15,33 +14,31 @@ import java.io.*;
 
 
 public class Main extends Application  {
+    private VistaSeleccionSolitario vistaSeleccion;
+    private Solitario solitario;
     // se deberia chequear de que no haya algun solitario guardado
 
     private void seleccionSolitario(Stage primaryStage) {
-        GridPane layout = new VistaSeleccionSolitario(primaryStage);
-        Scene scene = new Scene(layout, ConfiguracionUI.ANCHO_VENTANA, ConfiguracionUI.ALTO_VENTANA);
+        vistaSeleccion = new VistaSeleccionSolitario(primaryStage);
+        Scene scene = new Scene(vistaSeleccion, ConfiguracionUI.ANCHO_VENTANA, ConfiguracionUI.ALTO_VENTANA);
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.setTitle("Seleccionar Solitario");
     }
-
-    private void buscarSerializacion(InputStream is, Solitario s, Stage stage) {
-        try {
-            s = Solitario.deSerializar(is);
-        } catch (IOException | ClassNotFoundException e) {
-            seleccionSolitario(stage);
-        }
-    }
     @Override
     public void start(Stage primaryStage) {
 
-        InputStream is = null;
+        FileInputStream is;
+        Solitario s = null;
         try {
             is = new FileInputStream(ConfiguracionUI.RUTA_SERIALIZACION);
-        } catch (FileNotFoundException e) {}
-        Solitario s = null;
-        buscarSerializacion(is, s, primaryStage);
+            s = Solitario.deSerializar(is);
+        } catch (IOException | ClassNotFoundException e) {
+            seleccionSolitario(primaryStage);
+            solitario = vistaSeleccion.getSolitario();
+        }
         if (s != null){
+            solitario = s;
             SolitarioUI ui;
             if (s.getClass() == SolitarioKlondike.class) {
                 ui = new KlondikeUI(primaryStage, (SolitarioKlondike) s);
@@ -53,9 +50,15 @@ public class Main extends Application  {
         primaryStage.show();
     }
 
-    @Override
-    public void stop() {
 
+
+    @Override
+    public void stop() throws IOException {
+            if (solitario != null && solitario.verificarVictoria()) return;
+        if (vistaSeleccion == null){
+            solitario.serializar(new FileOutputStream(ConfiguracionUI.RUTA_SERIALIZACION));
+        }
+        solitario.serializar(new FileOutputStream(ConfiguracionUI.RUTA_SERIALIZACION));
     }
     public static void main(String[] args) {
         launch(args);

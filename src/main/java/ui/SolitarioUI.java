@@ -14,8 +14,9 @@ import modeloelementos.EstadoJuego;
 import modelosolitario.Solitario;
 
 import java.io.File;
+import java.io.Serializable;
 
-public abstract class SolitarioUI extends GridPane implements Listener {
+public abstract class SolitarioUI extends GridPane implements Listener, Serializable {
 
 
     private final Stage stage;

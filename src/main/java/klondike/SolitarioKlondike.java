@@ -2,6 +2,7 @@ package klondike;
 
 import modeloelementos.Carta;
 import modelosolitario.*;
+import ui.ConfiguracionUI;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -60,11 +61,6 @@ public class SolitarioKlondike extends SolitarioConCimientos implements Serializ
         }
         sumarMovimiento();
         notificar();
-        try {
-            serializar(serializacion);
-        } catch (IOException e){
-            System.out.println(e.getMessage());
-        }
         return true;
     }
 
