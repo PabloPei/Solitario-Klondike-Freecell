@@ -24,6 +24,16 @@ public class Main extends Application  {
         primaryStage.setResizable(false);
     }
 
+    private void iniciarSolitarioExistente(Solitario s, Stage stage){
+        solitario = s;
+        SolitarioUI ui;
+        if (s.getClass() == SolitarioKlondike.class) {
+            ui = new KlondikeUI(stage, (SolitarioKlondike) s);
+        } else {
+            ui = new FreecellUI(stage, (SolitarioFreeCell) s);
+        }
+        ui.mostrar();
+    }
     @Override
     public void start(Stage primaryStage) {
         FileInputStream is;
@@ -34,16 +44,7 @@ public class Main extends Application  {
         } catch (IOException | ClassNotFoundException e) {
             seleccionSolitario(primaryStage);
         }
-        if (s != null){
-            solitario = s;
-            SolitarioUI ui;
-            if (s.getClass() == SolitarioKlondike.class) {
-                ui = new KlondikeUI(primaryStage, (SolitarioKlondike) s);
-            } else {
-                ui = new FreecellUI(primaryStage, (SolitarioFreeCell) s);
-            }
-            ui.mostrar();
-        }
+        if (s != null) iniciarSolitarioExistente(s, primaryStage);
         primaryStage.show();
     }
 

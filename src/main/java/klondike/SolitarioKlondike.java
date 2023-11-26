@@ -2,8 +2,6 @@ package klondike;
 
 import modeloelementos.Carta;
 import modelosolitario.*;
-import ui.ConfiguracionUI;
-
 import java.io.*;
 import java.util.ArrayList;
 
