@@ -3,6 +3,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import klondike.SolitarioKlondike;
+import modeloelementos.EstadoJuego;
 import modelosolitario.Solitario;
 import ui.ConfiguracionUI;
 import ui.SolitarioUI;
@@ -34,6 +35,7 @@ public class Main extends Application  {
         }
         ui.mostrar();
     }
+
     @Override
     public void start(Stage primaryStage) {
         FileInputStream is;
@@ -44,7 +46,10 @@ public class Main extends Application  {
         } catch (IOException | ClassNotFoundException e) {
             seleccionSolitario(primaryStage);
         }
-        if (s != null) iniciarSolitarioExistente(s, primaryStage);
+        if (s != null && s.verificarEstado() != EstadoJuego.GANADO)
+            iniciarSolitarioExistente(s, primaryStage);
+        else
+            seleccionSolitario(primaryStage);
         primaryStage.show();
     }
 
