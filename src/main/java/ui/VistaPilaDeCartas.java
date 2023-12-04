@@ -54,6 +54,15 @@ public class VistaPilaDeCartas extends StackPane implements Listener, Serializab
         }
     }
 
+    protected void manejoMovimientosInvalidos(){
+        if( ! solitario.moverCartas(solitario.getPilaOrigen(),this.getPilaDeCartas(),solitario.getCartaOrigen())) {
+            Media sonido = new Media(new File(ConfiguracionUI.RUTA_SONIDOS + "movefail.mp3").toURI().toString());
+            MediaPlayer sonidoMovimientoInvalido = new MediaPlayer(sonido);
+            sonidoMovimientoInvalido.play();
+        }
+        solitario.setPilaOrigen(null);
+        solitario.setCartaOrigen(null);
+    }
 
     protected void manejoPilaLlenaClick(VistaCarta vistaCarta, VistaPilaDeCartas vistaPila) {
         if (solitario.getPilaOrigen() == null) {
@@ -82,13 +91,7 @@ public class VistaPilaDeCartas extends StackPane implements Listener, Serializab
             solitario.setCartaOrigen(carta);
         }
         else {
-            if( ! solitario.moverCartas(solitario.getPilaOrigen(),this.getPilaDeCartas(),solitario.getCartaOrigen())) {
-                Media sonido = new Media(new File(ConfiguracionUI.RUTA_SONIDOS + "movefail.mp3").toURI().toString());
-                MediaPlayer sonidoMovimientoInvalido = new MediaPlayer(sonido);
-                sonidoMovimientoInvalido.play();
-            }
-            solitario.setPilaOrigen(null);
-            solitario.setCartaOrigen(null);
+            manejoMovimientosInvalidos();
         }
     }
 
@@ -100,11 +103,7 @@ public class VistaPilaDeCartas extends StackPane implements Listener, Serializab
             sonidoMovimientoInvalido.play();
         }
         else {
-            if( ! solitario.moverCartas(solitario.getPilaOrigen(),this.getPilaDeCartas(),solitario.getCartaOrigen())) {
-                sonidoMovimientoInvalido.play();
-            }
-            solitario.setPilaOrigen(null);
-            solitario.setCartaOrigen(null);
+            manejoMovimientosInvalidos();
         }
     }
 
