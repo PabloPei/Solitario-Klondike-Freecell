@@ -13,7 +13,8 @@ public class VistaMovimientos extends HBox implements Listener, Serializable {
 
     public VistaMovimientos(Solitario s) {
         this.solitario = s;
-        label = new Label("Movimientos: 0 ");  // Inicializar label
+        int movimientos = solitario.getMovimientos();
+        label = new Label("Movimientos: " + movimientos);  // Inicializar label
         label.setStyle(ConfiguracionUI.ESTILO_TITULO);
         getChildren().add(label);
         solitario.agregarListener(this);
