@@ -13,6 +13,10 @@ import modelosolitario.*;
 import ui.freecell.FreecellUI;
 import ui.klondike.KlondikeUI;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 
 public class VistaSeleccionSolitario extends GridPane {
 
@@ -39,18 +43,26 @@ public class VistaSeleccionSolitario extends GridPane {
 
             seleccionarButton.setOnMouseEntered(mouseEvent  -> seleccionarButton.setStyle(ConfiguracionUI.BOTON_SELECCION_MOUSE_ARRIBA));
             seleccionarButton.setOnMouseExited(mouseEvent  -> seleccionarButton.setStyle(ConfiguracionUI.BOTON_SELECCION_ESTADO_NORMAL));
-
             seleccionarButton.setOnAction(e -> {
                  switch (tipo) {
                       case FREECELL -> {
-                          actual = new SolitarioFreeCell();
-                          FreecellUI ui = new FreecellUI(stage, (SolitarioFreeCell) actual);
-                          ui.mostrar();
+                          if (buscarSolitarioPorTipo() && actual.getClass() == SolitarioFreeCell.class){
+                              iniciarSolitarioExistente(stage);
+                          } else {
+                              actual = new SolitarioFreeCell();
+                              FreecellUI ui = new FreecellUI(stage, (SolitarioFreeCell) actual);
+                              ui.mostrar();
+                          }
                       }
                       case KLONDIKE -> {
-                          actual = new SolitarioKlondike();
-                          KlondikeUI ui = new KlondikeUI(stage, (SolitarioKlondike) actual);
-                          ui.mostrar();
+                          if (buscarSolitarioPorTipo() && actual.getClass() == SolitarioKlondike.class){
+                              iniciarSolitarioExistente(stage);
+                          } else {
+                              actual = new SolitarioKlondike();
+                              KlondikeUI ui = new KlondikeUI(stage, (SolitarioKlondike) actual);
+                              ui.mostrar();
+                          }
+
                       }
                  }
             });
@@ -58,5 +70,23 @@ public class VistaSeleccionSolitario extends GridPane {
         }
     }
 
+    private boolean buscarSolitarioPorTipo(){
+        try {
+            FileInputStream is = new FileInputStream(ConfiguracionUI.RUTA_SERIALIZACION);
+            actual = Solitario.deSerializar(is);
+        } catch (IOException | ClassNotFoundException e){
+            return false;
+        }
+        return true;
+    }
+    private void iniciarSolitarioExistente(Stage stage){
+        SolitarioUI ui;
+        if (actual.getClass() == SolitarioKlondike.class) {
+            ui = new KlondikeUI(stage, (SolitarioKlondike) actual);
+        } else {
+            ui = new FreecellUI(stage, (SolitarioFreeCell) actual);
+        }
+        ui.mostrar();
+    }
     public Solitario getSolitario() { return actual; }
 }
