@@ -14,7 +14,6 @@ import ui.freecell.FreecellUI;
 import ui.klondike.KlondikeUI;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 
