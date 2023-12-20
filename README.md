@@ -1,4 +1,4 @@
-# TrabajoPractico-Algo3
+# Solitario Klondike y Freecell 
 
 Integrantes del grupo:
 
